@@ -30,3 +30,10 @@ export const Checked: Story = {
     checked: true,
   },
 };
+
+export const TestCheckbox: Story = {
+  args: {
+    label: "Unchecked Checkbox",
+    checked: true
+  }
+};

@@ -1,3 +1,5 @@
+/* @import '@assets/css/variables.css'; */
+
 .badge {
     display: inline-block;
     padding: 0.5rem 1rem;
@@ -13,6 +15,7 @@ background-color: #007bff;
 
 .badge.success {
 background-color: #28a745;
+/* background-color: var(--succe); */
 }
 
 .badge.warning {

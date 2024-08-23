@@ -1,0 +1,12 @@
+<div class="card">
+    <img *ngIf="imageUrl" [src]="imageUrl" alt="Card image" class="card-image"/>
+    <div class="card-content">
+      <h3 *ngIf="title">{{ title }}</h3>
+      <p *ngIf="content">{{ content }}</p>
+      <ng-content></ng-content>
+    </div>
+    <div class="card-actions" *ngIf="actions">
+      <button *ngFor="let action of actions" (click)="actionClick(action)">{{ action.label }}</button>
+    </div>
+  </div>
+  

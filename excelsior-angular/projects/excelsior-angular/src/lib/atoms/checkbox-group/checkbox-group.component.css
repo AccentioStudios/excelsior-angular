@@ -1,0 +1,21 @@
+.checkbox-group-container {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem 0;
+  }
+  
+  .checkbox-group-container > label {
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+  }
+  
+  .checkbox-group-container div {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+  }
+  
+  .checkbox-group-container input[type="checkbox"] {
+    margin-right: 0.5rem;
+  }
+      
