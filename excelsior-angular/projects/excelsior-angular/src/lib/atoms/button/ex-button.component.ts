@@ -2,7 +2,7 @@ import { CommonModule } from '@angular/common';
 import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
-  selector: 'storybook-button',
+  selector: 'ex-button',
   standalone: true,
   imports: [CommonModule],
   template: ` <button
@@ -13,9 +13,9 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
   >
     {{ label }}
   </button>`,
-  styleUrls: ['./button.css'],
+  styleUrls: ['./ex-button.css'],
 })
-export class ButtonComponent {
+export class ExButtonComponent {
   /**
    * Is this the principal call to action on the page?
    */

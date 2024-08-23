@@ -4,7 +4,7 @@ import { within, userEvent, expect } from '@storybook/test';
 import { PageComponent } from './page.component';
 
 const meta: Meta<PageComponent> = {
-  title: 'Example/Page',
+  title: 'Layouts/Page',
   component: PageComponent,
   parameters: {
     // More on how to position stories at: https://storybook.js.org/docs/configure/story-layout
