@@ -1,13 +1,18 @@
-import { Component, Input,Output, EventEmitter } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core'
+import { CommonModule } from '@angular/common'
+import { ExIconComponent } from '../icon/ex-icon.component'
 
 @Component({
-  selector: 'app-badge',
+  selector: 'ex-badge',
   templateUrl: './badge.component.html',
-  styleUrls: ['./badge.component.css']
+  styleUrls: ['./badge.component.css'],
+  standalone: true,
+  imports: [CommonModule, ExIconComponent],
+
 })
-export class BadgeComponent {
-  @Input() text: string = 'Default Badge';
-  @Input() type: 'primary' | 'success' | 'warning' | 'danger' = 'primary';
+export class ExBadgeComponent {
+  @Input() text: string = 'Default Badge'
+  @Input() type: 'success' | 'pink' | 'warning' | 'error' | 'purple' | 'indigo' | 'indigo' | 'blue-light' = 'success'
   @Output()
-  onClick = new EventEmitter<Event>();
+  onClick = new EventEmitter<Event>()
 }

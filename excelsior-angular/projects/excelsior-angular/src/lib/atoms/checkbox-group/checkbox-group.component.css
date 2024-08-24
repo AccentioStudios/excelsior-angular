@@ -1,21 +1,66 @@
-.checkbox-group-container {
-    display: flex;
-    flex-direction: column;
-    margin: 1rem 0;
-  }
-  
-  .checkbox-group-container > label {
-    margin-bottom: 0.5rem;
-    font-weight: bold;
-  }
-  
-  .checkbox-group-container div {
-    display: flex;
-    align-items: center;
-    margin-bottom: 0.5rem;
-  }
-  
-  .checkbox-group-container input[type="checkbox"] {
-    margin-right: 0.5rem;
-  }
-      
+@import 'src/lib/assets/css/variables.css';
+
+.checkbox-container {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  user-select: none;
+}
+
+.checkbox-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkmark {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: var(--radius-xs);
+  margin-right: 8px;
+  border: solid 1px var(--border-primary);
+}
+
+.checkbox-container input:checked ~ .checkmark {
+  background-color: var(--secondary-color);
+  color: var(--secondary-color);
+  position: relative;
+}
+
+.checkbox-container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.checkmark:after {
+  content: '';
+  position: absolute;
+  display: none;
+  left: 6px;
+  top: 1px;
+  width: 6px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.checkbox-container h6{
+  margin: 0;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  text-align: left;
+  color:var(--text-secondary-700) ;
+}
+.checkbox-container p{
+  margin: 0;
+font-size: 14px;
+font-weight: 400;
+line-height: 20px;
+text-align: left;
+color: var(--on-surface-color-variant);
+
+}

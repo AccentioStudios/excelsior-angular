@@ -1,6 +1,6 @@
-import { Meta, StoryObj } from '@storybook/angular';
-import { SearchInputDropdownComponent } from './search-input-dropdown.component';
-import { fn } from '@storybook/test';
+import { Meta, StoryObj } from '@storybook/angular'
+import { SearchInputDropdownComponent } from './search-input-dropdown.component'
+import { fn } from '@storybook/test'
 
 const meta: Meta<SearchInputDropdownComponent> = {
   title: 'Components/Search Input Dropdown',
@@ -21,10 +21,10 @@ const meta: Meta<SearchInputDropdownComponent> = {
     ],
     selectionChange: fn(),
   },
-};
+}
 
-export default meta;
-type Story = StoryObj<SearchInputDropdownComponent>;
+export default meta
+type Story = StoryObj<SearchInputDropdownComponent>
 
 export const Default: Story = {
   args: {
@@ -32,7 +32,7 @@ export const Default: Story = {
     label: 'Search',
     placeholder: 'Type to search...',
   },
-};
+}
 
 export const WithOptions: Story = {
   args: {
@@ -45,4 +45,4 @@ export const WithOptions: Story = {
       { value: 'option3', label: 'Option 3' },
     ],
   },
-};
+}

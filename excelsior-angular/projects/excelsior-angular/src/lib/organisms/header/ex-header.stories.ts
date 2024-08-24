@@ -1,7 +1,7 @@
-import type { Meta, StoryObj } from '@storybook/angular';
+import type { Meta, StoryObj } from '@storybook/angular'
 
-import { ExHeaderComponent } from './ex-header.component';
-import { fn } from '@storybook/test';
+import { ExHeaderComponent } from './ex-header.component'
+import { fn } from '@storybook/test'
 
 const meta: Meta<ExHeaderComponent> = {
   title: 'Layouts/Header',
@@ -17,10 +17,10 @@ const meta: Meta<ExHeaderComponent> = {
     onLogout: fn(),
     onCreateAccount: fn(),
   },
-};
+}
 
-export default meta;
-type Story = StoryObj<ExHeaderComponent>;
+export default meta
+type Story = StoryObj<ExHeaderComponent>
 
 export const LoggedIn: Story = {
   args: {
@@ -28,6 +28,6 @@ export const LoggedIn: Story = {
       name: 'Jane Doe',
     },
   },
-};
+}
 
-export const LoggedOut: Story = {};
+export const LoggedOut: Story = {}

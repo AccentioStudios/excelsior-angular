@@ -1,30 +1,68 @@
-.storybook-button {
-  font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-weight: 700;
-  border: 0;
-  border-radius: 3em;
+@import 'src/lib/assets/css/variables.css';
+
+.ex-button {
+  padding: 10px var(--spacing-xl) 10px var(--spacing-xl);
+  gap: var(--spacing-sm);
+  border-radius: var(--radius-md);
   cursor: pointer;
-  display: inline-block;
-  line-height: 1;
+  border: solid 1px transparent;
+  transition: all ease-out .3s;
 }
-.storybook-button--primary {
-  color: white;
-  background-color: #1ea7fd;
+.ex-button-content-text{
+  padding: 0px var(--spacing-xxs) 0px var(--spacing-xxs);
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
 }
-.storybook-button--secondary {
+.ex-button--primary {
+  color: var(--surface-color);
+  background-color: var(--secondary-color);
+  border-color: var(--secondary-color);
+}
+
+.ex-button--primary:hover {
+  color: var(--surface-color);
+  background-color: var(--button-primary-color_hover);
+  border-color: var(--button-primary-border_hover);
+}
+
+.ex-button--primary:focus {
+  color: var(--surface-color);
+  background-color: var(--button-primary-color_hover);
+  border-color: var(--button-primary-border_hover);
+  box-shadow: 0px 0px 0px 4px #9E77ED3D;
+  box-shadow: 0px 0px 0px 4px #5F92E240;
+}
+
+.ex-button--primary:disabled {
+  cursor: not-allowed;
+  color: var(--fg-disabled);
+  box-shadow: var(--shadow-xs);
+  background-color: var(--bg-disabled);
+  border-color: var(--border-disabled_subtle); 
+}
+
+.ex-button--secondary {
   color: #333;
   background-color: transparent;
   box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 0px 1px inset;
 }
-.storybook-button--small {
+
+.ex-button--secondary {
+  color: #333;
+  background-color: transparent;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 0px 1px inset;
+}
+
+/* .ex-button--small {
   font-size: 12px;
   padding: 10px 16px;
 }
-.storybook-button--medium {
+.ex-button--medium {
   font-size: 14px;
   padding: 11px 20px;
 }
-.storybook-button--large {
+.ex-button--large {
   font-size: 16px;
   padding: 12px 24px;
-}
+} */

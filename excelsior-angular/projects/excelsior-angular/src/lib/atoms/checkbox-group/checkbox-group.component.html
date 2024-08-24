@@ -1,14 +1,16 @@
-<div class="checkbox-group-container">
-    <label>{{ label }}</label>
-    <div *ngFor="let option of options">
-      <input
-        type="checkbox"
-        [id]="option.value"
-        [value]="option.value"
-        [checked]="isSelected(option.value)"
-        (change)="onCheckboxChange(option.value, $event)"
-      />
-      <label [for]="option.value">{{ option.label }}</label>
+<ex-card>
+    <label class="checkbox-container">
+    <div>
+      <input type="checkbox" [checked]="checked" (change)="toggleCheck()" />
+      <span class="checkmark"></span>
     </div>
-  </div>
-  
+    <article>
+      <h6>
+        {{ title }}
+      </h6>
+      <p>
+        {{ label }}
+      </p>
+    </article>
+  </label>
+</ex-card>

@@ -1,27 +1,22 @@
-import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core'
+import { CommonModule } from '@angular/common'
+import { CardComponent } from '../card/card.component'
 
 @Component({
-  selector: 'app-checkbox-group',
+  selector: 'ex-checkbox-card',
   templateUrl: './checkbox-group.component.html',
-  styleUrls: ['./checkbox-group.component.css']
+  styleUrls: ['./checkbox-group.component.css'],
+  standalone: true,
+  imports: [CommonModule,CardComponent  ],
 })
-export class CheckboxGroupComponent {
-  @Input() label: string = 'Select options';
-  @Input() options: { value: string, label: string }[] = [];
-  @Input() selectedValues: string[] = [];
-  @Output() selectionChange = new EventEmitter<string[]>();
+export class ExCheckboxGroupComponent {
+  @Input() label: string = 'Default Checkbox'
+  @Input() title: string = 'Default Checkbox'
+  @Input() checked: boolean = false
+  @Output() checkedChange = new EventEmitter<boolean>()
 
-  isSelected(value: string): boolean {
-    return this.selectedValues.includes(value);
-  }
-
-  onCheckboxChange(value: string, event: Event) {
-    const isChecked = (event.target as HTMLInputElement).checked;
-    if (isChecked) {
-      this.selectedValues = [...this.selectedValues, value];
-    } else {
-      this.selectedValues = this.selectedValues.filter(v => v !== value);
-    }
-    this.selectionChange.emit(this.selectedValues);
+  toggleCheck() {
+    this.checked = !this.checked
+    this.checkedChange.emit(this.checked)
   }
 }

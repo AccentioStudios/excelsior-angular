@@ -1,28 +1,85 @@
-/* @import '@assets/css/variables.css'; */
+@import 'src/lib/assets/css/variables.css';
 
 .badge {
-    display: inline-block;
-    padding: 0.5rem 1rem;
-    font-size: 0.875rem;
-    font-weight: 600;
-    border-radius: 0.25rem;
-    color: white;
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  border-radius: var(--radius-full);
+  border: solid 1px;
+  color: var(--primary-color);
 }
 
-.badge.primary {
-background-color: #007bff;
+.badge .content-icon{
+  display: inline-block;
 }
 
 .badge.success {
-background-color: #28a745;
-/* background-color: var(--succe); */
+  background-color: var(--utility-success-50);
+  border-color: var(--utility-success-200);
+  color: var(--utility-success-700);
+}
+
+.badge.success .content-icon{
+  color: var(--utility-success-500);
+}
+
+.badge.pink {
+  background-color: var(--utility-pink-50);
+  border-color: var(--utility-pink-200);
+  color: var(--utility-pink-700);
+}
+
+.badge.pink .content-icon{
+  color: var(--utility-pink-500);
 }
 
 .badge.warning {
-background-color: #ffc107;
+  background-color: var(--utility-warning-50);
+  border-color: var(--utility-warning-200);
+  color: var(--utility-warning-700);
 }
 
-.badge.danger {
-background-color: #dc3545;
+.badge.warning .content-icon{
+  color: var(--utility-warning-500);
 }
-    
+
+.badge.purple {
+  background-color: var(--utility-purple-50);
+  border-color: var(--utility-purple-200);
+  color: var(--utility-purple-700);
+}
+
+.badge.purple .content-icon{
+  color: var(--utility-purple-500);
+}
+
+.badge.indigo {
+  background-color: var(--utility-indigo-50);
+  border-color: var(--utility-indigo-200);
+  color: var(--utility-indigo-700);
+}
+
+.badge.indigo .content-icon{
+  color: var(--utility-indigo-500);
+}
+
+.badge.blue-light {
+  background-color: var(--utility-blue-light-50);
+  border-color: var(--utility-blue-light-200);
+  color: var(--utility-blue-light-700);
+}
+
+.badge.blue-light .content-icon{
+  color: var(--utility-blue-light-500);
+}
+
+.badge.error {
+  background-color: var(--utility-error-50);
+  border-color: var(--utility-error-200);
+  color: var(--utility-error-700);
+}
+
+.badge.error .content-icon{
+  color: var(--utility-error-500);
+}

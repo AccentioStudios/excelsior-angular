@@ -1,23 +1,27 @@
+@import 'src/lib/assets/css/variables.css';
+
 .select-container {
-    display: flex;
-    flex-direction: column;
-    margin: 1rem 0;
-  }
-  
-  .select-container label {
-    margin-bottom: 0.5rem;
-    font-weight: bold;
-  }
-  
-  .select-container select {
-    padding: 0.5rem;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 1rem;
-  }
-  
-  .select-container select:focus {
-    border-color: #007bff;
-    outline: none;
-  }
-  
+  display: flex;
+  flex-direction: column;
+  gap:var(--spacing-sm);
+}
+
+.select-container label {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  text-align: left;
+  color: var(--text-secondary-700);
+}
+
+.select-container select {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.select-container select:focus {
+  border-color: #007bff;
+  outline: none;
+}

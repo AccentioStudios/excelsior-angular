@@ -1,10 +1,12 @@
-<div class="collapsible-container">
-    <button class="collapsible-header" (click)="toggleCollapse()">
-      {{ title }}
-      <span>{{ isCollapsed ? '+' : '-' }}</span>
-    </button>
-    <div class="collapsible-content" *ngIf="!isCollapsed">
-      <ng-content></ng-content>
-    </div>
+<div class="collapsble-container">
+  <button class="collapsble-header" (click)="toggleCollapse()">
+    {{ title }}
+    <span>
+      <ex-icon *ngIf="!isCollapsed" [iconId]="'chevron-down'"/>
+      <ex-icon *ngIf="isCollapsed" [iconId]="'chevron-up'"/>
+    </span>
+  </button>
+  <div class="collapsble-content" *ngIf="!isCollapsed">
+    <ng-content></ng-content>
   </div>
-  
+</div>

@@ -1,40 +1,41 @@
-import { Meta, StoryObj } from '@storybook/angular';
-import { CheckboxGroupComponent } from './checkbox-group.component';
-import { fn } from '@storybook/test';
+import type { Meta, StoryObj } from '@storybook/angular'
+import { fn } from '@storybook/test'
+import { ExCheckboxGroupComponent } from './checkbox-group.component'
 
-const meta: Meta<CheckboxGroupComponent> = {
-  title: 'Components/Checkbox Group',
-  component: CheckboxGroupComponent,
+const meta: Meta<ExCheckboxGroupComponent> = {
+  title: 'Components/Checkbox Card',
+  component: ExCheckboxGroupComponent,
   tags: ['autodocs'],
   argTypes: {
     label: { control: 'text' },
-    options: { control: 'object' },
-    selectedValues: { control: [] },
-    selectionChange: { action: 'selectionChange' },
+    checked: { control: 'boolean' },
+    checkedChange: { action: 'checkedChange' },
   },
-  args: {
-    options: [
-      { value: 'option1', label: 'Option 1' },
-      { value: 'option2', label: 'Option 2' },
-      { value: 'option3', label: 'Option 3' },
-    ],
-    selectedValues: [],
-    selectionChange: fn(),
-  },
-};
+  args: { checkedChange: fn() },
+}
 
-export default meta;
-type Story = StoryObj<CheckboxGroupComponent>;
+export default meta
+type Story = StoryObj<ExCheckboxGroupComponent>
 
-export const Default: Story = {
+export const Unchecked: Story = {
   args: {
-    label: 'Select options',
+    title: 'Permitir assinar como conferente',
+    label: 'O usuário vai poder verificar e conferir diversos elementos na plataforma.',
+    checked: false,
   },
-};
+}
 
-export const Preselected: Story = {
+export const Checked: Story = {
   args: {
-    label: 'Select options',
-    selectedValues: ['option2'],
+    title: 'Permitir assinar como conferente',
+    label: 'O usuário vai poder verificar e conferir diversos elementos na plataforma.',
+    checked: true,
   },
-};
+}
+
+export const TestCheckbox: Story = {
+  args: {
+    label: 'Unchecked Checkbox',
+    checked: true,
+  },
+}

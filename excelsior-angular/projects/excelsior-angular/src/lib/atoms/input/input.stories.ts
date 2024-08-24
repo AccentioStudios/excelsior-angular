@@ -1,6 +1,6 @@
-import { Meta, StoryObj } from '@storybook/angular';
-import { fn } from '@storybook/test';
-import { InputComponent } from './input.component';
+import { Meta, StoryObj } from '@storybook/angular'
+import { fn } from '@storybook/test'
+import { InputComponent } from './input.component'
 
 const meta: Meta<InputComponent> = {
   title: 'Components/Input',
@@ -21,10 +21,10 @@ const meta: Meta<InputComponent> = {
   args: {
     valueChange: fn(),
   },
-};
+}
 
-export default meta;
-type Story = StoryObj<InputComponent>;
+export default meta
+type Story = StoryObj<InputComponent>
 
 export const Default: Story = {
   args: {
@@ -33,7 +33,7 @@ export const Default: Story = {
     placeholder: 'Type something...',
     value: '',
   },
-};
+}
 
 export const WithValue: Story = {
   args: {
@@ -42,4 +42,4 @@ export const WithValue: Story = {
     placeholder: 'Type something...',
     value: 'Initial Value',
   },
-};
+}

@@ -1,38 +1,44 @@
-import { CommonModule } from '@angular/common';
-import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { CommonModule } from '@angular/common'
+import { Component, Input, Output, EventEmitter } from '@angular/core'
+import { ExIconComponent } from '../icon/ex-icon.component'
 
 @Component({
   selector: 'ex-button',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, ExIconComponent],
   template: ` <button
     type="button"
     (click)="onClick.emit($event)"
     [ngClass]="classes"
     [ngStyle]="{ 'background-color': backgroundColor }"
-  >
-    {{ label }}
+    [disabled]="disabled"
+  > 
+    <i  [ngStyle]="{ 'color': iconColor }">
+      <ex-icon *ngIf="icon !== ''" [iconId]="icon"/>
+    </i>
+    <span class="ex-button-content-text">
+      {{ label }}
+    </span>
   </button>`,
   styleUrls: ['./ex-button.css'],
 })
 export class ExButtonComponent {
-  /**
-   * Is this the principal call to action on the page?
-   */
-  @Input()
-  primary = false;
 
-  /**
-   * What background color to use
-   */
   @Input()
-  backgroundColor?: string;
+  primary = false
 
-  /**
-   * How large should the button be?
-   */
+
   @Input()
-  size: 'small' | 'medium' | 'large' = 'medium';
+  icon: string = ''
+
+  @Input()
+  backgroundColor?: string
+
+  @Input()
+  iconColor?: string
+
+  @Input()
+  size: 'small' | 'medium' | 'large' = 'medium'
 
   /**
    * Button contents
@@ -40,17 +46,17 @@ export class ExButtonComponent {
    * @required
    */
   @Input()
-  label = 'Button';
+  label = 'Button'
 
-  /**
-   * Optional click handler
-   */
+  @Input()
+  disabled = false
+
   @Output()
-  onClick = new EventEmitter<Event>();
+  onClick = new EventEmitter<Event>()
 
   public get classes(): string[] {
-    const mode = this.primary ? 'storybook-button--primary' : 'storybook-button--secondary';
-
-    return ['storybook-button', `storybook-button--${this.size}`, mode];
+    const mode = this.primary ? 'ex-button--primary' : 'ex-button--secondary'
+    const disabledClass = this.disabled ? 'ex-button--disabled' : ''
+    return ['ex-button', `ex-button--${this.size}`, mode, disabledClass]
   }
 }

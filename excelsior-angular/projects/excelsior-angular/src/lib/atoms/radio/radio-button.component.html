@@ -1,15 +1,14 @@
 <div class="radio-container">
-    <label>{{ label }}</label>
-    <div *ngFor="let option of options">
-      <input
-        type="radio"
-        [id]="option.value"
-        [name]="name"
-        [value]="option.value"
-        [checked]="option.value === selectedValue"
-        (change)="onSelectionChange(option.value)"
-      />
-      <label [for]="option.value">{{ option.label }}</label>
-    </div>
+  <label>{{ label }}</label>
+  <div *ngFor="let option of options">
+    <input
+      type="radio"
+      [id]="option.value"
+      [name]="name"
+      [value]="option.value"
+      [checked]="option.value === selectedValue"
+      (change)="onSelectionChange(option.value)"
+    />
+    <label [for]="option.value">{{ option.label }}</label>
   </div>
-  
+</div>

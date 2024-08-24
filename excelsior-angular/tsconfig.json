@@ -5,9 +5,7 @@
     "outDir": "./dist/out-tsc",
     "strict": true,
     "paths": {
-      "excelsior-angular": [
-        "./dist/excelsior-angular"
-      ]
+      "excelsior-angular": ["./dist/excelsior-angular"]
     },
     "noImplicitOverride": true,
     "noPropertyAccessFromIndexSignature": true,
@@ -23,10 +21,7 @@
     "target": "ES2022",
     "module": "ES2022",
     "useDefineForClassFields": false,
-    "lib": [
-      "ES2022",
-      "dom"
-    ]
+    "lib": ["ES2022", "dom"]
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,

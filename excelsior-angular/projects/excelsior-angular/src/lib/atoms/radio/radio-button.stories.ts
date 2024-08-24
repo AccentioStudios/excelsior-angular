@@ -1,6 +1,6 @@
-import { Meta, StoryObj } from '@storybook/angular';
-import { RadioButtonComponent } from './radio-button.component';
-import { fn } from '@storybook/test';
+import { Meta, StoryObj } from '@storybook/angular'
+import { RadioButtonComponent } from './radio-button.component'
+import { fn } from '@storybook/test'
 
 const meta: Meta<RadioButtonComponent> = {
   title: 'Components/Radio Button',
@@ -21,10 +21,10 @@ const meta: Meta<RadioButtonComponent> = {
     ],
     selectionChange: fn(),
   },
-};
+}
 
-export default meta;
-type Story = StoryObj<RadioButtonComponent>;
+export default meta
+type Story = StoryObj<RadioButtonComponent>
 
 export const Default: Story = {
   args: {
@@ -32,7 +32,7 @@ export const Default: Story = {
     label: 'Choose an Option',
     selectedValue: '',
   },
-};
+}
 
 export const WithSelectedValue: Story = {
   args: {
@@ -40,4 +40,4 @@ export const WithSelectedValue: Story = {
     label: 'Choose an Option',
     selectedValue: 'option2',
   },
-};
+}

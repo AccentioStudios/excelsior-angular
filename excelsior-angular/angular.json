@@ -28,10 +28,7 @@
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
             "tsConfig": "projects/excelsior-angular/tsconfig.spec.json",
-            "polyfills": [
-              "zone.js",
-              "zone.js/testing"
-            ]
+            "polyfills": ["zone.js", "zone.js/testing"]
           }
         },
         "storybook": {
@@ -40,12 +37,7 @@
             "configDir": "projects/excelsior-angular/.storybook",
             "browserTarget": "excelsior-angular:build",
             "compodoc": true,
-            "compodocArgs": [
-              "-e",
-              "json",
-              "-d",
-              "projects/excelsior-angular"
-            ],
+            "compodocArgs": ["-e", "json", "-d", "projects/excelsior-angular"],
             "port": 6006
           }
         },
@@ -55,12 +47,7 @@
             "configDir": "projects/excelsior-angular/.storybook",
             "browserTarget": "excelsior-angular:build",
             "compodoc": true,
-            "compodocArgs": [
-              "-e",
-              "json",
-              "-d",
-              "projects/excelsior-angular"
-            ],
+            "compodocArgs": ["-e", "json", "-d", "projects/excelsior-angular"],
             "outputDir": "storybook-static"
           }
         }

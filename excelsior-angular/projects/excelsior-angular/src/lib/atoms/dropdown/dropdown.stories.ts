@@ -1,6 +1,6 @@
-import { Meta, StoryObj } from '@storybook/angular';
-import { SelectDropdownComponent } from './dropdown.component';
-import { fn } from '@storybook/test';
+import { Meta, StoryObj } from '@storybook/angular'
+import { SelectDropdownComponent } from './dropdown.component'
+import { fn } from '@storybook/test'
 
 const meta: Meta<SelectDropdownComponent> = {
   title: 'Components/Dropdown',
@@ -21,10 +21,10 @@ const meta: Meta<SelectDropdownComponent> = {
     ],
     selectionChange: fn(),
   },
-};
+}
 
-export default meta;
-type Story = StoryObj<SelectDropdownComponent>;
+export default meta
+type Story = StoryObj<SelectDropdownComponent>
 
 export const Default: Story = {
   args: {
@@ -32,7 +32,7 @@ export const Default: Story = {
     label: 'Select an Option',
     selectedValue: '',
   },
-};
+}
 
 export const WithSelectedValue: Story = {
   args: {
@@ -40,4 +40,4 @@ export const WithSelectedValue: Story = {
     label: 'Select an Option',
     selectedValue: 'option2',
   },
-};
+}

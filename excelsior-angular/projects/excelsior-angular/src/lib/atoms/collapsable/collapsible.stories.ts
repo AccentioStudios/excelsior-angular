@@ -1,5 +1,5 @@
-import { Meta, StoryObj } from '@storybook/angular';
-import { CollapsibleComponent } from './collapsible.component';
+import { Meta, StoryObj } from '@storybook/angular'
+import { CollapsibleComponent } from './collapsible.component'
 
 const meta: Meta<CollapsibleComponent> = {
   title: 'Components/Collapsible',
@@ -8,10 +8,10 @@ const meta: Meta<CollapsibleComponent> = {
   argTypes: {
     title: { control: 'text' },
   },
-};
+}
 
-export default meta;
-type Story = StoryObj<CollapsibleComponent>;
+export default meta
+type Story = StoryObj<CollapsibleComponent>
 
 export const Default: Story = {
   args: {
@@ -19,9 +19,9 @@ export const Default: Story = {
   },
   render: (args) => ({
     props: args,
-    template: `<app-collapsible [title]="title">This is the content inside the collapsible.</app-collapsible>`
+    template: `<app-collapsible [title]="title"><p>This is the content inside the collapsible.</p></app-collapsible>`,
   }),
-};
+}
 
 export const OpenByDefault: Story = {
   args: {
@@ -29,6 +29,6 @@ export const OpenByDefault: Story = {
   },
   render: (args) => ({
     props: { ...args, isCollapsed: false },
-    template: `<app-collapsible [title]="title" [isCollapsed]="false">This is the content inside the collapsible.</app-collapsible>`
+    template: `<app-collapsible [title]="title" [isCollapsed]="false">This is the content inside the collapsible.</app-collapsible>`,
   }),
-};
+}

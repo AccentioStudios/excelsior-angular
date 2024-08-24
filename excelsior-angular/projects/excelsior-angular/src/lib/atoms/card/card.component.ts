@@ -1,18 +1,15 @@
-import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { Component, Input } from '@angular/core'
+import { CommonModule } from '@angular/common'
 
 @Component({
-  selector: 'app-card',
+  selector: 'ex-card',
   templateUrl: './card.component.html',
-  styleUrls: ['./card.component.css']
+  styleUrls: ['./card.component.css'],
+  standalone: true,
+  imports: [CommonModule,],
 })
 export class CardComponent {
-  @Input() title: string = '';
-  @Input() content: string = '';
-  @Input() imageUrl: string = '';
-  @Input() actions: { label: string, value: string }[] = [];
-  @Output() actionClick = new EventEmitter<string>();
+  @Input() title: string = ''
+  @Input() content: string = ''
 
-  onActionClick(action: { label: string, value: string }) {
-    this.actionClick.emit(action.value);
-  }
 }
