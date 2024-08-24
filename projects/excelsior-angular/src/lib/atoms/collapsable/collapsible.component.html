@@ -2,8 +2,8 @@
   <button class="collapsble-header" (click)="toggleCollapse()">
     {{ title }}
     <span>
-      <ex-icon *ngIf="!isCollapsed" [iconId]="'chevron-down'"/>
-      <ex-icon *ngIf="isCollapsed" [iconId]="'chevron-up'"/>
+      <ex-icon *ngIf="isCollapsed" [iconId]="'chevron-down'"/>
+      <ex-icon *ngIf="!isCollapsed" [iconId]="'chevron-up'"/>
     </span>
   </button>
   <div class="collapsble-content" *ngIf="!isCollapsed">
