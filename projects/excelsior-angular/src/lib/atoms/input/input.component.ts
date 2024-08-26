@@ -4,6 +4,7 @@ import { Component, Input, Output, EventEmitter } from '@angular/core'
   selector: 'app-input',
   templateUrl: './input.component.html',
   styleUrls: ['./input.component.css'],
+  standalone: true,
 })
 export class InputComponent {
   @Input() id: string = 'input'

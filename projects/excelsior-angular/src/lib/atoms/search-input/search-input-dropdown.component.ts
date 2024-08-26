@@ -4,6 +4,7 @@ import { Component, Input, Output, EventEmitter } from '@angular/core'
   selector: 'app-search-input-dropdown',
   templateUrl: './search-input-dropdown.component.html',
   styleUrls: ['./search-input-dropdown.component.css'],
+  standalone: true,
 })
 export class SearchInputDropdownComponent {
   @Input() id: string = 'search'
