@@ -16,7 +16,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 18.20.4
           registry-url: 'https://npm.pkg.github.com'
           scope: '@accentiostudios'
 
@@ -26,7 +26,7 @@ jobs:
         run: npm run build
 
       - name: Build Storybook
-        run: npm run storybook:build
+        run: npm run build-storybook
 
       - name: Publish to GitHub Packages
         run: npm publish --access public
