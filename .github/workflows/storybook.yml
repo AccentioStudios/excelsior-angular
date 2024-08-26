@@ -1,6 +1,4 @@
-# Github actions to upload to GH Packages an Angular Library with Storybook and publish it
-
-name: Excelsior-Angular
+name: Storybook Excelsior-Angular
 on:
   # Trigger with manual action
   workflow_dispatch:
@@ -30,11 +28,6 @@ jobs:
 
       - name: Build Storybook
         run: npm run build-storybook
-
-      - name: Publish to GitHub Packages
-        run: npm publish --access public
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_REG }}
 
       - name: Publish Storybook to GitHub Pages
         uses: crazy-max/ghaction-github-pages@v2
