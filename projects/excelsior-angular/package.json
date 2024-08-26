@@ -2,11 +2,11 @@
   "name": "@accentiostudios/excelsior-angular",
   "version": "1.0.5",
   "peerDependencies": {
-    "@angular/common": "^17.3.0",
-    "@angular/core": "^17.3.0"
+    "@angular/common": "^15.2.10",
+    "@angular/core": "^15.2.10"
   },
   "dependencies": {
-    "tslib": "^2.3.0"
+    "tslib": "^2.0.0"
   },
   "sideEffects": false
 }
