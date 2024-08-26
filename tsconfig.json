@@ -2,11 +2,13 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
+    "baseUrl": "./",
     "outDir": "./dist/out-tsc",
     "strict": true,
     "paths": {
-      "excelsior-angular": ["./dist/excelsior-angular"],
+      "excelsior-angular": ["./dist/excelsior-angular"]
     },
+    "allowSyntheticDefaultImports": true,
     "noImplicitOverride": true,
     "noPropertyAccessFromIndexSignature": true,
     "noImplicitReturns": true,
@@ -27,6 +29,6 @@
     "enableI18nLegacyMessageIdFormat": false,
     "strictInjectionParameters": true,
     "strictInputAccessModifiers": true,
-    "strictTemplates": true
+    "strictTemplates": true,
   }
 }

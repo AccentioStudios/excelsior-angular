@@ -5,7 +5,7 @@
   "projects": {
     "excelsior-angular": {
       "projectType": "library",
-      "root": "projects/excelsior-angular",
+      "root": "./projects/excelsior-angular",
       "sourceRoot": "projects/excelsior-angular/src",
       "prefix": "lib",
       "architect": {
@@ -15,6 +15,7 @@
             "project": "projects/excelsior-angular/ng-package.json"
           },
           "configurations": {
+            
             "production": {
               "tsConfig": "projects/excelsior-angular/tsconfig.lib.prod.json"
             },

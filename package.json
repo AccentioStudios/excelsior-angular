@@ -1,30 +1,31 @@
 {
+  "name": "@accentiostudios/excelsior-angular",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build --configuration=production",
-    "watch": "ng build --watch --configuration development",
+    "build": "ng build excelsior-angular --configuration=production",
+    "watch": "ng build excelsior-angular --watch --configuration development",
     "test": "ng test",
     "storybook": "ng run excelsior-angular:storybook",
     "build-storybook": "ng run excelsior-angular:build-storybook"
   },
   "dependencies": {
-    "@angular/animations": "^17.3.0",
-    "@angular/common": "^17.3.0",
-    "@angular/compiler": "^17.3.0",
-    "@angular/core": "^17.3.0",
-    "@angular/forms": "^17.3.0",
-    "@angular/platform-browser": "^17.3.0",
-    "@angular/platform-browser-dynamic": "^17.3.0",
-    "@angular/router": "^17.3.0",
-    "rxjs": "~7.8.0",
-    "tslib": "^2.3.0",
-    "zone.js": "~0.14.3"
+    "@angular/animations": "^15.2.10",
+    "@angular/common": "^15.2.10",
+    "@angular/compiler": "^15.2.10",
+    "@angular/core": "^15.2.10",
+    "@angular/forms": "^15.2.10",
+    "@angular/platform-browser": "^15.2.10",
+    "@angular/platform-browser-dynamic": "^15.2.10",
+    "@angular/router": "^15.2.10",
+    "rxjs": "~6.6.2",
+    "tslib": "^2.0.0",
+    "zone.js": "~0.11.4"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "^17.3.8",
-    "@angular/cli": "^17.3.8",
-    "@angular/compiler-cli": "^17.3.0",
+    "@angular-devkit/build-angular": "^15.2.11",
+    "@angular/cli": "^15.2.11",
+    "@angular/compiler-cli": "^15.2.10",
     "@chromatic-com/storybook": "^1.7.0",
     "@compodoc/compodoc": "^1.1.25",
     "@storybook/addon-docs": "^8.2.9",
@@ -46,9 +47,9 @@
     "karma-coverage": "~2.2.0",
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.1.0",
-    "ng-packagr": "^17.3.0",
+    "ng-packagr": "15.1.2",
     "prettier": "^3.3.3",
     "storybook": "^8.2.9",
-    "typescript": "~5.4.2"
+    "typescript": "~4.8.2"
   }
 }
