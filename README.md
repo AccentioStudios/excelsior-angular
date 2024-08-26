@@ -1,25 +1,27 @@
-# ExcelsiorAngular
+# Excelsior Angular Design System
 
-## Development server
+Excelsior Angular is a design system based on Atomic Design principles. It provides a set of reusable UI components and styles for building Angular applications. This documentation will guide you through the installation process and provide information on how to use Excelsior Angular in your projects.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Installation
 
-## Code scaffolding
+To install Excelsior Angular, follow these steps:
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+1. Open your terminal or command prompt.
+2. Navigate to your Angular project directory.
+3. Run the following command to install Excelsior Angular as a dependency:
 
-## Build
+```bash
+npm install @accentiostudios/excelsior-angular
+```
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+4. Once the installation is complete, you can import and use Excelsior Angular components in your Angular application.
 
-## Running unit tests
+## Usage
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+To use Excelsior Angular components in your Angular application, follow the storybook documentation for each component. [Excelsior Angular Storybook](https://excelsior-angular.accentio.dev).
 
-## Running end-to-end tests
+That's it! You have successfully installed and used Excelsior Angular in your Angular project.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## Features
+- *Atomic Design Principles:*Organized according to Atomic Design, Excelsior makes it easy to find, understand, and use components, from atoms to templates.
+- *Angular 15+ Support:*Fully compatible with Angular 15 and above, leveraging the latest features and optimizations of Angular for dynamic, efficient applications.
