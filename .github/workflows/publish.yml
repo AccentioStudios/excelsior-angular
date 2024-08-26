@@ -31,10 +31,18 @@ jobs:
       - name: Build Storybook
         run: npm run build-storybook
 
+      # Go to the dist folder and publish the library
+      - name: Go to dist folder
+        run: cd dist/excelsior-angular
+
       - name: Publish to GitHub Packages
         run: npm publish --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_REG }}
+
+      # Go to the root folder and publish the storybook
+      - name: Go to root folder
+        run: cd ../../
 
       - name: Publish Storybook to GitHub Pages
         uses: crazy-max/ghaction-github-pages@v2
