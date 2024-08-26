@@ -1,9 +1,9 @@
-@import 'src/lib/assets/css/variables.css';
+@import '../../assets/css/variables.css';
 
 .select-container {
   display: flex;
   flex-direction: column;
-  gap:var(--spacing-sm);
+  gap: var(--spacing-sm);
 }
 
 .select-container label {

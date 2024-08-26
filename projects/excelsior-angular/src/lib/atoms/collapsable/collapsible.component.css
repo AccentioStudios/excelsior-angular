@@ -1,4 +1,4 @@
-@import 'src/lib/assets/css/variables.css';
+@import '../../assets/css/variables.css';
 
 .collapsble-container {
   border: 1px solid var(--border-primary);
@@ -24,10 +24,9 @@
   color: var(--text-secondary-700);
 }
 
-
 .collapsble-content {
   padding: 1rem;
-  transition: all ease-in-out .3s;
+  transition: all ease-in-out 0.3s;
   padding: 16px, 24px, 16px, 24px;
 }
 

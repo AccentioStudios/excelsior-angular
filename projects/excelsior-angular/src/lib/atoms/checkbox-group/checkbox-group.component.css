@@ -1,4 +1,4 @@
-@import 'src/lib/assets/css/variables.css';
+@import '../../assets/css/variables.css';
 
 .checkbox-container {
   display: flex;
@@ -47,20 +47,19 @@
   transform: rotate(45deg);
 }
 
-.checkbox-container h6{
+.checkbox-container h6 {
   margin: 0;
   font-size: 14px;
   font-weight: 500;
   line-height: 20px;
   text-align: left;
-  color:var(--text-secondary-700) ;
+  color: var(--text-secondary-700);
 }
-.checkbox-container p{
+.checkbox-container p {
   margin: 0;
-font-size: 14px;
-font-weight: 400;
-line-height: 20px;
-text-align: left;
-color: var(--on-surface-color-variant);
-
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  text-align: left;
+  color: var(--on-surface-color-variant);
 }

@@ -1,3 +1,5 @@
+@import '../../assets/css/variables.css';
+
 .search-container {
   position: relative;
   display: flex;

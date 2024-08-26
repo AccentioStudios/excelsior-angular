@@ -1,4 +1,4 @@
-@import 'src/lib/assets/css/variables.css';
+@import '../../assets/css/variables.css';
 
 .checkbox-container {
   display: flex;

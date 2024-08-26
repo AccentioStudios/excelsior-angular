@@ -1,3 +1,5 @@
+@import '../../assets/css/variables.css';
+
 .storybook-page {
   font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 14px;

@@ -1,4 +1,4 @@
-@import 'src/lib/assets/css/variables.css';
+@import '../../assets/css/variables.css';
 
 .badge {
   display: inline-block;
@@ -10,7 +10,7 @@
   color: var(--primary-color);
 }
 
-.badge .content-icon{
+.badge .content-icon {
   display: inline-block;
 }
 
@@ -20,7 +20,7 @@
   color: var(--utility-success-700);
 }
 
-.badge.success .content-icon{
+.badge.success .content-icon {
   color: var(--utility-success-500);
 }
 
@@ -30,7 +30,7 @@
   color: var(--utility-pink-700);
 }
 
-.badge.pink .content-icon{
+.badge.pink .content-icon {
   color: var(--utility-pink-500);
 }
 
@@ -40,7 +40,7 @@
   color: var(--utility-warning-700);
 }
 
-.badge.warning .content-icon{
+.badge.warning .content-icon {
   color: var(--utility-warning-500);
 }
 
@@ -50,7 +50,7 @@
   color: var(--utility-purple-700);
 }
 
-.badge.purple .content-icon{
+.badge.purple .content-icon {
   color: var(--utility-purple-500);
 }
 
@@ -60,7 +60,7 @@
   color: var(--utility-indigo-700);
 }
 
-.badge.indigo .content-icon{
+.badge.indigo .content-icon {
   color: var(--utility-indigo-500);
 }
 
@@ -70,7 +70,7 @@
   color: var(--utility-blue-light-700);
 }
 
-.badge.blue-light .content-icon{
+.badge.blue-light .content-icon {
   color: var(--utility-blue-light-500);
 }
 
@@ -80,6 +80,6 @@
   color: var(--utility-error-700);
 }
 
-.badge.error .content-icon{
+.badge.error .content-icon {
   color: var(--utility-error-500);
 }

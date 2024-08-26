@@ -1,4 +1,4 @@
-@import 'src/lib/assets/css/variables.css';
+@import '../../assets/css/variables.css';
 
 .ex-button {
   padding: 10px var(--spacing-xl) 10px var(--spacing-xl);
@@ -6,9 +6,9 @@
   border-radius: var(--radius-md);
   cursor: pointer;
   border: solid 1px transparent;
-  transition: all ease-out .3s;
+  transition: all ease-out 0.3s;
 }
-.ex-button-content-text{
+.ex-button-content-text {
   padding: 0px var(--spacing-xxs) 0px var(--spacing-xxs);
   font-weight: 600;
   font-size: 16px;
@@ -30,8 +30,8 @@
   color: var(--surface-color);
   background-color: var(--button-primary-color_hover);
   border-color: var(--button-primary-border_hover);
-  box-shadow: 0px 0px 0px 4px #9E77ED3D;
-  box-shadow: 0px 0px 0px 4px #5F92E240;
+  box-shadow: 0px 0px 0px 4px #9e77ed3d;
+  box-shadow: 0px 0px 0px 4px #5f92e240;
 }
 
 .ex-button--primary:disabled {
@@ -39,7 +39,7 @@
   color: var(--fg-disabled);
   box-shadow: var(--shadow-xs);
   background-color: var(--bg-disabled);
-  border-color: var(--border-disabled_subtle); 
+  border-color: var(--border-disabled_subtle);
 }
 
 .ex-button--secondary {

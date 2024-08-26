@@ -5,7 +5,7 @@
     "outDir": "./dist/out-tsc",
     "strict": true,
     "paths": {
-      "excelsior-angular": ["./dist/excelsior-angular"]
+      "excelsior-angular": ["./dist/excelsior-angular"],
     },
     "noImplicitOverride": true,
     "noPropertyAccessFromIndexSignature": true,
