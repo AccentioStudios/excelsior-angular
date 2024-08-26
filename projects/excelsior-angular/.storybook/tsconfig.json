@@ -3,7 +3,8 @@
   "compilerOptions": {
     "types": ["node"],
     "allowSyntheticDefaultImports": true,
-    "resolveJsonModule": true
+    "resolveJsonModule": true,
+    "outDir": "../../../dist/out-tsc",
   },
   "exclude": ["../src/test.ts", "../src/**/*.spec.ts"],
   "include": ["../src/**/*.stories.*", "./preview.ts"],
