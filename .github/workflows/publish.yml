@@ -31,7 +31,7 @@ jobs:
       - name: Publish to GitHub Packages
         run: npm publish
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NODE_AUTH_TOKEN: ${{ secrets.GH_PACKAGES }}
 
       - name: Publish Storybook to GitHub Pages
         uses: crazy-max/ghaction-github-pages@v2
@@ -39,4 +39,4 @@ jobs:
           target_branch: gh-pages
           build_dir: storybook-static
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GH_PACKAGES }}
