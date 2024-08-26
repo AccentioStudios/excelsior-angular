@@ -10,7 +10,7 @@ const config: StorybookConfig = {
     '@storybook/addon-interactions',
   ],
   framework: {
-    name: '@storybook/angular',
+    name: '@accentiostudios/excelsior-angular',
     options: {},
   },
 }
