@@ -320,21 +320,21 @@
                 "name": "meta",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/excelsior-angular/src/lib/atoms/checkbox-group/checkbox-group.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Meta<ExCheckboxGroupComponent>",
-                "defaultValue": "{\r\n  title: 'Components/Checkbox Card',\r\n  component: ExCheckboxGroupComponent,\r\n  tags: ['autodocs'],\r\n  argTypes: {\r\n    label: { control: 'text' },\r\n    checked: { control: 'boolean' },\r\n    checkedChange: { action: 'checkedChange' },\r\n  },\r\n  args: { checkedChange: fn() },\r\n}"
-            },
-            {
-                "name": "meta",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
                 "file": "projects/excelsior-angular/src/lib/atoms/collapsable/collapsible.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Meta<CollapsibleComponent>",
                 "defaultValue": "{\r\n  title: 'Components/Collapsible',\r\n  component: CollapsibleComponent,\r\n  tags: ['autodocs'],\r\n  argTypes: {\r\n    title: { control: 'text' },\r\n  },\r\n}"
+            },
+            {
+                "name": "meta",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/excelsior-angular/src/lib/atoms/checkbox-group/checkbox-group.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Meta<ExCheckboxGroupComponent>",
+                "defaultValue": "{\r\n  title: 'Components/Checkbox Card',\r\n  component: ExCheckboxGroupComponent,\r\n  tags: ['autodocs'],\r\n  argTypes: {\r\n    label: { control: 'text' },\r\n    checked: { control: 'boolean' },\r\n    checkedChange: { action: 'checkedChange' },\r\n  },\r\n  args: { checkedChange: fn() },\r\n}"
             },
             {
                 "name": "meta",
@@ -685,8 +685,8 @@
                 "name": "Story",
                 "ctype": "miscellaneous",
                 "subtype": "typealias",
-                "rawtype": "StoryObj<ExCheckboxGroupComponent>",
-                "file": "projects/excelsior-angular/src/lib/atoms/checkbox-group/checkbox-group.stories.ts",
+                "rawtype": "StoryObj<CollapsibleComponent>",
+                "file": "projects/excelsior-angular/src/lib/atoms/collapsable/collapsible.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "description": "",
@@ -696,8 +696,8 @@
                 "name": "Story",
                 "ctype": "miscellaneous",
                 "subtype": "typealias",
-                "rawtype": "StoryObj<CollapsibleComponent>",
-                "file": "projects/excelsior-angular/src/lib/atoms/collapsable/collapsible.stories.ts",
+                "rawtype": "StoryObj<ExCheckboxGroupComponent>",
+                "file": "projects/excelsior-angular/src/lib/atoms/checkbox-group/checkbox-group.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "description": "",
@@ -1491,19 +1491,6 @@
                     "kind": 183
                 }
             ],
-            "projects/excelsior-angular/src/lib/atoms/checkbox-group/checkbox-group.stories.ts": [
-                {
-                    "name": "Story",
-                    "ctype": "miscellaneous",
-                    "subtype": "typealias",
-                    "rawtype": "StoryObj<ExCheckboxGroupComponent>",
-                    "file": "projects/excelsior-angular/src/lib/atoms/checkbox-group/checkbox-group.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "description": "",
-                    "kind": 183
-                }
-            ],
             "projects/excelsior-angular/src/lib/atoms/collapsable/collapsible.stories.ts": [
                 {
                     "name": "Story",
@@ -1511,6 +1498,19 @@
                     "subtype": "typealias",
                     "rawtype": "StoryObj<CollapsibleComponent>",
                     "file": "projects/excelsior-angular/src/lib/atoms/collapsable/collapsible.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 183
+                }
+            ],
+            "projects/excelsior-angular/src/lib/atoms/checkbox-group/checkbox-group.stories.ts": [
+                {
+                    "name": "Story",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "StoryObj<ExCheckboxGroupComponent>",
+                    "file": "projects/excelsior-angular/src/lib/atoms/checkbox-group/checkbox-group.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "description": "",
