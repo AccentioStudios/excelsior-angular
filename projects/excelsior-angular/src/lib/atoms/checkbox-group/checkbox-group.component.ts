@@ -1,13 +1,13 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core'
 import { CommonModule } from '@angular/common'
-import { CardComponent } from '../card/card.component'
+import { ExCardComponent } from '../card/card.component'
 
 @Component({
   selector: 'ex-checkbox-card',
   templateUrl: './checkbox-group.component.html',
   styleUrls: ['./checkbox-group.component.css'],
   standalone: true,
-  imports: [CommonModule,CardComponent  ],
+  imports: [CommonModule, ExCardComponent],
 })
 export class ExCheckboxGroupComponent {
   @Input() label: string = 'Default Checkbox'

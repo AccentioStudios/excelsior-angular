@@ -1,9 +1,9 @@
 import { Meta, StoryObj } from '@storybook/angular'
-import { CardComponent } from './card.component'
+import { ExCardComponent } from './card.component'
 
-const meta: Meta<CardComponent> = {
+const meta: Meta<ExCardComponent> = {
   title: 'Components/Card',
-  component: CardComponent,
+  component: ExCardComponent,
   tags: ['autodocs'],
   argTypes: {
     title: { control: 'text' },
@@ -16,9 +16,8 @@ const meta: Meta<CardComponent> = {
 }
 
 export default meta
-type Story = StoryObj<CardComponent>
+type Story = StoryObj<ExCardComponent>
 
 export const Default: Story = {
   args: {},
 }
-

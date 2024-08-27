@@ -8,7 +8,7 @@ import { CommonModule } from '@angular/common'
   standalone: true,
   imports: [CommonModule],
 })
-export class CardComponent {
+export class ExCardComponent {
   @Input() title: string = ''
   @Input() content: string = ''
 }
