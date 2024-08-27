@@ -1,0 +1,20 @@
+<div class="ex-layout">
+  <ng-content select="[sidenav]"></ng-content>
+  <main class="ex-layout-main">
+    <header class="ex-header-container row">
+      <div clas="ex-container">
+        <h3 class="ex-font-weight-600">
+          <ng-content select="[header]"></ng-content>
+        </h3>
+        <h5><ng-content select="[supportingText]"></ng-content></h5>
+      </div>
+      <div class="ex-header-actionButtons">
+        <ng-content select="[actionButtons]"></ng-content>
+      </div>
+    </header>
+    <ng-content></ng-content>
+  </main>
+  <footer class="ex-layout-footer">
+    <ng-content select="[footer]"></ng-content>
+  </footer>
+</div>
