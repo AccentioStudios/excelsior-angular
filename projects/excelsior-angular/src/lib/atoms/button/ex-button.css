@@ -7,6 +7,10 @@
   cursor: pointer;
   border: solid 1px transparent;
   transition: all ease-out 0.3s;
+  display: flex;
+  justify-content: flex-start;
+  justify-items: center;
+  align-items: center;
 }
 .ex-button-content-text {
   padding: 0px var(--spacing-xxs) 0px var(--spacing-xxs);
