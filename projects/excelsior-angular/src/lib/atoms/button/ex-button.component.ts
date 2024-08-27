@@ -15,7 +15,7 @@ import { ExIconComponent } from '../icon/ex-icon.component'
       [disabled]="disabled"
     >
       <i [ngStyle]="{ color: iconColor }">
-        <ex-icon *ngIf="icon !== ''" [name]="icon" />
+        <ex-icon *ngIf="icon !== ''" [name]="icon" [size]="size" />
       </i>
       <span class="ex-button-content-text">
         {{ label }}
