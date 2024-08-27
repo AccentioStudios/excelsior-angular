@@ -5,6 +5,10 @@ on:
   # Trigger with manual action
   workflow_dispatch:
 
+  push:
+    branches:
+      - main
+
 jobs:
   build:
     name: Build & Publish
