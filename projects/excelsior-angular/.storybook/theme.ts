@@ -7,4 +7,5 @@ export default create({
   brandUrl: 'https://excelsior-angular.accentio.dev',
   brandImage: logoUrl,
   brandTarget: '_self',
+  fontBase: '"Inter", sans-serif',
 })
