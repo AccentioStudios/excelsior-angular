@@ -24,21 +24,21 @@
                 "name": "Checked",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/excelsior-angular/src/lib/atoms/checkbox-group/checkbox-group.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Story",
-                "defaultValue": "{\r\n  args: {\r\n    title: 'Permitir assinar como conferente',\r\n    label: 'O usuário vai poder verificar e conferir diversos elementos na plataforma.',\r\n    checked: true,\r\n  },\r\n}"
-            },
-            {
-                "name": "Checked",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
                 "file": "projects/excelsior-angular/src/lib/atoms/checkbox/checkbox.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
                 "defaultValue": "{\r\n  args: {\r\n    label: 'Checked Checkbox',\r\n    checked: true,\r\n  },\r\n}"
+            },
+            {
+                "name": "Checked",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/excelsior-angular/src/lib/atoms/checkbox-group/checkbox-group.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\r\n  args: {\r\n    title: 'Permitir assinar como conferente',\r\n    label: 'O usuário vai poder verificar e conferir diversos elementos na plataforma.',\r\n    checked: true,\r\n  },\r\n}"
             },
             {
                 "name": "Cube",
@@ -48,7 +48,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\r\n  args: {\r\n    iconId: 'cube-03',\r\n  },\r\n}"
+                "defaultValue": "{\r\n  args: {\r\n    name: 'cube-03',\r\n  },\r\n}"
             },
             {
                 "name": "Default",
@@ -118,7 +118,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\r\n  args: {\r\n    iconId: 'dot',\r\n  },\r\n}"
+                "defaultValue": "{\r\n  args: {\r\n    name: 'dot',\r\n  },\r\n}"
             },
             {
                 "name": "Error",
@@ -138,7 +138,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\r\n  args: {\r\n    iconId: 'help-circle',\r\n  },\r\n}"
+                "defaultValue": "{\r\n  args: {\r\n    name: 'help-circle',\r\n  },\r\n}"
             },
             {
                 "name": "Home",
@@ -148,7 +148,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\r\n  args: {\r\n    iconId: 'icon-home',\r\n  },\r\n}"
+                "defaultValue": "{\r\n  args: {\r\n    name: 'icon-home',\r\n  },\r\n}"
             },
             {
                 "name": "Indigo",
@@ -168,7 +168,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\r\n  args: {\r\n    iconId: 'key-02',\r\n  },\r\n}"
+                "defaultValue": "{\r\n  args: {\r\n    name: 'key-02',\r\n  },\r\n}"
             },
             {
                 "name": "Large",
@@ -188,7 +188,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\r\n  args: {\r\n    iconId: 'line-chart-up-04',\r\n  },\r\n}"
+                "defaultValue": "{\r\n  args: {\r\n    name: 'line-chart-up-04',\r\n  },\r\n}"
             },
             {
                 "name": "Lock",
@@ -198,7 +198,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\r\n  args: {\r\n    iconId: 'lock-04',\r\n  },\r\n}"
+                "defaultValue": "{\r\n  args: {\r\n    name: 'lock-04',\r\n  },\r\n}"
             },
             {
                 "name": "LoggedIn",
@@ -241,6 +241,16 @@
                 "defaultValue": "{}"
             },
             {
+                "name": "Medium",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/excelsior-angular/src/lib/atoms/button/ex-button.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\r\n  args: {\r\n    size: 'medium',\r\n    label: 'Button',\r\n  },\r\n}"
+            },
+            {
                 "name": "meta",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
@@ -258,7 +268,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Meta<ExButtonComponent>",
-                "defaultValue": "{\r\n  title: 'Components/Button',\r\n  component: ExButtonComponent,\r\n  tags: ['autodocs'],\r\n  argTypes: {\r\n    backgroundColor: {\r\n      control: 'color',\r\n    },\r\n    disabled:{\r\n      control: 'boolean'\r\n    },\r\n    icon:{\r\n      control: 'text'\r\n    },\r\n    iconColor: {\r\n      control: 'color',\r\n    },\r\n  },\r\n  // Use `fn` to spy on the onClick arg, which will appear in the actions panel once invoked: https://storybook.js.org/docs/essentials/actions#action-args\r\n  args: { onClick: fn() },\r\n}"
+                "defaultValue": "{\r\n  title: 'Components/Button',\r\n  component: ExButtonComponent,\r\n  tags: ['autodocs'],\r\n  argTypes: {\r\n    backgroundColor: {\r\n      control: 'color',\r\n    },\r\n    disabled: {\r\n      control: 'boolean',\r\n    },\r\n    icon: {\r\n      control: 'text',\r\n    },\r\n    iconColor: {\r\n      control: 'color',\r\n    },\r\n    size: {\r\n      control: { type: 'select' },\r\n      options: ['small', 'medium', 'large'],\r\n    },\r\n  },\r\n  // Use `fn` to spy on the onClick arg, which will appear in the actions panel once invoked: https://storybook.js.org/docs/essentials/actions#action-args\r\n  args: { onClick: fn() },\r\n}"
             },
             {
                 "name": "meta",
@@ -267,8 +277,18 @@
                 "file": "projects/excelsior-angular/src/lib/atoms/card/card.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
-                "type": "Meta<CardComponent>",
-                "defaultValue": "{\r\n  title: 'Components/Card',\r\n  component: CardComponent,\r\n  tags: ['autodocs'],\r\n  argTypes: {\r\n    title: { control: 'text' },\r\n    content: { control: 'text' },\r\n  },\r\n  args: {\r\n    title: 'Card Title',\r\n    content: 'This is the content of the card. It can hold text, images, and buttons.',\r\n  },\r\n}"
+                "type": "Meta<ExCardComponent>",
+                "defaultValue": "{\r\n  title: 'Components/Card',\r\n  component: ExCardComponent,\r\n  tags: ['autodocs'],\r\n  argTypes: {\r\n    title: { control: 'text' },\r\n    content: { control: 'text' },\r\n  },\r\n  args: {\r\n    title: 'Card Title',\r\n    content: 'This is the content of the card. It can hold text, images, and buttons.',\r\n  },\r\n}"
+            },
+            {
+                "name": "meta",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/excelsior-angular/src/lib/atoms/checkbox/checkbox.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Meta<CheckboxComponent>",
+                "defaultValue": "{\r\n  title: 'Components/Checkbox',\r\n  component: CheckboxComponent,\r\n  tags: ['autodocs'],\r\n  argTypes: {\r\n    label: { control: 'text' },\r\n    checked: { control: 'boolean' },\r\n    checkedChange: { action: 'checkedChange' },\r\n  },\r\n  args: { checkedChange: fn() },\r\n}"
             },
             {
                 "name": "meta",
@@ -294,16 +314,6 @@
                 "name": "meta",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/excelsior-angular/src/lib/atoms/checkbox/checkbox.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Meta<CheckboxComponent>",
-                "defaultValue": "{\r\n  title: 'Components/Checkbox',\r\n  component: CheckboxComponent,\r\n  tags: ['autodocs'],\r\n  argTypes: {\r\n    label: { control: 'text' },\r\n    checked: { control: 'boolean' },\r\n    checkedChange: { action: 'checkedChange' },\r\n  },\r\n  args: { checkedChange: fn() },\r\n}"
-            },
-            {
-                "name": "meta",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
                 "file": "projects/excelsior-angular/src/lib/atoms/dropdown/dropdown.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
@@ -318,7 +328,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Meta<ExIconComponent>",
-                "defaultValue": "{\r\n  title: 'Components/Icon',\r\n  component: ExIconComponent,\r\n  tags: ['autodocs'],\r\n  argTypes: {\r\n    iconId: {\r\n      control: { type: 'select' },\r\n      options: ['icon-home', 'icon-user', 'help-circle', 'line-chart-up-04', 'lock-04', 'key-02', 'cube-03','dot'],\r\n    },\r\n    // Customize the fill color if needed\r\n  },\r\n  args: {\r\n    // Default fill color\r\n  },\r\n}"
+                "defaultValue": "{\r\n  title: 'Components/Icon',\r\n  component: ExIconComponent,\r\n  tags: ['autodocs'],\r\n  argTypes: {\r\n    name: {\r\n      control: { type: 'select' },\r\n      options: ['icon-home', 'icon-user', 'help-circle', 'line-chart-up-04', 'lock-04', 'key-02', 'cube-03', 'dot'],\r\n    },\r\n    // Customize the fill color if needed\r\n  },\r\n  args: {\r\n    // Default fill color\r\n  },\r\n}"
             },
             {
                 "name": "meta",
@@ -418,7 +428,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\r\n  args: {\r\n    primary: true,\r\n    label: 'Button',\r\n    icon:'dot'\r\n  },\r\n}"
+                "defaultValue": "{\r\n  args: {\r\n    primary: true,\r\n    label: 'Button',\r\n    icon: 'dot',\r\n  },\r\n}"
             },
             {
                 "name": "Purple",
@@ -468,17 +478,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\r\n  args: {\r\n    primary: false,\r\n    label: 'Button',\r\n  },\r\n}"
-            },
-            {
-                "name": "TestCheckbox",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "projects/excelsior-angular/src/lib/atoms/checkbox-group/checkbox-group.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Story",
-                "defaultValue": "{\r\n  args: {\r\n    label: 'Unchecked Checkbox',\r\n    checked: true,\r\n  },\r\n}"
+                "defaultValue": "{\r\n  args: {\r\n    primary: false,\r\n    label: 'Button',\r\n    size: 'medium',\r\n  },\r\n}"
             },
             {
                 "name": "TestCheckbox",
@@ -491,14 +491,14 @@
                 "defaultValue": "{\r\n  args: {\r\n    label: 'Unchecked Checkbox',\r\n    checked: true,\r\n  },\r\n}"
             },
             {
-                "name": "Unchecked",
+                "name": "TestCheckbox",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
                 "file": "projects/excelsior-angular/src/lib/atoms/checkbox-group/checkbox-group.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\r\n  args: {\r\n    title: 'Permitir assinar como conferente',\r\n    label: 'O usuário vai poder verificar e conferir diversos elementos na plataforma.',\r\n    checked: false,\r\n  },\r\n}"
+                "defaultValue": "{\r\n  args: {\r\n    label: 'Unchecked Checkbox',\r\n    checked: true,\r\n  },\r\n}"
             },
             {
                 "name": "Unchecked",
@@ -511,6 +511,16 @@
                 "defaultValue": "{\r\n  args: {\r\n    label: 'Unchecked Checkbox',\r\n    checked: false,\r\n  },\r\n}"
             },
             {
+                "name": "Unchecked",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/excelsior-angular/src/lib/atoms/checkbox-group/checkbox-group.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\r\n  args: {\r\n    title: 'Permitir assinar como conferente',\r\n    label: 'O usuário vai poder verificar e conferir diversos elementos na plataforma.',\r\n    checked: false,\r\n  },\r\n}"
+            },
+            {
                 "name": "User",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
@@ -518,7 +528,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\r\n  args: {\r\n    iconId: 'icon-user',\r\n  },\r\n}"
+                "defaultValue": "{\r\n  args: {\r\n    name: 'icon-user',\r\n  },\r\n}"
             },
             {
                 "name": "Warning",
@@ -599,8 +609,19 @@
                 "name": "Story",
                 "ctype": "miscellaneous",
                 "subtype": "typealias",
-                "rawtype": "StoryObj<CardComponent>",
+                "rawtype": "StoryObj<ExCardComponent>",
                 "file": "projects/excelsior-angular/src/lib/atoms/card/card.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "kind": 183
+            },
+            {
+                "name": "Story",
+                "ctype": "miscellaneous",
+                "subtype": "typealias",
+                "rawtype": "StoryObj<CheckboxComponent>",
+                "file": "projects/excelsior-angular/src/lib/atoms/checkbox/checkbox.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "description": "",
@@ -623,17 +644,6 @@
                 "subtype": "typealias",
                 "rawtype": "StoryObj<CollapsibleComponent>",
                 "file": "projects/excelsior-angular/src/lib/atoms/collapsable/collapsible.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "description": "",
-                "kind": 183
-            },
-            {
-                "name": "Story",
-                "ctype": "miscellaneous",
-                "subtype": "typealias",
-                "rawtype": "StoryObj<CheckboxComponent>",
-                "file": "projects/excelsior-angular/src/lib/atoms/checkbox/checkbox.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "description": "",
@@ -801,48 +811,6 @@
                     "defaultValue": "{\r\n  args: {\r\n    text: 'Warning Badge',\r\n    type: 'warning',\r\n  },\r\n}"
                 }
             ],
-            "projects/excelsior-angular/src/lib/atoms/checkbox-group/checkbox-group.stories.ts": [
-                {
-                    "name": "Checked",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "projects/excelsior-angular/src/lib/atoms/checkbox-group/checkbox-group.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Story",
-                    "defaultValue": "{\r\n  args: {\r\n    title: 'Permitir assinar como conferente',\r\n    label: 'O usuário vai poder verificar e conferir diversos elementos na plataforma.',\r\n    checked: true,\r\n  },\r\n}"
-                },
-                {
-                    "name": "meta",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "projects/excelsior-angular/src/lib/atoms/checkbox-group/checkbox-group.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Meta<ExCheckboxGroupComponent>",
-                    "defaultValue": "{\r\n  title: 'Components/Checkbox Card',\r\n  component: ExCheckboxGroupComponent,\r\n  tags: ['autodocs'],\r\n  argTypes: {\r\n    label: { control: 'text' },\r\n    checked: { control: 'boolean' },\r\n    checkedChange: { action: 'checkedChange' },\r\n  },\r\n  args: { checkedChange: fn() },\r\n}"
-                },
-                {
-                    "name": "TestCheckbox",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "projects/excelsior-angular/src/lib/atoms/checkbox-group/checkbox-group.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Story",
-                    "defaultValue": "{\r\n  args: {\r\n    label: 'Unchecked Checkbox',\r\n    checked: true,\r\n  },\r\n}"
-                },
-                {
-                    "name": "Unchecked",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "projects/excelsior-angular/src/lib/atoms/checkbox-group/checkbox-group.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Story",
-                    "defaultValue": "{\r\n  args: {\r\n    title: 'Permitir assinar como conferente',\r\n    label: 'O usuário vai poder verificar e conferir diversos elementos na plataforma.',\r\n    checked: false,\r\n  },\r\n}"
-                }
-            ],
             "projects/excelsior-angular/src/lib/atoms/checkbox/checkbox.stories.ts": [
                 {
                     "name": "Checked",
@@ -885,6 +853,48 @@
                     "defaultValue": "{\r\n  args: {\r\n    label: 'Unchecked Checkbox',\r\n    checked: false,\r\n  },\r\n}"
                 }
             ],
+            "projects/excelsior-angular/src/lib/atoms/checkbox-group/checkbox-group.stories.ts": [
+                {
+                    "name": "Checked",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/excelsior-angular/src/lib/atoms/checkbox-group/checkbox-group.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\r\n  args: {\r\n    title: 'Permitir assinar como conferente',\r\n    label: 'O usuário vai poder verificar e conferir diversos elementos na plataforma.',\r\n    checked: true,\r\n  },\r\n}"
+                },
+                {
+                    "name": "meta",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/excelsior-angular/src/lib/atoms/checkbox-group/checkbox-group.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Meta<ExCheckboxGroupComponent>",
+                    "defaultValue": "{\r\n  title: 'Components/Checkbox Card',\r\n  component: ExCheckboxGroupComponent,\r\n  tags: ['autodocs'],\r\n  argTypes: {\r\n    label: { control: 'text' },\r\n    checked: { control: 'boolean' },\r\n    checkedChange: { action: 'checkedChange' },\r\n  },\r\n  args: { checkedChange: fn() },\r\n}"
+                },
+                {
+                    "name": "TestCheckbox",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/excelsior-angular/src/lib/atoms/checkbox-group/checkbox-group.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\r\n  args: {\r\n    label: 'Unchecked Checkbox',\r\n    checked: true,\r\n  },\r\n}"
+                },
+                {
+                    "name": "Unchecked",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/excelsior-angular/src/lib/atoms/checkbox-group/checkbox-group.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\r\n  args: {\r\n    title: 'Permitir assinar como conferente',\r\n    label: 'O usuário vai poder verificar e conferir diversos elementos na plataforma.',\r\n    checked: false,\r\n  },\r\n}"
+                }
+            ],
             "projects/excelsior-angular/src/lib/atoms/icon/ex-icon.component.stories.ts": [
                 {
                     "name": "Cube",
@@ -894,7 +904,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\r\n  args: {\r\n    iconId: 'cube-03',\r\n  },\r\n}"
+                    "defaultValue": "{\r\n  args: {\r\n    name: 'cube-03',\r\n  },\r\n}"
                 },
                 {
                     "name": "Dot",
@@ -904,7 +914,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\r\n  args: {\r\n    iconId: 'dot',\r\n  },\r\n}"
+                    "defaultValue": "{\r\n  args: {\r\n    name: 'dot',\r\n  },\r\n}"
                 },
                 {
                     "name": "HelpCircle",
@@ -914,7 +924,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\r\n  args: {\r\n    iconId: 'help-circle',\r\n  },\r\n}"
+                    "defaultValue": "{\r\n  args: {\r\n    name: 'help-circle',\r\n  },\r\n}"
                 },
                 {
                     "name": "Home",
@@ -924,7 +934,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\r\n  args: {\r\n    iconId: 'icon-home',\r\n  },\r\n}"
+                    "defaultValue": "{\r\n  args: {\r\n    name: 'icon-home',\r\n  },\r\n}"
                 },
                 {
                     "name": "Key",
@@ -934,7 +944,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\r\n  args: {\r\n    iconId: 'key-02',\r\n  },\r\n}"
+                    "defaultValue": "{\r\n  args: {\r\n    name: 'key-02',\r\n  },\r\n}"
                 },
                 {
                     "name": "LineChartUp",
@@ -944,7 +954,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\r\n  args: {\r\n    iconId: 'line-chart-up-04',\r\n  },\r\n}"
+                    "defaultValue": "{\r\n  args: {\r\n    name: 'line-chart-up-04',\r\n  },\r\n}"
                 },
                 {
                     "name": "Lock",
@@ -954,7 +964,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\r\n  args: {\r\n    iconId: 'lock-04',\r\n  },\r\n}"
+                    "defaultValue": "{\r\n  args: {\r\n    name: 'lock-04',\r\n  },\r\n}"
                 },
                 {
                     "name": "meta",
@@ -964,7 +974,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Meta<ExIconComponent>",
-                    "defaultValue": "{\r\n  title: 'Components/Icon',\r\n  component: ExIconComponent,\r\n  tags: ['autodocs'],\r\n  argTypes: {\r\n    iconId: {\r\n      control: { type: 'select' },\r\n      options: ['icon-home', 'icon-user', 'help-circle', 'line-chart-up-04', 'lock-04', 'key-02', 'cube-03','dot'],\r\n    },\r\n    // Customize the fill color if needed\r\n  },\r\n  args: {\r\n    // Default fill color\r\n  },\r\n}"
+                    "defaultValue": "{\r\n  title: 'Components/Icon',\r\n  component: ExIconComponent,\r\n  tags: ['autodocs'],\r\n  argTypes: {\r\n    name: {\r\n      control: { type: 'select' },\r\n      options: ['icon-home', 'icon-user', 'help-circle', 'line-chart-up-04', 'lock-04', 'key-02', 'cube-03', 'dot'],\r\n    },\r\n    // Customize the fill color if needed\r\n  },\r\n  args: {\r\n    // Default fill color\r\n  },\r\n}"
                 },
                 {
                     "name": "User",
@@ -974,7 +984,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\r\n  args: {\r\n    iconId: 'icon-user',\r\n  },\r\n}"
+                    "defaultValue": "{\r\n  args: {\r\n    name: 'icon-user',\r\n  },\r\n}"
                 }
             ],
             "projects/excelsior-angular/src/lib/atoms/card/card.stories.ts": [
@@ -995,8 +1005,8 @@
                     "file": "projects/excelsior-angular/src/lib/atoms/card/card.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "type": "Meta<CardComponent>",
-                    "defaultValue": "{\r\n  title: 'Components/Card',\r\n  component: CardComponent,\r\n  tags: ['autodocs'],\r\n  argTypes: {\r\n    title: { control: 'text' },\r\n    content: { control: 'text' },\r\n  },\r\n  args: {\r\n    title: 'Card Title',\r\n    content: 'This is the content of the card. It can hold text, images, and buttons.',\r\n  },\r\n}"
+                    "type": "Meta<ExCardComponent>",
+                    "defaultValue": "{\r\n  title: 'Components/Card',\r\n  component: ExCardComponent,\r\n  tags: ['autodocs'],\r\n  argTypes: {\r\n    title: { control: 'text' },\r\n    content: { control: 'text' },\r\n  },\r\n  args: {\r\n    title: 'Card Title',\r\n    content: 'This is the content of the card. It can hold text, images, and buttons.',\r\n  },\r\n}"
                 }
             ],
             "projects/excelsior-angular/src/lib/atoms/collapsable/collapsible.stories.ts": [
@@ -1171,6 +1181,16 @@
                     "defaultValue": "{\r\n  args: {\r\n    size: 'large',\r\n    label: 'Button',\r\n  },\r\n}"
                 },
                 {
+                    "name": "Medium",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/excelsior-angular/src/lib/atoms/button/ex-button.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\r\n  args: {\r\n    size: 'medium',\r\n    label: 'Button',\r\n  },\r\n}"
+                },
+                {
                     "name": "meta",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
@@ -1178,7 +1198,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Meta<ExButtonComponent>",
-                    "defaultValue": "{\r\n  title: 'Components/Button',\r\n  component: ExButtonComponent,\r\n  tags: ['autodocs'],\r\n  argTypes: {\r\n    backgroundColor: {\r\n      control: 'color',\r\n    },\r\n    disabled:{\r\n      control: 'boolean'\r\n    },\r\n    icon:{\r\n      control: 'text'\r\n    },\r\n    iconColor: {\r\n      control: 'color',\r\n    },\r\n  },\r\n  // Use `fn` to spy on the onClick arg, which will appear in the actions panel once invoked: https://storybook.js.org/docs/essentials/actions#action-args\r\n  args: { onClick: fn() },\r\n}"
+                    "defaultValue": "{\r\n  title: 'Components/Button',\r\n  component: ExButtonComponent,\r\n  tags: ['autodocs'],\r\n  argTypes: {\r\n    backgroundColor: {\r\n      control: 'color',\r\n    },\r\n    disabled: {\r\n      control: 'boolean',\r\n    },\r\n    icon: {\r\n      control: 'text',\r\n    },\r\n    iconColor: {\r\n      control: 'color',\r\n    },\r\n    size: {\r\n      control: { type: 'select' },\r\n      options: ['small', 'medium', 'large'],\r\n    },\r\n  },\r\n  // Use `fn` to spy on the onClick arg, which will appear in the actions panel once invoked: https://storybook.js.org/docs/essentials/actions#action-args\r\n  args: { onClick: fn() },\r\n}"
                 },
                 {
                     "name": "Primary",
@@ -1198,7 +1218,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\r\n  args: {\r\n    primary: true,\r\n    label: 'Button',\r\n    icon:'dot'\r\n  },\r\n}"
+                    "defaultValue": "{\r\n  args: {\r\n    primary: true,\r\n    label: 'Button',\r\n    icon: 'dot',\r\n  },\r\n}"
                 },
                 {
                     "name": "Secondary",
@@ -1228,7 +1248,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\r\n  args: {\r\n    primary: false,\r\n    label: 'Button',\r\n  },\r\n}"
+                    "defaultValue": "{\r\n  args: {\r\n    primary: false,\r\n    label: 'Button',\r\n    size: 'medium',\r\n  },\r\n}"
                 }
             ],
             "projects/excelsior-angular/src/lib/organisms/header/ex-header.stories.ts": [
@@ -1342,8 +1362,21 @@
                     "name": "Story",
                     "ctype": "miscellaneous",
                     "subtype": "typealias",
-                    "rawtype": "StoryObj<CardComponent>",
+                    "rawtype": "StoryObj<ExCardComponent>",
                     "file": "projects/excelsior-angular/src/lib/atoms/card/card.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 183
+                }
+            ],
+            "projects/excelsior-angular/src/lib/atoms/checkbox/checkbox.stories.ts": [
+                {
+                    "name": "Story",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "StoryObj<CheckboxComponent>",
+                    "file": "projects/excelsior-angular/src/lib/atoms/checkbox/checkbox.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "description": "",
@@ -1370,19 +1403,6 @@
                     "subtype": "typealias",
                     "rawtype": "StoryObj<CollapsibleComponent>",
                     "file": "projects/excelsior-angular/src/lib/atoms/collapsable/collapsible.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "description": "",
-                    "kind": 183
-                }
-            ],
-            "projects/excelsior-angular/src/lib/atoms/checkbox/checkbox.stories.ts": [
-                {
-                    "name": "Story",
-                    "ctype": "miscellaneous",
-                    "subtype": "typealias",
-                    "rawtype": "StoryObj<CheckboxComponent>",
-                    "file": "projects/excelsior-angular/src/lib/atoms/checkbox/checkbox.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "description": "",
@@ -1583,6 +1603,16 @@
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
                 "name": "Large",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/excelsior-angular/src/lib/atoms/button/ex-button.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Medium",
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
                 "status": "low"

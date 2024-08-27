@@ -6,27 +6,27 @@ import { ExIconComponent } from '../icon/ex-icon.component'
   selector: 'ex-button',
   standalone: true,
   imports: [CommonModule, ExIconComponent],
-  template: ` <button
-    type="button"
-    (click)="onClick.emit($event)"
-    [ngClass]="classes"
-    [ngStyle]="{ 'background-color': backgroundColor }"
-    [disabled]="disabled"
-  > 
-    <i  [ngStyle]="{ 'color': iconColor }">
-      <ex-icon *ngIf="icon !== ''" [iconId]="icon"/>
-    </i>
-    <span class="ex-button-content-text">
-      {{ label }}
-    </span>
-  </button>`,
+  template: `
+    <button
+      type="button"
+      (click)="onClick.emit($event)"
+      [ngClass]="classes"
+      [ngStyle]="{ 'background-color': backgroundColor }"
+      [disabled]="disabled"
+    >
+      <i [ngStyle]="{ color: iconColor }">
+        <ex-icon *ngIf="icon !== ''" [name]="icon" />
+      </i>
+      <span class="ex-button-content-text">
+        {{ label }}
+      </span>
+    </button>
+  `,
   styleUrls: ['./ex-button.css'],
 })
 export class ExButtonComponent {
-
   @Input()
   primary = false
-
 
   @Input()
   icon: string = ''
@@ -57,6 +57,7 @@ export class ExButtonComponent {
   public get classes(): string[] {
     const mode = this.primary ? 'ex-button--primary' : 'ex-button--secondary'
     const disabledClass = this.disabled ? 'ex-button--disabled' : ''
-    return ['ex-button', `ex-button--${this.size}`, mode, disabledClass]
+    const size = `ex-button--${this.size}`
+    return ['ex-button', `ex-button--${this.size}`, mode, disabledClass, size]
   }
 }

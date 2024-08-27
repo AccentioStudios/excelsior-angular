@@ -2,3 +2,22 @@ svg {
   max-width: 24px;
   max-height: 24px;
 }
+
+.ex-icon {
+  display: inline-block;
+}
+
+.ex-icon--small {
+  width: 20px;
+  height: 20px;
+}
+
+.ex-icon--medium {
+  width: 24px;
+  height: 24px;
+}
+
+.ex-icon--large {
+  width: 32px;
+  height: 32px;
+}

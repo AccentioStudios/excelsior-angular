@@ -72,6 +72,14 @@
   --spacing-sm: 6px;
   --spacing-xl: 16px;
 
+  --ex-space-none: 0;
+  --ex-space-xs: 4px;
+  --ex-space-sm: 16px;
+  --ex-space-md: 24px;
+  --ex-space-md2: 32px;
+  --ex-space-lg: 48px;
+  --ex-space-xl: 96px;
+
   --button-primary-color_hover: #3e5779;
   --button-primary-border_hover: #6941c6;
 

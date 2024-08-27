@@ -11,14 +11,18 @@ const meta: Meta<ExButtonComponent> = {
     backgroundColor: {
       control: 'color',
     },
-    disabled:{
-      control: 'boolean'
+    disabled: {
+      control: 'boolean',
     },
-    icon:{
-      control: 'text'
+    icon: {
+      control: 'text',
     },
     iconColor: {
       control: 'color',
+    },
+    size: {
+      control: { type: 'select' },
+      options: ['small', 'medium', 'large'],
     },
   },
   // Use `fn` to spy on the onClick arg, which will appear in the actions panel once invoked: https://storybook.js.org/docs/essentials/actions#action-args
@@ -40,7 +44,7 @@ export const PrimaryIcon: Story = {
   args: {
     primary: true,
     label: 'Button',
-    icon:'dot'
+    icon: 'dot',
   },
 }
 
@@ -57,6 +61,13 @@ export const Large: Story = {
   },
 }
 
+export const Medium: Story = {
+  args: {
+    size: 'medium',
+    label: 'Button',
+  },
+}
+
 export const Small: Story = {
   args: {
     size: 'small',
@@ -68,5 +79,6 @@ export const Test: Story = {
   args: {
     primary: false,
     label: 'Button',
+    size: 'medium',
   },
 }

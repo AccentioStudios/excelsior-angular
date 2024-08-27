@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core'
-import { CommonModule } from '@angular/common';
+import { CommonModule } from '@angular/common'
 
 @Component({
   selector: 'ex-icon',
@@ -7,10 +7,14 @@ import { CommonModule } from '@angular/common';
   styleUrls: ['./ex-icon.component.css'],
   standalone: true,
   imports: [CommonModule],
-
 })
 export class ExIconComponent {
-  @Input() iconId: string = ''
+  @Input() name: string = ''
+  @Input() size: 'small' | 'medium' | 'large' = 'medium'
 
   constructor() {}
+
+  public get classes(): string[] {
+    return ['ex-icon', `ex-icon--${this.size}`]
+  }
 }

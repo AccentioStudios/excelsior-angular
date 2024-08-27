@@ -1,5 +1,6 @@
-<ng-container [ngSwitch]="iconId">
+<ng-container [ngSwitch]="name">
   <svg
+    [ngClass]="classes"
     xmlns="http://www.w3.org/2000/svg"
     *ngSwitchCase="'help-circle'"
     width="24"
@@ -72,6 +73,7 @@
   </svg>
 
   <svg
+    [ngClass]="classes"
     xmlns="http://www.w3.org/2000/svg"
     *ngSwitchCase="'cube-03'"
     width="24"
@@ -388,16 +390,41 @@
     />
   </svg>
 
-  <svg width="8" height="9" viewBox="0 0 8 9" fill="none"  *ngSwitchCase="'dot'" xmlns="http://www.w3.org/2000/svg">
-    <circle cx="4" cy="4.5" r="3" fill="currentColor"/>
+  <svg width="8" height="9" viewBox="0 0 8 9" fill="none" *ngSwitchCase="'dot'" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="4" cy="4.5" r="3" fill="currentColor" />
   </svg>
 
-  <svg width="20" height="21" viewBox="0 0 20 21" fill="none" *ngSwitchCase="'chevron-up'" xmlns="http://www.w3.org/2000/svg">
-    <path d="M15 13.4849L10 8.48486L5 13.4849" stroke="#98A2B3" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+  <svg
+    width="20"
+    height="21"
+    viewBox="0 0 20 21"
+    fill="none"
+    *ngSwitchCase="'chevron-up'"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M15 13.4849L10 8.48486L5 13.4849"
+      stroke="#98A2B3"
+      stroke-width="1.66667"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
   </svg>
-    
-  <svg width="20" height="21" viewBox="0 0 20 21" fill="none" *ngSwitchCase="'chevron-down'" xmlns="http://www.w3.org/2000/svg">
-    <path d="M5 8.48486L10 13.4849L15 8.48486" stroke="#98A2B3" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <svg
+    width="20"
+    height="21"
+    viewBox="0 0 20 21"
+    fill="none"
+    *ngSwitchCase="'chevron-down'"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M5 8.48486L10 13.4849L15 8.48486"
+      stroke="#98A2B3"
+      stroke-width="1.66667"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
   </svg>
-    
 </ng-container>

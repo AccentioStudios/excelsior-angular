@@ -6,9 +6,14 @@ const meta: Meta<ExIconComponent> = {
   component: ExIconComponent,
   tags: ['autodocs'],
   argTypes: {
-    iconId: {
+    name: {
       control: { type: 'select' },
-      options: ['icon-home', 'icon-user', 'help-circle', 'line-chart-up-04', 'lock-04', 'key-02', 'cube-03','dot'],
+      options: ['icon-home', 'icon-user', 'help-circle', 'line-chart-up-04', 'lock-04', 'key-02', 'cube-03', 'dot'],
+    },
+
+    size: {
+      control: { type: 'select' },
+      options: ['small', 'medium', 'large'],
     },
     // Customize the fill color if needed
   },
@@ -22,47 +27,68 @@ type Story = StoryObj<ExIconComponent>
 
 export const Home: Story = {
   args: {
-    iconId: 'icon-home',
+    name: 'icon-home',
   },
 }
 
 export const User: Story = {
   args: {
-    iconId: 'icon-user',
+    name: 'icon-user',
   },
 }
 
 export const HelpCircle: Story = {
   args: {
-    iconId: 'help-circle',
+    name: 'help-circle',
   },
 }
 
 export const LineChartUp: Story = {
   args: {
-    iconId: 'line-chart-up-04',
+    name: 'line-chart-up-04',
   },
 }
 
 export const Lock: Story = {
   args: {
-    iconId: 'lock-04',
+    name: 'lock-04',
   },
 }
 
 export const Key: Story = {
   args: {
-    iconId: 'key-02',
+    name: 'key-02',
   },
 }
 
 export const Cube: Story = {
   args: {
-    iconId: 'cube-03',
+    name: 'cube-03',
   },
 }
 export const Dot: Story = {
   args: {
-    iconId: 'dot',
+    name: 'dot',
+  },
+}
+
+export const Small: Story = {
+  args: {
+    name: 'cube-03',
+    size: 'small',
+  },
+}
+
+export const Medium: Story = {
+  args: {
+    name: 'cube-03',
+    size: 'medium',
+  },
+}
+
+export const Large: Story = {
+  args: {
+    name: 'cube-03',
+    size: 'large',
   },
 }
