@@ -5,6 +5,7 @@ svg {
 
 .ex-icon {
   display: inline-block;
+  vertical-align: bottom;
 }
 
 .ex-icon--small {
