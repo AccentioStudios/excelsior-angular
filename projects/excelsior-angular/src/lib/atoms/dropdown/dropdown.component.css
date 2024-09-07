@@ -17,11 +17,17 @@
 .select-container select {
   padding: 0.5rem;
   border: 1px solid #ccc;
-  border-radius: 4px;
+  border-radius: var(--radius-md);
   font-size: 1rem;
+  cursor: pointer;
 }
 
+.select-container select option:not(:first-child) {
+  border-radius: var(--radius-md);
+  background-color: blue;
+}
 .select-container select:focus {
-  border-color: #007bff;
+  border-color: var(--secondary-color);
+  border-color: red;
   outline: none;
 }

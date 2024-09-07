@@ -29,6 +29,7 @@
     "@angular/compiler-cli": "^15.2.10",
     "@chromatic-com/storybook": "^1.7.0",
     "@compodoc/compodoc": "^1.1.25",
+    "@eslint/js": "^9.10.0",
     "@storybook/addon-docs": "^8.2.9",
     "@storybook/addon-essentials": "^8.2.9",
     "@storybook/addon-interactions": "^8.2.9",
@@ -42,8 +43,9 @@
     "@types/jasmine": "~5.1.0",
     "@typescript-eslint/eslint-plugin": "^8.2.0",
     "@typescript-eslint/parser": "^8.2.0",
-    "eslint": "^9.9.1",
+    "eslint": "^9.10.0",
     "eslint-config-prettier": "^9.1.0",
+    "globals": "^15.9.0",
     "jasmine-core": "~5.1.0",
     "karma": "~6.4.0",
     "karma-chrome-launcher": "~3.2.0",
@@ -53,7 +55,8 @@
     "ng-packagr": "15.1.2",
     "prettier": "^3.3.3",
     "storybook": "^8.2.9",
-    "typescript": "~4.8.2"
+    "typescript": "~4.8.2",
+    "typescript-eslint": "^8.4.0"
   },
   "version": "0.0.1"
 }

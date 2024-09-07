@@ -9,6 +9,7 @@ import { ExCheckboxGroupComponent } from './atoms/checkbox-group/checkbox-group.
 import { CollapsibleComponent as ExCollapsibleComponent } from './atoms/collapsable/collapsible.component'
 import { SelectDropdownComponent as ExSelectDropdownComponent } from './atoms/dropdown/dropdown.component'
 import { InputComponent as ExInputComponent } from './atoms/input/input.component'
+import { DropdownComponent as DropdownComponent } from './atoms/dropdown-custom/dropdown.component'
 import { RadioButtonComponent as ExRadioButtonComponent } from './atoms/radio/radio-button.component'
 import { SearchInputDropdownComponent as ExSearchInputDropdownComponent } from './atoms/search-input/search-input-dropdown.component'
 
@@ -24,6 +25,7 @@ import { SearchInputDropdownComponent as ExSearchInputDropdownComponent } from '
     ExSelectDropdownComponent,
     ExIconComponent,
     ExInputComponent,
+    DropdownComponent,
     ExRadioButtonComponent,
     ExSearchInputDropdownComponent,
   ],
@@ -37,6 +39,7 @@ import { SearchInputDropdownComponent as ExSearchInputDropdownComponent } from '
     ExSelectDropdownComponent,
     ExIconComponent,
     ExInputComponent,
+    DropdownComponent,
     ExRadioButtonComponent,
     ExSearchInputDropdownComponent,
   ], // Exporta os componentes para que possam ser usados fora da biblioteca

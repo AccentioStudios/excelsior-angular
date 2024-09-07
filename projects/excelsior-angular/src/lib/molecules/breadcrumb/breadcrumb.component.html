@@ -1,0 +1,13 @@
+<nav aria-label="breadcrumb">
+    <ul class="breadcrumb">
+      <li *ngFor="let item of items; let last = last" class="breadcrumb-item" [class.active]="last">
+        <ng-container *ngIf="!last">
+          <a href="#" (click)="onNavigate(item)">{{ item.label }}</a>
+        </ng-container>
+        <ng-container *ngIf="last">
+          {{ item.label }}
+        </ng-container>
+      </li>
+    </ul>
+  </nav>
+  

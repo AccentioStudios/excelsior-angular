@@ -1,0 +1,21 @@
+<div class="table-container">
+    <table>
+      <thead>
+        <tr>
+          <th *ngFor="let column of columns">{{ column.header }}</th>
+          <th *ngIf="actions.length">Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let row of data">
+          <td *ngFor="let column of columns">{{ row[column.field] }}</td>
+          <td *ngIf="actions.length">
+            <button *ngFor="let action of actions" (click)="onActionClick(action.value, row)">
+              {{ action.label }}
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  

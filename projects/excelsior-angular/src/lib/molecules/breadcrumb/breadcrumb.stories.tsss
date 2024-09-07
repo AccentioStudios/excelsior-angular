@@ -1,0 +1,44 @@
+import { Meta, StoryObj } from '@storybook/angular';
+import { BreadcrumbComponent } from '../app/breadcrumb/breadcrumb.component';
+import { fn } from '@storybook/testing-library';
+
+const meta: Meta<BreadcrumbComponent> = {
+  title: 'Components/Breadcrumb',
+  component: BreadcrumbComponent,
+  tags: ['autodocs'],
+  argTypes: {
+    items: { control: 'object' },
+    navigate: { action: 'navigate' },
+  },
+  args: {
+    items: [
+      { label: 'Home', path: '/' },
+      { label: 'Products', path: '/products' },
+      { label: 'Electronics', path: '/products/electronics' },
+      { label: 'Smartphones', path: '/products/electronics/smartphones' },
+    ],
+    navigate: fn(),
+  },
+};
+
+export default meta;
+type Story = StoryObj<BreadcrumbComponent>;
+
+export const Default: Story = {
+  args: {},
+};
+
+export const SingleItem: Story = {
+  args: {
+    items: [{ label: 'Home', path: '/' }],
+  },
+};
+
+export const CustomPath: Story = {
+  args: {
+    items: [
+      { label: 'Dashboard', path: '/dashboard' },
+      { label: 'Settings', path: '/dashboard/settings' },
+    ],
+  },
+};

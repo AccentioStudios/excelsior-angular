@@ -1,7 +1,5 @@
 import { Meta, StoryObj } from '@storybook/angular'
 import { ExBadgeComponent } from './badge.component'
-
-
 import { fn } from '@storybook/test'
 
 const meta: Meta<ExBadgeComponent> = {

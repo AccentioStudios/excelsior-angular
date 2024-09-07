@@ -51,6 +51,16 @@
                 "defaultValue": "{\r\n  args: {\r\n    name: 'cube-03',\r\n  },\r\n}"
             },
             {
+                "name": "CustomColumns",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/excelsior-angular/src/lib/organisms/table/table.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\r\n  args: {\r\n    columns: [\r\n      { field: 'product', header: 'Product' },\r\n      { field: 'price', header: 'Price' },\r\n      { field: 'quantity', header: 'Quantity' },\r\n    ],\r\n    data: [\r\n      { product: 'Laptop', price: '$1000', quantity: 2 },\r\n      { product: 'Phone', price: '$500', quantity: 5 },\r\n      { product: 'Tablet', price: '$300', quantity: 10 },\r\n    ],\r\n  },\r\n}"
+            },
+            {
                 "name": "Default",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
@@ -84,6 +94,16 @@
                 "name": "Default",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
+                "file": "projects/excelsior-angular/src/lib/atoms/dropdown-custom/dropdown.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\r\n  args: {\r\n    selectedOption: '',\r\n  },\r\n}"
+            },
+            {
+                "name": "Default",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
                 "file": "projects/excelsior-angular/src/lib/atoms/input/input.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
@@ -109,6 +129,16 @@
                 "deprecationMessage": "",
                 "type": "Story",
                 "defaultValue": "{\r\n  args: {\r\n    id: 'defaultSearch',\r\n    label: 'Search',\r\n    placeholder: 'Type to search...',\r\n  },\r\n}"
+            },
+            {
+                "name": "Default",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/excelsior-angular/src/lib/organisms/table/table.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\r\n  args: {},\r\n}"
             },
             {
                 "name": "Dot",
@@ -300,21 +330,21 @@
                 "name": "meta",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/excelsior-angular/src/lib/atoms/checkbox/checkbox.stories.ts",
+                "file": "projects/excelsior-angular/src/lib/atoms/card/card.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
-                "type": "Meta<CheckboxComponent>",
-                "defaultValue": "{\r\n  title: 'Components/Checkbox',\r\n  component: CheckboxComponent,\r\n  tags: ['autodocs'],\r\n  argTypes: {\r\n    label: { control: 'text' },\r\n    checked: { control: 'boolean' },\r\n    checkedChange: { action: 'checkedChange' },\r\n  },\r\n  args: { checkedChange: fn() },\r\n}"
+                "type": "Meta<ExCardComponent>",
+                "defaultValue": "{\r\n  title: 'Components/Card',\r\n  component: ExCardComponent,\r\n  tags: ['autodocs'],\r\n}"
             },
             {
                 "name": "meta",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/excelsior-angular/src/lib/atoms/card/card.stories.ts",
+                "file": "projects/excelsior-angular/src/lib/atoms/checkbox/checkbox.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
-                "type": "Meta<ExCardComponent>",
-                "defaultValue": "{\r\n  title: 'Components/Card',\r\n  component: ExCardComponent,\r\n  tags: ['autodocs'],\r\n  argTypes: {\r\n    title: { control: 'text' },\r\n    content: { control: 'text' },\r\n  },\r\n  args: {\r\n    title: 'Card Title',\r\n    content: 'This is the content of the card. It can hold text, images, and buttons.',\r\n  },\r\n}"
+                "type": "Meta<CheckboxComponent>",
+                "defaultValue": "{\r\n  title: 'Components/Checkbox',\r\n  component: CheckboxComponent,\r\n  tags: ['autodocs'],\r\n  argTypes: {\r\n    label: { control: 'text' },\r\n    checked: { control: 'boolean' },\r\n    checkedChange: { action: 'checkedChange' },\r\n  },\r\n  args: { checkedChange: fn() },\r\n}"
             },
             {
                 "name": "meta",
@@ -344,7 +374,17 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Meta<SelectDropdownComponent>",
-                "defaultValue": "{\r\n  title: 'Components/Dropdown',\r\n  component: SelectDropdownComponent,\r\n  tags: ['autodocs'],\r\n  argTypes: {\r\n    id: { control: 'text' },\r\n    label: { control: 'text' },\r\n    options: { control: 'object' },\r\n    selectedValue: { control: 'text' },\r\n    selectionChange: { action: 'selectionChange' },\r\n  },\r\n  args: {\r\n    options: [\r\n      { value: 'option1', label: 'Option 1' },\r\n      { value: 'option2', label: 'Option 2' },\r\n      { value: 'option3', label: 'Option 3' },\r\n    ],\r\n    selectionChange: fn(),\r\n  },\r\n}"
+                "defaultValue": "{\r\n  title: 'Components/Dropdown-old',\r\n  component: SelectDropdownComponent,\r\n  tags: ['autodocs'],\r\n  argTypes: {\r\n    id: { control: 'text' },\r\n    label: { control: 'text' },\r\n    options: { control: 'object' },\r\n    selectedValue: { control: 'text' },\r\n    selectionChange: { action: 'selectionChange' },\r\n  },\r\n  args: {\r\n    options: [\r\n      { value: 'option1', label: 'Option 1' },\r\n      { value: 'option2', label: 'Option 2' },\r\n      { value: 'option3', label: 'Option 3' },\r\n    ],\r\n    selectionChange: fn(),\r\n  },\r\n}"
+            },
+            {
+                "name": "meta",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/excelsior-angular/src/lib/atoms/dropdown-custom/dropdown.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Meta<DropdownComponent>",
+                "defaultValue": "{\r\n  title: 'Components/CustomSelect',\r\n  component: DropdownComponent,\r\n  tags: ['autodocs'],\r\n  argTypes: {\r\n    options: { control: 'object' },\r\n    placeholder: { control: 'text' },\r\n    selectedOption: { control: 'text' },\r\n    selectOption: { action: 'selectOption' }, \r\n  },\r\n  args: {\r\n    options: ['Option 1', 'Option 2', 'Option 3',  'Option 4',  'Option 6', 'Option 7', 'Option 8'],\r\n    placeholder: 'Select an option',\r\n  },\r\n}"
             },
             {
                 "name": "meta",
@@ -407,10 +447,30 @@
                 "defaultValue": "{\r\n  title: 'Layouts/Page',\r\n  component: PageComponent,\r\n  parameters: {\r\n    // More on how to position stories at: https://storybook.js.org/docs/configure/story-layout\r\n    layout: 'fullscreen',\r\n  },\r\n}"
             },
             {
+                "name": "meta",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/excelsior-angular/src/lib/organisms/table/table.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Meta<TableComponent>",
+                "defaultValue": "{\r\n  title: 'Components/Table',\r\n  component: TableComponent,\r\n  tags: ['autodocs'],\r\n  argTypes: {\r\n    columns: { control: 'object' },\r\n    data: { control: 'object' },\r\n    actions: { control: 'object' },\r\n    actionClick: { action: 'actionClick' },\r\n  },\r\n  args: {\r\n    columns: [\r\n      { field: 'name', header: 'Name' },\r\n      { field: 'age', header: 'Age' },\r\n      { field: 'email', header: 'Email' },\r\n    ],\r\n    data: [\r\n      { name: 'John Doe', age: 30, email: 'john@example.com' },\r\n      { name: 'Jane Smith', age: 25, email: 'jane@example.com' },\r\n      { name: 'Bob Johnson', age: 40, email: 'bob@example.com' },\r\n    ],\r\n    actions: [\r\n      { label: 'Edit', value: 'edit' },\r\n      { label: 'Delete', value: 'delete' },\r\n    ],\r\n    actionClick: fn(),\r\n  },\r\n}"
+            },
+            {
                 "name": "minor",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
                 "file": "projects/excelsior-angular/.storybook/preview.ts"
+            },
+            {
+                "name": "NoActions",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/excelsior-angular/src/lib/organisms/table/table.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\r\n  args: {\r\n    actions: [],\r\n  },\r\n}"
             },
             {
                 "name": "OpenByDefault",
@@ -618,6 +678,16 @@
                 "name": "WithSelectedValue",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
+                "file": "projects/excelsior-angular/src/lib/atoms/dropdown-custom/dropdown.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\r\n  args: {\r\n    selectedOption: 'Option 2',\r\n  },\r\n}"
+            },
+            {
+                "name": "WithSelectedValue",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
                 "file": "projects/excelsior-angular/src/lib/atoms/radio/radio-button.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
@@ -663,8 +733,8 @@
                 "name": "Story",
                 "ctype": "miscellaneous",
                 "subtype": "typealias",
-                "rawtype": "StoryObj<CheckboxComponent>",
-                "file": "projects/excelsior-angular/src/lib/atoms/checkbox/checkbox.stories.ts",
+                "rawtype": "StoryObj<ExCardComponent>",
+                "file": "projects/excelsior-angular/src/lib/atoms/card/card.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "description": "",
@@ -674,8 +744,8 @@
                 "name": "Story",
                 "ctype": "miscellaneous",
                 "subtype": "typealias",
-                "rawtype": "StoryObj<ExCardComponent>",
-                "file": "projects/excelsior-angular/src/lib/atoms/card/card.stories.ts",
+                "rawtype": "StoryObj<CheckboxComponent>",
+                "file": "projects/excelsior-angular/src/lib/atoms/checkbox/checkbox.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "description": "",
@@ -709,6 +779,17 @@
                 "subtype": "typealias",
                 "rawtype": "StoryObj<SelectDropdownComponent>",
                 "file": "projects/excelsior-angular/src/lib/atoms/dropdown/dropdown.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "kind": 183
+            },
+            {
+                "name": "Story",
+                "ctype": "miscellaneous",
+                "subtype": "typealias",
+                "rawtype": "StoryObj<DropdownComponent>",
+                "file": "projects/excelsior-angular/src/lib/atoms/dropdown-custom/dropdown.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "description": "",
@@ -775,6 +856,17 @@
                 "subtype": "typealias",
                 "rawtype": "StoryObj<PageComponent>",
                 "file": "projects/excelsior-angular/src/lib/organisms/page/page.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "kind": 183
+            },
+            {
+                "name": "Story",
+                "ctype": "miscellaneous",
+                "subtype": "typealias",
+                "rawtype": "StoryObj<TableComponent>",
+                "file": "projects/excelsior-angular/src/lib/organisms/table/table.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "description": "",
@@ -1071,6 +1163,48 @@
                     "defaultValue": "{\r\n  args: {\r\n    name: 'icon-user',\r\n  },\r\n}"
                 }
             ],
+            "projects/excelsior-angular/src/lib/organisms/table/table.stories.ts": [
+                {
+                    "name": "CustomColumns",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/excelsior-angular/src/lib/organisms/table/table.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\r\n  args: {\r\n    columns: [\r\n      { field: 'product', header: 'Product' },\r\n      { field: 'price', header: 'Price' },\r\n      { field: 'quantity', header: 'Quantity' },\r\n    ],\r\n    data: [\r\n      { product: 'Laptop', price: '$1000', quantity: 2 },\r\n      { product: 'Phone', price: '$500', quantity: 5 },\r\n      { product: 'Tablet', price: '$300', quantity: 10 },\r\n    ],\r\n  },\r\n}"
+                },
+                {
+                    "name": "Default",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/excelsior-angular/src/lib/organisms/table/table.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\r\n  args: {},\r\n}"
+                },
+                {
+                    "name": "meta",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/excelsior-angular/src/lib/organisms/table/table.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Meta<TableComponent>",
+                    "defaultValue": "{\r\n  title: 'Components/Table',\r\n  component: TableComponent,\r\n  tags: ['autodocs'],\r\n  argTypes: {\r\n    columns: { control: 'object' },\r\n    data: { control: 'object' },\r\n    actions: { control: 'object' },\r\n    actionClick: { action: 'actionClick' },\r\n  },\r\n  args: {\r\n    columns: [\r\n      { field: 'name', header: 'Name' },\r\n      { field: 'age', header: 'Age' },\r\n      { field: 'email', header: 'Email' },\r\n    ],\r\n    data: [\r\n      { name: 'John Doe', age: 30, email: 'john@example.com' },\r\n      { name: 'Jane Smith', age: 25, email: 'jane@example.com' },\r\n      { name: 'Bob Johnson', age: 40, email: 'bob@example.com' },\r\n    ],\r\n    actions: [\r\n      { label: 'Edit', value: 'edit' },\r\n      { label: 'Delete', value: 'delete' },\r\n    ],\r\n    actionClick: fn(),\r\n  },\r\n}"
+                },
+                {
+                    "name": "NoActions",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/excelsior-angular/src/lib/organisms/table/table.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\r\n  args: {\r\n    actions: [],\r\n  },\r\n}"
+                }
+            ],
             "projects/excelsior-angular/src/lib/atoms/card/card.stories.ts": [
                 {
                     "name": "Default",
@@ -1090,7 +1224,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Meta<ExCardComponent>",
-                    "defaultValue": "{\r\n  title: 'Components/Card',\r\n  component: ExCardComponent,\r\n  tags: ['autodocs'],\r\n  argTypes: {\r\n    title: { control: 'text' },\r\n    content: { control: 'text' },\r\n  },\r\n  args: {\r\n    title: 'Card Title',\r\n    content: 'This is the content of the card. It can hold text, images, and buttons.',\r\n  },\r\n}"
+                    "defaultValue": "{\r\n  title: 'Components/Card',\r\n  component: ExCardComponent,\r\n  tags: ['autodocs'],\r\n}"
                 }
             ],
             "projects/excelsior-angular/src/lib/atoms/collapsable/collapsible.stories.ts": [
@@ -1144,7 +1278,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Meta<SelectDropdownComponent>",
-                    "defaultValue": "{\r\n  title: 'Components/Dropdown',\r\n  component: SelectDropdownComponent,\r\n  tags: ['autodocs'],\r\n  argTypes: {\r\n    id: { control: 'text' },\r\n    label: { control: 'text' },\r\n    options: { control: 'object' },\r\n    selectedValue: { control: 'text' },\r\n    selectionChange: { action: 'selectionChange' },\r\n  },\r\n  args: {\r\n    options: [\r\n      { value: 'option1', label: 'Option 1' },\r\n      { value: 'option2', label: 'Option 2' },\r\n      { value: 'option3', label: 'Option 3' },\r\n    ],\r\n    selectionChange: fn(),\r\n  },\r\n}"
+                    "defaultValue": "{\r\n  title: 'Components/Dropdown-old',\r\n  component: SelectDropdownComponent,\r\n  tags: ['autodocs'],\r\n  argTypes: {\r\n    id: { control: 'text' },\r\n    label: { control: 'text' },\r\n    options: { control: 'object' },\r\n    selectedValue: { control: 'text' },\r\n    selectionChange: { action: 'selectionChange' },\r\n  },\r\n  args: {\r\n    options: [\r\n      { value: 'option1', label: 'Option 1' },\r\n      { value: 'option2', label: 'Option 2' },\r\n      { value: 'option3', label: 'Option 3' },\r\n    ],\r\n    selectionChange: fn(),\r\n  },\r\n}"
                 },
                 {
                     "name": "WithSelectedValue",
@@ -1155,6 +1289,38 @@
                     "deprecationMessage": "",
                     "type": "Story",
                     "defaultValue": "{\r\n  args: {\r\n    id: 'selectedValueSelect',\r\n    label: 'Select an Option',\r\n    selectedValue: 'option2',\r\n  },\r\n}"
+                }
+            ],
+            "projects/excelsior-angular/src/lib/atoms/dropdown-custom/dropdown.stories.ts": [
+                {
+                    "name": "Default",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/excelsior-angular/src/lib/atoms/dropdown-custom/dropdown.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\r\n  args: {\r\n    selectedOption: '',\r\n  },\r\n}"
+                },
+                {
+                    "name": "meta",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/excelsior-angular/src/lib/atoms/dropdown-custom/dropdown.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Meta<DropdownComponent>",
+                    "defaultValue": "{\r\n  title: 'Components/CustomSelect',\r\n  component: DropdownComponent,\r\n  tags: ['autodocs'],\r\n  argTypes: {\r\n    options: { control: 'object' },\r\n    placeholder: { control: 'text' },\r\n    selectedOption: { control: 'text' },\r\n    selectOption: { action: 'selectOption' }, \r\n  },\r\n  args: {\r\n    options: ['Option 1', 'Option 2', 'Option 3',  'Option 4',  'Option 6', 'Option 7', 'Option 8'],\r\n    placeholder: 'Select an option',\r\n  },\r\n}"
+                },
+                {
+                    "name": "WithSelectedValue",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/excelsior-angular/src/lib/atoms/dropdown-custom/dropdown.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\r\n  args: {\r\n    selectedOption: 'Option 2',\r\n  },\r\n}"
                 }
             ],
             "projects/excelsior-angular/src/lib/atoms/input/input.stories.ts": [
@@ -1465,19 +1631,6 @@
                     "kind": 183
                 }
             ],
-            "projects/excelsior-angular/src/lib/atoms/checkbox/checkbox.stories.ts": [
-                {
-                    "name": "Story",
-                    "ctype": "miscellaneous",
-                    "subtype": "typealias",
-                    "rawtype": "StoryObj<CheckboxComponent>",
-                    "file": "projects/excelsior-angular/src/lib/atoms/checkbox/checkbox.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "description": "",
-                    "kind": 183
-                }
-            ],
             "projects/excelsior-angular/src/lib/atoms/card/card.stories.ts": [
                 {
                     "name": "Story",
@@ -1485,6 +1638,19 @@
                     "subtype": "typealias",
                     "rawtype": "StoryObj<ExCardComponent>",
                     "file": "projects/excelsior-angular/src/lib/atoms/card/card.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 183
+                }
+            ],
+            "projects/excelsior-angular/src/lib/atoms/checkbox/checkbox.stories.ts": [
+                {
+                    "name": "Story",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "StoryObj<CheckboxComponent>",
+                    "file": "projects/excelsior-angular/src/lib/atoms/checkbox/checkbox.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "description": "",
@@ -1524,6 +1690,19 @@
                     "subtype": "typealias",
                     "rawtype": "StoryObj<SelectDropdownComponent>",
                     "file": "projects/excelsior-angular/src/lib/atoms/dropdown/dropdown.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 183
+                }
+            ],
+            "projects/excelsior-angular/src/lib/atoms/dropdown-custom/dropdown.stories.ts": [
+                {
+                    "name": "Story",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "StoryObj<DropdownComponent>",
+                    "file": "projects/excelsior-angular/src/lib/atoms/dropdown-custom/dropdown.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "description": "",
@@ -1602,6 +1781,19 @@
                     "subtype": "typealias",
                     "rawtype": "StoryObj<PageComponent>",
                     "file": "projects/excelsior-angular/src/lib/organisms/page/page.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 183
+                }
+            ],
+            "projects/excelsior-angular/src/lib/organisms/table/table.stories.ts": [
+                {
+                    "name": "Story",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "StoryObj<TableComponent>",
+                    "file": "projects/excelsior-angular/src/lib/organisms/table/table.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "description": "",
@@ -1956,6 +2148,36 @@
                 "status": "low"
             },
             {
+                "filePath": "projects/excelsior-angular/src/lib/atoms/dropdown-custom/dropdown.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Default",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/excelsior-angular/src/lib/atoms/dropdown-custom/dropdown.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "meta",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/excelsior-angular/src/lib/atoms/dropdown-custom/dropdown.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "WithSelectedValue",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
                 "filePath": "projects/excelsior-angular/src/lib/atoms/dropdown/dropdown.stories.ts",
                 "type": "variable",
                 "linktype": "miscellaneous",
@@ -2251,6 +2473,46 @@
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
                 "name": "meta",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/excelsior-angular/src/lib/organisms/table/table.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "CustomColumns",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/excelsior-angular/src/lib/organisms/table/table.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Default",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/excelsior-angular/src/lib/organisms/table/table.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "meta",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/excelsior-angular/src/lib/organisms/table/table.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "NoActions",
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
                 "status": "low"

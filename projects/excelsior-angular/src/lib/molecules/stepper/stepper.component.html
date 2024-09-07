@@ -1,0 +1,20 @@
+<div class="stepper-vertical">
+    <div 
+      *ngFor="let step of steps; let i = index" 
+      class="step" 
+      [class.active]="i === currentStep"
+      [class.completed]="i < currentStep"
+      (click)="selectStep(i)"
+    >
+      <div class="step-indicator">{{ i + 1 }}</div>
+      <div class="step-details">
+        <div class="step-label">{{ step.label }}</div>
+        <ng-container *ngIf="i === currentStep">
+          <div class="step-content">
+            <ng-content select="[step-content]"></ng-content>
+          </div>
+        </ng-container>
+      </div>
+    </div>
+  </div>
+  

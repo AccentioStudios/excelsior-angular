@@ -1,0 +1,109 @@
+
+@import '../../assets/css/variables.css';
+
+
+.custom-select-container {
+  background-color: var(--bg-primary);
+  position: relative;
+  width: 100%;
+  border: 1px solid var(--border-primary);
+  border-radius: var(--radius-md);
+  padding: 8px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.custom-select-container.open {
+  border: 1px solid var(--secondary-color  );
+}
+
+.selected-value {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  color: var(--text-secondary-700);
+  transition: all ease-in-out .2s;
+  position: relative;
+}
+
+.selected-value.open::after{
+  content: " ";
+  display: block;
+  position: absolute;
+  width: calc(100% + 14px);
+  border: solid 6px #d7e4f8;
+  border-radius: 12px;
+  min-height: 36px;
+  height: 100%;
+  top: -14px;
+  left: -13px;
+  z-index: -1;
+}
+
+.selected-value.open i {
+  transition: all ease-in-out .2s;
+  transform: rotate(180deg);
+}
+
+.options-list {
+  display: none;
+  position: absolute;
+  top: calc(100% + 6px);
+  left: 0;
+  width: 100%;
+  max-height: 177px;
+  overflow-y: auto;
+  border: 1px solid #ccc;
+  border-radius: var(--radius-md);
+  background: #fff;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  z-index: 100;
+  padding: 4px;
+}
+
+.options-list::-webkit-scrollbar-track
+{
+  height: 30px;
+	border-radius: 10px;
+	background-color: transparent;
+}
+
+.options-list::-webkit-scrollbar
+{
+	width: 12px;
+	background-color: transparent;
+}
+
+.options-list::-webkit-scrollbar-thumb
+{
+	border-radius: 10px;
+	background-color: var(--secondary-color);
+	border: 2px solid transparent; 
+  background-clip: content-box;
+  border-radius: 10px;
+  display: block;
+  min-height: 20px; 
+  max-height: 20px; 
+}
+
+.options-list.show {
+  display: block;
+}
+
+.options-list li {
+  border-radius: var(--radius-md);
+  padding: 10px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.options-list li:hover {
+  background: #f0f0f0;
+}
+
+.options-list li.selected {
+  background: #007bff;
+  color: white;
+}

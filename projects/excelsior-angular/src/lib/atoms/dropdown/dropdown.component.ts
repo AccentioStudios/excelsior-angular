@@ -1,10 +1,11 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core'
 import { CommonModule } from '@angular/common'
+import { ExIconComponent } from '../icon/ex-icon.component'
 
 @Component({
-  selector: 'ex-dropdown',
+  selector: 'ex-dropdown-old',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, ExIconComponent],
   templateUrl: './dropdown.component.html',
   styleUrls: ['./dropdown.component.css'],
 

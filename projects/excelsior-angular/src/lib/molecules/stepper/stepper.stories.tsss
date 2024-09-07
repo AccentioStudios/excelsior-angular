@@ -1,0 +1,48 @@
+import { Meta, StoryObj } from '@storybook/angular';
+import { StepperComponent } from '../app/stepper/stepper.component';
+import { fn } from '@storybook/testing-library';
+
+const meta: Meta<StepperComponent> = {
+  title: 'Components/Stepper (Vertical)',
+  component: StepperComponent,
+  tags: ['autodocs'],
+  argTypes: {
+    steps: { control: 'object' },
+    currentStep: { control: 'number' },
+    stepSelected: { action: 'stepSelected' },
+  },
+  args: {
+    steps: [
+      { label: 'Step 1' },
+      { label: 'Step 2' },
+      { label: 'Step 3' },
+      { label: 'Step 4' },
+    ],
+    currentStep: 0,
+    stepSelected: fn(),
+  },
+};
+
+export default meta;
+type Story = StoryObj<StepperComponent>;
+
+export const Default: Story = {
+  args: {},
+};
+
+export const MiddleStep: Story = {
+  args: {
+    currentStep: 2,
+  },
+};
+
+export const CustomSteps: Story = {
+  args: {
+    steps: [
+      { label: 'Start' },
+      { label: 'In Progress' },
+      { label: 'Review' },
+      { label: 'Finish' },
+    ],
+  },
+};

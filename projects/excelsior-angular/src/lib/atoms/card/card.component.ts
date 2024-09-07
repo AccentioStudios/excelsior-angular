@@ -9,6 +9,5 @@ import { CommonModule } from '@angular/common'
   imports: [CommonModule],
 })
 export class ExCardComponent {
-  @Input() title: string = ''
-  @Input() content: string = ''
+ 
 }

@@ -1,0 +1,58 @@
+.stepper-vertical {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  .step {
+    display: flex;
+    align-items: flex-start;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .step:hover {
+    transform: scale(1.05);
+  }
+  
+  .step-indicator {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #e0e0e0;
+    color: #555;
+    font-weight: bold;
+    margin-right: 12px;
+  }
+  
+  .step-details {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .step-label {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 4px;
+  }
+  
+  .step.active .step-indicator {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  .step.completed .step-indicator {
+    background-color: #28a745;
+    color: white;
+  }
+  
+  .step-content {
+    padding-left: 42px;
+    margin-top: 8px;
+    font-size: 13px;
+    color: #333;
+  }
+  

@@ -1,0 +1,26 @@
+<div class="modal-overlay" *ngIf="isVisible" (click)="closeModal()">
+    <div class="modal" (click)="$event.stopPropagation()">
+      <div class="modal-header">
+        <ng-content select="[modalHeader]"></ng-content>
+        <!-- <h2 *ngIf="!hasCustomHeader">{{ title }}</h2> -->
+        <button class="close-button" (click)="closeModal()">
+            <i>
+                <ex-icon [name]="'close-x'" />
+            </i>
+
+        </button>
+
+      </div>
+  
+      <div class="modal-content">
+        <ng-content></ng-content>
+      </div>
+      
+      <div class="modal-footer" *ngIf="showFooter">
+        <button *ngFor="let action of actions" (click)="onActionClick(action)">
+          {{ action.label }}
+        </button>
+      </div>
+    </div>
+  </div>
+  
