@@ -3,7 +3,7 @@ import { fn } from '@storybook/test'
 import { ExCheckboxGroupComponent } from './checkbox-group.component'
 
 const meta: Meta<ExCheckboxGroupComponent> = {
-  title: 'Components/Checkbox Card',
+  title: '1.Atoms/Checkbox Card',
   component: ExCheckboxGroupComponent,
   tags: ['autodocs'],
   argTypes: {

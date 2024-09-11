@@ -2,7 +2,7 @@ import { Meta, StoryObj } from '@storybook/angular'
 import { CollapsibleComponent } from './collapsible.component'
 
 const meta: Meta<CollapsibleComponent> = {
-  title: 'Components/Collapsible',
+  title: '1.Atoms/Collapsible',
   component: CollapsibleComponent,
   tags: ['autodocs'],
   argTypes: {

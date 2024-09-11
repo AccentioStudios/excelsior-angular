@@ -1,0 +1,118 @@
+@import '../../styles/excelsior.scss';
+
+.ex-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+  }
+  
+  .ex-modal {
+    position: relative;
+    background: var(--surface-color);
+    border-radius: 12px;
+    width: 500px;
+    max-width: 90%;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    border: 1px solid #eaecf0;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+  }
+  
+
+  .ex-modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--ex-space-md);
+  }
+  
+  .close-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+
+    width: 44px;
+    height: 44px;
+    font-size: 12px;
+    color: var(--on-surface-color-variant);
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    border-radius: var(--radius-md);
+
+    &:hover {
+      background: var(--surface-container)
+    }
+  }
+  
+  .ex-modal-content {
+    padding: 16px;
+  }
+  
+  .ex-modal-footer {
+    display: flex;
+    justify-content: flex-end;
+    padding: 16px;
+    border-top: 1px solid var(--outline-color);
+    padding: var(--ex-space-md);
+  }
+  
+  .ex-modal-header__circles {
+    position: absolute;
+    width: 336px;
+    height: 336px;
+    left: -123px;
+    top: -122px;
+    z-index: 1;
+    color: var(--outline-color)
+  }
+
+  .ex-color-header-text {
+    color: var(--on-surface-color);
+    font-size: 18px;
+    font-weight: 700;
+    padding: 0;
+    margin:0;
+  }
+  .ex-color-supporting-text {
+    color: var(--on-surface-color-variant);
+    font-size: 14px;
+    padding: 0;
+    margin: 0;
+    margin-top: 5px;
+  }
+ .ex-modal-content {
+  padding: var(--ex-space-md);
+ }
+
+  // Media query for mobile
+
+  @media (max-width: 768px) {
+    .ex-modal-overlay {
+      padding: 0;
+    }
+    .ex-modal {
+      width: 100%;
+      max-width: 100%;
+      border-radius: 0;
+    }
+
+    .ex-modal-header {
+      padding: var(--ex-space-sm);
+    }
+
+    .ex-modal-footer {
+      padding: var(--ex-space-sm);
+    }
+
+    .ex-modal-content {
+      padding: var(--ex-space-sm);
+    }
+  }

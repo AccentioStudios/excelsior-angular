@@ -28,6 +28,8 @@ export class ExButtonComponent {
   @Input()
   primary = false
 
+  @Input() extended = false
+
   @Input()
   icon: string = ''
 
@@ -58,6 +60,7 @@ export class ExButtonComponent {
     const mode = this.primary ? 'ex-button--primary' : 'ex-button--secondary'
     const disabledClass = this.disabled ? 'ex-button--disabled' : ''
     const size = `ex-button--${this.size}`
-    return ['ex-button', `ex-button--${this.size}`, mode, disabledClass, size]
+    const extended = this.extended ? 'ex-button--extended' : ''
+    return ['ex-button', `ex-button--${this.size}`, mode, disabledClass, size, extended]
   }
 }

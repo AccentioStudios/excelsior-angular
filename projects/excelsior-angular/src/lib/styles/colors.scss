@@ -1,0 +1,32 @@
+:host {
+    // Basic colors
+    --primary-color: #17202c;
+    --secondary-color: #33465f;
+    --teriary-color: #16d9f5;
+    --error-color: #ba1a1a;
+    
+
+    // Surface Colors
+    --surface-color: #ffffff;
+    --surface-container: #f5f5f5;
+    --on-surface-color: #101828;
+    --on-surface-color-variant: #475467;
+
+    --dark-surface-color: #17202c;
+    --dark-surface-container: #1f2a3a;
+
+    --dark-surface-bright: #33465f;
+    --dark-surface-container-bright: #364f71;
+
+    --on-dark-surface-color: #ffffff;
+    --on-dark-surface-color-variant: #94969c;
+
+
+    // Accent Colors
+    --on-surface-accent-color: #008ea2;
+    --on-dark-surface-accent-color: #16d9f5;
+
+    // Outline
+    --outline-color: #d0d5dd;
+    --outline-variant-color: #eaecf0;
+}

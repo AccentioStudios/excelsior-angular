@@ -84,16 +84,6 @@
                 "name": "Default",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/excelsior-angular/src/lib/atoms/dropdown/dropdown.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Story",
-                "defaultValue": "{\r\n  args: {\r\n    id: 'defaultSelect',\r\n    label: 'Select an Option',\r\n    selectedValue: '',\r\n  },\r\n}"
-            },
-            {
-                "name": "Default",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
                 "file": "projects/excelsior-angular/src/lib/atoms/dropdown-custom/dropdown.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
@@ -129,6 +119,16 @@
                 "deprecationMessage": "",
                 "type": "Story",
                 "defaultValue": "{\r\n  args: {\r\n    id: 'defaultSearch',\r\n    label: 'Search',\r\n    placeholder: 'Type to search...',\r\n  },\r\n}"
+            },
+            {
+                "name": "Default",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/excelsior-angular/src/lib/organisms/modal/modal.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\r\n  render: (args) => ({\r\n    props: args,\r\n    styles: [\r\n      `\r\n      .ex-row {\r\n        display: flex;\r\n        justify-content: flex-end;\r\n        gap: 0.4rem;\r\n      }\r\n      `,\r\n    ],\r\n    template: `\r\n      <div style=\"display: flex; justify-content: center; align-items: center; height: 100vh; width: 100vw;\">\r\n        <ex-modal \r\n        [title]=\"title\" \r\n        [supportingText]=\"supportingText\" \r\n        [isVisible]=\"isVisible\"\r\n        [iconName]=\"iconName\"\r\n        (onClose)=\"close()\">\r\n        <p>Modal body content goes here.</p>\r\n        <div modalFooter>\r\n        <div class=\"ex-row\">         \r\n        <ex-button [primary]=\"false\" label=\"Cancel\" (click)=\"isVisible = false\"/>\r\n        <ex-button [primary]=\"true\" label=\"Ok\" (click)=\"isVisible = false\"/>\r\n        </div>\r\n        </div>\r\n        </ex-modal>\r\n      </div>\r\n    `,\r\n  }),\r\n}"
             },
             {
                 "name": "Default",
@@ -244,31 +244,11 @@
                 "name": "LoggedIn",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/excelsior-angular/src/lib/organisms/header/ex-header.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Story",
-                "defaultValue": "{\r\n  args: {\r\n    user: {\r\n      name: 'Jane Doe',\r\n    },\r\n  },\r\n}"
-            },
-            {
-                "name": "LoggedIn",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
                 "file": "projects/excelsior-angular/src/lib/organisms/page/page.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
                 "defaultValue": "{\r\n  play: async ({ canvasElement }) => {\r\n    const canvas = within(canvasElement)\r\n    const loginButton = canvas.getByRole('button', { name: /Log in/i })\r\n    await expect(loginButton).toBeInTheDocument()\r\n    await userEvent.click(loginButton)\r\n    await expect(loginButton).not.toBeInTheDocument()\r\n\r\n    const logoutButton = canvas.getByRole('button', { name: /Log out/i })\r\n    await expect(logoutButton).toBeInTheDocument()\r\n  },\r\n}"
-            },
-            {
-                "name": "LoggedOut",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "projects/excelsior-angular/src/lib/organisms/header/ex-header.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Story",
-                "defaultValue": "{}"
             },
             {
                 "name": "LoggedOut",
@@ -314,7 +294,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Meta<ExBadgeComponent>",
-                "defaultValue": "{\r\n  title: 'Components/Badge',\r\n  component: ExBadgeComponent,\r\n  tags: ['autodocs'],\r\n  argTypes: {\r\n    type: {\r\n      control: { type: 'select' },\r\n      options: ['success', 'pink', 'warning', 'error', 'purple', 'indigo', 'indigo', 'blue-light'],\r\n    },\r\n    text: { control: 'text' },\r\n  },\r\n  // Use `fn` to spy on the onClick arg, which will appear in the actions panel once invoked: https://storybook.js.org/docs/essentials/actions#action-args\r\n  args: { onClick: fn() },\r\n}"
+                "defaultValue": "{\r\n  title: '1.Atoms/Badge',\r\n  component: ExBadgeComponent,\r\n  tags: ['autodocs'],\r\n  argTypes: {\r\n    type: {\r\n      control: { type: 'select' },\r\n      options: ['success', 'pink', 'warning', 'error', 'purple', 'indigo', 'indigo', 'blue-light'],\r\n    },\r\n    text: { control: 'text' },\r\n  },\r\n  // Use `fn` to spy on the onClick arg, which will appear in the actions panel once invoked: https://storybook.js.org/docs/essentials/actions#action-args\r\n  args: { onClick: fn() },\r\n}"
             },
             {
                 "name": "meta",
@@ -324,7 +304,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Meta<ExButtonComponent>",
-                "defaultValue": "{\r\n  title: 'Components/Button',\r\n  component: ExButtonComponent,\r\n  tags: ['autodocs'],\r\n  argTypes: {\r\n    backgroundColor: {\r\n      control: 'color',\r\n    },\r\n    disabled: {\r\n      control: 'boolean',\r\n    },\r\n    icon: {\r\n      control: 'text',\r\n    },\r\n    iconColor: {\r\n      control: 'color',\r\n    },\r\n    size: {\r\n      control: { type: 'select' },\r\n      options: ['small', 'medium', 'large'],\r\n    },\r\n  },\r\n  // Use `fn` to spy on the onClick arg, which will appear in the actions panel once invoked: https://storybook.js.org/docs/essentials/actions#action-args\r\n  args: { onClick: fn() },\r\n}"
+                "defaultValue": "{\r\n  title: '1.Atoms/Button',\r\n  component: ExButtonComponent,\r\n  tags: ['autodocs'],\r\n  argTypes: {\r\n    backgroundColor: {\r\n      control: 'color',\r\n    },\r\n    disabled: {\r\n      control: 'boolean',\r\n    },\r\n    icon: {\r\n      control: 'text',\r\n    },\r\n    iconColor: {\r\n      control: 'color',\r\n    },\r\n    size: {\r\n      control: { type: 'select' },\r\n      options: ['small', 'medium', 'large'],\r\n    },\r\n  },\r\n  // Use `fn` to spy on the onClick arg, which will appear in the actions panel once invoked: https://storybook.js.org/docs/essentials/actions#action-args\r\n  args: { onClick: fn() },\r\n}"
             },
             {
                 "name": "meta",
@@ -334,7 +314,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Meta<ExCardComponent>",
-                "defaultValue": "{\r\n  title: 'Components/Card',\r\n  component: ExCardComponent,\r\n  tags: ['autodocs'],\r\n}"
+                "defaultValue": "{\r\n  title: '1.Atoms/Card',\r\n  component: ExCardComponent,\r\n  tags: ['autodocs'],\r\n}"
             },
             {
                 "name": "meta",
@@ -344,7 +324,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Meta<CheckboxComponent>",
-                "defaultValue": "{\r\n  title: 'Components/Checkbox',\r\n  component: CheckboxComponent,\r\n  tags: ['autodocs'],\r\n  argTypes: {\r\n    label: { control: 'text' },\r\n    checked: { control: 'boolean' },\r\n    checkedChange: { action: 'checkedChange' },\r\n  },\r\n  args: { checkedChange: fn() },\r\n}"
+                "defaultValue": "{\r\n  title: '1.Atoms/Checkbox',\r\n  component: CheckboxComponent,\r\n  tags: ['autodocs'],\r\n  argTypes: {\r\n    label: { control: 'text' },\r\n    checked: { control: 'boolean' },\r\n    checkedChange: { action: 'checkedChange' },\r\n  },\r\n  args: { checkedChange: fn() },\r\n}"
             },
             {
                 "name": "meta",
@@ -354,7 +334,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Meta<ExCheckboxGroupComponent>",
-                "defaultValue": "{\r\n  title: 'Components/Checkbox Card',\r\n  component: ExCheckboxGroupComponent,\r\n  tags: ['autodocs'],\r\n  argTypes: {\r\n    label: { control: 'text' },\r\n    checked: { control: 'boolean' },\r\n    checkedChange: { action: 'checkedChange' },\r\n  },\r\n  args: { checkedChange: fn() },\r\n}"
+                "defaultValue": "{\r\n  title: '1.Atoms/Checkbox Card',\r\n  component: ExCheckboxGroupComponent,\r\n  tags: ['autodocs'],\r\n  argTypes: {\r\n    label: { control: 'text' },\r\n    checked: { control: 'boolean' },\r\n    checkedChange: { action: 'checkedChange' },\r\n  },\r\n  args: { checkedChange: fn() },\r\n}"
             },
             {
                 "name": "meta",
@@ -364,17 +344,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Meta<CollapsibleComponent>",
-                "defaultValue": "{\r\n  title: 'Components/Collapsible',\r\n  component: CollapsibleComponent,\r\n  tags: ['autodocs'],\r\n  argTypes: {\r\n    title: { control: 'text' },\r\n  },\r\n}"
-            },
-            {
-                "name": "meta",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "projects/excelsior-angular/src/lib/atoms/dropdown/dropdown.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Meta<SelectDropdownComponent>",
-                "defaultValue": "{\r\n  title: 'Components/Dropdown-old',\r\n  component: SelectDropdownComponent,\r\n  tags: ['autodocs'],\r\n  argTypes: {\r\n    id: { control: 'text' },\r\n    label: { control: 'text' },\r\n    options: { control: 'object' },\r\n    selectedValue: { control: 'text' },\r\n    selectionChange: { action: 'selectionChange' },\r\n  },\r\n  args: {\r\n    options: [\r\n      { value: 'option1', label: 'Option 1' },\r\n      { value: 'option2', label: 'Option 2' },\r\n      { value: 'option3', label: 'Option 3' },\r\n    ],\r\n    selectionChange: fn(),\r\n  },\r\n}"
+                "defaultValue": "{\r\n  title: '1.Atoms/Collapsible',\r\n  component: CollapsibleComponent,\r\n  tags: ['autodocs'],\r\n  argTypes: {\r\n    title: { control: 'text' },\r\n  },\r\n}"
             },
             {
                 "name": "meta",
@@ -384,7 +354,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Meta<DropdownComponent>",
-                "defaultValue": "{\r\n  title: 'Components/CustomSelect',\r\n  component: DropdownComponent,\r\n  tags: ['autodocs'],\r\n  argTypes: {\r\n    options: { control: 'object' },\r\n    placeholder: { control: 'text' },\r\n    selectedOption: { control: 'text' },\r\n    selectOption: { action: 'selectOption' }, \r\n  },\r\n  args: {\r\n    options: ['Option 1', 'Option 2', 'Option 3',  'Option 4',  'Option 6', 'Option 7', 'Option 8'],\r\n    placeholder: 'Select an option',\r\n  },\r\n}"
+                "defaultValue": "{\r\n  title: '1.Atoms/Dropdown',\r\n  component: DropdownComponent,\r\n  tags: ['autodocs'],\r\n  argTypes: {\r\n    options: { control: 'object' },\r\n    placeholder: { control: 'text' },\r\n    selectedOption: { control: 'text' },\r\n    selectOption: { action: 'selectOption' },\r\n  },\r\n  args: {\r\n    options: ['Option 1', 'Option 2', 'Option 3', 'Option 4', 'Option 6', 'Option 7', 'Option 8'],\r\n    placeholder: 'Select an option',\r\n  },\r\n}"
             },
             {
                 "name": "meta",
@@ -394,7 +364,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Meta<ExIconComponent>",
-                "defaultValue": "{\r\n  title: 'Components/Icon',\r\n  component: ExIconComponent,\r\n  tags: ['autodocs'],\r\n  argTypes: {\r\n    name: {\r\n      control: { type: 'select' },\r\n      options: ['icon-home', 'icon-user', 'help-circle', 'line-chart-up-04', 'lock-04', 'key-02', 'cube-03', 'dot'],\r\n    },\r\n\r\n    size: {\r\n      control: { type: 'select' },\r\n      options: ['small', 'medium', 'large'],\r\n    },\r\n    // Customize the fill color if needed\r\n  },\r\n  args: {\r\n    // Default fill color\r\n  },\r\n}"
+                "defaultValue": "{\r\n  title: '1.Atoms/Icon',\r\n  component: ExIconComponent,\r\n  tags: ['autodocs'],\r\n  argTypes: {\r\n    name: {\r\n      control: { type: 'select' },\r\n      options: ['icon-home', 'icon-user', 'help-circle', 'line-chart-up-04', 'lock-04', 'key-02', 'cube-03', 'dot'],\r\n    },\r\n\r\n    size: {\r\n      control: { type: 'select' },\r\n      options: ['small', 'medium', 'large'],\r\n    },\r\n    // Customize the fill color if needed\r\n  },\r\n  args: {\r\n    // Default fill color\r\n  },\r\n}"
             },
             {
                 "name": "meta",
@@ -403,8 +373,8 @@
                 "file": "projects/excelsior-angular/src/lib/atoms/input/input.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
-                "type": "Meta<InputComponent>",
-                "defaultValue": "{\r\n  title: 'Components/Input',\r\n  component: InputComponent,\r\n  tags: ['autodocs'],\r\n  argTypes: {\r\n    type: {\r\n      control: { type: 'text' },\r\n    },\r\n    placeholder: {\r\n      control: { type: 'text' },\r\n    },\r\n    value: {\r\n      control: { type: 'text' },\r\n    },\r\n    valueChange: { action: 'valueChange' },\r\n  },\r\n  args: {\r\n    valueChange: fn(),\r\n  },\r\n}"
+                "type": "Meta<ExInputComponent>",
+                "defaultValue": "{\r\n  title: '1.Atoms/Input',\r\n  component: ExInputComponent,\r\n  tags: ['autodocs'],\r\n  argTypes: {\r\n    type: {\r\n      control: { type: 'text' },\r\n    },\r\n    placeholder: {\r\n      control: { type: 'text' },\r\n    },\r\n    value: {\r\n      control: { type: 'text' },\r\n    },\r\n    valueChange: { action: 'valueChange' },\r\n  },\r\n  args: {\r\n    valueChange: fn(),\r\n  },\r\n}"
             },
             {
                 "name": "meta",
@@ -414,7 +384,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Meta<RadioButtonComponent>",
-                "defaultValue": "{\r\n  title: 'Components/Radio Button',\r\n  component: RadioButtonComponent,\r\n  tags: ['autodocs'],\r\n  argTypes: {\r\n    name: { control: 'text' },\r\n    label: { control: 'text' },\r\n    options: { control: 'object' },\r\n    selectedValue: { control: 'text' },\r\n    selectionChange: { action: 'selectionChange' },\r\n  },\r\n  args: {\r\n    options: [\r\n      { value: 'option1', label: 'Option 1' },\r\n      { value: 'option2', label: 'Option 2' },\r\n      { value: 'option3', label: 'Option 3' },\r\n    ],\r\n    selectionChange: fn(),\r\n  },\r\n}"
+                "defaultValue": "{\r\n  title: '1.Atoms/Radio Button',\r\n  component: RadioButtonComponent,\r\n  tags: ['autodocs'],\r\n  argTypes: {\r\n    name: { control: 'text' },\r\n    label: { control: 'text' },\r\n    options: { control: 'object' },\r\n    selectedValue: { control: 'text' },\r\n    selectionChange: { action: 'selectionChange' },\r\n  },\r\n  args: {\r\n    options: [\r\n      { value: 'option1', label: 'Option 1' },\r\n      { value: 'option2', label: 'Option 2' },\r\n      { value: 'option3', label: 'Option 3' },\r\n    ],\r\n    selectionChange: fn(),\r\n  },\r\n}"
             },
             {
                 "name": "meta",
@@ -424,17 +394,17 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Meta<SearchInputDropdownComponent>",
-                "defaultValue": "{\r\n  title: 'Components/Search Input Dropdown',\r\n  component: SearchInputDropdownComponent,\r\n  tags: ['autodocs'],\r\n  argTypes: {\r\n    id: { control: 'text' },\r\n    label: { control: 'text' },\r\n    placeholder: { control: 'text' },\r\n    options: { control: 'object' },\r\n    selectionChange: { action: 'selectionChange' },\r\n  },\r\n  args: {\r\n    options: [\r\n      { value: 'option1', label: 'Option 1' },\r\n      { value: 'option2', label: 'Option 2' },\r\n      { value: 'option3', label: 'Option 3' },\r\n    ],\r\n    selectionChange: fn(),\r\n  },\r\n}"
+                "defaultValue": "{\r\n  title: '1.Atoms/Search Input Dropdown',\r\n  component: SearchInputDropdownComponent,\r\n  tags: ['autodocs'],\r\n  argTypes: {\r\n    id: { control: 'text' },\r\n    label: { control: 'text' },\r\n    placeholder: { control: 'text' },\r\n    options: { control: 'object' },\r\n    selectionChange: { action: 'selectionChange' },\r\n  },\r\n  args: {\r\n    options: [\r\n      { value: 'option1', label: 'Option 1' },\r\n      { value: 'option2', label: 'Option 2' },\r\n      { value: 'option3', label: 'Option 3' },\r\n    ],\r\n    selectionChange: fn(),\r\n  },\r\n}"
             },
             {
                 "name": "meta",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/excelsior-angular/src/lib/organisms/header/ex-header.stories.ts",
+                "file": "projects/excelsior-angular/src/lib/organisms/modal/modal.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
-                "type": "Meta<ExHeaderComponent>",
-                "defaultValue": "{\r\n  title: 'Layouts/Header',\r\n  component: ExHeaderComponent,\r\n  // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/writing-docs/autodocs\r\n  tags: ['autodocs'],\r\n  parameters: {\r\n    // More on how to position stories at: https://storybook.js.org/docs/configure/story-layout\r\n    layout: 'fullscreen',\r\n  },\r\n  args: {\r\n    onLogin: fn(),\r\n    onLogout: fn(),\r\n    onCreateAccount: fn(),\r\n  },\r\n}"
+                "type": "Meta<ExModalComponent>",
+                "defaultValue": "{\r\n  title: '3.Organism/Modal',\r\n  component: ExModalComponent,\r\n  tags: ['autodocs'],\r\n  decorators: [\r\n    moduleMetadata({\r\n      imports: [ExButtonComponent],\r\n    }),\r\n  ],\r\n  argTypes: {\r\n    title: { control: 'text' },\r\n    supportingText: { control: 'text' },\r\n    iconName: { control: 'text' },\r\n    isVisible: { control: 'boolean' },\r\n    onClose: { action: 'onClose' },\r\n  },\r\n  args: {\r\n    title: 'Sample Modal',\r\n    supportingText: 'This is a sample modal...',\r\n    iconName: 'Visualizar',\r\n    isVisible: true,\r\n    onClose: fn(),\r\n  },\r\n}"
             },
             {
                 "name": "meta",
@@ -444,7 +414,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Meta<PageComponent>",
-                "defaultValue": "{\r\n  title: 'Layouts/Page',\r\n  component: PageComponent,\r\n  parameters: {\r\n    // More on how to position stories at: https://storybook.js.org/docs/configure/story-layout\r\n    layout: 'fullscreen',\r\n  },\r\n}"
+                "defaultValue": "{\r\n  title: '4.Layouts/Page',\r\n  component: PageComponent,\r\n  parameters: {\r\n    // More on how to position stories at: https://storybook.js.org/docs/configure/story-layout\r\n    layout: 'fullscreen',\r\n  },\r\n}"
             },
             {
                 "name": "meta",
@@ -454,7 +424,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Meta<TableComponent>",
-                "defaultValue": "{\r\n  title: 'Components/Table',\r\n  component: TableComponent,\r\n  tags: ['autodocs'],\r\n  argTypes: {\r\n    columns: { control: 'object' },\r\n    data: { control: 'object' },\r\n    actions: { control: 'object' },\r\n    actionClick: { action: 'actionClick' },\r\n  },\r\n  args: {\r\n    columns: [\r\n      { field: 'name', header: 'Name' },\r\n      { field: 'age', header: 'Age' },\r\n      { field: 'email', header: 'Email' },\r\n    ],\r\n    data: [\r\n      { name: 'John Doe', age: 30, email: 'john@example.com' },\r\n      { name: 'Jane Smith', age: 25, email: 'jane@example.com' },\r\n      { name: 'Bob Johnson', age: 40, email: 'bob@example.com' },\r\n    ],\r\n    actions: [\r\n      { label: 'Edit', value: 'edit' },\r\n      { label: 'Delete', value: 'delete' },\r\n    ],\r\n    actionClick: fn(),\r\n  },\r\n}"
+                "defaultValue": "{\r\n  title: '1.Atoms/Table',\r\n  component: TableComponent,\r\n  tags: ['autodocs'],\r\n  argTypes: {\r\n    columns: { control: 'object' },\r\n    data: { control: 'object' },\r\n    actions: { control: 'object' },\r\n    actionClick: { action: 'actionClick' },\r\n  },\r\n  args: {\r\n    columns: [\r\n      { field: 'name', header: 'Name' },\r\n      { field: 'age', header: 'Age' },\r\n      { field: 'email', header: 'Email' },\r\n    ],\r\n    data: [\r\n      { name: 'John Doe', age: 30, email: 'john@example.com' },\r\n      { name: 'Jane Smith', age: 25, email: 'jane@example.com' },\r\n      { name: 'Bob Johnson', age: 40, email: 'bob@example.com' },\r\n    ],\r\n    actions: [\r\n      { label: 'Edit', value: 'edit' },\r\n      { label: 'Delete', value: 'delete' },\r\n    ],\r\n    actionClick: fn(),\r\n  },\r\n}"
             },
             {
                 "name": "minor",
@@ -668,16 +638,6 @@
                 "name": "WithSelectedValue",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/excelsior-angular/src/lib/atoms/dropdown/dropdown.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Story",
-                "defaultValue": "{\r\n  args: {\r\n    id: 'selectedValueSelect',\r\n    label: 'Select an Option',\r\n    selectedValue: 'option2',\r\n  },\r\n}"
-            },
-            {
-                "name": "WithSelectedValue",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
                 "file": "projects/excelsior-angular/src/lib/atoms/dropdown-custom/dropdown.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
@@ -777,17 +737,6 @@
                 "name": "Story",
                 "ctype": "miscellaneous",
                 "subtype": "typealias",
-                "rawtype": "StoryObj<SelectDropdownComponent>",
-                "file": "projects/excelsior-angular/src/lib/atoms/dropdown/dropdown.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "description": "",
-                "kind": 183
-            },
-            {
-                "name": "Story",
-                "ctype": "miscellaneous",
-                "subtype": "typealias",
                 "rawtype": "StoryObj<DropdownComponent>",
                 "file": "projects/excelsior-angular/src/lib/atoms/dropdown-custom/dropdown.stories.ts",
                 "deprecated": false,
@@ -810,7 +759,7 @@
                 "name": "Story",
                 "ctype": "miscellaneous",
                 "subtype": "typealias",
-                "rawtype": "StoryObj<InputComponent>",
+                "rawtype": "StoryObj<ExInputComponent>",
                 "file": "projects/excelsior-angular/src/lib/atoms/input/input.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
@@ -843,8 +792,8 @@
                 "name": "Story",
                 "ctype": "miscellaneous",
                 "subtype": "typealias",
-                "rawtype": "StoryObj<ExHeaderComponent>",
-                "file": "projects/excelsior-angular/src/lib/organisms/header/ex-header.stories.ts",
+                "rawtype": "StoryObj<ExModalComponent>",
+                "file": "projects/excelsior-angular/src/lib/organisms/modal/modal.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "description": "",
@@ -914,7 +863,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Meta<ExBadgeComponent>",
-                    "defaultValue": "{\r\n  title: 'Components/Badge',\r\n  component: ExBadgeComponent,\r\n  tags: ['autodocs'],\r\n  argTypes: {\r\n    type: {\r\n      control: { type: 'select' },\r\n      options: ['success', 'pink', 'warning', 'error', 'purple', 'indigo', 'indigo', 'blue-light'],\r\n    },\r\n    text: { control: 'text' },\r\n  },\r\n  // Use `fn` to spy on the onClick arg, which will appear in the actions panel once invoked: https://storybook.js.org/docs/essentials/actions#action-args\r\n  args: { onClick: fn() },\r\n}"
+                    "defaultValue": "{\r\n  title: '1.Atoms/Badge',\r\n  component: ExBadgeComponent,\r\n  tags: ['autodocs'],\r\n  argTypes: {\r\n    type: {\r\n      control: { type: 'select' },\r\n      options: ['success', 'pink', 'warning', 'error', 'purple', 'indigo', 'indigo', 'blue-light'],\r\n    },\r\n    text: { control: 'text' },\r\n  },\r\n  // Use `fn` to spy on the onClick arg, which will appear in the actions panel once invoked: https://storybook.js.org/docs/essentials/actions#action-args\r\n  args: { onClick: fn() },\r\n}"
                 },
                 {
                     "name": "pink",
@@ -976,7 +925,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Meta<CheckboxComponent>",
-                    "defaultValue": "{\r\n  title: 'Components/Checkbox',\r\n  component: CheckboxComponent,\r\n  tags: ['autodocs'],\r\n  argTypes: {\r\n    label: { control: 'text' },\r\n    checked: { control: 'boolean' },\r\n    checkedChange: { action: 'checkedChange' },\r\n  },\r\n  args: { checkedChange: fn() },\r\n}"
+                    "defaultValue": "{\r\n  title: '1.Atoms/Checkbox',\r\n  component: CheckboxComponent,\r\n  tags: ['autodocs'],\r\n  argTypes: {\r\n    label: { control: 'text' },\r\n    checked: { control: 'boolean' },\r\n    checkedChange: { action: 'checkedChange' },\r\n  },\r\n  args: { checkedChange: fn() },\r\n}"
                 },
                 {
                     "name": "TestCheckbox",
@@ -1018,7 +967,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Meta<ExCheckboxGroupComponent>",
-                    "defaultValue": "{\r\n  title: 'Components/Checkbox Card',\r\n  component: ExCheckboxGroupComponent,\r\n  tags: ['autodocs'],\r\n  argTypes: {\r\n    label: { control: 'text' },\r\n    checked: { control: 'boolean' },\r\n    checkedChange: { action: 'checkedChange' },\r\n  },\r\n  args: { checkedChange: fn() },\r\n}"
+                    "defaultValue": "{\r\n  title: '1.Atoms/Checkbox Card',\r\n  component: ExCheckboxGroupComponent,\r\n  tags: ['autodocs'],\r\n  argTypes: {\r\n    label: { control: 'text' },\r\n    checked: { control: 'boolean' },\r\n    checkedChange: { action: 'checkedChange' },\r\n  },\r\n  args: { checkedChange: fn() },\r\n}"
                 },
                 {
                     "name": "TestCheckbox",
@@ -1140,7 +1089,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Meta<ExIconComponent>",
-                    "defaultValue": "{\r\n  title: 'Components/Icon',\r\n  component: ExIconComponent,\r\n  tags: ['autodocs'],\r\n  argTypes: {\r\n    name: {\r\n      control: { type: 'select' },\r\n      options: ['icon-home', 'icon-user', 'help-circle', 'line-chart-up-04', 'lock-04', 'key-02', 'cube-03', 'dot'],\r\n    },\r\n\r\n    size: {\r\n      control: { type: 'select' },\r\n      options: ['small', 'medium', 'large'],\r\n    },\r\n    // Customize the fill color if needed\r\n  },\r\n  args: {\r\n    // Default fill color\r\n  },\r\n}"
+                    "defaultValue": "{\r\n  title: '1.Atoms/Icon',\r\n  component: ExIconComponent,\r\n  tags: ['autodocs'],\r\n  argTypes: {\r\n    name: {\r\n      control: { type: 'select' },\r\n      options: ['icon-home', 'icon-user', 'help-circle', 'line-chart-up-04', 'lock-04', 'key-02', 'cube-03', 'dot'],\r\n    },\r\n\r\n    size: {\r\n      control: { type: 'select' },\r\n      options: ['small', 'medium', 'large'],\r\n    },\r\n    // Customize the fill color if needed\r\n  },\r\n  args: {\r\n    // Default fill color\r\n  },\r\n}"
                 },
                 {
                     "name": "Small",
@@ -1192,7 +1141,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Meta<TableComponent>",
-                    "defaultValue": "{\r\n  title: 'Components/Table',\r\n  component: TableComponent,\r\n  tags: ['autodocs'],\r\n  argTypes: {\r\n    columns: { control: 'object' },\r\n    data: { control: 'object' },\r\n    actions: { control: 'object' },\r\n    actionClick: { action: 'actionClick' },\r\n  },\r\n  args: {\r\n    columns: [\r\n      { field: 'name', header: 'Name' },\r\n      { field: 'age', header: 'Age' },\r\n      { field: 'email', header: 'Email' },\r\n    ],\r\n    data: [\r\n      { name: 'John Doe', age: 30, email: 'john@example.com' },\r\n      { name: 'Jane Smith', age: 25, email: 'jane@example.com' },\r\n      { name: 'Bob Johnson', age: 40, email: 'bob@example.com' },\r\n    ],\r\n    actions: [\r\n      { label: 'Edit', value: 'edit' },\r\n      { label: 'Delete', value: 'delete' },\r\n    ],\r\n    actionClick: fn(),\r\n  },\r\n}"
+                    "defaultValue": "{\r\n  title: '1.Atoms/Table',\r\n  component: TableComponent,\r\n  tags: ['autodocs'],\r\n  argTypes: {\r\n    columns: { control: 'object' },\r\n    data: { control: 'object' },\r\n    actions: { control: 'object' },\r\n    actionClick: { action: 'actionClick' },\r\n  },\r\n  args: {\r\n    columns: [\r\n      { field: 'name', header: 'Name' },\r\n      { field: 'age', header: 'Age' },\r\n      { field: 'email', header: 'Email' },\r\n    ],\r\n    data: [\r\n      { name: 'John Doe', age: 30, email: 'john@example.com' },\r\n      { name: 'Jane Smith', age: 25, email: 'jane@example.com' },\r\n      { name: 'Bob Johnson', age: 40, email: 'bob@example.com' },\r\n    ],\r\n    actions: [\r\n      { label: 'Edit', value: 'edit' },\r\n      { label: 'Delete', value: 'delete' },\r\n    ],\r\n    actionClick: fn(),\r\n  },\r\n}"
                 },
                 {
                     "name": "NoActions",
@@ -1224,7 +1173,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Meta<ExCardComponent>",
-                    "defaultValue": "{\r\n  title: 'Components/Card',\r\n  component: ExCardComponent,\r\n  tags: ['autodocs'],\r\n}"
+                    "defaultValue": "{\r\n  title: '1.Atoms/Card',\r\n  component: ExCardComponent,\r\n  tags: ['autodocs'],\r\n}"
                 }
             ],
             "projects/excelsior-angular/src/lib/atoms/collapsable/collapsible.stories.ts": [
@@ -1246,7 +1195,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Meta<CollapsibleComponent>",
-                    "defaultValue": "{\r\n  title: 'Components/Collapsible',\r\n  component: CollapsibleComponent,\r\n  tags: ['autodocs'],\r\n  argTypes: {\r\n    title: { control: 'text' },\r\n  },\r\n}"
+                    "defaultValue": "{\r\n  title: '1.Atoms/Collapsible',\r\n  component: CollapsibleComponent,\r\n  tags: ['autodocs'],\r\n  argTypes: {\r\n    title: { control: 'text' },\r\n  },\r\n}"
                 },
                 {
                     "name": "OpenByDefault",
@@ -1257,38 +1206,6 @@
                     "deprecationMessage": "",
                     "type": "Story",
                     "defaultValue": "{\r\n  args: {\r\n    title: 'Open by Default',\r\n  },\r\n  render: (args) => ({\r\n    props: { ...args, isCollapsed: false },\r\n    template: `<app-collapsible [title]=\"title\" [isCollapsed]=\"false\">This is the content inside the collapsible.</app-collapsible>`,\r\n  }),\r\n}"
-                }
-            ],
-            "projects/excelsior-angular/src/lib/atoms/dropdown/dropdown.stories.ts": [
-                {
-                    "name": "Default",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "projects/excelsior-angular/src/lib/atoms/dropdown/dropdown.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Story",
-                    "defaultValue": "{\r\n  args: {\r\n    id: 'defaultSelect',\r\n    label: 'Select an Option',\r\n    selectedValue: '',\r\n  },\r\n}"
-                },
-                {
-                    "name": "meta",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "projects/excelsior-angular/src/lib/atoms/dropdown/dropdown.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Meta<SelectDropdownComponent>",
-                    "defaultValue": "{\r\n  title: 'Components/Dropdown-old',\r\n  component: SelectDropdownComponent,\r\n  tags: ['autodocs'],\r\n  argTypes: {\r\n    id: { control: 'text' },\r\n    label: { control: 'text' },\r\n    options: { control: 'object' },\r\n    selectedValue: { control: 'text' },\r\n    selectionChange: { action: 'selectionChange' },\r\n  },\r\n  args: {\r\n    options: [\r\n      { value: 'option1', label: 'Option 1' },\r\n      { value: 'option2', label: 'Option 2' },\r\n      { value: 'option3', label: 'Option 3' },\r\n    ],\r\n    selectionChange: fn(),\r\n  },\r\n}"
-                },
-                {
-                    "name": "WithSelectedValue",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "projects/excelsior-angular/src/lib/atoms/dropdown/dropdown.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Story",
-                    "defaultValue": "{\r\n  args: {\r\n    id: 'selectedValueSelect',\r\n    label: 'Select an Option',\r\n    selectedValue: 'option2',\r\n  },\r\n}"
                 }
             ],
             "projects/excelsior-angular/src/lib/atoms/dropdown-custom/dropdown.stories.ts": [
@@ -1310,7 +1227,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Meta<DropdownComponent>",
-                    "defaultValue": "{\r\n  title: 'Components/CustomSelect',\r\n  component: DropdownComponent,\r\n  tags: ['autodocs'],\r\n  argTypes: {\r\n    options: { control: 'object' },\r\n    placeholder: { control: 'text' },\r\n    selectedOption: { control: 'text' },\r\n    selectOption: { action: 'selectOption' }, \r\n  },\r\n  args: {\r\n    options: ['Option 1', 'Option 2', 'Option 3',  'Option 4',  'Option 6', 'Option 7', 'Option 8'],\r\n    placeholder: 'Select an option',\r\n  },\r\n}"
+                    "defaultValue": "{\r\n  title: '1.Atoms/Dropdown',\r\n  component: DropdownComponent,\r\n  tags: ['autodocs'],\r\n  argTypes: {\r\n    options: { control: 'object' },\r\n    placeholder: { control: 'text' },\r\n    selectedOption: { control: 'text' },\r\n    selectOption: { action: 'selectOption' },\r\n  },\r\n  args: {\r\n    options: ['Option 1', 'Option 2', 'Option 3', 'Option 4', 'Option 6', 'Option 7', 'Option 8'],\r\n    placeholder: 'Select an option',\r\n  },\r\n}"
                 },
                 {
                     "name": "WithSelectedValue",
@@ -1341,8 +1258,8 @@
                     "file": "projects/excelsior-angular/src/lib/atoms/input/input.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "type": "Meta<InputComponent>",
-                    "defaultValue": "{\r\n  title: 'Components/Input',\r\n  component: InputComponent,\r\n  tags: ['autodocs'],\r\n  argTypes: {\r\n    type: {\r\n      control: { type: 'text' },\r\n    },\r\n    placeholder: {\r\n      control: { type: 'text' },\r\n    },\r\n    value: {\r\n      control: { type: 'text' },\r\n    },\r\n    valueChange: { action: 'valueChange' },\r\n  },\r\n  args: {\r\n    valueChange: fn(),\r\n  },\r\n}"
+                    "type": "Meta<ExInputComponent>",
+                    "defaultValue": "{\r\n  title: '1.Atoms/Input',\r\n  component: ExInputComponent,\r\n  tags: ['autodocs'],\r\n  argTypes: {\r\n    type: {\r\n      control: { type: 'text' },\r\n    },\r\n    placeholder: {\r\n      control: { type: 'text' },\r\n    },\r\n    value: {\r\n      control: { type: 'text' },\r\n    },\r\n    valueChange: { action: 'valueChange' },\r\n  },\r\n  args: {\r\n    valueChange: fn(),\r\n  },\r\n}"
                 },
                 {
                     "name": "WithValue",
@@ -1374,7 +1291,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Meta<RadioButtonComponent>",
-                    "defaultValue": "{\r\n  title: 'Components/Radio Button',\r\n  component: RadioButtonComponent,\r\n  tags: ['autodocs'],\r\n  argTypes: {\r\n    name: { control: 'text' },\r\n    label: { control: 'text' },\r\n    options: { control: 'object' },\r\n    selectedValue: { control: 'text' },\r\n    selectionChange: { action: 'selectionChange' },\r\n  },\r\n  args: {\r\n    options: [\r\n      { value: 'option1', label: 'Option 1' },\r\n      { value: 'option2', label: 'Option 2' },\r\n      { value: 'option3', label: 'Option 3' },\r\n    ],\r\n    selectionChange: fn(),\r\n  },\r\n}"
+                    "defaultValue": "{\r\n  title: '1.Atoms/Radio Button',\r\n  component: RadioButtonComponent,\r\n  tags: ['autodocs'],\r\n  argTypes: {\r\n    name: { control: 'text' },\r\n    label: { control: 'text' },\r\n    options: { control: 'object' },\r\n    selectedValue: { control: 'text' },\r\n    selectionChange: { action: 'selectionChange' },\r\n  },\r\n  args: {\r\n    options: [\r\n      { value: 'option1', label: 'Option 1' },\r\n      { value: 'option2', label: 'Option 2' },\r\n      { value: 'option3', label: 'Option 3' },\r\n    ],\r\n    selectionChange: fn(),\r\n  },\r\n}"
                 },
                 {
                     "name": "WithSelectedValue",
@@ -1406,7 +1323,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Meta<SearchInputDropdownComponent>",
-                    "defaultValue": "{\r\n  title: 'Components/Search Input Dropdown',\r\n  component: SearchInputDropdownComponent,\r\n  tags: ['autodocs'],\r\n  argTypes: {\r\n    id: { control: 'text' },\r\n    label: { control: 'text' },\r\n    placeholder: { control: 'text' },\r\n    options: { control: 'object' },\r\n    selectionChange: { action: 'selectionChange' },\r\n  },\r\n  args: {\r\n    options: [\r\n      { value: 'option1', label: 'Option 1' },\r\n      { value: 'option2', label: 'Option 2' },\r\n      { value: 'option3', label: 'Option 3' },\r\n    ],\r\n    selectionChange: fn(),\r\n  },\r\n}"
+                    "defaultValue": "{\r\n  title: '1.Atoms/Search Input Dropdown',\r\n  component: SearchInputDropdownComponent,\r\n  tags: ['autodocs'],\r\n  argTypes: {\r\n    id: { control: 'text' },\r\n    label: { control: 'text' },\r\n    placeholder: { control: 'text' },\r\n    options: { control: 'object' },\r\n    selectionChange: { action: 'selectionChange' },\r\n  },\r\n  args: {\r\n    options: [\r\n      { value: 'option1', label: 'Option 1' },\r\n      { value: 'option2', label: 'Option 2' },\r\n      { value: 'option3', label: 'Option 3' },\r\n    ],\r\n    selectionChange: fn(),\r\n  },\r\n}"
                 },
                 {
                     "name": "WithOptions",
@@ -1417,6 +1334,28 @@
                     "deprecationMessage": "",
                     "type": "Story",
                     "defaultValue": "{\r\n  args: {\r\n    id: 'searchWithOptions',\r\n    label: 'Search with Options',\r\n    placeholder: 'Type to search...',\r\n    options: [\r\n      { value: 'option1', label: 'Option 1' },\r\n      { value: 'option2', label: 'Option 2' },\r\n      { value: 'option3', label: 'Option 3' },\r\n    ],\r\n  },\r\n}"
+                }
+            ],
+            "projects/excelsior-angular/src/lib/organisms/modal/modal.stories.ts": [
+                {
+                    "name": "Default",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/excelsior-angular/src/lib/organisms/modal/modal.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\r\n  render: (args) => ({\r\n    props: args,\r\n    styles: [\r\n      `\r\n      .ex-row {\r\n        display: flex;\r\n        justify-content: flex-end;\r\n        gap: 0.4rem;\r\n      }\r\n      `,\r\n    ],\r\n    template: `\r\n      <div style=\"display: flex; justify-content: center; align-items: center; height: 100vh; width: 100vw;\">\r\n        <ex-modal \r\n        [title]=\"title\" \r\n        [supportingText]=\"supportingText\" \r\n        [isVisible]=\"isVisible\"\r\n        [iconName]=\"iconName\"\r\n        (onClose)=\"close()\">\r\n        <p>Modal body content goes here.</p>\r\n        <div modalFooter>\r\n        <div class=\"ex-row\">         \r\n        <ex-button [primary]=\"false\" label=\"Cancel\" (click)=\"isVisible = false\"/>\r\n        <ex-button [primary]=\"true\" label=\"Ok\" (click)=\"isVisible = false\"/>\r\n        </div>\r\n        </div>\r\n        </ex-modal>\r\n      </div>\r\n    `,\r\n  }),\r\n}"
+                },
+                {
+                    "name": "meta",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/excelsior-angular/src/lib/organisms/modal/modal.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Meta<ExModalComponent>",
+                    "defaultValue": "{\r\n  title: '3.Organism/Modal',\r\n  component: ExModalComponent,\r\n  tags: ['autodocs'],\r\n  decorators: [\r\n    moduleMetadata({\r\n      imports: [ExButtonComponent],\r\n    }),\r\n  ],\r\n  argTypes: {\r\n    title: { control: 'text' },\r\n    supportingText: { control: 'text' },\r\n    iconName: { control: 'text' },\r\n    isVisible: { control: 'boolean' },\r\n    onClose: { action: 'onClose' },\r\n  },\r\n  args: {\r\n    title: 'Sample Modal',\r\n    supportingText: 'This is a sample modal...',\r\n    iconName: 'Visualizar',\r\n    isVisible: true,\r\n    onClose: fn(),\r\n  },\r\n}"
                 }
             ],
             "projects/excelsior-angular/src/lib/atoms/button/ex-button.stories.ts": [
@@ -1448,7 +1387,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Meta<ExButtonComponent>",
-                    "defaultValue": "{\r\n  title: 'Components/Button',\r\n  component: ExButtonComponent,\r\n  tags: ['autodocs'],\r\n  argTypes: {\r\n    backgroundColor: {\r\n      control: 'color',\r\n    },\r\n    disabled: {\r\n      control: 'boolean',\r\n    },\r\n    icon: {\r\n      control: 'text',\r\n    },\r\n    iconColor: {\r\n      control: 'color',\r\n    },\r\n    size: {\r\n      control: { type: 'select' },\r\n      options: ['small', 'medium', 'large'],\r\n    },\r\n  },\r\n  // Use `fn` to spy on the onClick arg, which will appear in the actions panel once invoked: https://storybook.js.org/docs/essentials/actions#action-args\r\n  args: { onClick: fn() },\r\n}"
+                    "defaultValue": "{\r\n  title: '1.Atoms/Button',\r\n  component: ExButtonComponent,\r\n  tags: ['autodocs'],\r\n  argTypes: {\r\n    backgroundColor: {\r\n      control: 'color',\r\n    },\r\n    disabled: {\r\n      control: 'boolean',\r\n    },\r\n    icon: {\r\n      control: 'text',\r\n    },\r\n    iconColor: {\r\n      control: 'color',\r\n    },\r\n    size: {\r\n      control: { type: 'select' },\r\n      options: ['small', 'medium', 'large'],\r\n    },\r\n  },\r\n  // Use `fn` to spy on the onClick arg, which will appear in the actions panel once invoked: https://storybook.js.org/docs/essentials/actions#action-args\r\n  args: { onClick: fn() },\r\n}"
                 },
                 {
                     "name": "Primary",
@@ -1501,38 +1440,6 @@
                     "defaultValue": "{\r\n  args: {\r\n    primary: false,\r\n    label: 'Button',\r\n    size: 'medium',\r\n  },\r\n}"
                 }
             ],
-            "projects/excelsior-angular/src/lib/organisms/header/ex-header.stories.ts": [
-                {
-                    "name": "LoggedIn",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "projects/excelsior-angular/src/lib/organisms/header/ex-header.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Story",
-                    "defaultValue": "{\r\n  args: {\r\n    user: {\r\n      name: 'Jane Doe',\r\n    },\r\n  },\r\n}"
-                },
-                {
-                    "name": "LoggedOut",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "projects/excelsior-angular/src/lib/organisms/header/ex-header.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Story",
-                    "defaultValue": "{}"
-                },
-                {
-                    "name": "meta",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "projects/excelsior-angular/src/lib/organisms/header/ex-header.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Meta<ExHeaderComponent>",
-                    "defaultValue": "{\r\n  title: 'Layouts/Header',\r\n  component: ExHeaderComponent,\r\n  // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/writing-docs/autodocs\r\n  tags: ['autodocs'],\r\n  parameters: {\r\n    // More on how to position stories at: https://storybook.js.org/docs/configure/story-layout\r\n    layout: 'fullscreen',\r\n  },\r\n  args: {\r\n    onLogin: fn(),\r\n    onLogout: fn(),\r\n    onCreateAccount: fn(),\r\n  },\r\n}"
-                }
-            ],
             "projects/excelsior-angular/src/lib/organisms/page/page.stories.ts": [
                 {
                     "name": "LoggedIn",
@@ -1562,7 +1469,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Meta<PageComponent>",
-                    "defaultValue": "{\r\n  title: 'Layouts/Page',\r\n  component: PageComponent,\r\n  parameters: {\r\n    // More on how to position stories at: https://storybook.js.org/docs/configure/story-layout\r\n    layout: 'fullscreen',\r\n  },\r\n}"
+                    "defaultValue": "{\r\n  title: '4.Layouts/Page',\r\n  component: PageComponent,\r\n  parameters: {\r\n    // More on how to position stories at: https://storybook.js.org/docs/configure/story-layout\r\n    layout: 'fullscreen',\r\n  },\r\n}"
                 }
             ],
             "projects/excelsior-angular/.storybook/preview.ts": [
@@ -1683,19 +1590,6 @@
                     "kind": 183
                 }
             ],
-            "projects/excelsior-angular/src/lib/atoms/dropdown/dropdown.stories.ts": [
-                {
-                    "name": "Story",
-                    "ctype": "miscellaneous",
-                    "subtype": "typealias",
-                    "rawtype": "StoryObj<SelectDropdownComponent>",
-                    "file": "projects/excelsior-angular/src/lib/atoms/dropdown/dropdown.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "description": "",
-                    "kind": 183
-                }
-            ],
             "projects/excelsior-angular/src/lib/atoms/dropdown-custom/dropdown.stories.ts": [
                 {
                     "name": "Story",
@@ -1727,7 +1621,7 @@
                     "name": "Story",
                     "ctype": "miscellaneous",
                     "subtype": "typealias",
-                    "rawtype": "StoryObj<InputComponent>",
+                    "rawtype": "StoryObj<ExInputComponent>",
                     "file": "projects/excelsior-angular/src/lib/atoms/input/input.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
@@ -1761,13 +1655,13 @@
                     "kind": 183
                 }
             ],
-            "projects/excelsior-angular/src/lib/organisms/header/ex-header.stories.ts": [
+            "projects/excelsior-angular/src/lib/organisms/modal/modal.stories.ts": [
                 {
                     "name": "Story",
                     "ctype": "miscellaneous",
                     "subtype": "typealias",
-                    "rawtype": "StoryObj<ExHeaderComponent>",
-                    "file": "projects/excelsior-angular/src/lib/organisms/header/ex-header.stories.ts",
+                    "rawtype": "StoryObj<ExModalComponent>",
+                    "file": "projects/excelsior-angular/src/lib/organisms/modal/modal.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "description": "",
@@ -2178,36 +2072,6 @@
                 "status": "low"
             },
             {
-                "filePath": "projects/excelsior-angular/src/lib/atoms/dropdown/dropdown.stories.ts",
-                "type": "variable",
-                "linktype": "miscellaneous",
-                "linksubtype": "variable",
-                "name": "Default",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
-                "filePath": "projects/excelsior-angular/src/lib/atoms/dropdown/dropdown.stories.ts",
-                "type": "variable",
-                "linktype": "miscellaneous",
-                "linksubtype": "variable",
-                "name": "meta",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
-                "filePath": "projects/excelsior-angular/src/lib/atoms/dropdown/dropdown.stories.ts",
-                "type": "variable",
-                "linktype": "miscellaneous",
-                "linksubtype": "variable",
-                "name": "WithSelectedValue",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
                 "filePath": "projects/excelsior-angular/src/lib/atoms/icon/ex-icon.component.stories.ts",
                 "type": "variable",
                 "linktype": "miscellaneous",
@@ -2418,27 +2282,17 @@
                 "status": "low"
             },
             {
-                "filePath": "projects/excelsior-angular/src/lib/organisms/header/ex-header.stories.ts",
+                "filePath": "projects/excelsior-angular/src/lib/organisms/modal/modal.stories.ts",
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
-                "name": "LoggedIn",
+                "name": "Default",
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
                 "status": "low"
             },
             {
-                "filePath": "projects/excelsior-angular/src/lib/organisms/header/ex-header.stories.ts",
-                "type": "variable",
-                "linktype": "miscellaneous",
-                "linksubtype": "variable",
-                "name": "LoggedOut",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
-                "filePath": "projects/excelsior-angular/src/lib/organisms/header/ex-header.stories.ts",
+                "filePath": "projects/excelsior-angular/src/lib/organisms/modal/modal.stories.ts",
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",

@@ -13,6 +13,7 @@ import { DropdownComponent as DropdownComponent } from './atoms/dropdown-custom/
 import { RadioButtonComponent as ExRadioButtonComponent } from './atoms/radio/radio-button.component'
 import { SearchInputDropdownComponent as ExSearchInputDropdownComponent } from './atoms/search-input/search-input-dropdown.component'
 import { ExLayoutMainComponent } from './atoms/layout-main/ex-layout-main.component'
+import { ExModalComponent } from './organisms/modal/modal.component'
 
 @NgModule({
   declarations: [],
@@ -30,8 +31,10 @@ import { ExLayoutMainComponent } from './atoms/layout-main/ex-layout-main.compon
     ExRadioButtonComponent,
     ExSearchInputDropdownComponent,
     ExLayoutMainComponent,
+    ExModalComponent,
   ],
   exports: [
+    // Atoms
     ExBadgeComponent,
     ExButtonComponent,
     ExCardComponent,
@@ -45,6 +48,9 @@ import { ExLayoutMainComponent } from './atoms/layout-main/ex-layout-main.compon
     ExRadioButtonComponent,
     ExSearchInputDropdownComponent,
     ExLayoutMainComponent,
+
+    // Organisms
+    ExModalComponent,
   ], // Exporta os componentes para que possam ser usados fora da biblioteca
 })
 export class ExcelsiorModule {}

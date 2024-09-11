@@ -1,0 +1,11 @@
+.ex-col {
+    display: flex;
+    flex-direction: column;
+    gap: var(--ex-space-md);
+}
+
+.ex-row {
+    display: flex;
+    flex-direction: row;
+    gap: var(--ex-space-md);
+}

@@ -3,7 +3,7 @@ import { SearchInputDropdownComponent } from './search-input-dropdown.component'
 import { fn } from '@storybook/test'
 
 const meta: Meta<SearchInputDropdownComponent> = {
-  title: 'Components/Search Input Dropdown',
+  title: '1.Atoms/Search Input Dropdown',
   component: SearchInputDropdownComponent,
   tags: ['autodocs'],
   argTypes: {

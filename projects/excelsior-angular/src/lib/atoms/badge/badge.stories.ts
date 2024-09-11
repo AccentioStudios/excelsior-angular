@@ -3,7 +3,7 @@ import { ExBadgeComponent } from './badge.component'
 import { fn } from '@storybook/test'
 
 const meta: Meta<ExBadgeComponent> = {
-  title: 'Components/Badge',
+  title: '1.Atoms/Badge',
   component: ExBadgeComponent,
   tags: ['autodocs'],
   argTypes: {

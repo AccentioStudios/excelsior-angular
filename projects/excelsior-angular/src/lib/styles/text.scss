@@ -1,0 +1,57 @@
+.ex-font-weight-bold {
+    font-weight: bold;
+}
+
+.ex-font-weight-normal {
+    font-weight: normal;
+}
+
+.ex-font-weight-light {
+    font-weight: lighter;
+}
+
+.ex-font-weight-100 {
+    font-weight: 100;
+}
+
+.ex-font-weight-200 {
+    font-weight: 200;
+}
+
+.ex-font-weight-300 {
+    font-weight: 300;
+}
+
+.ex-font-weight-400 {
+    font-weight: 400;
+}
+
+.ex-font-weight-500 {
+    font-weight: 500;
+}
+
+.ex-font-weight-600 {
+    font-weight: 600;
+}
+
+h3 {
+    font-family: 'Inter', sans-serif!important;
+    font-size: 30px;
+    color: var(--on-surface-color);
+    padding: 0;
+    margin: 0;
+    font-weight: 500;
+}
+h5 {
+    font-family: 'Inter', sans-serif!important;
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--on-surface-color-variant);
+    padding: 0;
+    margin: 0;
+    margin-top: 8px;
+}
+
+.font-inter {
+    font-family: 'Inter', sans-serif!important;
+}

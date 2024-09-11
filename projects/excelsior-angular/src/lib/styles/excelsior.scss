@@ -1,2 +1,15 @@
-@import 'variables';
+@import 'colors';
+@import 'radius';
+@import 'misc';
+@import 'nav';
 @import 'container';
+@import 'grid';
+@import 'text'; 
+@import 'spaces';
+@import 'buttons';
+@import 'cards';
+
+* {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+}

@@ -3,7 +3,7 @@ import { RadioButtonComponent } from './radio-button.component'
 import { fn } from '@storybook/test'
 
 const meta: Meta<RadioButtonComponent> = {
-  title: 'Components/Radio Button',
+  title: '1.Atoms/Radio Button',
   component: RadioButtonComponent,
   tags: ['autodocs'],
   argTypes: {

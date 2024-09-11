@@ -1,0 +1,9 @@
+:host {
+    --ex-radius-sm: 6px;
+}
+
+.ex-radius {
+    &-sm {
+        border-radius: var(--ex-radius-sm);
+    }
+}

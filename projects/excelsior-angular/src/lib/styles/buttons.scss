@@ -1,0 +1,76 @@
+ex-button.ex-button-nowrap {
+    > button {
+        > span {
+            white-space: nowrap;
+            text-wrap: nowrap;
+        }
+    }
+}
+
+ex-button.ex-button-color-warn {
+    > button {
+        background-color: var(--utility-warning-500) !important;
+        border: 1px solid var(--utility-warning-500) !important;
+
+        &:hover {
+            background-color: var(--utility-warning-700) !important;
+            border: 1px solid var(--utility-warning-700) !important;
+        }
+    }   
+}
+
+
+ex-button.ex-button-color-error {
+    > button {
+        background-color: var(--utility-error-500) !important;
+        border: 1px solid var(--utility-error-500) !important;
+
+        &:hover {
+            background-color: var(--utility-error-700) !important;
+            border: 1px solid var(--utility-error-700) !important;
+        }
+    }   
+}
+
+ex-button.ex-button-color-success {
+    > button {
+        background-color: var(--utility-success-500) !important;
+        border: 1px solid var(--utility-success-500) !important;
+
+        &:hover {
+            background-color: var(--utility-success-700) !important;
+            border: 1px solid var(--utility-success-700) !important;
+        }
+    }   
+}
+
+ex-button.ex-button-color-info {
+    > button {
+        background-color: var(--utility-info-500) !important;
+        border: 1px solid var(--utility-info-500) !important;
+
+        &:hover {
+            background-color: var(--utility-info-700) !important;
+            border: 1px solid var(--utility-info-700) !important;
+        }
+    }   
+}
+
+ex-button.ex-button-color-delete {
+    > button {
+        background-color: var(--utility-delete-500) !important;
+        border: 1px solid var(--utility-delete-500) !important;
+
+        &:hover {
+            background-color: var(--utility-delete-700) !important;
+            border: 1px solid var(--utility-delete-700) !important;
+        }
+    }   
+}
+
+ex-button.ex-button-expanded {
+    > button {
+        width: 100%;
+        justify-content: center!important;
+    }
+}

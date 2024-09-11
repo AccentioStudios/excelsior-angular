@@ -2,7 +2,7 @@ import { Meta, StoryObj } from '@storybook/angular'
 import { DropdownComponent } from './dropdown.component'
 
 const meta: Meta<DropdownComponent> = {
-  title: 'Components/Dropdown',
+  title: '1.Atoms/Dropdown',
   component: DropdownComponent,
   tags: ['autodocs'],
   argTypes: {

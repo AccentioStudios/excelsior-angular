@@ -2,7 +2,7 @@ import { Meta, StoryObj } from '@storybook/angular'
 import { ExIconComponent } from './ex-icon.component'
 
 const meta: Meta<ExIconComponent> = {
-  title: 'Components/Icon',
+  title: '1.Atoms/Icon',
   component: ExIconComponent,
   tags: ['autodocs'],
   argTypes: {

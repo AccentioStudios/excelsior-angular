@@ -2,7 +2,7 @@ import { Meta, StoryObj } from '@storybook/angular'
 import { ExCardComponent } from './card.component'
 
 const meta: Meta<ExCardComponent> = {
-  title: 'Components/Card',
+  title: '1.Atoms/Card',
   component: ExCardComponent,
   tags: ['autodocs'],
 }

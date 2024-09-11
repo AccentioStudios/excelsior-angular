@@ -3,7 +3,7 @@ import { fn } from '@storybook/test'
 import { ExInputComponent } from './input.component'
 
 const meta: Meta<ExInputComponent> = {
-  title: 'Components/Input',
+  title: '1.Atoms/Input',
   component: ExInputComponent,
   tags: ['autodocs'],
   argTypes: {

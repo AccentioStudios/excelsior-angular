@@ -1,9 +1,9 @@
-import { Meta, StoryObj } from '@storybook/angular';
-import { TableComponent } from './table.component';
+import { Meta, StoryObj } from '@storybook/angular'
+import { TableComponent } from './table.component'
 import { fn } from '@storybook/test'
 
 const meta: Meta<TableComponent> = {
-  title: 'Components/Table',
+  title: '1.Atoms/Table',
   component: TableComponent,
   tags: ['autodocs'],
   argTypes: {
@@ -29,20 +29,20 @@ const meta: Meta<TableComponent> = {
     ],
     actionClick: fn(),
   },
-};
+}
 
-export default meta;
-type Story = StoryObj<TableComponent>;
+export default meta
+type Story = StoryObj<TableComponent>
 
 export const Default: Story = {
   args: {},
-};
+}
 
 export const NoActions: Story = {
   args: {
     actions: [],
   },
-};
+}
 
 export const CustomColumns: Story = {
   args: {
@@ -57,4 +57,4 @@ export const CustomColumns: Story = {
       { product: 'Tablet', price: '$300', quantity: 10 },
     ],
   },
-};
+}

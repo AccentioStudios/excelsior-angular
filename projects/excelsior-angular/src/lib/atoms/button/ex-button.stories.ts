@@ -4,7 +4,7 @@ import { ExButtonComponent } from './ex-button.component'
 
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories
 const meta: Meta<ExButtonComponent> = {
-  title: 'Components/Button',
+  title: '1.Atoms/Button',
   component: ExButtonComponent,
   tags: ['autodocs'],
   argTypes: {
@@ -23,6 +23,9 @@ const meta: Meta<ExButtonComponent> = {
     size: {
       control: { type: 'select' },
       options: ['small', 'medium', 'large'],
+    },
+    extended: {
+      control: 'boolean',
     },
   },
   // Use `fn` to spy on the onClick arg, which will appear in the actions panel once invoked: https://storybook.js.org/docs/essentials/actions#action-args
@@ -75,10 +78,11 @@ export const Small: Story = {
   },
 }
 
-export const Test: Story = {
+export const Extended: Story = {
   args: {
-    primary: false,
+    primary: true,
     label: 'Button',
     size: 'medium',
+    extended: true,
   },
 }

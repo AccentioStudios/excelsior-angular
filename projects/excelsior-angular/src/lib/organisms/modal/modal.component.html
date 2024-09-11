@@ -1,26 +1,70 @@
-<div class="modal-overlay" *ngIf="isVisible" (click)="closeModal()">
-    <div class="modal" (click)="$event.stopPropagation()">
-      <div class="modal-header">
+<div class="ex-modal-overlay" *ngIf="isVisible" (click)="closeModal()">
+  <div class="ex-modal" (click)="$event.stopPropagation()">
+    <div class="ex-modal-header">
+      <svg
+        *ngIf="iconName"
+        class="ex-modal-header__circles"
+        width="336"
+        height="336"
+        viewBox="0 0 336 336"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <mask
+          id="mask0_895_35139"
+          style="mask-type: alpha"
+          maskUnits="userSpaceOnUse"
+          x="0"
+          y="0"
+          width="336"
+          height="336"
+        >
+          <rect width="336" height="336" fill="url(#paint0_radial_895_35139)" />
+        </mask>
+        <g mask="url(#mask0_895_35139)">
+          <circle cx="168" cy="168" r="47.5" stroke="currentColor" />
+          <circle cx="168" cy="168" r="47.5" stroke="currentColor" />
+          <circle cx="168" cy="168" r="71.5" stroke="currentColor" />
+          <circle cx="168" cy="168" r="95.5" stroke="currentColor" />
+          <circle cx="168" cy="168" r="119.5" stroke="currentColor" />
+          <circle cx="168" cy="168" r="143.5" stroke="currentColor" />
+          <circle cx="168" cy="168" r="167.5" stroke="currentColor" />
+        </g>
+        <defs>
+          <radialGradient
+            id="paint0_radial_895_35139"
+            cx="0"
+            cy="0"
+            r="1"
+            gradientUnits="userSpaceOnUse"
+            gradientTransform="translate(168 168) rotate(90) scale(168 168)"
+          >
+            <stop />
+            <stop offset="1" stop-opacity="0" />
+          </radialGradient>
+        </defs>
+      </svg>
+
+      <div class="ex-container" style="z-index: 2; gap: var(--ex-space-sm)">
+        <ex-featured-icon [flat]="true" *ngIf="iconName" [name]="iconName" size="medium" />
+        <div class="ex-text-and-supporting-text">
+          <h2 class="ex-color-header-text" *ngIf="title">{{ title }}</h2>
+          <p class="ex-color-supporting-text" *ngIf="supportingText">{{ supportingText }}</p>
+        </div>
         <ng-content select="[modalHeader]"></ng-content>
-        <!-- <h2 *ngIf="!hasCustomHeader">{{ title }}</h2> -->
-        <button class="close-button" (click)="closeModal()">
-            <i>
-                <ex-icon [name]="'close-x'" />
-            </i>
+      </div>
+      <!-- <h2 *ngIf="!hasCustomHeader">{{ title }}</h2> -->
+      <button class="close-button" (click)="closeModal()" data-bs-dismiss="modal" aria-label="Close">
+        <ex-icon [name]="'close-x'" size="large" />
+      </button>
+    </div>
 
-        </button>
+    <div class="ex-container ex-modal-content" style="z-index: 3">
+      <ng-content></ng-content>
+    </div>
 
-      </div>
-  
-      <div class="modal-content">
-        <ng-content></ng-content>
-      </div>
-      
-      <div class="modal-footer" *ngIf="showFooter">
-        <button *ngFor="let action of actions" (click)="onActionClick(action)">
-          {{ action.label }}
-        </button>
-      </div>
+    <div class="ex-modal-footer" style="z-index: 4">
+      <ng-content select="[modalFooter]"></ng-content>
     </div>
   </div>
-  
+</div>
