@@ -8,6 +8,10 @@ const meta: Meta<ExButtonComponent> = {
   component: ExButtonComponent,
   tags: ['autodocs'],
   argTypes: {
+    primary: { control: 'boolean' },
+    extended: {
+      control: 'boolean',
+    },
     backgroundColor: {
       control: 'color',
     },
@@ -16,6 +20,7 @@ const meta: Meta<ExButtonComponent> = {
     },
     icon: {
       control: 'text',
+      options: ['cube-03'],
     },
     iconColor: {
       control: 'color',
@@ -23,9 +28,6 @@ const meta: Meta<ExButtonComponent> = {
     size: {
       control: { type: 'select' },
       options: ['small', 'medium', 'large'],
-    },
-    extended: {
-      control: 'boolean',
     },
   },
   // Use `fn` to spy on the onClick arg, which will appear in the actions panel once invoked: https://storybook.js.org/docs/essentials/actions#action-args

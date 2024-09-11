@@ -128,7 +128,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\r\n  render: (args) => ({\r\n    props: args,\r\n    styles: [\r\n      `\r\n      .ex-row {\r\n        display: flex;\r\n        justify-content: flex-end;\r\n        gap: 0.4rem;\r\n      }\r\n      `,\r\n    ],\r\n    template: `\r\n      <div style=\"display: flex; justify-content: center; align-items: center; height: 100vh; width: 100vw;\">\r\n        <ex-modal \r\n        [title]=\"title\" \r\n        [supportingText]=\"supportingText\" \r\n        [isVisible]=\"isVisible\"\r\n        [iconName]=\"iconName\"\r\n        (onClose)=\"close()\">\r\n        <p>Modal body content goes here.</p>\r\n        <div modalFooter>\r\n        <div class=\"ex-row\">         \r\n        <ex-button [primary]=\"false\" label=\"Cancel\" (click)=\"isVisible = false\"/>\r\n        <ex-button [primary]=\"true\" label=\"Ok\" (click)=\"isVisible = false\"/>\r\n        </div>\r\n        </div>\r\n        </ex-modal>\r\n      </div>\r\n    `,\r\n  }),\r\n}"
+                "defaultValue": "{\r\n  render: (args) => ({\r\n    props: args,\r\n    styles: [\r\n      `\r\n      .ex-row {\r\n        display: flex;\r\n        justify-content: flex-end;\r\n        gap: 0.4rem;\r\n      }\r\n      `,\r\n    ],\r\n    template: `\r\n      <div style=\"display: flex; justify-content: center; align-items: center; height: 100vh; width: 100vw;\">\r\n        <ex-modal \r\n        [title]=\"title\" \r\n        [supportingText]=\"supportingText\" \r\n        [isVisible]=\"isVisible\"\r\n        [iconName]=\"iconName\"\r\n        (onClose)=\"close()\">\r\n        <p>Modal body content goes here.</p>\r\n        <div style=\"width:100%;\" modalFooter>\r\n        <div class=\"ex-row\" style=\"width:100%;\">         \r\n        <ex-button style=\"width:100%;\" [primary]=\"false\" [extended]=\"true\" label=\"Cancel\" (click)=\"isVisible = false\"/>\r\n        <ex-button style=\"width:100%;\" [primary]=\"true\" [extended]=\"true\" label=\"Ok\" (click)=\"isVisible = false\"/>\r\n        </div>\r\n        </div>\r\n        </ex-modal>\r\n      </div>\r\n    `,\r\n  }),\r\n}"
             },
             {
                 "name": "Default",
@@ -159,6 +159,16 @@
                 "deprecationMessage": "",
                 "type": "Story",
                 "defaultValue": "{\r\n  args: {\r\n    text: 'Error Badge',\r\n    type: 'error',\r\n  },\r\n}"
+            },
+            {
+                "name": "Extended",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/excelsior-angular/src/lib/atoms/button/ex-button.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\r\n  args: {\r\n    primary: true,\r\n    label: 'Button',\r\n    size: 'medium',\r\n    extended: true,\r\n  },\r\n}"
             },
             {
                 "name": "HelpCircle",
@@ -304,7 +314,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Meta<ExButtonComponent>",
-                "defaultValue": "{\r\n  title: '1.Atoms/Button',\r\n  component: ExButtonComponent,\r\n  tags: ['autodocs'],\r\n  argTypes: {\r\n    backgroundColor: {\r\n      control: 'color',\r\n    },\r\n    disabled: {\r\n      control: 'boolean',\r\n    },\r\n    icon: {\r\n      control: 'text',\r\n    },\r\n    iconColor: {\r\n      control: 'color',\r\n    },\r\n    size: {\r\n      control: { type: 'select' },\r\n      options: ['small', 'medium', 'large'],\r\n    },\r\n  },\r\n  // Use `fn` to spy on the onClick arg, which will appear in the actions panel once invoked: https://storybook.js.org/docs/essentials/actions#action-args\r\n  args: { onClick: fn() },\r\n}"
+                "defaultValue": "{\r\n  title: '1.Atoms/Button',\r\n  component: ExButtonComponent,\r\n  tags: ['autodocs'],\r\n  argTypes: {\r\n    backgroundColor: {\r\n      control: 'color',\r\n    },\r\n    disabled: {\r\n      control: 'boolean',\r\n    },\r\n    icon: {\r\n      control: 'text',\r\n    },\r\n    iconColor: {\r\n      control: 'color',\r\n    },\r\n    size: {\r\n      control: { type: 'select' },\r\n      options: ['small', 'medium', 'large'],\r\n    },\r\n    extended: {\r\n      control: 'boolean',\r\n    },\r\n  },\r\n  // Use `fn` to spy on the onClick arg, which will appear in the actions panel once invoked: https://storybook.js.org/docs/essentials/actions#action-args\r\n  args: { onClick: fn() },\r\n}"
             },
             {
                 "name": "meta",
@@ -553,16 +563,6 @@
                 "deprecationMessage": "",
                 "type": "Story",
                 "defaultValue": "{\r\n  args: {\r\n    text: 'Success Badge',\r\n    type: 'success',\r\n  },\r\n}"
-            },
-            {
-                "name": "Test",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "projects/excelsior-angular/src/lib/atoms/button/ex-button.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Story",
-                "defaultValue": "{\r\n  args: {\r\n    primary: false,\r\n    label: 'Button',\r\n    size: 'medium',\r\n  },\r\n}"
             },
             {
                 "name": "TestCheckbox",
@@ -1345,7 +1345,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\r\n  render: (args) => ({\r\n    props: args,\r\n    styles: [\r\n      `\r\n      .ex-row {\r\n        display: flex;\r\n        justify-content: flex-end;\r\n        gap: 0.4rem;\r\n      }\r\n      `,\r\n    ],\r\n    template: `\r\n      <div style=\"display: flex; justify-content: center; align-items: center; height: 100vh; width: 100vw;\">\r\n        <ex-modal \r\n        [title]=\"title\" \r\n        [supportingText]=\"supportingText\" \r\n        [isVisible]=\"isVisible\"\r\n        [iconName]=\"iconName\"\r\n        (onClose)=\"close()\">\r\n        <p>Modal body content goes here.</p>\r\n        <div modalFooter>\r\n        <div class=\"ex-row\">         \r\n        <ex-button [primary]=\"false\" label=\"Cancel\" (click)=\"isVisible = false\"/>\r\n        <ex-button [primary]=\"true\" label=\"Ok\" (click)=\"isVisible = false\"/>\r\n        </div>\r\n        </div>\r\n        </ex-modal>\r\n      </div>\r\n    `,\r\n  }),\r\n}"
+                    "defaultValue": "{\r\n  render: (args) => ({\r\n    props: args,\r\n    styles: [\r\n      `\r\n      .ex-row {\r\n        display: flex;\r\n        justify-content: flex-end;\r\n        gap: 0.4rem;\r\n      }\r\n      `,\r\n    ],\r\n    template: `\r\n      <div style=\"display: flex; justify-content: center; align-items: center; height: 100vh; width: 100vw;\">\r\n        <ex-modal \r\n        [title]=\"title\" \r\n        [supportingText]=\"supportingText\" \r\n        [isVisible]=\"isVisible\"\r\n        [iconName]=\"iconName\"\r\n        (onClose)=\"close()\">\r\n        <p>Modal body content goes here.</p>\r\n        <div style=\"width:100%;\" modalFooter>\r\n        <div class=\"ex-row\" style=\"width:100%;\">         \r\n        <ex-button style=\"width:100%;\" [primary]=\"false\" [extended]=\"true\" label=\"Cancel\" (click)=\"isVisible = false\"/>\r\n        <ex-button style=\"width:100%;\" [primary]=\"true\" [extended]=\"true\" label=\"Ok\" (click)=\"isVisible = false\"/>\r\n        </div>\r\n        </div>\r\n        </ex-modal>\r\n      </div>\r\n    `,\r\n  }),\r\n}"
                 },
                 {
                     "name": "meta",
@@ -1359,6 +1359,16 @@
                 }
             ],
             "projects/excelsior-angular/src/lib/atoms/button/ex-button.stories.ts": [
+                {
+                    "name": "Extended",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/excelsior-angular/src/lib/atoms/button/ex-button.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\r\n  args: {\r\n    primary: true,\r\n    label: 'Button',\r\n    size: 'medium',\r\n    extended: true,\r\n  },\r\n}"
+                },
                 {
                     "name": "Large",
                     "ctype": "miscellaneous",
@@ -1387,7 +1397,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Meta<ExButtonComponent>",
-                    "defaultValue": "{\r\n  title: '1.Atoms/Button',\r\n  component: ExButtonComponent,\r\n  tags: ['autodocs'],\r\n  argTypes: {\r\n    backgroundColor: {\r\n      control: 'color',\r\n    },\r\n    disabled: {\r\n      control: 'boolean',\r\n    },\r\n    icon: {\r\n      control: 'text',\r\n    },\r\n    iconColor: {\r\n      control: 'color',\r\n    },\r\n    size: {\r\n      control: { type: 'select' },\r\n      options: ['small', 'medium', 'large'],\r\n    },\r\n  },\r\n  // Use `fn` to spy on the onClick arg, which will appear in the actions panel once invoked: https://storybook.js.org/docs/essentials/actions#action-args\r\n  args: { onClick: fn() },\r\n}"
+                    "defaultValue": "{\r\n  title: '1.Atoms/Button',\r\n  component: ExButtonComponent,\r\n  tags: ['autodocs'],\r\n  argTypes: {\r\n    backgroundColor: {\r\n      control: 'color',\r\n    },\r\n    disabled: {\r\n      control: 'boolean',\r\n    },\r\n    icon: {\r\n      control: 'text',\r\n    },\r\n    iconColor: {\r\n      control: 'color',\r\n    },\r\n    size: {\r\n      control: { type: 'select' },\r\n      options: ['small', 'medium', 'large'],\r\n    },\r\n    extended: {\r\n      control: 'boolean',\r\n    },\r\n  },\r\n  // Use `fn` to spy on the onClick arg, which will appear in the actions panel once invoked: https://storybook.js.org/docs/essentials/actions#action-args\r\n  args: { onClick: fn() },\r\n}"
                 },
                 {
                     "name": "Primary",
@@ -1428,16 +1438,6 @@
                     "deprecationMessage": "",
                     "type": "Story",
                     "defaultValue": "{\r\n  args: {\r\n    size: 'small',\r\n    label: 'Button',\r\n  },\r\n}"
-                },
-                {
-                    "name": "Test",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "projects/excelsior-angular/src/lib/atoms/button/ex-button.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Story",
-                    "defaultValue": "{\r\n  args: {\r\n    primary: false,\r\n    label: 'Button',\r\n    size: 'medium',\r\n  },\r\n}"
                 }
             ],
             "projects/excelsior-angular/src/lib/organisms/page/page.stories.ts": [
@@ -1836,6 +1836,16 @@
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
+                "name": "Extended",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/excelsior-angular/src/lib/atoms/button/ex-button.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
                 "name": "Large",
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
@@ -1897,16 +1907,6 @@
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
                 "name": "Small",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
-                "filePath": "projects/excelsior-angular/src/lib/atoms/button/ex-button.stories.ts",
-                "type": "variable",
-                "linktype": "miscellaneous",
-                "linksubtype": "variable",
-                "name": "Test",
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
                 "status": "low"
