@@ -6,7 +6,7 @@ import { Component, Input, Output, EventEmitter } from '@angular/core'
   styleUrls: ['./input.component.css'],
   standalone: true,
 })
-export class InputComponent {
+export class ExInputComponent {
   @Input() id: string = 'input'
   @Input() type: string = 'text'
   @Input() placeholder: string = 'Enter text'

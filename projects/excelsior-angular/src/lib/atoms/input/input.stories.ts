@@ -1,10 +1,10 @@
 import { Meta, StoryObj } from '@storybook/angular'
 import { fn } from '@storybook/test'
-import { InputComponent } from './input.component'
+import { ExInputComponent } from './input.component'
 
-const meta: Meta<InputComponent> = {
+const meta: Meta<ExInputComponent> = {
   title: 'Components/Input',
-  component: InputComponent,
+  component: ExInputComponent,
   tags: ['autodocs'],
   argTypes: {
     type: {
@@ -24,7 +24,7 @@ const meta: Meta<InputComponent> = {
 }
 
 export default meta
-type Story = StoryObj<InputComponent>
+type Story = StoryObj<ExInputComponent>
 
 export const Default: Story = {
   args: {
