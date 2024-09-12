@@ -1,0 +1,9 @@
+<div class="ex-accordion__header" (click)="toggleCollapse()">
+  <div #chevron>
+    <ex-icon name="chevron-up" />
+  </div>
+  <ng-content select="[parent]"></ng-content>
+</div>
+<div class="ex-accordion__content" [class]="{ collapsed: isCollapsed }">
+  <ng-content select="[child]"></ng-content>
+</div>

@@ -5,7 +5,7 @@ import { ExButtonComponent } from './atoms/button/ex-button.component'
 import { ExCardComponent } from './atoms/card/card.component'
 import { CheckboxComponent as ExCheckboxComponent } from './atoms/checkbox/checkbox.component'
 import { ExCheckboxGroupComponent } from './atoms/checkbox-group/checkbox-group.component'
-import { CollapsibleComponent as ExCollapsibleComponent } from './atoms/collapsable/collapsible.component'
+import { CollapsibleComponent as ExCollapsibleComponent } from './atoms/collapsible-card/collapsible.component'
 import { SelectDropdownComponent as ExSelectDropdownComponent } from './atoms/dropdown/dropdown.component'
 import { ExInputComponent } from './atoms/input/input.component'
 import { DropdownComponent as DropdownComponent } from './atoms/dropdown-custom/dropdown.component'
@@ -13,9 +13,11 @@ import { RadioButtonComponent as ExRadioButtonComponent } from './atoms/radio/ra
 import { SearchInputDropdownComponent as ExSearchInputDropdownComponent } from './atoms/search-input/search-input-dropdown.component'
 import { ExLayoutMainComponent } from './atoms/layout-main/ex-layout-main.component'
 import { ExModalComponent } from './organisms/modal/modal.component'
+import { ExAccordionComponent } from './atoms/accordion/accordion.component'
+import { TreeComponent } from './molecules/tree/tree.component'
+import { ExAccordionDenseComponent } from './atoms/accordion/accordion-dense/accordion-dense.component'
 
 @NgModule({
-  declarations: [],
   imports: [
     ExBadgeComponent,
     ExButtonComponent,
@@ -31,6 +33,8 @@ import { ExModalComponent } from './organisms/modal/modal.component'
     ExSearchInputDropdownComponent,
     ExLayoutMainComponent,
     ExModalComponent,
+    ExAccordionComponent,
+    ExAccordionDenseComponent,
   ],
   exports: [
     // Atoms
@@ -47,9 +51,12 @@ import { ExModalComponent } from './organisms/modal/modal.component'
     ExRadioButtonComponent,
     ExSearchInputDropdownComponent,
     ExLayoutMainComponent,
+    ExAccordionComponent,
+    ExAccordionDenseComponent,
 
     // Organisms
     ExModalComponent,
-  ], // Exporta os componentes para que possam ser usados fora da biblioteca
+  ],
+  declarations: [TreeComponent], // Exporta os componentes para que possam ser usados fora da biblioteca
 })
 export class ExcelsiorModule {}
