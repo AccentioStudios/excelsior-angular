@@ -17,6 +17,12 @@ const meta: Meta<ExInputComponent> = {
       control: { type: 'text' },
     },
     valueChange: { action: 'valueChange' },
+    label: {
+      control: { type: 'text' },
+    },
+    disabled: {
+      control: { type: 'boolean' },
+    },
   },
   args: {
     valueChange: fn(),

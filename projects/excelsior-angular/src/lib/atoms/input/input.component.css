@@ -1,23 +1,58 @@
 @import '../../assets/css/variables.css';
 
-.input-container {
+.ex-input__container {
   display: flex;
   flex-direction: column;
 }
 
-.input-container label {
+.ex-input__container label {
   margin-bottom: 0.5rem;
-  font-weight: bold;
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--text-secondary-700);
 }
 
-.input-container input {
-  padding: 0.5rem;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  font-size: 1rem;
+.ex-input__container input {
+  padding: 10px 14px;
+  border: 1px solid var(--border-primary);
+  border-radius: var(--radius-md);
+  font-size: 16px;
 }
 
-.input-container input:focus {
+.ex-input__container input::placeholder {
+  color: var(--fg-quinary);
+}
+
+.ex-input__container input:focus {
+  border-color: var(--button-primary-border_hover);
+  box-shadow: 0px 0px 0px 4px #9e77ed3d;
+  box-shadow: 0px 0px 0px 4px #5f92e240;
+}
+
+.ex-input__container input:focus {
   border-color: #007bff;
   outline: none;
+}
+
+.ex-input__container.disabled input {
+  cursor: not-allowed;
+  color: var(--fg-disabled);
+  background-color: var(--bg-disabled);
+  border-color: var(--border-disabled_subtle);
+}
+
+.ex-input__container.disabled label {
+  color: var(--fg-disabled);
+}
+
+.ex-input__container.invalid label {
+  color: var(--utility-error-500);
+}
+.ex-input__container.invalid input {
+  border-color: var(--utility-error-500);
+  color: var(--utility-error-500);
+}
+
+.ex-input__container.invalid input:focus {
+  box-shadow: 0px 0px 0px 4px #ff00001a;
 }

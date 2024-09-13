@@ -1,4 +1,4 @@
-<div class="input-container">
-  <label [for]="id">{{ label }}</label>
+<div class="ex-input__container" [class]="classes">
+  <label *ngIf="label" [for]="id">{{ label }}</label>
   <input [id]="id" [type]="type" [placeholder]="placeholder" [value]="value" (input)="onInput($event)" />
 </div>

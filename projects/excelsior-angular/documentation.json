@@ -21,14 +21,14 @@
                 "defaultValue": "{\r\n  args: {\r\n    text: 'Blue Light Badge',\r\n    type: 'blue-light',\r\n  },\r\n}"
             },
             {
-                "name": "CardNarrow",
+                "name": "CardWithIndentation",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
                 "file": "projects/excelsior-angular/src/lib/atoms/accordion/accordion.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\r\n  render: (args) => ({\r\n    props: args,\r\n    template: `\r\n    <ex-accordion> \r\n    <ex-accordion-item [density]=\"'narrow'\" [style]=\"'card'\" parent>Parent</div>\r\n    <ex-accordion-item [density]=\"'narrow'\" [style]=\"'card'\" >Child</div>\r\n    <ex-accordion-item [density]=\"'narrow'\" [style]=\"'card'\" >Child</div>\r\n    <ex-accordion-item [density]=\"'narrow'\" [style]=\"'card'\" >Child</div>\r\n    </ex-accordion>\r\n    `,\r\n  }),\r\n}"
+                "defaultValue": "{\r\n  render: (args) => ({\r\n    props: args,\r\n    template: `\r\n    <ex-accordion> \r\n      <ex-accordion-item [style]=\"'card'\" parent>\r\n        Parent\r\n      </ex-accordion-item>\r\n      <ex-accordion-item [style]=\"'card'\" [density]=\"'dense'\" [indentation]=\"true\">\r\n        Child\r\n      </ex-accordion-item>\r\n      <ex-accordion-item [style]=\"'card'\" [density]=\"'dense'\" [indentation]=\"true\">\r\n        Child\r\n      </ex-accordion-item>\r\n    </ex-accordion>\r\n    `,\r\n  }),\r\n}"
             },
             {
                 "name": "Checked",
@@ -78,7 +78,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\r\n  render: (args) => ({\r\n    props: args,\r\n    template: `\r\n    <ex-accordion [isCollapsed]=\"true\" [density]=\"normal\" [style]=\"list\">\r\n    <div parent>Parent</div>\r\n    <div child>\r\n      <ex-accordion [isCollapsed]=\"true\" [density]=\"normal\" [style]=\"list\">\r\n        <div parent>Parent</div>\r\n        <div child>Child</div>\r\n        <div child>Child</div>\r\n      </ex-accordion>\r\n    </div>\r\n    <div child>Child</div>\r\n    <div child>Child</div>\r\n    </ex-accordion>\r\n        <ex-accordion [isCollapsed]=\"true\" [density]=\"normal\" [style]=\"list\">\r\n    <div parent>Parent</div>\r\n    <div child>\r\n      <ex-accordion [isCollapsed]=\"true\" [density]=\"normal\" [style]=\"list\">\r\n        <div parent>Parent</div>\r\n        <div child>Child</div>\r\n        <div child>Child</div>\r\n      </ex-accordion>\r\n    </div>\r\n    <div child>Child</div>\r\n    <div child>Child</div>\r\n    </ex-accordion>\r\n    `,\r\n  }),\r\n}"
+                "defaultValue": "{\r\n  render: (args) => ({\r\n    props: args,\r\n    template: `\r\n    <ex-accordion> \r\n      <ex-accordion-item parent>\r\n        Parent\r\n      </ex-accordion-item>\r\n      <ex-accordion-item>\r\n        Child\r\n      </ex-accordion-item>\r\n    </ex-accordion>\r\n    `,\r\n  }),\r\n}"
             },
             {
                 "name": "Default",
@@ -159,16 +159,6 @@
                 "deprecationMessage": "",
                 "type": "Story",
                 "defaultValue": "{\r\n  args: {},\r\n}"
-            },
-            {
-                "name": "Dense",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "projects/excelsior-angular/src/lib/atoms/accordion/accordion.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Story",
-                "defaultValue": "{\r\n  render: (args) => ({\r\n    props: args,\r\n    template: `\r\n    <ex-accordion [density]=\"dense\"> \r\n    <div parent>Parent</div>\r\n    <div child>child</div>\r\n    </ex-accordion>\r\n    `,\r\n  }),\r\n}"
             },
             {
                 "name": "Dot",
@@ -424,7 +414,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Meta<ExInputComponent>",
-                "defaultValue": "{\r\n  title: '1.Atoms/Input',\r\n  component: ExInputComponent,\r\n  tags: ['autodocs'],\r\n  argTypes: {\r\n    type: {\r\n      control: { type: 'text' },\r\n    },\r\n    placeholder: {\r\n      control: { type: 'text' },\r\n    },\r\n    value: {\r\n      control: { type: 'text' },\r\n    },\r\n    valueChange: { action: 'valueChange' },\r\n  },\r\n  args: {\r\n    valueChange: fn(),\r\n  },\r\n}"
+                "defaultValue": "{\r\n  title: '1.Atoms/Input',\r\n  component: ExInputComponent,\r\n  tags: ['autodocs'],\r\n  argTypes: {\r\n    type: {\r\n      control: { type: 'text' },\r\n    },\r\n    placeholder: {\r\n      control: { type: 'text' },\r\n    },\r\n    value: {\r\n      control: { type: 'text' },\r\n    },\r\n    valueChange: { action: 'valueChange' },\r\n    label: {\r\n      control: { type: 'text' },\r\n    },\r\n    disabled: {\r\n      control: { type: 'boolean' },\r\n    },\r\n  },\r\n  args: {\r\n    valueChange: fn(),\r\n  },\r\n}"
             },
             {
                 "name": "meta",
@@ -959,14 +949,14 @@
             ],
             "projects/excelsior-angular/src/lib/atoms/accordion/accordion.stories.ts": [
                 {
-                    "name": "CardNarrow",
+                    "name": "CardWithIndentation",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
                     "file": "projects/excelsior-angular/src/lib/atoms/accordion/accordion.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\r\n  render: (args) => ({\r\n    props: args,\r\n    template: `\r\n    <ex-accordion> \r\n    <ex-accordion-item [density]=\"'narrow'\" [style]=\"'card'\" parent>Parent</div>\r\n    <ex-accordion-item [density]=\"'narrow'\" [style]=\"'card'\" >Child</div>\r\n    <ex-accordion-item [density]=\"'narrow'\" [style]=\"'card'\" >Child</div>\r\n    <ex-accordion-item [density]=\"'narrow'\" [style]=\"'card'\" >Child</div>\r\n    </ex-accordion>\r\n    `,\r\n  }),\r\n}"
+                    "defaultValue": "{\r\n  render: (args) => ({\r\n    props: args,\r\n    template: `\r\n    <ex-accordion> \r\n      <ex-accordion-item [style]=\"'card'\" parent>\r\n        Parent\r\n      </ex-accordion-item>\r\n      <ex-accordion-item [style]=\"'card'\" [density]=\"'dense'\" [indentation]=\"true\">\r\n        Child\r\n      </ex-accordion-item>\r\n      <ex-accordion-item [style]=\"'card'\" [density]=\"'dense'\" [indentation]=\"true\">\r\n        Child\r\n      </ex-accordion-item>\r\n    </ex-accordion>\r\n    `,\r\n  }),\r\n}"
                 },
                 {
                     "name": "Default",
@@ -976,17 +966,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\r\n  render: (args) => ({\r\n    props: args,\r\n    template: `\r\n    <ex-accordion [isCollapsed]=\"true\" [density]=\"normal\" [style]=\"list\">\r\n    <div parent>Parent</div>\r\n    <div child>\r\n      <ex-accordion [isCollapsed]=\"true\" [density]=\"normal\" [style]=\"list\">\r\n        <div parent>Parent</div>\r\n        <div child>Child</div>\r\n        <div child>Child</div>\r\n      </ex-accordion>\r\n    </div>\r\n    <div child>Child</div>\r\n    <div child>Child</div>\r\n    </ex-accordion>\r\n        <ex-accordion [isCollapsed]=\"true\" [density]=\"normal\" [style]=\"list\">\r\n    <div parent>Parent</div>\r\n    <div child>\r\n      <ex-accordion [isCollapsed]=\"true\" [density]=\"normal\" [style]=\"list\">\r\n        <div parent>Parent</div>\r\n        <div child>Child</div>\r\n        <div child>Child</div>\r\n      </ex-accordion>\r\n    </div>\r\n    <div child>Child</div>\r\n    <div child>Child</div>\r\n    </ex-accordion>\r\n    `,\r\n  }),\r\n}"
-                },
-                {
-                    "name": "Dense",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "projects/excelsior-angular/src/lib/atoms/accordion/accordion.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Story",
-                    "defaultValue": "{\r\n  render: (args) => ({\r\n    props: args,\r\n    template: `\r\n    <ex-accordion [density]=\"dense\"> \r\n    <div parent>Parent</div>\r\n    <div child>child</div>\r\n    </ex-accordion>\r\n    `,\r\n  }),\r\n}"
+                    "defaultValue": "{\r\n  render: (args) => ({\r\n    props: args,\r\n    template: `\r\n    <ex-accordion> \r\n      <ex-accordion-item parent>\r\n        Parent\r\n      </ex-accordion-item>\r\n      <ex-accordion-item>\r\n        Child\r\n      </ex-accordion-item>\r\n    </ex-accordion>\r\n    `,\r\n  }),\r\n}"
                 },
                 {
                     "name": "meta",
@@ -1352,7 +1332,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Meta<ExInputComponent>",
-                    "defaultValue": "{\r\n  title: '1.Atoms/Input',\r\n  component: ExInputComponent,\r\n  tags: ['autodocs'],\r\n  argTypes: {\r\n    type: {\r\n      control: { type: 'text' },\r\n    },\r\n    placeholder: {\r\n      control: { type: 'text' },\r\n    },\r\n    value: {\r\n      control: { type: 'text' },\r\n    },\r\n    valueChange: { action: 'valueChange' },\r\n  },\r\n  args: {\r\n    valueChange: fn(),\r\n  },\r\n}"
+                    "defaultValue": "{\r\n  title: '1.Atoms/Input',\r\n  component: ExInputComponent,\r\n  tags: ['autodocs'],\r\n  argTypes: {\r\n    type: {\r\n      control: { type: 'text' },\r\n    },\r\n    placeholder: {\r\n      control: { type: 'text' },\r\n    },\r\n    value: {\r\n      control: { type: 'text' },\r\n    },\r\n    valueChange: { action: 'valueChange' },\r\n    label: {\r\n      control: { type: 'text' },\r\n    },\r\n    disabled: {\r\n      control: { type: 'boolean' },\r\n    },\r\n  },\r\n  args: {\r\n    valueChange: fn(),\r\n  },\r\n}"
                 },
                 {
                     "name": "WithValue",
@@ -1862,7 +1842,7 @@
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
-                "name": "CardNarrow",
+                "name": "CardWithIndentation",
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
                 "status": "low"
@@ -1873,16 +1853,6 @@
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
                 "name": "Default",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
-                "filePath": "projects/excelsior-angular/src/lib/atoms/accordion/accordion.stories.ts",
-                "type": "variable",
-                "linktype": "miscellaneous",
-                "linksubtype": "variable",
-                "name": "Dense",
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
                 "status": "low"
