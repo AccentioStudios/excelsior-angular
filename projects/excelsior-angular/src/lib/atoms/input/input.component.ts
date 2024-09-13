@@ -11,14 +11,34 @@ import { ExIconComponent } from '../icon/ex-icon.component'
 })
 export class ExInputComponent {
   @Input() id: string = 'input'
-  @Input() type: string = 'text'
+  /**
+   * Input type. Can be 'text', 'password', 'email' or 'number'.
+   */
+  @Input() type: 'text' | 'password' | 'email' | 'number' = 'text'
+  /**
+   * Placeholder text to be displayed in the input when it is empty.
+   */
   @Input() placeholder: string = 'Enter text'
   @Input() value: string = ''
   @Input() label: string = ''
   @Output() valueChange = new EventEmitter<string>()
-  @Input() validator = (value: string): boolean | null => null
+  /**
+   * Validator function to validate the input value. If the function returns a string, the input will be considered invalid and the string will be used as the error message.
+   * @param value
+   * @returns {string | null} Error message or undefined if the input is valid.
+   */
+  @Input() validator? = (value: string): string | undefined => undefined
   @Input() disabled: boolean = false
+  /**
+   * Icon name (ExIcon) to be displayed on the left side of the input.
+   * @type {string}
+   */
   @Input() iconName: string = ''
+  /**
+   * Hint text to be displayed below the input. If null, no hint text will be displayed.
+   * @type {string}
+   */
+  @Input() hintText: string | null = null
 
   onInput(event: Event) {
     const input = event.target as HTMLInputElement
@@ -27,7 +47,24 @@ export class ExInputComponent {
   }
 
   get isInvalid(): boolean {
-    return this.validator(this.value) === false
+    if (this.validator) {
+      const error = this.validator(this.value)
+      return error !== undefined
+    }
+
+    return false
+  }
+
+  get errorMessage(): string | undefined {
+    if (this.validator) {
+      const error = this.validator(this.value)
+      return error
+    }
+    return undefined
+  }
+
+  get haveHint(): boolean {
+    return this.hintText !== null
   }
 
   get classes(): string {

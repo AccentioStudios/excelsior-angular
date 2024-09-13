@@ -24,9 +24,6 @@ const meta: Meta<ExInputComponent> = {
       control: { type: 'boolean' },
     },
   },
-  args: {
-    valueChange: fn(),
-  },
 }
 
 export default meta
@@ -37,7 +34,12 @@ export const Default: Story = {
     id: 'defaultInput',
     label: 'Default Input',
     placeholder: 'Type something...',
-    value: '',
+    hintText: 'This is a hint text',
+    validator: (value: string) => {
+      console.log('Validating...')
+      if (value.length < 5) return 'Value must have at least 5 characters'
+      return undefined
+    },
   },
 }
 

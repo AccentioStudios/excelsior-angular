@@ -56,3 +56,17 @@
 .ex-input__container.invalid input:focus {
   box-shadow: 0px 0px 0px 4px #ff00001a;
 }
+
+.ex-input__hint {
+  font-size: 14px;
+  font-weight: 400;
+  margin-top: 0.4rem;
+  color: var(--text-tertiary);
+}
+
+.ex-input__error {
+  font-size: 14px;
+  font-weight: 400;
+  margin-top: 0.4rem;
+  color: var(--utility-error-500);
+}
