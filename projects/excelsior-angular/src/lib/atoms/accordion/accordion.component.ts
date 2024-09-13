@@ -3,8 +3,17 @@ import { ExIconComponent } from '../icon/ex-icon.component'
 
 @Component({
   selector: 'ex-accordion',
-  templateUrl: './accordion.component.html',
-  styleUrls: ['./accordion.component.css'],
+  template: `
+    <div class="ex-accordion__container">
+      <div class="ex-accordion__header" (click)="toggleCollapse()">
+        <ng-content select="[parent]"></ng-content>
+      </div>
+      <div class="ex-accordion__content" [class]="{ collapsed: isCollapsed }">
+        <ng-content></ng-content>
+      </div>
+    </div>
+  `,
+  styleUrls: ['./accordion.component.scss'],
   standalone: true,
   imports: [ExIconComponent],
 })
@@ -27,4 +36,16 @@ export class ExAccordionComponent {
       this.chevron.nativeElement.style.transform = !this.isCollapsed ? 'rotate(0deg)' : 'rotate(180deg)'
     }
   }
+
+  // get classes(): string {
+  //   const classList = [
+  //     'ex-accordion',
+  //     this.density === 'dense' ? 'ex-accordion--dense' : '',
+  //     this.density === 'narrow' ? 'ex-accordion--narrow' : '',
+  //     this.style === 'list' ? 'ex-accordion--list' : '',
+  //     this.style === 'card' ? 'ex-accordion--card' : '',
+  //   ].join(' ')
+
+  //   return classList
+  // }
 }

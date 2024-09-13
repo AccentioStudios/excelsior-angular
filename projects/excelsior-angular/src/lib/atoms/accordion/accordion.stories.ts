@@ -1,48 +1,52 @@
-import { Meta, StoryObj } from '@storybook/angular'
+import { Meta, moduleMetadata, StoryObj } from '@storybook/angular'
 import { ExAccordionComponent } from './accordion.component'
+import { ExAccordionItemComponent } from './accordion_item.component'
 
 const meta: Meta<ExAccordionComponent> = {
   title: '1.Atoms/Accordion',
   component: ExAccordionComponent,
+  decorators: [
+    moduleMetadata({
+      imports: [ExAccordionItemComponent],
+    }),
+  ],
   tags: ['autodocs'],
-  argTypes: {
-    isCollapsed: { control: 'boolean' },
-  },
+  args: {},
 }
 
 export default meta
 type Story = StoryObj<ExAccordionComponent>
 
 export const Default: Story = {
-  args: {
-    isCollapsed: true,
-  },
   render: (args) => ({
     props: args,
     template: `
-    <ex-accordion>
-    <div parent>Parent</div>
-    <div child>
-      <ex-accordion>
-        <div parent>Parent</div>
-        <div child>Child</div>
-        <div child>Child</div>
-      </ex-accordion>
-    </div>
-    <div child>Child</div>
-    <div child>Child</div>
+    <ex-accordion> 
+      <ex-accordion-item parent>
+        Parent
+      </ex-accordion-item>
+      <ex-accordion-item>
+        Child
+      </ex-accordion-item>
     </ex-accordion>
-        <ex-accordion>
-    <div parent>Parent</div>
-    <div child>
-      <ex-accordion>
-        <div parent>Parent</div>
-        <div child>Child</div>
-        <div child>Child</div>
-      </ex-accordion>
-    </div>
-    <div child>Child</div>
-    <div child>Child</div>
+    `,
+  }),
+}
+
+export const CardWithIndentation: Story = {
+  render: (args) => ({
+    props: args,
+    template: `
+    <ex-accordion> 
+      <ex-accordion-item [style]="'card'" parent>
+        Parent
+      </ex-accordion-item>
+      <ex-accordion-item [style]="'card'" [density]="'dense'" [indentation]="true">
+        Child
+      </ex-accordion-item>
+      <ex-accordion-item [style]="'card'" [density]="'dense'" [indentation]="true">
+        Child
+      </ex-accordion-item>
     </ex-accordion>
     `,
   }),

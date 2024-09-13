@@ -21,6 +21,16 @@
                 "defaultValue": "{\r\n  args: {\r\n    text: 'Blue Light Badge',\r\n    type: 'blue-light',\r\n  },\r\n}"
             },
             {
+                "name": "CardNarrow",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/excelsior-angular/src/lib/atoms/accordion/accordion.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\r\n  render: (args) => ({\r\n    props: args,\r\n    template: `\r\n    <ex-accordion> \r\n    <ex-accordion-item [density]=\"'narrow'\" [style]=\"'card'\" parent>Parent</div>\r\n    <ex-accordion-item [density]=\"'narrow'\" [style]=\"'card'\" >Child</div>\r\n    <ex-accordion-item [density]=\"'narrow'\" [style]=\"'card'\" >Child</div>\r\n    <ex-accordion-item [density]=\"'narrow'\" [style]=\"'card'\" >Child</div>\r\n    </ex-accordion>\r\n    `,\r\n  }),\r\n}"
+            },
+            {
                 "name": "Checked",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
@@ -68,7 +78,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\r\n  args: {\r\n    isCollapsed: true,\r\n  },\r\n  render: (args) => ({\r\n    props: args,\r\n    template: `\r\n    <ex-accordion>\r\n    <div parent>Parent</div>\r\n    <div child>Child</div>\r\n    </ex-accordion>`,\r\n  }),\r\n}"
+                "defaultValue": "{\r\n  render: (args) => ({\r\n    props: args,\r\n    template: `\r\n    <ex-accordion [isCollapsed]=\"true\" [density]=\"normal\" [style]=\"list\">\r\n    <div parent>Parent</div>\r\n    <div child>\r\n      <ex-accordion [isCollapsed]=\"true\" [density]=\"normal\" [style]=\"list\">\r\n        <div parent>Parent</div>\r\n        <div child>Child</div>\r\n        <div child>Child</div>\r\n      </ex-accordion>\r\n    </div>\r\n    <div child>Child</div>\r\n    <div child>Child</div>\r\n    </ex-accordion>\r\n        <ex-accordion [isCollapsed]=\"true\" [density]=\"normal\" [style]=\"list\">\r\n    <div parent>Parent</div>\r\n    <div child>\r\n      <ex-accordion [isCollapsed]=\"true\" [density]=\"normal\" [style]=\"list\">\r\n        <div parent>Parent</div>\r\n        <div child>Child</div>\r\n        <div child>Child</div>\r\n      </ex-accordion>\r\n    </div>\r\n    <div child>Child</div>\r\n    <div child>Child</div>\r\n    </ex-accordion>\r\n    `,\r\n  }),\r\n}"
             },
             {
                 "name": "Default",
@@ -149,6 +159,16 @@
                 "deprecationMessage": "",
                 "type": "Story",
                 "defaultValue": "{\r\n  args: {},\r\n}"
+            },
+            {
+                "name": "Dense",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/excelsior-angular/src/lib/atoms/accordion/accordion.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\r\n  render: (args) => ({\r\n    props: args,\r\n    template: `\r\n    <ex-accordion [density]=\"dense\"> \r\n    <div parent>Parent</div>\r\n    <div child>child</div>\r\n    </ex-accordion>\r\n    `,\r\n  }),\r\n}"
             },
             {
                 "name": "Dot",
@@ -314,7 +334,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Meta<ExAccordionComponent>",
-                "defaultValue": "{\r\n  title: '1.Atoms/Accordion',\r\n  component: ExAccordionComponent,\r\n  tags: ['autodocs'],\r\n  argTypes: {\r\n    isCollapsed: { control: 'boolean' },\r\n  },\r\n}"
+                "defaultValue": "{\r\n  title: '1.Atoms/Accordion',\r\n  component: ExAccordionComponent,\r\n  decorators: [\r\n    moduleMetadata({\r\n      imports: [ExAccordionItemComponent],\r\n    }),\r\n  ],\r\n  tags: ['autodocs'],\r\n  args: {},\r\n}"
             },
             {
                 "name": "meta",
@@ -340,21 +360,21 @@
                 "name": "meta",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/excelsior-angular/src/lib/atoms/checkbox/checkbox.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Meta<CheckboxComponent>",
-                "defaultValue": "{\r\n  title: '1.Atoms/Checkbox',\r\n  component: CheckboxComponent,\r\n  tags: ['autodocs'],\r\n  argTypes: {\r\n    label: { control: 'text' },\r\n    checked: { control: 'boolean' },\r\n    checkedChange: { action: 'checkedChange' },\r\n  },\r\n  args: { checkedChange: fn() },\r\n}"
-            },
-            {
-                "name": "meta",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
                 "file": "projects/excelsior-angular/src/lib/atoms/card/card.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Meta<ExCardComponent>",
                 "defaultValue": "{\r\n  title: '1.Atoms/Card',\r\n  component: ExCardComponent,\r\n  tags: ['autodocs'],\r\n}"
+            },
+            {
+                "name": "meta",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/excelsior-angular/src/lib/atoms/checkbox/checkbox.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Meta<CheckboxComponent>",
+                "defaultValue": "{\r\n  title: '1.Atoms/Checkbox',\r\n  component: CheckboxComponent,\r\n  tags: ['autodocs'],\r\n  argTypes: {\r\n    label: { control: 'text' },\r\n    checked: { control: 'boolean' },\r\n    checkedChange: { action: 'checkedChange' },\r\n  },\r\n  args: { checkedChange: fn() },\r\n}"
             },
             {
                 "name": "meta",
@@ -724,8 +744,8 @@
                 "name": "Story",
                 "ctype": "miscellaneous",
                 "subtype": "typealias",
-                "rawtype": "StoryObj<CheckboxComponent>",
-                "file": "projects/excelsior-angular/src/lib/atoms/checkbox/checkbox.stories.ts",
+                "rawtype": "StoryObj<ExCardComponent>",
+                "file": "projects/excelsior-angular/src/lib/atoms/card/card.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "description": "",
@@ -735,8 +755,8 @@
                 "name": "Story",
                 "ctype": "miscellaneous",
                 "subtype": "typealias",
-                "rawtype": "StoryObj<ExCardComponent>",
-                "file": "projects/excelsior-angular/src/lib/atoms/card/card.stories.ts",
+                "rawtype": "StoryObj<CheckboxComponent>",
+                "file": "projects/excelsior-angular/src/lib/atoms/checkbox/checkbox.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "description": "",
@@ -935,6 +955,48 @@
                     "deprecationMessage": "",
                     "type": "Story",
                     "defaultValue": "{\r\n  args: {\r\n    text: 'Warning Badge',\r\n    type: 'warning',\r\n  },\r\n}"
+                }
+            ],
+            "projects/excelsior-angular/src/lib/atoms/accordion/accordion.stories.ts": [
+                {
+                    "name": "CardNarrow",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/excelsior-angular/src/lib/atoms/accordion/accordion.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\r\n  render: (args) => ({\r\n    props: args,\r\n    template: `\r\n    <ex-accordion> \r\n    <ex-accordion-item [density]=\"'narrow'\" [style]=\"'card'\" parent>Parent</div>\r\n    <ex-accordion-item [density]=\"'narrow'\" [style]=\"'card'\" >Child</div>\r\n    <ex-accordion-item [density]=\"'narrow'\" [style]=\"'card'\" >Child</div>\r\n    <ex-accordion-item [density]=\"'narrow'\" [style]=\"'card'\" >Child</div>\r\n    </ex-accordion>\r\n    `,\r\n  }),\r\n}"
+                },
+                {
+                    "name": "Default",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/excelsior-angular/src/lib/atoms/accordion/accordion.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\r\n  render: (args) => ({\r\n    props: args,\r\n    template: `\r\n    <ex-accordion [isCollapsed]=\"true\" [density]=\"normal\" [style]=\"list\">\r\n    <div parent>Parent</div>\r\n    <div child>\r\n      <ex-accordion [isCollapsed]=\"true\" [density]=\"normal\" [style]=\"list\">\r\n        <div parent>Parent</div>\r\n        <div child>Child</div>\r\n        <div child>Child</div>\r\n      </ex-accordion>\r\n    </div>\r\n    <div child>Child</div>\r\n    <div child>Child</div>\r\n    </ex-accordion>\r\n        <ex-accordion [isCollapsed]=\"true\" [density]=\"normal\" [style]=\"list\">\r\n    <div parent>Parent</div>\r\n    <div child>\r\n      <ex-accordion [isCollapsed]=\"true\" [density]=\"normal\" [style]=\"list\">\r\n        <div parent>Parent</div>\r\n        <div child>Child</div>\r\n        <div child>Child</div>\r\n      </ex-accordion>\r\n    </div>\r\n    <div child>Child</div>\r\n    <div child>Child</div>\r\n    </ex-accordion>\r\n    `,\r\n  }),\r\n}"
+                },
+                {
+                    "name": "Dense",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/excelsior-angular/src/lib/atoms/accordion/accordion.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\r\n  render: (args) => ({\r\n    props: args,\r\n    template: `\r\n    <ex-accordion [density]=\"dense\"> \r\n    <div parent>Parent</div>\r\n    <div child>child</div>\r\n    </ex-accordion>\r\n    `,\r\n  }),\r\n}"
+                },
+                {
+                    "name": "meta",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/excelsior-angular/src/lib/atoms/accordion/accordion.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Meta<ExAccordionComponent>",
+                    "defaultValue": "{\r\n  title: '1.Atoms/Accordion',\r\n  component: ExAccordionComponent,\r\n  decorators: [\r\n    moduleMetadata({\r\n      imports: [ExAccordionItemComponent],\r\n    }),\r\n  ],\r\n  tags: ['autodocs'],\r\n  args: {},\r\n}"
                 }
             ],
             "projects/excelsior-angular/src/lib/atoms/checkbox/checkbox.stories.ts": [
@@ -1183,28 +1245,6 @@
                     "deprecationMessage": "",
                     "type": "Story",
                     "defaultValue": "{\r\n  args: {\r\n    actions: [],\r\n  },\r\n}"
-                }
-            ],
-            "projects/excelsior-angular/src/lib/atoms/accordion/accordion.stories.ts": [
-                {
-                    "name": "Default",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "projects/excelsior-angular/src/lib/atoms/accordion/accordion.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Story",
-                    "defaultValue": "{\r\n  args: {\r\n    isCollapsed: true,\r\n  },\r\n  render: (args) => ({\r\n    props: args,\r\n    template: `\r\n    <ex-accordion>\r\n    <div parent>Parent</div>\r\n    <div child>Child</div>\r\n    </ex-accordion>`,\r\n  }),\r\n}"
-                },
-                {
-                    "name": "meta",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "projects/excelsior-angular/src/lib/atoms/accordion/accordion.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Meta<ExAccordionComponent>",
-                    "defaultValue": "{\r\n  title: '1.Atoms/Accordion',\r\n  component: ExAccordionComponent,\r\n  tags: ['autodocs'],\r\n  argTypes: {\r\n    isCollapsed: { control: 'boolean' },\r\n  },\r\n}"
                 }
             ],
             "projects/excelsior-angular/src/lib/atoms/card/card.stories.ts": [
@@ -1604,19 +1644,6 @@
                     "kind": 183
                 }
             ],
-            "projects/excelsior-angular/src/lib/atoms/checkbox/checkbox.stories.ts": [
-                {
-                    "name": "Story",
-                    "ctype": "miscellaneous",
-                    "subtype": "typealias",
-                    "rawtype": "StoryObj<CheckboxComponent>",
-                    "file": "projects/excelsior-angular/src/lib/atoms/checkbox/checkbox.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "description": "",
-                    "kind": 183
-                }
-            ],
             "projects/excelsior-angular/src/lib/atoms/card/card.stories.ts": [
                 {
                     "name": "Story",
@@ -1624,6 +1651,19 @@
                     "subtype": "typealias",
                     "rawtype": "StoryObj<ExCardComponent>",
                     "file": "projects/excelsior-angular/src/lib/atoms/card/card.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 183
+                }
+            ],
+            "projects/excelsior-angular/src/lib/atoms/checkbox/checkbox.stories.ts": [
+                {
+                    "name": "Story",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "StoryObj<CheckboxComponent>",
+                    "file": "projects/excelsior-angular/src/lib/atoms/checkbox/checkbox.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "description": "",
@@ -1822,7 +1862,27 @@
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
+                "name": "CardNarrow",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/excelsior-angular/src/lib/atoms/accordion/accordion.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
                 "name": "Default",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/excelsior-angular/src/lib/atoms/accordion/accordion.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Dense",
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
                 "status": "low"

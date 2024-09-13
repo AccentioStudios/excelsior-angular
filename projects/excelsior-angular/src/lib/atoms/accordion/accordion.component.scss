@@ -1,0 +1,56 @@
+@import '../../styles/colors.scss';
+
+.ex-accordion__container {
+  position: relative;
+  box-sizing: border-box;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.ex-accordion__header {
+  width: auto;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+
+.ex-accordion__content {
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0px;
+  height: min-content;
+  font-weight: 600;
+  font-size: 14px;
+  overflow: hidden;
+  transition: height 0.3s ease;
+  padding-bottom: 10px;
+}
+
+.ex-accordion__item.ex-accordion__item--card {
+  padding: 12px 24px;
+  background-color: var(--surface-color);
+}
+
+.ex-accordion__content.collapsed {
+  display: none;
+}
+
+.ex-accordion__item.ex-accordion__item--dense {
+  padding: 8px 16px;
+}
+
+.ex-accordion__item.indentation {
+  padding-left: 40px !important;
+}
+
+// .ex-accordion__content {
+//   & > ex-accordion-item {
+//     &> .ex-accordion__item.ex-accordion__content--dense {
+//       padding: 8px 16px;
+//     }
+//   }
+// }
+ 
