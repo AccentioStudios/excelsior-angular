@@ -6,11 +6,12 @@ import { CommonModule } from '@angular/common'
   templateUrl: './checkbox.component.html',
   styleUrls: ['./checkbox.component.css'],
   standalone: true,
-  imports: [CommonModule,],
+  imports: [CommonModule],
 })
-export class CheckboxComponent {
+export class ExCheckboxComponent {
   @Input() label: string = 'Default Checkbox'
   @Input() checked: boolean = false
+  @Input() disabled: boolean = false
   @Output() checkedChange = new EventEmitter<boolean>()
 
   toggleCheck() {

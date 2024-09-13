@@ -85,11 +85,13 @@
 
   --bg-disabled: #f2f4f7;
   --bg-primary: #ffffff;
-  --bg-secondary: #F9FAFB;
+  --bg-secondary: #f9fafb;
 
   --fg-quinary: #98a2b3;
   --fg-disabled: #98a2b3;
   --border-disabled_subtle: #eaecf0;
+  --on-disabled: #a7a7a7;
+
   --shadow-xs: 0px 1px 2px 0px #1018280d;
 
   --text-primary-900: #101828;

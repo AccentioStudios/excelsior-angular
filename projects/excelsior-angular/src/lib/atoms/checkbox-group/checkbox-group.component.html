@@ -1,16 +1,16 @@
 <ex-card>
-    <label class="checkbox-container">
-    <div>
-      <input type="checkbox" [checked]="checked" (change)="toggleCheck()" />
+  <label class="checkbox-container" [ngClass]="{ disabled: disabled }">
+    <div class="checkbox">
+      <input class="checkbox--item" type="checkbox" [checked]="checked" (change)="toggleCheck()" />
       <span class="checkmark"></span>
     </div>
-    <article>
+    <div>
       <h6>
-        {{ title }}
+        {{ text }}
       </h6>
       <p>
         {{ label }}
       </p>
-    </article>
+    </div>
   </label>
 </ex-card>

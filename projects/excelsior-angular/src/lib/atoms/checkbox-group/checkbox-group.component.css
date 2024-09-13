@@ -2,11 +2,19 @@
 
 .checkbox-container {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   cursor: pointer;
   user-select: none;
+  gap: 8px;
 }
 
+.checkbox-container.disabled {
+  cursor: not-allowed;
+  pointer-events: none;
+}
+.checkbox {
+  margin-top: 3px;
+}
 .checkbox-container input {
   position: absolute;
   opacity: 0;
@@ -21,7 +29,42 @@
   height: 20px;
   border-radius: var(--radius-xs);
   margin-right: 8px;
-  border: solid 1px var(--border-primary);
+  border: solid 1px var(--secondary-color);
+}
+
+.checkbox-container.disabled input ~ .checkmark {
+  background-color: var(--bg-disabled);
+  border: solid 1px var(--bg-disabled);
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.checkbox-container.disabled h6 {
+  color: var(--text-disabled);
+}
+
+.checkbox-container.disabled p {
+  color: var(--text-disabled);
+}
+
+.checkbox-container.disabled input:checked ~ .checkmark {
+  background-color: var(--bg-disabled);
+  color: var(--bg-disabled);
+  position: relative;
+  pointer-events: none;
+}
+.checkbox-container.disabled input:checked ~ .checkmark:after {
+  content: '';
+  position: absolute;
+  /* display: none; */
+  left: 6px;
+  top: 1px;
+  width: 6px;
+  height: 10px;
+  border: solid black;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+  pointer-events: none;
 }
 
 .checkbox-container input:checked ~ .checkmark {

@@ -8,8 +8,10 @@ const meta: Meta<ExCheckboxGroupComponent> = {
   tags: ['autodocs'],
   argTypes: {
     label: { control: 'text' },
+    text: { control: 'text' },
     checked: { control: 'boolean' },
     checkedChange: { action: 'checkedChange' },
+    disabled: { control: 'boolean' },
   },
   args: { checkedChange: fn() },
 }
@@ -19,17 +21,19 @@ type Story = StoryObj<ExCheckboxGroupComponent>
 
 export const Unchecked: Story = {
   args: {
-    title: 'Permitir assinar como conferente',
+    text: 'Permitir assinar como conferente',
     label: 'O usuário vai poder verificar e conferir diversos elementos na plataforma.',
     checked: false,
+    disabled: false,
   },
 }
 
 export const Checked: Story = {
   args: {
-    title: 'Permitir assinar como conferente',
+    text: 'Permitir assinar como conferente',
     label: 'O usuário vai poder verificar e conferir diversos elementos na plataforma.',
     checked: true,
+    disabled: false,
   },
 }
 
@@ -37,5 +41,15 @@ export const TestCheckbox: Story = {
   args: {
     label: 'Unchecked Checkbox',
     checked: true,
+    disabled: false,
+  },
+}
+
+export const Disabled: Story = {
+  args: {
+    text: 'Permitir assinar como conferente',
+    label: 'O usuário vai poder verificar e conferir diversos elementos na plataforma.',
+    checked: true,
+    disabled: true,
   },
 }

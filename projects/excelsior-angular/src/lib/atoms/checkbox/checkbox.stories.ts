@@ -1,10 +1,10 @@
 import type { Meta, StoryObj } from '@storybook/angular'
 import { fn } from '@storybook/test'
-import { CheckboxComponent } from './checkbox.component'
+import { ExCheckboxComponent } from './checkbox.component'
 
-const meta: Meta<CheckboxComponent> = {
+const meta: Meta<ExCheckboxComponent> = {
   title: '1.Atoms/Checkbox',
-  component: CheckboxComponent,
+  component: ExCheckboxComponent,
   tags: ['autodocs'],
   argTypes: {
     label: { control: 'text' },
@@ -15,7 +15,7 @@ const meta: Meta<CheckboxComponent> = {
 }
 
 export default meta
-type Story = StoryObj<CheckboxComponent>
+type Story = StoryObj<ExCheckboxComponent>
 
 export const Unchecked: Story = {
   args: {

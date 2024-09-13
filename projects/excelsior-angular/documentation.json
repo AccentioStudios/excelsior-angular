@@ -48,7 +48,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\r\n  args: {\r\n    title: 'Permitir assinar como conferente',\r\n    label: 'O usuário vai poder verificar e conferir diversos elementos na plataforma.',\r\n    checked: true,\r\n  },\r\n}"
+                "defaultValue": "{\r\n  args: {\r\n    text: 'Permitir assinar como conferente',\r\n    label: 'O usuário vai poder verificar e conferir diversos elementos na plataforma.',\r\n    checked: true,\r\n  },\r\n}"
             },
             {
                 "name": "Cube",
@@ -350,21 +350,21 @@
                 "name": "meta",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/excelsior-angular/src/lib/atoms/card/card.stories.ts",
+                "file": "projects/excelsior-angular/src/lib/atoms/checkbox/checkbox.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
-                "type": "Meta<ExCardComponent>",
-                "defaultValue": "{\r\n  title: '1.Atoms/Card',\r\n  component: ExCardComponent,\r\n  tags: ['autodocs'],\r\n}"
+                "type": "Meta<ExCheckboxComponent>",
+                "defaultValue": "{\r\n  title: '1.Atoms/Checkbox',\r\n  component: ExCheckboxComponent,\r\n  tags: ['autodocs'],\r\n  argTypes: {\r\n    label: { control: 'text' },\r\n    checked: { control: 'boolean' },\r\n    checkedChange: { action: 'checkedChange' },\r\n  },\r\n  args: { checkedChange: fn() },\r\n}"
             },
             {
                 "name": "meta",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/excelsior-angular/src/lib/atoms/checkbox/checkbox.stories.ts",
+                "file": "projects/excelsior-angular/src/lib/atoms/card/card.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
-                "type": "Meta<CheckboxComponent>",
-                "defaultValue": "{\r\n  title: '1.Atoms/Checkbox',\r\n  component: CheckboxComponent,\r\n  tags: ['autodocs'],\r\n  argTypes: {\r\n    label: { control: 'text' },\r\n    checked: { control: 'boolean' },\r\n    checkedChange: { action: 'checkedChange' },\r\n  },\r\n  args: { checkedChange: fn() },\r\n}"
+                "type": "Meta<ExCardComponent>",
+                "defaultValue": "{\r\n  title: '1.Atoms/Card',\r\n  component: ExCardComponent,\r\n  tags: ['autodocs'],\r\n}"
             },
             {
                 "name": "meta",
@@ -632,7 +632,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\r\n  args: {\r\n    title: 'Permitir assinar como conferente',\r\n    label: 'O usuário vai poder verificar e conferir diversos elementos na plataforma.',\r\n    checked: false,\r\n  },\r\n}"
+                "defaultValue": "{\r\n  args: {\r\n    text: 'Permitir assinar como conferente',\r\n    label: 'O usuário vai poder verificar e conferir diversos elementos na plataforma.',\r\n    checked: false,\r\n  },\r\n}"
             },
             {
                 "name": "User",
@@ -734,8 +734,8 @@
                 "name": "Story",
                 "ctype": "miscellaneous",
                 "subtype": "typealias",
-                "rawtype": "StoryObj<ExCardComponent>",
-                "file": "projects/excelsior-angular/src/lib/atoms/card/card.stories.ts",
+                "rawtype": "StoryObj<ExCheckboxComponent>",
+                "file": "projects/excelsior-angular/src/lib/atoms/checkbox/checkbox.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "description": "",
@@ -745,8 +745,8 @@
                 "name": "Story",
                 "ctype": "miscellaneous",
                 "subtype": "typealias",
-                "rawtype": "StoryObj<CheckboxComponent>",
-                "file": "projects/excelsior-angular/src/lib/atoms/checkbox/checkbox.stories.ts",
+                "rawtype": "StoryObj<ExCardComponent>",
+                "file": "projects/excelsior-angular/src/lib/atoms/card/card.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "description": "",
@@ -997,8 +997,8 @@
                     "file": "projects/excelsior-angular/src/lib/atoms/checkbox/checkbox.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "type": "Meta<CheckboxComponent>",
-                    "defaultValue": "{\r\n  title: '1.Atoms/Checkbox',\r\n  component: CheckboxComponent,\r\n  tags: ['autodocs'],\r\n  argTypes: {\r\n    label: { control: 'text' },\r\n    checked: { control: 'boolean' },\r\n    checkedChange: { action: 'checkedChange' },\r\n  },\r\n  args: { checkedChange: fn() },\r\n}"
+                    "type": "Meta<ExCheckboxComponent>",
+                    "defaultValue": "{\r\n  title: '1.Atoms/Checkbox',\r\n  component: ExCheckboxComponent,\r\n  tags: ['autodocs'],\r\n  argTypes: {\r\n    label: { control: 'text' },\r\n    checked: { control: 'boolean' },\r\n    checkedChange: { action: 'checkedChange' },\r\n  },\r\n  args: { checkedChange: fn() },\r\n}"
                 },
                 {
                     "name": "TestCheckbox",
@@ -1030,7 +1030,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\r\n  args: {\r\n    title: 'Permitir assinar como conferente',\r\n    label: 'O usuário vai poder verificar e conferir diversos elementos na plataforma.',\r\n    checked: true,\r\n  },\r\n}"
+                    "defaultValue": "{\r\n  args: {\r\n    text: 'Permitir assinar como conferente',\r\n    label: 'O usuário vai poder verificar e conferir diversos elementos na plataforma.',\r\n    checked: true,\r\n  },\r\n}"
                 },
                 {
                     "name": "meta",
@@ -1060,7 +1060,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\r\n  args: {\r\n    title: 'Permitir assinar como conferente',\r\n    label: 'O usuário vai poder verificar e conferir diversos elementos na plataforma.',\r\n    checked: false,\r\n  },\r\n}"
+                    "defaultValue": "{\r\n  args: {\r\n    text: 'Permitir assinar como conferente',\r\n    label: 'O usuário vai poder verificar e conferir diversos elementos na plataforma.',\r\n    checked: false,\r\n  },\r\n}"
                 }
             ],
             "projects/excelsior-angular/src/lib/atoms/icon/ex-icon.component.stories.ts": [
@@ -1624,6 +1624,19 @@
                     "kind": 183
                 }
             ],
+            "projects/excelsior-angular/src/lib/atoms/checkbox/checkbox.stories.ts": [
+                {
+                    "name": "Story",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "StoryObj<ExCheckboxComponent>",
+                    "file": "projects/excelsior-angular/src/lib/atoms/checkbox/checkbox.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 183
+                }
+            ],
             "projects/excelsior-angular/src/lib/atoms/card/card.stories.ts": [
                 {
                     "name": "Story",
@@ -1631,19 +1644,6 @@
                     "subtype": "typealias",
                     "rawtype": "StoryObj<ExCardComponent>",
                     "file": "projects/excelsior-angular/src/lib/atoms/card/card.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "description": "",
-                    "kind": 183
-                }
-            ],
-            "projects/excelsior-angular/src/lib/atoms/checkbox/checkbox.stories.ts": [
-                {
-                    "name": "Story",
-                    "ctype": "miscellaneous",
-                    "subtype": "typealias",
-                    "rawtype": "StoryObj<CheckboxComponent>",
-                    "file": "projects/excelsior-angular/src/lib/atoms/checkbox/checkbox.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "description": "",
