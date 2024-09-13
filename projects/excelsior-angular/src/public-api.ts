@@ -15,6 +15,7 @@ export * from './lib/atoms/featured-icon/ex-featured-icon.component'
 export * from './lib/atoms/input/input.component'
 export * from './lib/atoms/radio/radio-button.component'
 export * from './lib/atoms/search-input/search-input-dropdown.component'
+export * from './lib/atoms/accordion/accordion.component'
 
 // Molecules
 export * from './lib/molecules/breadcrumb/breadcrumb.component'
