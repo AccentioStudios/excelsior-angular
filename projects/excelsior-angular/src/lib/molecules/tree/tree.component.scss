@@ -1,0 +1,26 @@
+@import '../../styles/spaces.scss';
+@import '../../styles/colors.scss';
+
+.ex-tree-parent {
+    display: flex;
+    align-items: center;
+    padding: 16px 24px 16px 0px;
+    width: 100%;
+}
+.line {
+    width: 100%;
+    height: 1px;
+    background-color: var(--outline-variant-color);
+}
+.ex-tree__subtree {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: var(--ex-space-xs2);
+
+}
+.ex-tree__subtree-checkbox {
+    margin: 0;
+    padding:0;
+    margin-right: var(--ex-space-xs2);
+}

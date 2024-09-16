@@ -1,5 +1,6 @@
 import { Component, ElementRef, EventEmitter, Input, Output, ViewChild } from '@angular/core'
 import { ExIconComponent } from '../icon/ex-icon.component'
+import { CommonModule } from '@angular/common'
 
 @Component({
   selector: 'ex-accordion',
@@ -15,26 +16,15 @@ import { ExIconComponent } from '../icon/ex-icon.component'
   `,
   styleUrls: ['./accordion.component.scss'],
   standalone: true,
-  imports: [ExIconComponent],
+  imports: [ExIconComponent, CommonModule],
 })
 export class ExAccordionComponent {
-  @Input() isCollapsed: boolean = true
+  @Input() public isCollapsed: boolean = true
   @Output() isCollapsedChange = new EventEmitter<boolean>()
-  @ViewChild('chevron') chevron: ElementRef | undefined
-
-  ngAfterViewChecked() {
-    if (this.chevron) {
-      this.chevron.nativeElement.style.transform = !this.isCollapsed ? 'rotate(0deg)' : 'rotate(180deg)'
-    }
-  }
 
   toggleCollapse() {
     this.isCollapsed = !this.isCollapsed
     this.isCollapsedChange.emit(this.isCollapsed)
-
-    if (this.chevron) {
-      this.chevron.nativeElement.style.transform = !this.isCollapsed ? 'rotate(0deg)' : 'rotate(180deg)'
-    }
   }
 
   // get classes(): string {

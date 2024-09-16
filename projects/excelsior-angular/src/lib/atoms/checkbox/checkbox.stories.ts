@@ -10,6 +10,7 @@ const meta: Meta<ExCheckboxComponent> = {
     label: { control: 'text' },
     checked: { control: 'boolean' },
     checkedChange: { action: 'checkedChange' },
+    indeterminate: { control: 'boolean' },
   },
   args: { checkedChange: fn() },
 }
@@ -31,9 +32,15 @@ export const Checked: Story = {
   },
 }
 
-export const TestCheckbox: Story = {
+export const Indeterminate: Story = {
   args: {
-    label: 'Unchecked Checkbox',
+    label: 'Indeterminate Checkbox',
+    indeterminate: true,
+  },
+}
+
+export const OnlyCheckbox: Story = {
+  args: {
     checked: true,
   },
 }

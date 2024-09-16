@@ -14,7 +14,8 @@ import { SearchInputDropdownComponent as ExSearchInputDropdownComponent } from '
 import { ExLayoutMainComponent } from './atoms/layout-main/ex-layout-main.component'
 import { ExModalComponent } from './organisms/modal/modal.component'
 import { ExAccordionComponent } from './atoms/accordion/accordion.component'
-import { ExAccordionItemComponent } from './atoms/accordion/accordion_item.component'
+import { ExAccordionItemComponent } from './atoms/accordion/accordion_item.component';
+import { TreeComponent } from './molecules/tree/tree.component'
 
 @NgModule({
   imports: [
@@ -55,6 +56,9 @@ import { ExAccordionItemComponent } from './atoms/accordion/accordion_item.compo
 
     // Organisms
     ExModalComponent,
+  ],
+  declarations: [
+    TreeComponent
   ],
 })
 export class ExcelsiorModule {}

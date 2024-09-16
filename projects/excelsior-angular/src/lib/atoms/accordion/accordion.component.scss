@@ -1,4 +1,10 @@
 @import '../../styles/colors.scss';
+@import '../../styles/spaces.scss';
+
+.chevron {
+  transition: transform 0.25s ease;
+  margin-right: var(--ex-space-xs2);
+}
 
 .ex-accordion__container {
   position: relative;
@@ -29,6 +35,14 @@
   padding-bottom: 10px;
 }
 
+.ex-accordion__item {
+  display: flex;
+  flex-direction: row;
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: flex-start;
+}
+
 .ex-accordion__item.ex-accordion__item--card {
   padding: 12px 24px;
   background-color: var(--surface-color);
@@ -44,6 +58,10 @@
 
 .ex-accordion__item.indentation {
   padding-left: 40px !important;
+}
+
+.ex-accordion__item.ex-accordion__item--card.ex-accordion__item--dense.indentation {
+  padding-left: 52px !important;
 }
 
 // .ex-accordion__content {

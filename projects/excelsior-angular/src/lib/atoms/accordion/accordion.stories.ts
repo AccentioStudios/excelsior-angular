@@ -11,7 +11,6 @@ const meta: Meta<ExAccordionComponent> = {
     }),
   ],
   tags: ['autodocs'],
-  args: {},
 }
 
 export default meta
@@ -32,7 +31,21 @@ export const Default: Story = {
     `,
   }),
 }
-
+export const WithChevron: Story = {
+  render: (args) => ({
+    props: args,
+    template: `
+    <ex-accordion> 
+      <ex-accordion-item parent [withChevron]="true">
+        Parent
+      </ex-accordion-item>
+      <ex-accordion-item>
+        Child
+      </ex-accordion-item>
+    </ex-accordion>
+    `,
+  }),
+}
 export const CardWithIndentation: Story = {
   render: (args) => ({
     props: args,
@@ -43,6 +56,22 @@ export const CardWithIndentation: Story = {
       </ex-accordion-item>
       <ex-accordion-item [style]="'card'" [density]="'dense'" [indentation]="true">
         Child
+      </ex-accordion-item>
+      <ex-accordion-item [style]="'card'" [density]="'dense'" [indentation]="true">
+        Child
+      </ex-accordion-item>
+    </ex-accordion>
+    `,
+  }),
+}
+
+export const CardWithChevronAndIndentation: Story = {
+  render: (args) => ({
+    props: args,
+    template: `
+    <ex-accordion> 
+      <ex-accordion-item parent [style]="'card'" [density]="'dense'" [withChevron]="true">
+        Parent
       </ex-accordion-item>
       <ex-accordion-item [style]="'card'" [density]="'dense'" [indentation]="true">
         Child

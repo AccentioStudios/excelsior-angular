@@ -1,5 +1,15 @@
-<label class="checkbox-container">
-  <input type="checkbox" [checked]="checked" (change)="toggleCheck()" [ngClass]="{ disabled: 'disabled' }" />
-  <span class="checkmark"></span>
-  {{ label }}
-</label>
+<div class="ex-checkbox">
+  <input
+    [id]="componentId"
+    type="checkbox"
+    [checked]="checked"
+    (change)="toggleCheck($event)"
+    [indeterminate]="indeterminate"
+    [ngClass]="{ disabled: 'disabled' }"
+  />
+  <ng-container *ngIf="label">
+    <label [for]="componentId">
+      {{ label }}
+    </label>
+  </ng-container>
+</div>

@@ -1,0 +1,30 @@
+<div class="ex-tree">
+  <ng-container *ngFor="let item of items">
+    <ex-accordion>
+      <ex-accordion-item parent [withChevron]="true">
+        <div class="ex-tree-parent">
+          <ex-checkbox
+            [checked]="getTreeItemStatus(item) === 'selected'"
+            (checkedChange)="toggleSelectionFromParentToAllChildren(item)"
+            [disabled]="item.disabled"
+            class="ex-mr-xs2"
+            [indeterminate]="getTreeItemStatus(item) === 'indeterminate'"
+          />
+          {{ item.label }}
+        </div>
+      </ex-accordion-item>
+      <ex-accordion-item *ngFor="let child of item.children" [indentation]="true">
+        <div class="ex-tree__subtree">
+          <ex-checkbox
+            [checked]="getTreeItemStatus(child) === 'selected'"
+            (checkedChange)="toggleSelectItem(child)"
+            [disabled]="item.disabled"
+            class="ex-tree__subtree-checkbox"
+          />
+          {{ child.label }}
+        </div>
+      </ex-accordion-item>
+    </ex-accordion>
+    <div class="line"></div>
+  </ng-container>
+</div>

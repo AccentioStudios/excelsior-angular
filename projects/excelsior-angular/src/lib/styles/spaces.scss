@@ -1,6 +1,7 @@
 :host {
     --ex-space-none: 0;
     --ex-space-xs: 4px;
+    --ex-space-xs2: 12px;
     --ex-space-sm: 16px;
     --ex-space-md: 24px;
     --ex-space-md2: 32px;
@@ -15,6 +16,9 @@
         }
         &-xs {
             width: var(--ex-space-xs);
+        }
+        &-xs2 {
+            width: var(--ex-space-xs2);
         }
         &-sm {
             width: var(--ex-space-sm);
@@ -38,6 +42,9 @@
         }
         &-xs {
             height: var(--ex-space-xs);
+        }
+        &-xs2 {
+            height: var(--ex-space-xs2);
         }
         &-sm {
             height: var(--ex-space-sm);
@@ -105,6 +112,63 @@
     margin-bottom: var(--ex-space-md2) !important;
 }
 
+
+
+.ex-ml {
+    &-none {
+        margin-left: 0;
+    }
+    &-xs {
+        margin-left: var(--ex-space-xs);
+    }
+    &-xs2{
+        margin-left: var(--ex-space-xs2);
+    }
+
+    &-sm {
+        margin-left: var(--ex-space-sm);
+    }
+    &-md {
+        margin-left: var(--ex-space-md);
+    }
+    &-md2 {
+        margin-left: var(--ex-space-md2);
+    }
+    &-lg {
+        margin-left: var(--ex-space-lg);
+    }
+    &-xl {
+        margin-left: var(--ex-space-xl);
+    }
+}
+
+.ex-mr {
+    &-none {
+        margin-right: 0;
+    }
+    &-xs {
+        margin-right: var(--ex-space-xs);
+    }
+    &-xs2 {
+        margin-right: var(--ex-space-xs2);
+    }
+    &-sm {
+        margin-right: var(--ex-space-sm);
+    }
+    &-md {
+        margin-right: var(--ex-space-md);
+    }
+    &-md2 {
+        margin-right: var(--ex-space-md2);
+    }
+    &-lg {
+        margin-right: var(--ex-space-lg);
+    }
+    &-xl {
+        margin-right: var(--ex-space-xl);
+    }
+
+}
 
 .ex-padding {
     &-none {
