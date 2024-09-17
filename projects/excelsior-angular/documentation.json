@@ -360,21 +360,21 @@
                 "name": "meta",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/excelsior-angular/src/lib/atoms/accordion/accordion.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Meta<ExAccordionComponent>",
-                "defaultValue": "{\r\n  title: '1.Atoms/Accordion',\r\n  component: ExAccordionComponent,\r\n  decorators: [\r\n    moduleMetadata({\r\n      imports: [ExAccordionItemComponent],\r\n    }),\r\n  ],\r\n  tags: ['autodocs'],\r\n}"
-            },
-            {
-                "name": "meta",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
                 "file": "projects/excelsior-angular/src/lib/atoms/badge/badge.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Meta<ExBadgeComponent>",
                 "defaultValue": "{\r\n  title: '1.Atoms/Badge',\r\n  component: ExBadgeComponent,\r\n  tags: ['autodocs'],\r\n  argTypes: {\r\n    type: {\r\n      control: { type: 'select' },\r\n      options: ['success', 'pink', 'warning', 'error', 'purple', 'indigo', 'indigo', 'blue-light'],\r\n    },\r\n    text: { control: 'text' },\r\n  },\r\n  // Use `fn` to spy on the onClick arg, which will appear in the actions panel once invoked: https://storybook.js.org/docs/essentials/actions#action-args\r\n  args: { onClick: fn() },\r\n}"
+            },
+            {
+                "name": "meta",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/excelsior-angular/src/lib/atoms/accordion/accordion.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Meta<ExAccordionComponent>",
+                "defaultValue": "{\r\n  title: '1.Atoms/Accordion',\r\n  component: ExAccordionComponent,\r\n  decorators: [\r\n    moduleMetadata({\r\n      imports: [ExAccordionItemComponent],\r\n    }),\r\n  ],\r\n  tags: ['autodocs'],\r\n}"
             },
             {
                 "name": "meta",
@@ -761,8 +761,8 @@
                 "name": "Story",
                 "ctype": "miscellaneous",
                 "subtype": "typealias",
-                "rawtype": "StoryObj<ExAccordionComponent>",
-                "file": "projects/excelsior-angular/src/lib/atoms/accordion/accordion.stories.ts",
+                "rawtype": "StoryObj<ExBadgeComponent>",
+                "file": "projects/excelsior-angular/src/lib/atoms/badge/badge.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "description": "",
@@ -772,8 +772,8 @@
                 "name": "Story",
                 "ctype": "miscellaneous",
                 "subtype": "typealias",
-                "rawtype": "StoryObj<ExBadgeComponent>",
-                "file": "projects/excelsior-angular/src/lib/atoms/badge/badge.stories.ts",
+                "rawtype": "StoryObj<ExAccordionComponent>",
+                "file": "projects/excelsior-angular/src/lib/atoms/accordion/accordion.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "description": "",
@@ -1718,19 +1718,6 @@
         "groupedFunctions": {},
         "groupedEnumerations": {},
         "groupedTypeAliases": {
-            "projects/excelsior-angular/src/lib/atoms/accordion/accordion.stories.ts": [
-                {
-                    "name": "Story",
-                    "ctype": "miscellaneous",
-                    "subtype": "typealias",
-                    "rawtype": "StoryObj<ExAccordionComponent>",
-                    "file": "projects/excelsior-angular/src/lib/atoms/accordion/accordion.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "description": "",
-                    "kind": 183
-                }
-            ],
             "projects/excelsior-angular/src/lib/atoms/badge/badge.stories.ts": [
                 {
                     "name": "Story",
@@ -1738,6 +1725,19 @@
                     "subtype": "typealias",
                     "rawtype": "StoryObj<ExBadgeComponent>",
                     "file": "projects/excelsior-angular/src/lib/atoms/badge/badge.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 183
+                }
+            ],
+            "projects/excelsior-angular/src/lib/atoms/accordion/accordion.stories.ts": [
+                {
+                    "name": "Story",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "StoryObj<ExAccordionComponent>",
+                    "file": "projects/excelsior-angular/src/lib/atoms/accordion/accordion.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "description": "",

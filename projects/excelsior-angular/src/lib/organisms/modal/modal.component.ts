@@ -45,9 +45,9 @@ export class ExModalComponent {
   }
 
   closeModal() {
-    this.isVisible = false
     this.onClose.emit()
     this.isVisibleChange.emit(this.isVisible)
+    console.log('closeModal')
   }
 
   get styleWidth() {

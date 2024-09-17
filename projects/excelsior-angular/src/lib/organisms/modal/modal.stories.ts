@@ -43,7 +43,6 @@ const meta: Meta<ExModalComponent> = {
     supportingText: 'This is a sample modal...',
     iconName: 'Visualizar',
     isVisible: true,
-    onClose: fn(),
   },
 }
 
@@ -57,6 +56,7 @@ export const Default: Story = {
     iconName: 'Visualizar',
     isVisible: true,
     maxWidth: '60%',
+    onClose: fn(),
   },
   render: (args) => ({
     props: args,
