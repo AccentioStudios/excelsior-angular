@@ -1,11 +1,11 @@
 import { CommonModule } from '@angular/common'
-import { Component, Input, Output, EventEmitter } from '@angular/core'
+import { Component, EventEmitter, Input, Output } from '@angular/core'
 import { ExIconComponent } from '../icon/ex-icon.component'
 
 @Component({
   selector: 'ex-input',
   templateUrl: './input.component.html',
-  styleUrls: ['./input.component.css'],
+  styleUrls: ['./input.component.scss'],
   imports: [CommonModule, ExIconComponent],
   standalone: true,
 })
@@ -19,15 +19,33 @@ export class ExInputComponent {
    * Placeholder text to be displayed in the input when it is empty.
    */
   @Input() placeholder: string = 'Enter text'
-  @Input() value: string = ''
+  /**
+   * Label text to be displayed above the input.
+   */
   @Input() label: string = ''
+  /**
+   * Value of the input.
+   */
+  @Input() value: string = ''
+  /**
+   * Event emitter for when the value of the input changes.
+   */
   @Output() valueChange = new EventEmitter<string>()
   /**
-   * Validator function to validate the input value. If the function returns a string, the input will be considered invalid and the string will be used as the error message.
+   * Validator function to validate the input value.  If the function returns false, the input will be marked as invalid.
    * @param value
-   * @returns {string | null} Error message or undefined if the input is valid.
+   * @returns { boolean } Boolean indicating if the input is valid.
    */
-  @Input() validator? = (value: string): string | undefined => undefined
+  @Input() validator? = (value: string): boolean => true
+
+  /**
+   * Error message to be displayed below the input when the input is invalid.
+   */
+  @Input() errorMessage?: string | undefined = undefined
+
+  /**
+   * Boolean indicating if the input is disabled.
+   */
   @Input() disabled: boolean = false
   /**
    * Icon name (ExIcon) to be displayed on the left side of the input.
@@ -40,12 +58,14 @@ export class ExInputComponent {
    */
   @Input() hintText: string | null = null
 
-  /**
-   * Function to format the error message. By default, the error message is displayed as is.
-   * @param string raw error
-   * @returns string Formatted error message.
-   */
-  @Input() errorFormatter: (error: string) => string = (error) => error
+  ngOnInit() {}
+
+  get isValid(): boolean {
+    if (this.validator !== undefined) {
+      return this.validator(this.value)
+    }
+    return true
+  }
 
   onInput(event: Event) {
     const input = event.target as HTMLInputElement
@@ -53,34 +73,12 @@ export class ExInputComponent {
     this.valueChange.emit(this.value)
   }
 
-  get isInvalid(): boolean {
-    if (this.validator) {
-      const error = this.validator(this.value)
-      return error !== undefined
-    }
-
-    return false
-  }
-
-  get errorMessage(): string | undefined {
-    if (this.validator) {
-      const error = this.validator(this.value)
-      if (error !== undefined) {
-        const errorFormatted = this.errorFormatter(error)
-        return errorFormatted
-      }
-      return error
-    }
-    return undefined
-  }
-
   get haveHint(): boolean {
     return this.hintText !== null
   }
 
   get classes(): string {
-    const classList = ['ex-input', this.isInvalid ? 'invalid' : '', this.disabled ? 'disabled' : ''].join(' ')
-
+    const classList = ['ex-input', this.isValid === false ? 'invalid' : '', this.disabled ? 'disabled' : ''].join(' ')
     return classList
   }
 }
