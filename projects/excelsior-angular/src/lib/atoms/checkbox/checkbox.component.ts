@@ -11,7 +11,7 @@ import { CommonModule } from '@angular/common'
 export class ExCheckboxComponent {
   @Input() label?: string
   @Input() checked: boolean = false
-  @Input() disabled: boolean = false
+  @Input() disabled: boolean | undefined = false
   @Input() indeterminate: boolean = false
   @Output() checkedChange = new EventEmitter<boolean>()
 

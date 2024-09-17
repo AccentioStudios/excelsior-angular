@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common'
 import { Component, ElementRef, Input, ViewChild } from '@angular/core'
-import { ExIconComponent } from 'excelsior-angular'
 import { ExAccordionComponent } from './accordion.component'
+import { ExIconComponent } from '../icon/ex-icon.component'
 
 @Component({
   selector: 'ex-accordion-item',
