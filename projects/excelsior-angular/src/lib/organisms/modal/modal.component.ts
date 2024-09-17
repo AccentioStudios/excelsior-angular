@@ -15,6 +15,7 @@ export class ExModalComponent {
    * The visibility of the modal
    */
   @Input() isVisible: boolean = false
+  @Output() isVisibleChange = new EventEmitter<boolean>()
   /**
    * The title of the modal
    */
@@ -46,6 +47,7 @@ export class ExModalComponent {
   closeModal() {
     this.isVisible = false
     this.onClose.emit()
+    this.isVisibleChange.emit(this.isVisible)
   }
 
   get styleWidth() {
