@@ -2,6 +2,9 @@
  * Public API Surface of excelsior-angular
  */
 
+// Types
+export * from './lib/types'
+
 // Atoms
 export * from './lib/atoms/badge/badge.component'
 export * from './lib/atoms/button/ex-button.component'
@@ -20,6 +23,7 @@ export * from './lib/atoms/accordion/accordion.component'
 // Molecules
 export * from './lib/molecules/breadcrumb/breadcrumb.component'
 export * from './lib/molecules/stepper/stepper.component'
+export * from './lib/molecules/tree/tree.component'
 
 // Organisms
 export * from './lib/organisms/modal/modal.component'

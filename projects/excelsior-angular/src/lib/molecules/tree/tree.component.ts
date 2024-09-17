@@ -3,18 +3,7 @@ import { ExAccordionComponent } from '../../atoms/accordion/accordion.component'
 import { ExAccordionItemComponent } from '../../atoms/accordion/accordion_item.component'
 import { CommonModule } from '@angular/common'
 import { ExCheckboxComponent } from '../../atoms/checkbox/checkbox.component'
-export interface TreeItem {
-  id: string
-  label: string
-  children: TreeItem[]
-  selected?: TreeItemStatus
-}
-
-export enum TreeItemStatus {
-  SELECTED = 'selected',
-  UNSELECTED = 'unselected',
-  INDETERMINATE = 'indeterminate',
-}
+import { TreeItem, TreeItemStatus } from '../../types'
 
 @Component({
   selector: 'ex-tree',
