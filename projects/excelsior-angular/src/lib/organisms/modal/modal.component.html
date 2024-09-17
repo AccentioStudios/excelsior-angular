@@ -63,7 +63,7 @@
       <ng-content></ng-content>
     </div>
 
-    <div class="ex-modal-footer" style="z-index: 4">
+    <div *ngIf="hasCustomHeader" class="ex-modal-footer" style="z-index: 4">
       <ng-content select="[modalFooter]"></ng-content>
     </div>
   </div>
