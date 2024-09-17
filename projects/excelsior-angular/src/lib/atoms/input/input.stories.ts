@@ -1,5 +1,5 @@
 import { Meta, StoryObj } from '@storybook/angular'
-import { fn } from '@storybook/test'
+import { action } from '@storybook/addon-actions'
 import { ExInputComponent } from './input.component'
 
 const meta: Meta<ExInputComponent> = {

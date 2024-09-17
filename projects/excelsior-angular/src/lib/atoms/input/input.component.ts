@@ -40,6 +40,13 @@ export class ExInputComponent {
    */
   @Input() hintText: string | null = null
 
+  /**
+   * Function to format the error message. By default, the error message is displayed as is.
+   * @param string raw error
+   * @returns string Formatted error message.
+   */
+  @Input() errorFormatter: (error: string) => string = (error) => error
+
   onInput(event: Event) {
     const input = event.target as HTMLInputElement
     this.value = input.value
@@ -58,6 +65,10 @@ export class ExInputComponent {
   get errorMessage(): string | undefined {
     if (this.validator) {
       const error = this.validator(this.value)
+      if (error !== undefined) {
+        const errorFormatted = this.errorFormatter(error)
+        return errorFormatted
+      }
       return error
     }
     return undefined

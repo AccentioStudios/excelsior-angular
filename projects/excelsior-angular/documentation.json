@@ -221,6 +221,16 @@
                 "defaultValue": "{\r\n  args: {\r\n    primary: true,\r\n    label: 'Button',\r\n    size: 'medium',\r\n    extended: true,\r\n  },\r\n}"
             },
             {
+                "name": "FormatError",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/excelsior-angular/src/lib/atoms/input/input.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\r\n  args: {\r\n    id: 'formatErrorInput',\r\n    label: 'Input with Format Error',\r\n    placeholder: 'Type something...',\r\n    value: 'Invalid Value',\r\n    validator: (value: string) => {\r\n      return 'Invalid Value'\r\n    },\r\n    errorFormatter: (error) => {\r\n      return 'Formatted Error'\r\n    },\r\n  },\r\n\r\n  render: (args, context) => {\r\n    const { validator, errorFormatter } = context.parameters\r\n\r\n    return {\r\n      props: {\r\n        ...args,\r\n        validator,\r\n        errorFormatter,\r\n      },\r\n      template: `\r\n      <ex-input\r\n        [id]=\"id\"\r\n        [label]=\"label\"\r\n        [placeholder]=\"placeholder\"\r\n        [value]=\"value\"\r\n        (valueChange)=\"valueChange($event)\"\r\n        [hintText]=\"hintText\"\r\n        [validator]=\"validator\"\r\n        [errorFormatter]=\"errorFormatter\"\r\n      ></ex-input>\r\n      `,\r\n    }\r\n  },\r\n}"
+            },
+            {
                 "name": "HelpCircle",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
@@ -380,11 +390,11 @@
                 "name": "meta",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/excelsior-angular/src/lib/atoms/button/ex-button.stories.ts",
+                "file": "projects/excelsior-angular/src/lib/atoms/card/card.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
-                "type": "Meta<ExButtonComponent>",
-                "defaultValue": "{\r\n  title: '1.Atoms/Button',\r\n  component: ExButtonComponent,\r\n  tags: ['autodocs'],\r\n  argTypes: {\r\n    primary: { control: 'boolean' },\r\n    extended: {\r\n      control: 'boolean',\r\n    },\r\n    backgroundColor: {\r\n      control: 'color',\r\n    },\r\n    disabled: {\r\n      control: 'boolean',\r\n    },\r\n    icon: {\r\n      control: 'text',\r\n      options: ['cube-03'],\r\n    },\r\n    iconColor: {\r\n      control: 'color',\r\n    },\r\n    size: {\r\n      control: { type: 'select' },\r\n      options: ['small', 'medium', 'large'],\r\n    },\r\n  },\r\n  // Use `fn` to spy on the onClick arg, which will appear in the actions panel once invoked: https://storybook.js.org/docs/essentials/actions#action-args\r\n  args: { onClick: fn() },\r\n}"
+                "type": "Meta<ExCardComponent>",
+                "defaultValue": "{\r\n  title: '1.Atoms/Card',\r\n  component: ExCardComponent,\r\n  tags: ['autodocs'],\r\n}"
             },
             {
                 "name": "meta",
@@ -400,11 +410,11 @@
                 "name": "meta",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/excelsior-angular/src/lib/atoms/card/card.stories.ts",
+                "file": "projects/excelsior-angular/src/lib/atoms/button/ex-button.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
-                "type": "Meta<ExCardComponent>",
-                "defaultValue": "{\r\n  title: '1.Atoms/Card',\r\n  component: ExCardComponent,\r\n  tags: ['autodocs'],\r\n}"
+                "type": "Meta<ExButtonComponent>",
+                "defaultValue": "{\r\n  title: '1.Atoms/Button',\r\n  component: ExButtonComponent,\r\n  tags: ['autodocs'],\r\n  argTypes: {\r\n    primary: { control: 'boolean' },\r\n    extended: {\r\n      control: 'boolean',\r\n    },\r\n    backgroundColor: {\r\n      control: 'color',\r\n    },\r\n    disabled: {\r\n      control: 'boolean',\r\n    },\r\n    icon: {\r\n      control: 'text',\r\n      options: ['cube-03'],\r\n    },\r\n    iconColor: {\r\n      control: 'color',\r\n    },\r\n    size: {\r\n      control: { type: 'select' },\r\n      options: ['small', 'medium', 'large'],\r\n    },\r\n  },\r\n  // Use `fn` to spy on the onClick arg, which will appear in the actions panel once invoked: https://storybook.js.org/docs/essentials/actions#action-args\r\n  args: { onClick: fn() },\r\n}"
             },
             {
                 "name": "meta",
@@ -440,21 +450,21 @@
                 "name": "meta",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/excelsior-angular/src/lib/atoms/input/input.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Meta<ExInputComponent>",
-                "defaultValue": "{\r\n  title: '1.Atoms/Input',\r\n  component: ExInputComponent,\r\n  tags: ['autodocs'],\r\n  argTypes: {\r\n    type: {\r\n      control: { type: 'text' },\r\n    },\r\n    placeholder: {\r\n      control: { type: 'text' },\r\n    },\r\n    value: {\r\n      control: { type: 'text' },\r\n    },\r\n    valueChange: { action: 'valueChange' },\r\n    label: {\r\n      control: { type: 'text' },\r\n    },\r\n    disabled: {\r\n      control: { type: 'boolean' },\r\n    },\r\n  },\r\n}"
-            },
-            {
-                "name": "meta",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
                 "file": "projects/excelsior-angular/src/lib/atoms/icon/ex-icon.component.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Meta<ExIconComponent>",
                 "defaultValue": "{\r\n  title: '1.Atoms/Icon',\r\n  component: ExIconComponent,\r\n  tags: ['autodocs'],\r\n  argTypes: {\r\n    name: {\r\n      control: { type: 'select' },\r\n      options: ['icon-home', 'icon-user', 'help-circle', 'line-chart-up-04', 'lock-04', 'key-02', 'cube-03', 'dot'],\r\n    },\r\n\r\n    size: {\r\n      control: { type: 'select' },\r\n      options: ['small', 'medium', 'large'],\r\n    },\r\n    // Customize the fill color if needed\r\n  },\r\n  args: {\r\n    // Default fill color\r\n  },\r\n}"
+            },
+            {
+                "name": "meta",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/excelsior-angular/src/lib/atoms/input/input.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Meta<ExInputComponent>",
+                "defaultValue": "{\r\n  title: '1.Atoms/Input',\r\n  component: ExInputComponent,\r\n  tags: ['autodocs'],\r\n  argTypes: {\r\n    type: {\r\n      control: { type: 'text' },\r\n    },\r\n    placeholder: {\r\n      control: { type: 'text' },\r\n    },\r\n    value: {\r\n      control: { type: 'text' },\r\n    },\r\n    valueChange: { action: 'valueChange' },\r\n    label: {\r\n      control: { type: 'text' },\r\n    },\r\n    disabled: {\r\n      control: { type: 'boolean' },\r\n    },\r\n  },\r\n}"
             },
             {
                 "name": "meta",
@@ -783,8 +793,8 @@
                 "name": "Story",
                 "ctype": "miscellaneous",
                 "subtype": "typealias",
-                "rawtype": "StoryObj<ExButtonComponent>",
-                "file": "projects/excelsior-angular/src/lib/atoms/button/ex-button.stories.ts",
+                "rawtype": "StoryObj<ExCardComponent>",
+                "file": "projects/excelsior-angular/src/lib/atoms/card/card.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "description": "",
@@ -805,8 +815,8 @@
                 "name": "Story",
                 "ctype": "miscellaneous",
                 "subtype": "typealias",
-                "rawtype": "StoryObj<ExCardComponent>",
-                "file": "projects/excelsior-angular/src/lib/atoms/card/card.stories.ts",
+                "rawtype": "StoryObj<ExButtonComponent>",
+                "file": "projects/excelsior-angular/src/lib/atoms/button/ex-button.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "description": "",
@@ -849,8 +859,8 @@
                 "name": "Story",
                 "ctype": "miscellaneous",
                 "subtype": "typealias",
-                "rawtype": "StoryObj<ExInputComponent>",
-                "file": "projects/excelsior-angular/src/lib/atoms/input/input.stories.ts",
+                "rawtype": "StoryObj<ExIconComponent>",
+                "file": "projects/excelsior-angular/src/lib/atoms/icon/ex-icon.component.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "description": "",
@@ -860,8 +870,8 @@
                 "name": "Story",
                 "ctype": "miscellaneous",
                 "subtype": "typealias",
-                "rawtype": "StoryObj<ExIconComponent>",
-                "file": "projects/excelsior-angular/src/lib/atoms/icon/ex-icon.component.stories.ts",
+                "rawtype": "StoryObj<ExInputComponent>",
+                "file": "projects/excelsior-angular/src/lib/atoms/input/input.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "description": "",
@@ -1436,6 +1446,16 @@
                     "defaultValue": "{\r\n  args: {\r\n    id: 'defaultInput',\r\n    label: 'Default Input',\r\n    placeholder: 'Type something...',\r\n    hintText: 'This is a hint text',\r\n    validator: (value: string) => {\r\n      console.log('Validating...')\r\n      if (value.length < 5) return 'Value must have at least 5 characters'\r\n      return undefined\r\n    },\r\n  },\r\n}"
                 },
                 {
+                    "name": "FormatError",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/excelsior-angular/src/lib/atoms/input/input.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\r\n  args: {\r\n    id: 'formatErrorInput',\r\n    label: 'Input with Format Error',\r\n    placeholder: 'Type something...',\r\n    value: 'Invalid Value',\r\n    validator: (value: string) => {\r\n      return 'Invalid Value'\r\n    },\r\n    errorFormatter: (error) => {\r\n      return 'Formatted Error'\r\n    },\r\n  },\r\n\r\n  render: (args, context) => {\r\n    const { validator, errorFormatter } = context.parameters\r\n\r\n    return {\r\n      props: {\r\n        ...args,\r\n        validator,\r\n        errorFormatter,\r\n      },\r\n      template: `\r\n      <ex-input\r\n        [id]=\"id\"\r\n        [label]=\"label\"\r\n        [placeholder]=\"placeholder\"\r\n        [value]=\"value\"\r\n        (valueChange)=\"valueChange($event)\"\r\n        [hintText]=\"hintText\"\r\n        [validator]=\"validator\"\r\n        [errorFormatter]=\"errorFormatter\"\r\n      ></ex-input>\r\n      `,\r\n    }\r\n  },\r\n}"
+                },
+                {
                     "name": "meta",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
@@ -1744,13 +1764,13 @@
                     "kind": 183
                 }
             ],
-            "projects/excelsior-angular/src/lib/atoms/button/ex-button.stories.ts": [
+            "projects/excelsior-angular/src/lib/atoms/card/card.stories.ts": [
                 {
                     "name": "Story",
                     "ctype": "miscellaneous",
                     "subtype": "typealias",
-                    "rawtype": "StoryObj<ExButtonComponent>",
-                    "file": "projects/excelsior-angular/src/lib/atoms/button/ex-button.stories.ts",
+                    "rawtype": "StoryObj<ExCardComponent>",
+                    "file": "projects/excelsior-angular/src/lib/atoms/card/card.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "description": "",
@@ -1770,13 +1790,13 @@
                     "kind": 183
                 }
             ],
-            "projects/excelsior-angular/src/lib/atoms/card/card.stories.ts": [
+            "projects/excelsior-angular/src/lib/atoms/button/ex-button.stories.ts": [
                 {
                     "name": "Story",
                     "ctype": "miscellaneous",
                     "subtype": "typealias",
-                    "rawtype": "StoryObj<ExCardComponent>",
-                    "file": "projects/excelsior-angular/src/lib/atoms/card/card.stories.ts",
+                    "rawtype": "StoryObj<ExButtonComponent>",
+                    "file": "projects/excelsior-angular/src/lib/atoms/button/ex-button.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "description": "",
@@ -1822,19 +1842,6 @@
                     "kind": 183
                 }
             ],
-            "projects/excelsior-angular/src/lib/atoms/input/input.stories.ts": [
-                {
-                    "name": "Story",
-                    "ctype": "miscellaneous",
-                    "subtype": "typealias",
-                    "rawtype": "StoryObj<ExInputComponent>",
-                    "file": "projects/excelsior-angular/src/lib/atoms/input/input.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "description": "",
-                    "kind": 183
-                }
-            ],
             "projects/excelsior-angular/src/lib/atoms/icon/ex-icon.component.stories.ts": [
                 {
                     "name": "Story",
@@ -1842,6 +1849,19 @@
                     "subtype": "typealias",
                     "rawtype": "StoryObj<ExIconComponent>",
                     "file": "projects/excelsior-angular/src/lib/atoms/icon/ex-icon.component.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 183
+                }
+            ],
+            "projects/excelsior-angular/src/lib/atoms/input/input.stories.ts": [
+                {
+                    "name": "Story",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "StoryObj<ExInputComponent>",
+                    "file": "projects/excelsior-angular/src/lib/atoms/input/input.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "description": "",
@@ -2499,6 +2519,16 @@
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
                 "name": "Default",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/excelsior-angular/src/lib/atoms/input/input.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "FormatError",
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
                 "status": "low"
