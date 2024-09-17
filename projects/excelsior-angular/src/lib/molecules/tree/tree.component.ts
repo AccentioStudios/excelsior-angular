@@ -51,9 +51,6 @@ export class ExTreeComponent {
   }
 
   toggleSelectItem(item: TreeItem) {
-    const elementIDName = 'ex-tree-checkbox-item-' + item.id
-    const element = document.getElementById(elementIDName) as any
-
     item.selected = item.selected === TreeItemStatus.SELECTED ? TreeItemStatus.UNSELECTED : TreeItemStatus.SELECTED
     if (item.children.length > 0) {
       item.children.forEach((child) => {
@@ -83,10 +80,11 @@ export class ExTreeComponent {
     }
     item.selected = status
     item.children.forEach((child) => {
-      console.log('child', child)
       child.selected = status
+      // this.selectedItem.emit(child)
     })
     this.updateSelection()
+    this.selectedItem.emit(item)
   }
 
   getTreeItemStatus(item: TreeItem): TreeItemStatus {
