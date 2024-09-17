@@ -84,21 +84,21 @@
                 "name": "Default",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/excelsior-angular/src/lib/atoms/card/card.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Story",
-                "defaultValue": "{\r\n  args: {},\r\n}"
-            },
-            {
-                "name": "Default",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
                 "file": "projects/excelsior-angular/src/lib/atoms/accordion/accordion.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
                 "defaultValue": "{\r\n  render: (args) => ({\r\n    props: args,\r\n    template: `\r\n    <ex-accordion> \r\n      <ex-accordion-item parent>\r\n        Parent\r\n      </ex-accordion-item>\r\n      <ex-accordion-item>\r\n        Child\r\n      </ex-accordion-item>\r\n    </ex-accordion>\r\n    `,\r\n  }),\r\n}"
+            },
+            {
+                "name": "Default",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/excelsior-angular/src/lib/atoms/card/card.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\r\n  args: {},\r\n}"
             },
             {
                 "name": "Default",
@@ -128,7 +128,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\r\n  args: {\r\n    id: 'defaultInput',\r\n    label: 'Default Input',\r\n    placeholder: 'Type something...',\r\n    hintText: 'This is a hint text',\r\n    validator: (value: string) => value.length > 5,\r\n    errorMessage: 'Input must be longer than 5 characters',\r\n  },\r\n}"
+                "defaultValue": "{\r\n  args: {\r\n    id: 'defaultInput',\r\n    label: 'Default Input',\r\n    value: 'Example Text',\r\n    type: 'text',\r\n    placeholder: 'Type something...',\r\n    hintText: 'This is a hint text',\r\n    validator: (value: string) => value.length >= 5 && value.length <= 12,\r\n    errorMessage: 'Input must be longer than 5 characters and shorter than 12 characters.',\r\n  },\r\n}"
             },
             {
                 "name": "Default",
@@ -168,7 +168,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\r\n  render: (args) => ({\r\n    props: args,\r\n    styles: [\r\n      `\r\n      .ex-row {\r\n        display: flex;\r\n        justify-content: flex-end;\r\n        gap: 0.4rem;\r\n      }\r\n      `,\r\n    ],\r\n    template: `\r\n      <div style=\"display: flex; justify-content: center; align-items: center; height: 100vh; width: 100vw;\">\r\n        <ex-modal \r\n        [title]=\"title\" \r\n        [supportingText]=\"supportingText\" \r\n        [isVisible]=\"isVisible\"\r\n        [iconName]=\"iconName\"\r\n        (onClose)=\"close()\">\r\n        <p>Modal body content goes here.</p>\r\n        <div style=\"width:100%;\" modalFooter>\r\n        <div class=\"ex-row\" style=\"width:100%;\">         \r\n        <ex-button style=\"width:100%;\" [primary]=\"false\" [extended]=\"true\" label=\"Cancel\" (click)=\"isVisible = false\"/>\r\n        <ex-button style=\"width:100%;\" [primary]=\"true\" [extended]=\"true\" label=\"Ok\" (click)=\"isVisible = false\"/>\r\n        </div>\r\n        </div>\r\n        </ex-modal>\r\n      </div>\r\n    `,\r\n  }),\r\n}"
+                "defaultValue": "{\r\n  args: {\r\n    title: 'Sample Modal',\r\n    supportingText: 'This is a sample modal...',\r\n    iconName: 'Visualizar',\r\n    isVisible: true,\r\n    maxWidth: '60%',\r\n  },\r\n  render: (args) => ({\r\n    props: args,\r\n    styles: [\r\n      `\r\n      .ex-row {\r\n        display: flex;\r\n        justify-content: flex-end;\r\n        gap: 0.4rem;\r\n      }\r\n      `,\r\n    ],\r\n    template: `\r\n      <div style=\"display: flex; justify-content: center; align-items: center; height: 100vh; width: 100vw;\">\r\n        <ex-modal \r\n        [title]=\"title\" \r\n        [supportingText]=\"supportingText\" \r\n        [isVisible]=\"isVisible\"\r\n        [iconName]=\"iconName\"\r\n        [maxWidth]=\"maxWidth\"\r\n        (onClose)=\"close()\">\r\n        <p>Modal body content goes here.</p>\r\n        <div style=\"width:100%;\" modalFooter>\r\n        <div class=\"ex-row\" style=\"width:100%;\">         \r\n        <ex-button style=\"width:100%;\" [primary]=\"false\" [extended]=\"true\" label=\"Cancel\" (click)=\"isVisible = false\"/>\r\n        <ex-button style=\"width:100%;\" [primary]=\"true\" [extended]=\"true\" label=\"Ok\" (click)=\"isVisible = false\"/>\r\n        </div>\r\n        </div>\r\n        </ex-modal>\r\n      </div>\r\n    `,\r\n  }),\r\n}"
             },
             {
                 "name": "Default",
@@ -360,11 +360,11 @@
                 "name": "meta",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/excelsior-angular/src/lib/atoms/button/ex-button.stories.ts",
+                "file": "projects/excelsior-angular/src/lib/atoms/accordion/accordion.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
-                "type": "Meta<ExButtonComponent>",
-                "defaultValue": "{\r\n  title: '1.Atoms/Button',\r\n  component: ExButtonComponent,\r\n  tags: ['autodocs'],\r\n  argTypes: {\r\n    primary: { control: 'boolean' },\r\n    extended: {\r\n      control: 'boolean',\r\n    },\r\n    backgroundColor: {\r\n      control: 'color',\r\n    },\r\n    disabled: {\r\n      control: 'boolean',\r\n    },\r\n    icon: {\r\n      control: 'text',\r\n      options: ['cube-03'],\r\n    },\r\n    iconColor: {\r\n      control: 'color',\r\n    },\r\n    size: {\r\n      control: { type: 'select' },\r\n      options: ['small', 'medium', 'large'],\r\n    },\r\n  },\r\n  // Use `fn` to spy on the onClick arg, which will appear in the actions panel once invoked: https://storybook.js.org/docs/essentials/actions#action-args\r\n  args: { onClick: fn() },\r\n}"
+                "type": "Meta<ExAccordionComponent>",
+                "defaultValue": "{\r\n  title: '1.Atoms/Accordion',\r\n  component: ExAccordionComponent,\r\n  decorators: [\r\n    moduleMetadata({\r\n      imports: [ExAccordionItemComponent],\r\n    }),\r\n  ],\r\n  tags: ['autodocs'],\r\n}"
             },
             {
                 "name": "meta",
@@ -380,21 +380,21 @@
                 "name": "meta",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/excelsior-angular/src/lib/atoms/card/card.stories.ts",
+                "file": "projects/excelsior-angular/src/lib/atoms/button/ex-button.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
-                "type": "Meta<ExCardComponent>",
-                "defaultValue": "{\r\n  title: '1.Atoms/Card',\r\n  component: ExCardComponent,\r\n  tags: ['autodocs'],\r\n}"
+                "type": "Meta<ExButtonComponent>",
+                "defaultValue": "{\r\n  title: '1.Atoms/Button',\r\n  component: ExButtonComponent,\r\n  tags: ['autodocs'],\r\n  argTypes: {\r\n    primary: { control: 'boolean' },\r\n    extended: {\r\n      control: 'boolean',\r\n    },\r\n    backgroundColor: {\r\n      control: 'color',\r\n    },\r\n    disabled: {\r\n      control: 'boolean',\r\n    },\r\n    icon: {\r\n      control: 'text',\r\n      options: ['cube-03'],\r\n    },\r\n    iconColor: {\r\n      control: 'color',\r\n    },\r\n    size: {\r\n      control: { type: 'select' },\r\n      options: ['small', 'medium', 'large'],\r\n    },\r\n  },\r\n  // Use `fn` to spy on the onClick arg, which will appear in the actions panel once invoked: https://storybook.js.org/docs/essentials/actions#action-args\r\n  args: { onClick: fn() },\r\n}"
             },
             {
                 "name": "meta",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/excelsior-angular/src/lib/atoms/accordion/accordion.stories.ts",
+                "file": "projects/excelsior-angular/src/lib/atoms/card/card.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
-                "type": "Meta<ExAccordionComponent>",
-                "defaultValue": "{\r\n  title: '1.Atoms/Accordion',\r\n  component: ExAccordionComponent,\r\n  decorators: [\r\n    moduleMetadata({\r\n      imports: [ExAccordionItemComponent],\r\n    }),\r\n  ],\r\n  tags: ['autodocs'],\r\n}"
+                "type": "Meta<ExCardComponent>",
+                "defaultValue": "{\r\n  title: '1.Atoms/Card',\r\n  component: ExCardComponent,\r\n  tags: ['autodocs'],\r\n}"
             },
             {
                 "name": "meta",
@@ -454,7 +454,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Meta<ExInputComponent>",
-                "defaultValue": "{\r\n  title: '1.Atoms/Input',\r\n  component: ExInputComponent,\r\n  tags: ['autodocs'],\r\n  argTypes: {\r\n    type: {\r\n      control: { type: 'text' },\r\n    },\r\n    placeholder: {\r\n      control: { type: 'text' },\r\n    },\r\n    value: {\r\n      control: { type: 'text' },\r\n    },\r\n    valueChange: { action: 'valueChange' },\r\n    label: {\r\n      description: 'Label text to be displayed above the input.',\r\n      control: { type: 'text' },\r\n    },\r\n    disabled: {\r\n      description: 'Boolean indicating if the input is disabled.',\r\n      control: { type: 'boolean' },\r\n    },\r\n    // Function that returns true or false\r\n    validator: {\r\n      description:\r\n        'Validator function to validate the input value.  If the function returns false, the input will be marked as invalid.',\r\n      action: 'validate',\r\n    },\r\n    errorMessage: {\r\n      description: 'Error message to be displayed below the input when the input is invalid.',\r\n      control: { type: 'text' },\r\n    },\r\n  },\r\n}"
+                "defaultValue": "{\r\n  title: '1.Atoms/Input',\r\n  component: ExInputComponent,\r\n  tags: ['autodocs'],\r\n  argTypes: {\r\n    id: {\r\n      description: 'ID of the input.',\r\n      control: { type: 'text' },\r\n    },\r\n    type: {\r\n      description: 'Type of the input.',\r\n      control: {\r\n        control: { type: 'select' },\r\n        options: ['text', 'password', 'email', 'number'],\r\n      },\r\n    },\r\n    placeholder: {\r\n      description: 'Placeholder text to be displayed in the input when it is empty.',\r\n      control: { type: 'text' },\r\n    },\r\n    value: {\r\n      description: 'Value of the input.',\r\n      control: { type: 'text' },\r\n    },\r\n    valueChange: {\r\n      description: 'Event emitter for when the value of the input changes.',\r\n      action: 'valueChange',\r\n    },\r\n    label: {\r\n      description: 'Label text to be displayed above the input.',\r\n      control: { type: 'text' },\r\n    },\r\n    disabled: {\r\n      description: 'Boolean indicating if the input is disabled.',\r\n      control: { type: 'boolean' },\r\n    },\r\n    // Function that returns true or false\r\n    validator: {\r\n      description:\r\n        'Validator function to validate the input value.  If the function returns false, the input will be marked as invalid.',\r\n      action: 'validate',\r\n    },\r\n    errorMessage: {\r\n      description: 'Error message to be displayed below the input when the input is invalid.',\r\n      control: { type: 'text' },\r\n    },\r\n  },\r\n}"
             },
             {
                 "name": "meta",
@@ -494,7 +494,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Meta<ExModalComponent>",
-                "defaultValue": "{\r\n  title: '3.Organism/Modal',\r\n  component: ExModalComponent,\r\n  tags: ['autodocs'],\r\n  decorators: [\r\n    moduleMetadata({\r\n      imports: [ExButtonComponent],\r\n    }),\r\n  ],\r\n  argTypes: {\r\n    title: { control: 'text' },\r\n    supportingText: { control: 'text' },\r\n    iconName: { control: 'text' },\r\n    isVisible: { control: 'boolean' },\r\n    onClose: { action: 'onClose' },\r\n  },\r\n  args: {\r\n    title: 'Sample Modal',\r\n    supportingText: 'This is a sample modal...',\r\n    iconName: 'Visualizar',\r\n    isVisible: true,\r\n    onClose: fn(),\r\n  },\r\n}"
+                "defaultValue": "{\r\n  title: '3.Organism/Modal',\r\n  component: ExModalComponent,\r\n  tags: ['autodocs'],\r\n  decorators: [\r\n    moduleMetadata({\r\n      imports: [ExButtonComponent],\r\n    }),\r\n  ],\r\n  argTypes: {\r\n    title: {\r\n      description: 'The title of the modal',\r\n      control: 'text',\r\n    },\r\n    supportingText: {\r\n      description: 'The text appearing below the title',\r\n      control: 'text',\r\n    },\r\n    iconName: {\r\n      description: 'The icon name (ExIcon) to be displayed on the modal',\r\n      control: 'text',\r\n    },\r\n    isVisible: {\r\n      description: 'The visibility of the modal',\r\n      control: 'boolean',\r\n    },\r\n    onClose: {\r\n      description: 'The function to be called when the modal is closed',\r\n      action: 'onClose',\r\n    },\r\n    maxWidth: {\r\n      description: 'The optional maximum width of the modal',\r\n      control: 'text',\r\n    },\r\n  },\r\n  args: {\r\n    title: 'Sample Modal',\r\n    supportingText: 'This is a sample modal...',\r\n    iconName: 'Visualizar',\r\n    isVisible: true,\r\n    onClose: fn(),\r\n  },\r\n}"
             },
             {
                 "name": "meta",
@@ -752,7 +752,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\r\n  args: {\r\n    id: 'withValueInput',\r\n    label: 'Input with Value',\r\n    placeholder: 'Type something...',\r\n    value: 'Initial Value',\r\n  },\r\n}"
+                "defaultValue": "{\r\n  args: {\r\n    id: 'withValueInput',\r\n    type: 'text',\r\n    label: 'Input with Value',\r\n    placeholder: 'Type something...',\r\n    value: 'Initial Value',\r\n  },\r\n}"
             }
         ],
         "functions": [],
@@ -761,8 +761,8 @@
                 "name": "Story",
                 "ctype": "miscellaneous",
                 "subtype": "typealias",
-                "rawtype": "StoryObj<ExButtonComponent>",
-                "file": "projects/excelsior-angular/src/lib/atoms/button/ex-button.stories.ts",
+                "rawtype": "StoryObj<ExAccordionComponent>",
+                "file": "projects/excelsior-angular/src/lib/atoms/accordion/accordion.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "description": "",
@@ -783,8 +783,8 @@
                 "name": "Story",
                 "ctype": "miscellaneous",
                 "subtype": "typealias",
-                "rawtype": "StoryObj<ExCardComponent>",
-                "file": "projects/excelsior-angular/src/lib/atoms/card/card.stories.ts",
+                "rawtype": "StoryObj<ExButtonComponent>",
+                "file": "projects/excelsior-angular/src/lib/atoms/button/ex-button.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "description": "",
@@ -794,8 +794,8 @@
                 "name": "Story",
                 "ctype": "miscellaneous",
                 "subtype": "typealias",
-                "rawtype": "StoryObj<ExAccordionComponent>",
-                "file": "projects/excelsior-angular/src/lib/atoms/accordion/accordion.stories.ts",
+                "rawtype": "StoryObj<ExCardComponent>",
+                "file": "projects/excelsior-angular/src/lib/atoms/card/card.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "description": "",
@@ -1433,7 +1433,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\r\n  args: {\r\n    id: 'defaultInput',\r\n    label: 'Default Input',\r\n    placeholder: 'Type something...',\r\n    hintText: 'This is a hint text',\r\n    validator: (value: string) => value.length > 5,\r\n    errorMessage: 'Input must be longer than 5 characters',\r\n  },\r\n}"
+                    "defaultValue": "{\r\n  args: {\r\n    id: 'defaultInput',\r\n    label: 'Default Input',\r\n    value: 'Example Text',\r\n    type: 'text',\r\n    placeholder: 'Type something...',\r\n    hintText: 'This is a hint text',\r\n    validator: (value: string) => value.length >= 5 && value.length <= 12,\r\n    errorMessage: 'Input must be longer than 5 characters and shorter than 12 characters.',\r\n  },\r\n}"
                 },
                 {
                     "name": "meta",
@@ -1443,7 +1443,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Meta<ExInputComponent>",
-                    "defaultValue": "{\r\n  title: '1.Atoms/Input',\r\n  component: ExInputComponent,\r\n  tags: ['autodocs'],\r\n  argTypes: {\r\n    type: {\r\n      control: { type: 'text' },\r\n    },\r\n    placeholder: {\r\n      control: { type: 'text' },\r\n    },\r\n    value: {\r\n      control: { type: 'text' },\r\n    },\r\n    valueChange: { action: 'valueChange' },\r\n    label: {\r\n      description: 'Label text to be displayed above the input.',\r\n      control: { type: 'text' },\r\n    },\r\n    disabled: {\r\n      description: 'Boolean indicating if the input is disabled.',\r\n      control: { type: 'boolean' },\r\n    },\r\n    // Function that returns true or false\r\n    validator: {\r\n      description:\r\n        'Validator function to validate the input value.  If the function returns false, the input will be marked as invalid.',\r\n      action: 'validate',\r\n    },\r\n    errorMessage: {\r\n      description: 'Error message to be displayed below the input when the input is invalid.',\r\n      control: { type: 'text' },\r\n    },\r\n  },\r\n}"
+                    "defaultValue": "{\r\n  title: '1.Atoms/Input',\r\n  component: ExInputComponent,\r\n  tags: ['autodocs'],\r\n  argTypes: {\r\n    id: {\r\n      description: 'ID of the input.',\r\n      control: { type: 'text' },\r\n    },\r\n    type: {\r\n      description: 'Type of the input.',\r\n      control: {\r\n        control: { type: 'select' },\r\n        options: ['text', 'password', 'email', 'number'],\r\n      },\r\n    },\r\n    placeholder: {\r\n      description: 'Placeholder text to be displayed in the input when it is empty.',\r\n      control: { type: 'text' },\r\n    },\r\n    value: {\r\n      description: 'Value of the input.',\r\n      control: { type: 'text' },\r\n    },\r\n    valueChange: {\r\n      description: 'Event emitter for when the value of the input changes.',\r\n      action: 'valueChange',\r\n    },\r\n    label: {\r\n      description: 'Label text to be displayed above the input.',\r\n      control: { type: 'text' },\r\n    },\r\n    disabled: {\r\n      description: 'Boolean indicating if the input is disabled.',\r\n      control: { type: 'boolean' },\r\n    },\r\n    // Function that returns true or false\r\n    validator: {\r\n      description:\r\n        'Validator function to validate the input value.  If the function returns false, the input will be marked as invalid.',\r\n      action: 'validate',\r\n    },\r\n    errorMessage: {\r\n      description: 'Error message to be displayed below the input when the input is invalid.',\r\n      control: { type: 'text' },\r\n    },\r\n  },\r\n}"
                 },
                 {
                     "name": "WithValue",
@@ -1453,7 +1453,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\r\n  args: {\r\n    id: 'withValueInput',\r\n    label: 'Input with Value',\r\n    placeholder: 'Type something...',\r\n    value: 'Initial Value',\r\n  },\r\n}"
+                    "defaultValue": "{\r\n  args: {\r\n    id: 'withValueInput',\r\n    type: 'text',\r\n    label: 'Input with Value',\r\n    placeholder: 'Type something...',\r\n    value: 'Initial Value',\r\n  },\r\n}"
                 }
             ],
             "projects/excelsior-angular/src/lib/atoms/radio/radio-button.stories.ts": [
@@ -1551,7 +1551,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\r\n  render: (args) => ({\r\n    props: args,\r\n    styles: [\r\n      `\r\n      .ex-row {\r\n        display: flex;\r\n        justify-content: flex-end;\r\n        gap: 0.4rem;\r\n      }\r\n      `,\r\n    ],\r\n    template: `\r\n      <div style=\"display: flex; justify-content: center; align-items: center; height: 100vh; width: 100vw;\">\r\n        <ex-modal \r\n        [title]=\"title\" \r\n        [supportingText]=\"supportingText\" \r\n        [isVisible]=\"isVisible\"\r\n        [iconName]=\"iconName\"\r\n        (onClose)=\"close()\">\r\n        <p>Modal body content goes here.</p>\r\n        <div style=\"width:100%;\" modalFooter>\r\n        <div class=\"ex-row\" style=\"width:100%;\">         \r\n        <ex-button style=\"width:100%;\" [primary]=\"false\" [extended]=\"true\" label=\"Cancel\" (click)=\"isVisible = false\"/>\r\n        <ex-button style=\"width:100%;\" [primary]=\"true\" [extended]=\"true\" label=\"Ok\" (click)=\"isVisible = false\"/>\r\n        </div>\r\n        </div>\r\n        </ex-modal>\r\n      </div>\r\n    `,\r\n  }),\r\n}"
+                    "defaultValue": "{\r\n  args: {\r\n    title: 'Sample Modal',\r\n    supportingText: 'This is a sample modal...',\r\n    iconName: 'Visualizar',\r\n    isVisible: true,\r\n    maxWidth: '60%',\r\n  },\r\n  render: (args) => ({\r\n    props: args,\r\n    styles: [\r\n      `\r\n      .ex-row {\r\n        display: flex;\r\n        justify-content: flex-end;\r\n        gap: 0.4rem;\r\n      }\r\n      `,\r\n    ],\r\n    template: `\r\n      <div style=\"display: flex; justify-content: center; align-items: center; height: 100vh; width: 100vw;\">\r\n        <ex-modal \r\n        [title]=\"title\" \r\n        [supportingText]=\"supportingText\" \r\n        [isVisible]=\"isVisible\"\r\n        [iconName]=\"iconName\"\r\n        [maxWidth]=\"maxWidth\"\r\n        (onClose)=\"close()\">\r\n        <p>Modal body content goes here.</p>\r\n        <div style=\"width:100%;\" modalFooter>\r\n        <div class=\"ex-row\" style=\"width:100%;\">         \r\n        <ex-button style=\"width:100%;\" [primary]=\"false\" [extended]=\"true\" label=\"Cancel\" (click)=\"isVisible = false\"/>\r\n        <ex-button style=\"width:100%;\" [primary]=\"true\" [extended]=\"true\" label=\"Ok\" (click)=\"isVisible = false\"/>\r\n        </div>\r\n        </div>\r\n        </ex-modal>\r\n      </div>\r\n    `,\r\n  }),\r\n}"
                 },
                 {
                     "name": "meta",
@@ -1561,7 +1561,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Meta<ExModalComponent>",
-                    "defaultValue": "{\r\n  title: '3.Organism/Modal',\r\n  component: ExModalComponent,\r\n  tags: ['autodocs'],\r\n  decorators: [\r\n    moduleMetadata({\r\n      imports: [ExButtonComponent],\r\n    }),\r\n  ],\r\n  argTypes: {\r\n    title: { control: 'text' },\r\n    supportingText: { control: 'text' },\r\n    iconName: { control: 'text' },\r\n    isVisible: { control: 'boolean' },\r\n    onClose: { action: 'onClose' },\r\n  },\r\n  args: {\r\n    title: 'Sample Modal',\r\n    supportingText: 'This is a sample modal...',\r\n    iconName: 'Visualizar',\r\n    isVisible: true,\r\n    onClose: fn(),\r\n  },\r\n}"
+                    "defaultValue": "{\r\n  title: '3.Organism/Modal',\r\n  component: ExModalComponent,\r\n  tags: ['autodocs'],\r\n  decorators: [\r\n    moduleMetadata({\r\n      imports: [ExButtonComponent],\r\n    }),\r\n  ],\r\n  argTypes: {\r\n    title: {\r\n      description: 'The title of the modal',\r\n      control: 'text',\r\n    },\r\n    supportingText: {\r\n      description: 'The text appearing below the title',\r\n      control: 'text',\r\n    },\r\n    iconName: {\r\n      description: 'The icon name (ExIcon) to be displayed on the modal',\r\n      control: 'text',\r\n    },\r\n    isVisible: {\r\n      description: 'The visibility of the modal',\r\n      control: 'boolean',\r\n    },\r\n    onClose: {\r\n      description: 'The function to be called when the modal is closed',\r\n      action: 'onClose',\r\n    },\r\n    maxWidth: {\r\n      description: 'The optional maximum width of the modal',\r\n      control: 'text',\r\n    },\r\n  },\r\n  args: {\r\n    title: 'Sample Modal',\r\n    supportingText: 'This is a sample modal...',\r\n    iconName: 'Visualizar',\r\n    isVisible: true,\r\n    onClose: fn(),\r\n  },\r\n}"
                 }
             ],
             "projects/excelsior-angular/src/lib/atoms/button/ex-button.stories.ts": [
@@ -1718,13 +1718,13 @@
         "groupedFunctions": {},
         "groupedEnumerations": {},
         "groupedTypeAliases": {
-            "projects/excelsior-angular/src/lib/atoms/button/ex-button.stories.ts": [
+            "projects/excelsior-angular/src/lib/atoms/accordion/accordion.stories.ts": [
                 {
                     "name": "Story",
                     "ctype": "miscellaneous",
                     "subtype": "typealias",
-                    "rawtype": "StoryObj<ExButtonComponent>",
-                    "file": "projects/excelsior-angular/src/lib/atoms/button/ex-button.stories.ts",
+                    "rawtype": "StoryObj<ExAccordionComponent>",
+                    "file": "projects/excelsior-angular/src/lib/atoms/accordion/accordion.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "description": "",
@@ -1744,6 +1744,19 @@
                     "kind": 183
                 }
             ],
+            "projects/excelsior-angular/src/lib/atoms/button/ex-button.stories.ts": [
+                {
+                    "name": "Story",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "StoryObj<ExButtonComponent>",
+                    "file": "projects/excelsior-angular/src/lib/atoms/button/ex-button.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 183
+                }
+            ],
             "projects/excelsior-angular/src/lib/atoms/card/card.stories.ts": [
                 {
                     "name": "Story",
@@ -1751,19 +1764,6 @@
                     "subtype": "typealias",
                     "rawtype": "StoryObj<ExCardComponent>",
                     "file": "projects/excelsior-angular/src/lib/atoms/card/card.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "description": "",
-                    "kind": 183
-                }
-            ],
-            "projects/excelsior-angular/src/lib/atoms/accordion/accordion.stories.ts": [
-                {
-                    "name": "Story",
-                    "ctype": "miscellaneous",
-                    "subtype": "typealias",
-                    "rawtype": "StoryObj<ExAccordionComponent>",
-                    "file": "projects/excelsior-angular/src/lib/atoms/accordion/accordion.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "description": "",

@@ -1,5 +1,5 @@
 <div class="ex-modal-overlay" *ngIf="isVisible" (click)="closeModal()">
-  <div class="ex-modal" (click)="$event.stopPropagation()">
+  <div class="ex-modal" (click)="$event.stopPropagation()" [style]="styleWidth">
     <div class="ex-modal-header">
       <svg
         *ngIf="iconName"

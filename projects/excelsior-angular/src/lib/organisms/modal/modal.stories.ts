@@ -13,11 +13,30 @@ const meta: Meta<ExModalComponent> = {
     }),
   ],
   argTypes: {
-    title: { control: 'text' },
-    supportingText: { control: 'text' },
-    iconName: { control: 'text' },
-    isVisible: { control: 'boolean' },
-    onClose: { action: 'onClose' },
+    title: {
+      description: 'The title of the modal',
+      control: 'text',
+    },
+    supportingText: {
+      description: 'The text appearing below the title',
+      control: 'text',
+    },
+    iconName: {
+      description: 'The icon name (ExIcon) to be displayed on the modal',
+      control: 'text',
+    },
+    isVisible: {
+      description: 'The visibility of the modal',
+      control: 'boolean',
+    },
+    onClose: {
+      description: 'The function to be called when the modal is closed',
+      action: 'onClose',
+    },
+    maxWidth: {
+      description: 'The optional maximum width of the modal',
+      control: 'text',
+    },
   },
   args: {
     title: 'Sample Modal',
@@ -32,6 +51,13 @@ export default meta
 type Story = StoryObj<ExModalComponent>
 
 export const Default: Story = {
+  args: {
+    title: 'Sample Modal',
+    supportingText: 'This is a sample modal...',
+    iconName: 'Visualizar',
+    isVisible: true,
+    maxWidth: '60%',
+  },
   render: (args) => ({
     props: args,
     styles: [
@@ -50,6 +76,7 @@ export const Default: Story = {
         [supportingText]="supportingText" 
         [isVisible]="isVisible"
         [iconName]="iconName"
+        [maxWidth]="maxWidth"
         (onClose)="close()">
         <p>Modal body content goes here.</p>
         <div style="width:100%;" modalFooter>
