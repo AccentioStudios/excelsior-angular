@@ -1,5 +1,6 @@
 import { Meta, StoryObj } from '@storybook/angular'
-import { ExTreeComponent, TreeItemStatus } from './tree.component'
+import { ExTreeComponent } from './tree.component'
+import { TreeItemStatus } from '../../types'
 
 const meta: Meta<ExTreeComponent> = {
   title: 'Molecules/Tree',
