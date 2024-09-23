@@ -1,22 +1,12 @@
 {
   "name": "@accentiostudios/excelsior-angular",
-  "version": "1.0.8-alpha.10.1.10",
+  "version": "1.0.8-alpha.10.1.11",
   "peerDependencies": {
-    "@angular/common": "^15.2.10",
+    "@angular/common": "^15.2.11",
     "@angular/core": "^15.2.10"
   },
   "dependencies": {
     "tslib": "^2.0.0"
   },
-  "sideEffects": false,
-  "exports": {
-    "./styles": {
-      "import": "./styles/excelsior.scss",
-      "require": "./styles/excelsior.scss"
-    },
-    "./colors": {
-      "import": "./styles/colors.scss",
-      "require": "./styles/colors.scss"
-    }
-  }
+  "sideEffects": false
 }

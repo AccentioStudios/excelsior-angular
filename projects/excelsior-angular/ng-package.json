@@ -6,6 +6,6 @@
   },
   "assets": [
     "./src/lib/assets",
-    "./src/lib/styles/excelsior.scss"
+    "./src/lib/styles/**/*.*"
   ]
 }
