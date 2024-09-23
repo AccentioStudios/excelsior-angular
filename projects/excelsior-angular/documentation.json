@@ -168,7 +168,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\r\n  args: {\r\n    title: 'Sample Modal',\r\n    supportingText: 'This is a sample modal...',\r\n    iconName: 'Visualizar',\r\n    isVisible: true,\r\n    maxWidth: '60%',\r\n  },\r\n  render: (args) => ({\r\n    props: args,\r\n    styles: [\r\n      `\r\n      .ex-row {\r\n        display: flex;\r\n        justify-content: flex-end;\r\n        gap: 0.4rem;\r\n      }\r\n      `,\r\n    ],\r\n    template: `\r\n      <div style=\"display: flex; justify-content: center; align-items: center; height: 100vh; width: 100vw;\">\r\n        <ex-modal \r\n        [title]=\"title\" \r\n        [supportingText]=\"supportingText\" \r\n        [isVisible]=\"isVisible\"\r\n        [iconName]=\"iconName\"\r\n        [maxWidth]=\"maxWidth\"\r\n        (onClose)=\"close()\">\r\n        <p>Modal body content goes here.</p>\r\n        <div style=\"width:100%;\" modalFooter>\r\n        <div class=\"ex-row\" style=\"width:100%;\">         \r\n        <ex-button style=\"width:100%;\" [primary]=\"false\" [extended]=\"true\" label=\"Cancel\" (click)=\"isVisible = false\"/>\r\n        <ex-button style=\"width:100%;\" [primary]=\"true\" [extended]=\"true\" label=\"Ok\" (click)=\"isVisible = false\"/>\r\n        </div>\r\n        </div>\r\n        </ex-modal>\r\n      </div>\r\n    `,\r\n  }),\r\n}"
+                "defaultValue": "{\r\n  args: {\r\n    title: 'Sample Modal',\r\n    supportingText: 'This is a sample modal...',\r\n    iconName: 'Visualizar',\r\n    isVisible: true,\r\n    maxWidth: '60%',\r\n    onClose: fn(),\r\n  },\r\n  render: (args) => ({\r\n    props: args,\r\n    styles: [\r\n      `\r\n      .ex-row {\r\n        display: flex;\r\n        justify-content: flex-end;\r\n        gap: 0.4rem;\r\n      }\r\n      `,\r\n    ],\r\n    template: `\r\n      <div style=\"display: flex; justify-content: center; align-items: center; height: 100vh; width: 100vw;\">\r\n        <ex-modal \r\n        [title]=\"title\" \r\n        [supportingText]=\"supportingText\" \r\n        [isVisible]=\"isVisible\"\r\n        [iconName]=\"iconName\"\r\n        [maxWidth]=\"maxWidth\"\r\n        (onClose)=\"close()\">\r\n        <p>Modal body content goes here.</p>\r\n        <div style=\"width:100%;\" modalFooter>\r\n        <div class=\"ex-row\" style=\"width:100%;\">         \r\n        <ex-button style=\"width:100%;\" [primary]=\"false\" [extended]=\"true\" label=\"Cancel\" (click)=\"isVisible = false\"/>\r\n        <ex-button style=\"width:100%;\" [primary]=\"true\" [extended]=\"true\" label=\"Ok\" (click)=\"isVisible = false\"/>\r\n        </div>\r\n        </div>\r\n        </ex-modal>\r\n      </div>\r\n    `,\r\n  }),\r\n}"
             },
             {
                 "name": "Default",
@@ -360,21 +360,21 @@
                 "name": "meta",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/excelsior-angular/src/lib/atoms/badge/badge.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Meta<ExBadgeComponent>",
-                "defaultValue": "{\r\n  title: '1.Atoms/Badge',\r\n  component: ExBadgeComponent,\r\n  tags: ['autodocs'],\r\n  argTypes: {\r\n    type: {\r\n      control: { type: 'select' },\r\n      options: ['success', 'pink', 'warning', 'error', 'purple', 'indigo', 'indigo', 'blue-light'],\r\n    },\r\n    text: { control: 'text' },\r\n  },\r\n  // Use `fn` to spy on the onClick arg, which will appear in the actions panel once invoked: https://storybook.js.org/docs/essentials/actions#action-args\r\n  args: { onClick: fn() },\r\n}"
-            },
-            {
-                "name": "meta",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
                 "file": "projects/excelsior-angular/src/lib/atoms/accordion/accordion.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Meta<ExAccordionComponent>",
                 "defaultValue": "{\r\n  title: '1.Atoms/Accordion',\r\n  component: ExAccordionComponent,\r\n  decorators: [\r\n    moduleMetadata({\r\n      imports: [ExAccordionItemComponent],\r\n    }),\r\n  ],\r\n  tags: ['autodocs'],\r\n}"
+            },
+            {
+                "name": "meta",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/excelsior-angular/src/lib/atoms/badge/badge.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Meta<ExBadgeComponent>",
+                "defaultValue": "{\r\n  title: '1.Atoms/Badge',\r\n  component: ExBadgeComponent,\r\n  tags: ['autodocs'],\r\n  argTypes: {\r\n    type: {\r\n      control: { type: 'select' },\r\n      options: ['success', 'pink', 'warning', 'error', 'purple', 'indigo', 'indigo', 'blue-light'],\r\n    },\r\n    text: { control: 'text' },\r\n  },\r\n  // Use `fn` to spy on the onClick arg, which will appear in the actions panel once invoked: https://storybook.js.org/docs/essentials/actions#action-args\r\n  args: { onClick: fn() },\r\n}"
             },
             {
                 "name": "meta",
@@ -494,7 +494,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Meta<ExModalComponent>",
-                "defaultValue": "{\r\n  title: '3.Organism/Modal',\r\n  component: ExModalComponent,\r\n  tags: ['autodocs'],\r\n  decorators: [\r\n    moduleMetadata({\r\n      imports: [ExButtonComponent],\r\n    }),\r\n  ],\r\n  argTypes: {\r\n    title: {\r\n      description: 'The title of the modal',\r\n      control: 'text',\r\n    },\r\n    supportingText: {\r\n      description: 'The text appearing below the title',\r\n      control: 'text',\r\n    },\r\n    iconName: {\r\n      description: 'The icon name (ExIcon) to be displayed on the modal',\r\n      control: 'text',\r\n    },\r\n    isVisible: {\r\n      description: 'The visibility of the modal',\r\n      control: 'boolean',\r\n    },\r\n    onClose: {\r\n      description: 'The function to be called when the modal is closed',\r\n      action: 'onClose',\r\n    },\r\n    maxWidth: {\r\n      description: 'The optional maximum width of the modal',\r\n      control: 'text',\r\n    },\r\n  },\r\n  args: {\r\n    title: 'Sample Modal',\r\n    supportingText: 'This is a sample modal...',\r\n    iconName: 'Visualizar',\r\n    isVisible: true,\r\n    onClose: fn(),\r\n  },\r\n}"
+                "defaultValue": "{\r\n  title: '3.Organism/Modal',\r\n  component: ExModalComponent,\r\n  tags: ['autodocs'],\r\n  decorators: [\r\n    moduleMetadata({\r\n      imports: [ExButtonComponent],\r\n    }),\r\n  ],\r\n  argTypes: {\r\n    title: {\r\n      description: 'The title of the modal',\r\n      control: 'text',\r\n    },\r\n    supportingText: {\r\n      description: 'The text appearing below the title',\r\n      control: 'text',\r\n    },\r\n    iconName: {\r\n      description: 'The icon name (ExIcon) to be displayed on the modal',\r\n      control: 'text',\r\n    },\r\n    isVisible: {\r\n      description: 'The visibility of the modal',\r\n      control: 'boolean',\r\n    },\r\n    onClose: {\r\n      description: 'The function to be called when the modal is closed',\r\n      action: 'onClose',\r\n    },\r\n    maxWidth: {\r\n      description: 'The optional maximum width of the modal',\r\n      control: 'text',\r\n    },\r\n  },\r\n  args: {\r\n    title: 'Sample Modal',\r\n    supportingText: 'This is a sample modal...',\r\n    iconName: 'Visualizar',\r\n    isVisible: true,\r\n  },\r\n}"
             },
             {
                 "name": "meta",
@@ -761,8 +761,8 @@
                 "name": "Story",
                 "ctype": "miscellaneous",
                 "subtype": "typealias",
-                "rawtype": "StoryObj<ExBadgeComponent>",
-                "file": "projects/excelsior-angular/src/lib/atoms/badge/badge.stories.ts",
+                "rawtype": "StoryObj<ExAccordionComponent>",
+                "file": "projects/excelsior-angular/src/lib/atoms/accordion/accordion.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "description": "",
@@ -772,8 +772,8 @@
                 "name": "Story",
                 "ctype": "miscellaneous",
                 "subtype": "typealias",
-                "rawtype": "StoryObj<ExAccordionComponent>",
-                "file": "projects/excelsior-angular/src/lib/atoms/accordion/accordion.stories.ts",
+                "rawtype": "StoryObj<ExBadgeComponent>",
+                "file": "projects/excelsior-angular/src/lib/atoms/badge/badge.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "description": "",
@@ -1551,7 +1551,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\r\n  args: {\r\n    title: 'Sample Modal',\r\n    supportingText: 'This is a sample modal...',\r\n    iconName: 'Visualizar',\r\n    isVisible: true,\r\n    maxWidth: '60%',\r\n  },\r\n  render: (args) => ({\r\n    props: args,\r\n    styles: [\r\n      `\r\n      .ex-row {\r\n        display: flex;\r\n        justify-content: flex-end;\r\n        gap: 0.4rem;\r\n      }\r\n      `,\r\n    ],\r\n    template: `\r\n      <div style=\"display: flex; justify-content: center; align-items: center; height: 100vh; width: 100vw;\">\r\n        <ex-modal \r\n        [title]=\"title\" \r\n        [supportingText]=\"supportingText\" \r\n        [isVisible]=\"isVisible\"\r\n        [iconName]=\"iconName\"\r\n        [maxWidth]=\"maxWidth\"\r\n        (onClose)=\"close()\">\r\n        <p>Modal body content goes here.</p>\r\n        <div style=\"width:100%;\" modalFooter>\r\n        <div class=\"ex-row\" style=\"width:100%;\">         \r\n        <ex-button style=\"width:100%;\" [primary]=\"false\" [extended]=\"true\" label=\"Cancel\" (click)=\"isVisible = false\"/>\r\n        <ex-button style=\"width:100%;\" [primary]=\"true\" [extended]=\"true\" label=\"Ok\" (click)=\"isVisible = false\"/>\r\n        </div>\r\n        </div>\r\n        </ex-modal>\r\n      </div>\r\n    `,\r\n  }),\r\n}"
+                    "defaultValue": "{\r\n  args: {\r\n    title: 'Sample Modal',\r\n    supportingText: 'This is a sample modal...',\r\n    iconName: 'Visualizar',\r\n    isVisible: true,\r\n    maxWidth: '60%',\r\n    onClose: fn(),\r\n  },\r\n  render: (args) => ({\r\n    props: args,\r\n    styles: [\r\n      `\r\n      .ex-row {\r\n        display: flex;\r\n        justify-content: flex-end;\r\n        gap: 0.4rem;\r\n      }\r\n      `,\r\n    ],\r\n    template: `\r\n      <div style=\"display: flex; justify-content: center; align-items: center; height: 100vh; width: 100vw;\">\r\n        <ex-modal \r\n        [title]=\"title\" \r\n        [supportingText]=\"supportingText\" \r\n        [isVisible]=\"isVisible\"\r\n        [iconName]=\"iconName\"\r\n        [maxWidth]=\"maxWidth\"\r\n        (onClose)=\"close()\">\r\n        <p>Modal body content goes here.</p>\r\n        <div style=\"width:100%;\" modalFooter>\r\n        <div class=\"ex-row\" style=\"width:100%;\">         \r\n        <ex-button style=\"width:100%;\" [primary]=\"false\" [extended]=\"true\" label=\"Cancel\" (click)=\"isVisible = false\"/>\r\n        <ex-button style=\"width:100%;\" [primary]=\"true\" [extended]=\"true\" label=\"Ok\" (click)=\"isVisible = false\"/>\r\n        </div>\r\n        </div>\r\n        </ex-modal>\r\n      </div>\r\n    `,\r\n  }),\r\n}"
                 },
                 {
                     "name": "meta",
@@ -1561,7 +1561,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Meta<ExModalComponent>",
-                    "defaultValue": "{\r\n  title: '3.Organism/Modal',\r\n  component: ExModalComponent,\r\n  tags: ['autodocs'],\r\n  decorators: [\r\n    moduleMetadata({\r\n      imports: [ExButtonComponent],\r\n    }),\r\n  ],\r\n  argTypes: {\r\n    title: {\r\n      description: 'The title of the modal',\r\n      control: 'text',\r\n    },\r\n    supportingText: {\r\n      description: 'The text appearing below the title',\r\n      control: 'text',\r\n    },\r\n    iconName: {\r\n      description: 'The icon name (ExIcon) to be displayed on the modal',\r\n      control: 'text',\r\n    },\r\n    isVisible: {\r\n      description: 'The visibility of the modal',\r\n      control: 'boolean',\r\n    },\r\n    onClose: {\r\n      description: 'The function to be called when the modal is closed',\r\n      action: 'onClose',\r\n    },\r\n    maxWidth: {\r\n      description: 'The optional maximum width of the modal',\r\n      control: 'text',\r\n    },\r\n  },\r\n  args: {\r\n    title: 'Sample Modal',\r\n    supportingText: 'This is a sample modal...',\r\n    iconName: 'Visualizar',\r\n    isVisible: true,\r\n    onClose: fn(),\r\n  },\r\n}"
+                    "defaultValue": "{\r\n  title: '3.Organism/Modal',\r\n  component: ExModalComponent,\r\n  tags: ['autodocs'],\r\n  decorators: [\r\n    moduleMetadata({\r\n      imports: [ExButtonComponent],\r\n    }),\r\n  ],\r\n  argTypes: {\r\n    title: {\r\n      description: 'The title of the modal',\r\n      control: 'text',\r\n    },\r\n    supportingText: {\r\n      description: 'The text appearing below the title',\r\n      control: 'text',\r\n    },\r\n    iconName: {\r\n      description: 'The icon name (ExIcon) to be displayed on the modal',\r\n      control: 'text',\r\n    },\r\n    isVisible: {\r\n      description: 'The visibility of the modal',\r\n      control: 'boolean',\r\n    },\r\n    onClose: {\r\n      description: 'The function to be called when the modal is closed',\r\n      action: 'onClose',\r\n    },\r\n    maxWidth: {\r\n      description: 'The optional maximum width of the modal',\r\n      control: 'text',\r\n    },\r\n  },\r\n  args: {\r\n    title: 'Sample Modal',\r\n    supportingText: 'This is a sample modal...',\r\n    iconName: 'Visualizar',\r\n    isVisible: true,\r\n  },\r\n}"
                 }
             ],
             "projects/excelsior-angular/src/lib/atoms/button/ex-button.stories.ts": [
@@ -1718,19 +1718,6 @@
         "groupedFunctions": {},
         "groupedEnumerations": {},
         "groupedTypeAliases": {
-            "projects/excelsior-angular/src/lib/atoms/badge/badge.stories.ts": [
-                {
-                    "name": "Story",
-                    "ctype": "miscellaneous",
-                    "subtype": "typealias",
-                    "rawtype": "StoryObj<ExBadgeComponent>",
-                    "file": "projects/excelsior-angular/src/lib/atoms/badge/badge.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "description": "",
-                    "kind": 183
-                }
-            ],
             "projects/excelsior-angular/src/lib/atoms/accordion/accordion.stories.ts": [
                 {
                     "name": "Story",
@@ -1738,6 +1725,19 @@
                     "subtype": "typealias",
                     "rawtype": "StoryObj<ExAccordionComponent>",
                     "file": "projects/excelsior-angular/src/lib/atoms/accordion/accordion.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 183
+                }
+            ],
+            "projects/excelsior-angular/src/lib/atoms/badge/badge.stories.ts": [
+                {
+                    "name": "Story",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "StoryObj<ExBadgeComponent>",
+                    "file": "projects/excelsior-angular/src/lib/atoms/badge/badge.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "description": "",
