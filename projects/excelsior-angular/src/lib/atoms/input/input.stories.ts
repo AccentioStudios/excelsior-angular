@@ -44,6 +44,10 @@ const meta: Meta<ExInputComponent> = {
         'Validator function to validate the input value.  If the function returns false, the input will be marked as invalid.',
       action: 'validate',
     },
+    validateOnInit: {
+      description: 'Boolean indicating if the input should be validated on init. Is false by default.',
+      control: { type: 'boolean' },
+    },
     errorMessage: {
       description: 'Error message to be displayed below the input when the input is invalid.',
       control: { type: 'text' },
@@ -64,6 +68,7 @@ export const Default: Story = {
     hintText: 'This is a hint text',
     validator: (value: string) => value.length >= 5 && value.length <= 12,
     errorMessage: 'Input must be longer than 5 characters and shorter than 12 characters.',
+    validateOnInit: false,
   },
 }
 
@@ -74,5 +79,19 @@ export const WithValue: Story = {
     label: 'Input with Value',
     placeholder: 'Type something...',
     value: 'Initial Value',
+  },
+}
+
+export const ValidateOnInit: Story = {
+  args: {
+    id: 'defaultInput',
+    label: 'Default Input',
+    value: 'Text',
+    type: 'text',
+    placeholder: 'Type something...',
+    hintText: 'This is a hint text',
+    validator: (value: string) => value.length >= 5 && value.length <= 12,
+    errorMessage: 'Input must be longer than 5 characters and shorter than 12 characters.',
+    validateOnInit: true,
   },
 }

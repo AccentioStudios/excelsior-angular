@@ -58,18 +58,39 @@ export class ExInputComponent {
    */
   @Input() hintText: string | null = null
 
-  ngOnInit() {}
+  /**
+   * Boolean indicating if the input should be validated on init. Is false by default.
+   * @type {boolean}
+   */
+  @Input() validateOnInit: boolean = false
 
-  get isValid(): boolean {
-    if (this.validator !== undefined) {
-      return this.validator(this.value)
+  /**
+   * Boolean indicating if the input is required.
+   * @type {boolean}
+   * @default false
+   */
+  @Input() required: boolean = false
+
+  ngOnInit() {
+    if (this.validateOnInit) {
+      this.validate()
     }
-    return true
+  }
+
+  public isValid: boolean | null = null
+
+  validate() {
+    if (this.validator !== undefined) {
+      this.isValid = this.validator(this.value)
+      return // Return early if validator is defined
+    }
+    this.isValid = true
   }
 
   onInput(event: Event) {
     const input = event.target as HTMLInputElement
     this.value = input.value
+    this.validate()
     this.valueChange.emit(this.value)
   }
 

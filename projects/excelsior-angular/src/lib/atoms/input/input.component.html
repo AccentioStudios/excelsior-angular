@@ -1,10 +1,17 @@
 <div class="ex-input__container" [class]="classes">
   <label *ngIf="label" [for]="id">{{ label }}</label>
-  <input [id]="id" [type]="type" [placeholder]="placeholder" [value]="value" (input)="onInput($event)" />
+  <input
+    [id]="id"
+    [type]="type"
+    [placeholder]="placeholder"
+    [value]="value"
+    (input)="onInput($event)"
+    [required]="required"
+  />
   <div *ngIf="isValid === false" class="ex-input__error">
     {{ errorMessage }}
   </div>
-  <div *ngIf="haveHint && isValid" class="ex-input__hint">
+  <div *ngIf="haveHint && isValid !== false" class="ex-input__hint">
     {{ hintText }}
   </div>
 </div>
