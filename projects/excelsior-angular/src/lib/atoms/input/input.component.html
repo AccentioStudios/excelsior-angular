@@ -4,7 +4,7 @@
     [id]="id"
     [type]="type"
     [placeholder]="placeholder"
-    [value]="value"
+    [value]="value === undefined ? null : value"
     (input)="onInput($event)"
     [required]="required"
   />

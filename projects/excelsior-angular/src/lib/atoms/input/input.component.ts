@@ -26,7 +26,7 @@ export class ExInputComponent {
   /**
    * Value of the input.
    */
-  @Input() value: string = ''
+  @Input() value?: string = ''
   /**
    * Event emitter for when the value of the input changes.
    */
@@ -80,11 +80,13 @@ export class ExInputComponent {
   public isValid: boolean | null = null
 
   validate() {
-    if (this.validator !== undefined) {
-      this.isValid = this.validator(this.value)
-      return // Return early if validator is defined
+    if (this.value !== null && this.value !== undefined) {
+      if (this.validator !== undefined) {
+        this.isValid = this.validator(this.value)
+        return // Return early if validator is defined
+      }
+      this.isValid = true
     }
-    this.isValid = true
   }
 
   onInput(event: Event) {

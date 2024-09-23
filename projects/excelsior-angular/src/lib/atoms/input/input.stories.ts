@@ -78,7 +78,7 @@ export const WithValue: Story = {
     type: 'text',
     label: 'Input with Value',
     placeholder: 'Type something...',
-    value: 'Initial Value',
+    value: undefined,
   },
 }
 

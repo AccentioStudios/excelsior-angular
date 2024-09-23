@@ -128,7 +128,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\r\n  args: {\r\n    id: 'defaultInput',\r\n    label: 'Default Input',\r\n    value: 'Example Text',\r\n    type: 'text',\r\n    placeholder: 'Type something...',\r\n    hintText: 'This is a hint text',\r\n    validator: (value: string) => value.length >= 5 && value.length <= 12,\r\n    errorMessage: 'Input must be longer than 5 characters and shorter than 12 characters.',\r\n  },\r\n}"
+                "defaultValue": "{\r\n  args: {\r\n    id: 'defaultInput',\r\n    label: 'Default Input',\r\n    value: 'Example Text',\r\n    type: 'text',\r\n    placeholder: 'Type something...',\r\n    hintText: 'This is a hint text',\r\n    validator: (value: string) => value.length >= 5 && value.length <= 12,\r\n    errorMessage: 'Input must be longer than 5 characters and shorter than 12 characters.',\r\n    validateOnInit: false,\r\n  },\r\n}"
             },
             {
                 "name": "Default",
@@ -390,6 +390,16 @@
                 "name": "meta",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
+                "file": "projects/excelsior-angular/src/lib/atoms/card/card.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Meta<ExCardComponent>",
+                "defaultValue": "{\r\n  title: '1.Atoms/Card',\r\n  component: ExCardComponent,\r\n  tags: ['autodocs'],\r\n}"
+            },
+            {
+                "name": "meta",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
                 "file": "projects/excelsior-angular/src/lib/atoms/checkbox/checkbox.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
@@ -405,16 +415,6 @@
                 "deprecationMessage": "",
                 "type": "Meta<ExCheckboxGroupComponent>",
                 "defaultValue": "{\r\n  title: '1.Atoms/Checkbox Card',\r\n  component: ExCheckboxGroupComponent,\r\n  tags: ['autodocs'],\r\n  argTypes: {\r\n    label: { control: 'text' },\r\n    text: { control: 'text' },\r\n    checked: { control: 'boolean' },\r\n    checkedChange: { action: 'checkedChange' },\r\n    disabled: { control: 'boolean' },\r\n  },\r\n  args: { checkedChange: fn() },\r\n}"
-            },
-            {
-                "name": "meta",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "projects/excelsior-angular/src/lib/atoms/card/card.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Meta<ExCardComponent>",
-                "defaultValue": "{\r\n  title: '1.Atoms/Card',\r\n  component: ExCardComponent,\r\n  tags: ['autodocs'],\r\n}"
             },
             {
                 "name": "meta",
@@ -454,7 +454,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Meta<ExInputComponent>",
-                "defaultValue": "{\r\n  title: '1.Atoms/Input',\r\n  component: ExInputComponent,\r\n  tags: ['autodocs'],\r\n  argTypes: {\r\n    id: {\r\n      description: 'ID of the input.',\r\n      control: { type: 'text' },\r\n    },\r\n    type: {\r\n      description: 'Type of the input.',\r\n      control: {\r\n        control: { type: 'select' },\r\n        options: ['text', 'password', 'email', 'number'],\r\n      },\r\n    },\r\n    placeholder: {\r\n      description: 'Placeholder text to be displayed in the input when it is empty.',\r\n      control: { type: 'text' },\r\n    },\r\n    value: {\r\n      description: 'Value of the input.',\r\n      control: { type: 'text' },\r\n    },\r\n    valueChange: {\r\n      description: 'Event emitter for when the value of the input changes.',\r\n      action: 'valueChange',\r\n    },\r\n    label: {\r\n      description: 'Label text to be displayed above the input.',\r\n      control: { type: 'text' },\r\n    },\r\n    disabled: {\r\n      description: 'Boolean indicating if the input is disabled.',\r\n      control: { type: 'boolean' },\r\n    },\r\n    // Function that returns true or false\r\n    validator: {\r\n      description:\r\n        'Validator function to validate the input value.  If the function returns false, the input will be marked as invalid.',\r\n      action: 'validate',\r\n    },\r\n    errorMessage: {\r\n      description: 'Error message to be displayed below the input when the input is invalid.',\r\n      control: { type: 'text' },\r\n    },\r\n  },\r\n}"
+                "defaultValue": "{\r\n  title: '1.Atoms/Input',\r\n  component: ExInputComponent,\r\n  tags: ['autodocs'],\r\n  argTypes: {\r\n    id: {\r\n      description: 'ID of the input.',\r\n      control: { type: 'text' },\r\n    },\r\n    type: {\r\n      description: 'Type of the input.',\r\n      control: {\r\n        control: { type: 'select' },\r\n        options: ['text', 'password', 'email', 'number'],\r\n      },\r\n    },\r\n    placeholder: {\r\n      description: 'Placeholder text to be displayed in the input when it is empty.',\r\n      control: { type: 'text' },\r\n    },\r\n    value: {\r\n      description: 'Value of the input.',\r\n      control: { type: 'text' },\r\n    },\r\n    valueChange: {\r\n      description: 'Event emitter for when the value of the input changes.',\r\n      action: 'valueChange',\r\n    },\r\n    label: {\r\n      description: 'Label text to be displayed above the input.',\r\n      control: { type: 'text' },\r\n    },\r\n    disabled: {\r\n      description: 'Boolean indicating if the input is disabled.',\r\n      control: { type: 'boolean' },\r\n    },\r\n    // Function that returns true or false\r\n    validator: {\r\n      description:\r\n        'Validator function to validate the input value.  If the function returns false, the input will be marked as invalid.',\r\n      action: 'validate',\r\n    },\r\n    validateOnInit: {\r\n      description: 'Boolean indicating if the input should be validated on init. Is false by default.',\r\n      control: { type: 'boolean' },\r\n    },\r\n    errorMessage: {\r\n      description: 'Error message to be displayed below the input when the input is invalid.',\r\n      control: { type: 'text' },\r\n    },\r\n  },\r\n}"
             },
             {
                 "name": "meta",
@@ -695,6 +695,16 @@
                 "defaultValue": "{\r\n  args: {\r\n    name: 'icon-user',\r\n  },\r\n}"
             },
             {
+                "name": "ValidateOnInit",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/excelsior-angular/src/lib/atoms/input/input.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\r\n  args: {\r\n    id: 'defaultInput',\r\n    label: 'Default Input',\r\n    value: 'Text',\r\n    type: 'text',\r\n    placeholder: 'Type something...',\r\n    hintText: 'This is a hint text',\r\n    validator: (value: string) => value.length >= 5 && value.length <= 12,\r\n    errorMessage: 'Input must be longer than 5 characters and shorter than 12 characters.',\r\n    validateOnInit: true,\r\n  },\r\n}"
+            },
+            {
                 "name": "Warning",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
@@ -752,7 +762,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\r\n  args: {\r\n    id: 'withValueInput',\r\n    type: 'text',\r\n    label: 'Input with Value',\r\n    placeholder: 'Type something...',\r\n    value: 'Initial Value',\r\n  },\r\n}"
+                "defaultValue": "{\r\n  args: {\r\n    id: 'withValueInput',\r\n    type: 'text',\r\n    label: 'Input with Value',\r\n    placeholder: 'Type something...',\r\n    value: undefined,\r\n  },\r\n}"
             }
         ],
         "functions": [],
@@ -794,6 +804,17 @@
                 "name": "Story",
                 "ctype": "miscellaneous",
                 "subtype": "typealias",
+                "rawtype": "StoryObj<ExCardComponent>",
+                "file": "projects/excelsior-angular/src/lib/atoms/card/card.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "kind": 183
+            },
+            {
+                "name": "Story",
+                "ctype": "miscellaneous",
+                "subtype": "typealias",
                 "rawtype": "StoryObj<ExCheckboxComponent>",
                 "file": "projects/excelsior-angular/src/lib/atoms/checkbox/checkbox.stories.ts",
                 "deprecated": false,
@@ -807,17 +828,6 @@
                 "subtype": "typealias",
                 "rawtype": "StoryObj<ExCheckboxGroupComponent>",
                 "file": "projects/excelsior-angular/src/lib/atoms/checkbox-group/checkbox-group.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "description": "",
-                "kind": 183
-            },
-            {
-                "name": "Story",
-                "ctype": "miscellaneous",
-                "subtype": "typealias",
-                "rawtype": "StoryObj<ExCardComponent>",
-                "file": "projects/excelsior-angular/src/lib/atoms/card/card.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "description": "",
@@ -1433,7 +1443,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\r\n  args: {\r\n    id: 'defaultInput',\r\n    label: 'Default Input',\r\n    value: 'Example Text',\r\n    type: 'text',\r\n    placeholder: 'Type something...',\r\n    hintText: 'This is a hint text',\r\n    validator: (value: string) => value.length >= 5 && value.length <= 12,\r\n    errorMessage: 'Input must be longer than 5 characters and shorter than 12 characters.',\r\n  },\r\n}"
+                    "defaultValue": "{\r\n  args: {\r\n    id: 'defaultInput',\r\n    label: 'Default Input',\r\n    value: 'Example Text',\r\n    type: 'text',\r\n    placeholder: 'Type something...',\r\n    hintText: 'This is a hint text',\r\n    validator: (value: string) => value.length >= 5 && value.length <= 12,\r\n    errorMessage: 'Input must be longer than 5 characters and shorter than 12 characters.',\r\n    validateOnInit: false,\r\n  },\r\n}"
                 },
                 {
                     "name": "meta",
@@ -1443,7 +1453,17 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Meta<ExInputComponent>",
-                    "defaultValue": "{\r\n  title: '1.Atoms/Input',\r\n  component: ExInputComponent,\r\n  tags: ['autodocs'],\r\n  argTypes: {\r\n    id: {\r\n      description: 'ID of the input.',\r\n      control: { type: 'text' },\r\n    },\r\n    type: {\r\n      description: 'Type of the input.',\r\n      control: {\r\n        control: { type: 'select' },\r\n        options: ['text', 'password', 'email', 'number'],\r\n      },\r\n    },\r\n    placeholder: {\r\n      description: 'Placeholder text to be displayed in the input when it is empty.',\r\n      control: { type: 'text' },\r\n    },\r\n    value: {\r\n      description: 'Value of the input.',\r\n      control: { type: 'text' },\r\n    },\r\n    valueChange: {\r\n      description: 'Event emitter for when the value of the input changes.',\r\n      action: 'valueChange',\r\n    },\r\n    label: {\r\n      description: 'Label text to be displayed above the input.',\r\n      control: { type: 'text' },\r\n    },\r\n    disabled: {\r\n      description: 'Boolean indicating if the input is disabled.',\r\n      control: { type: 'boolean' },\r\n    },\r\n    // Function that returns true or false\r\n    validator: {\r\n      description:\r\n        'Validator function to validate the input value.  If the function returns false, the input will be marked as invalid.',\r\n      action: 'validate',\r\n    },\r\n    errorMessage: {\r\n      description: 'Error message to be displayed below the input when the input is invalid.',\r\n      control: { type: 'text' },\r\n    },\r\n  },\r\n}"
+                    "defaultValue": "{\r\n  title: '1.Atoms/Input',\r\n  component: ExInputComponent,\r\n  tags: ['autodocs'],\r\n  argTypes: {\r\n    id: {\r\n      description: 'ID of the input.',\r\n      control: { type: 'text' },\r\n    },\r\n    type: {\r\n      description: 'Type of the input.',\r\n      control: {\r\n        control: { type: 'select' },\r\n        options: ['text', 'password', 'email', 'number'],\r\n      },\r\n    },\r\n    placeholder: {\r\n      description: 'Placeholder text to be displayed in the input when it is empty.',\r\n      control: { type: 'text' },\r\n    },\r\n    value: {\r\n      description: 'Value of the input.',\r\n      control: { type: 'text' },\r\n    },\r\n    valueChange: {\r\n      description: 'Event emitter for when the value of the input changes.',\r\n      action: 'valueChange',\r\n    },\r\n    label: {\r\n      description: 'Label text to be displayed above the input.',\r\n      control: { type: 'text' },\r\n    },\r\n    disabled: {\r\n      description: 'Boolean indicating if the input is disabled.',\r\n      control: { type: 'boolean' },\r\n    },\r\n    // Function that returns true or false\r\n    validator: {\r\n      description:\r\n        'Validator function to validate the input value.  If the function returns false, the input will be marked as invalid.',\r\n      action: 'validate',\r\n    },\r\n    validateOnInit: {\r\n      description: 'Boolean indicating if the input should be validated on init. Is false by default.',\r\n      control: { type: 'boolean' },\r\n    },\r\n    errorMessage: {\r\n      description: 'Error message to be displayed below the input when the input is invalid.',\r\n      control: { type: 'text' },\r\n    },\r\n  },\r\n}"
+                },
+                {
+                    "name": "ValidateOnInit",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/excelsior-angular/src/lib/atoms/input/input.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\r\n  args: {\r\n    id: 'defaultInput',\r\n    label: 'Default Input',\r\n    value: 'Text',\r\n    type: 'text',\r\n    placeholder: 'Type something...',\r\n    hintText: 'This is a hint text',\r\n    validator: (value: string) => value.length >= 5 && value.length <= 12,\r\n    errorMessage: 'Input must be longer than 5 characters and shorter than 12 characters.',\r\n    validateOnInit: true,\r\n  },\r\n}"
                 },
                 {
                     "name": "WithValue",
@@ -1453,7 +1473,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\r\n  args: {\r\n    id: 'withValueInput',\r\n    type: 'text',\r\n    label: 'Input with Value',\r\n    placeholder: 'Type something...',\r\n    value: 'Initial Value',\r\n  },\r\n}"
+                    "defaultValue": "{\r\n  args: {\r\n    id: 'withValueInput',\r\n    type: 'text',\r\n    label: 'Input with Value',\r\n    placeholder: 'Type something...',\r\n    value: undefined,\r\n  },\r\n}"
                 }
             ],
             "projects/excelsior-angular/src/lib/atoms/radio/radio-button.stories.ts": [
@@ -1757,6 +1777,19 @@
                     "kind": 183
                 }
             ],
+            "projects/excelsior-angular/src/lib/atoms/card/card.stories.ts": [
+                {
+                    "name": "Story",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "StoryObj<ExCardComponent>",
+                    "file": "projects/excelsior-angular/src/lib/atoms/card/card.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 183
+                }
+            ],
             "projects/excelsior-angular/src/lib/atoms/checkbox/checkbox.stories.ts": [
                 {
                     "name": "Story",
@@ -1777,19 +1810,6 @@
                     "subtype": "typealias",
                     "rawtype": "StoryObj<ExCheckboxGroupComponent>",
                     "file": "projects/excelsior-angular/src/lib/atoms/checkbox-group/checkbox-group.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "description": "",
-                    "kind": 183
-                }
-            ],
-            "projects/excelsior-angular/src/lib/atoms/card/card.stories.ts": [
-                {
-                    "name": "Story",
-                    "ctype": "miscellaneous",
-                    "subtype": "typealias",
-                    "rawtype": "StoryObj<ExCardComponent>",
-                    "file": "projects/excelsior-angular/src/lib/atoms/card/card.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "description": "",
@@ -2509,6 +2529,16 @@
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
                 "name": "meta",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/excelsior-angular/src/lib/atoms/input/input.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "ValidateOnInit",
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
                 "status": "low"
