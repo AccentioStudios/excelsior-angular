@@ -370,6 +370,16 @@
                 "name": "meta",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
+                "file": "projects/excelsior-angular/src/lib/atoms/button/ex-button.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Meta<ExButtonComponent>",
+                "defaultValue": "{\r\n  title: '1.Atoms/Button',\r\n  component: ExButtonComponent,\r\n  tags: ['autodocs'],\r\n  argTypes: {\r\n    primary: { control: 'boolean' },\r\n    extended: {\r\n      control: 'boolean',\r\n    },\r\n    backgroundColor: {\r\n      control: 'color',\r\n    },\r\n    disabled: {\r\n      control: 'boolean',\r\n    },\r\n    icon: {\r\n      control: 'text',\r\n      options: ['cube-03'],\r\n    },\r\n    iconColor: {\r\n      control: 'color',\r\n    },\r\n    size: {\r\n      control: { type: 'select' },\r\n      options: ['small', 'medium', 'large'],\r\n    },\r\n  },\r\n  // Use `fn` to spy on the onClick arg, which will appear in the actions panel once invoked: https://storybook.js.org/docs/essentials/actions#action-args\r\n  args: { onClick: fn() },\r\n}"
+            },
+            {
+                "name": "meta",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
                 "file": "projects/excelsior-angular/src/lib/atoms/badge/badge.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
@@ -380,11 +390,11 @@
                 "name": "meta",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/excelsior-angular/src/lib/atoms/button/ex-button.stories.ts",
+                "file": "projects/excelsior-angular/src/lib/atoms/card/card.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
-                "type": "Meta<ExButtonComponent>",
-                "defaultValue": "{\r\n  title: '1.Atoms/Button',\r\n  component: ExButtonComponent,\r\n  tags: ['autodocs'],\r\n  argTypes: {\r\n    primary: { control: 'boolean' },\r\n    extended: {\r\n      control: 'boolean',\r\n    },\r\n    backgroundColor: {\r\n      control: 'color',\r\n    },\r\n    disabled: {\r\n      control: 'boolean',\r\n    },\r\n    icon: {\r\n      control: 'text',\r\n      options: ['cube-03'],\r\n    },\r\n    iconColor: {\r\n      control: 'color',\r\n    },\r\n    size: {\r\n      control: { type: 'select' },\r\n      options: ['small', 'medium', 'large'],\r\n    },\r\n  },\r\n  // Use `fn` to spy on the onClick arg, which will appear in the actions panel once invoked: https://storybook.js.org/docs/essentials/actions#action-args\r\n  args: { onClick: fn() },\r\n}"
+                "type": "Meta<ExCardComponent>",
+                "defaultValue": "{\r\n  title: '1.Atoms/Card',\r\n  component: ExCardComponent,\r\n  tags: ['autodocs'],\r\n}"
             },
             {
                 "name": "meta",
@@ -405,16 +415,6 @@
                 "deprecationMessage": "",
                 "type": "Meta<ExCheckboxComponent>",
                 "defaultValue": "{\r\n  title: '1.Atoms/Checkbox',\r\n  component: ExCheckboxComponent,\r\n  tags: ['autodocs'],\r\n  argTypes: {\r\n    label: { control: 'text' },\r\n    checked: { control: 'boolean' },\r\n    checkedChange: { action: 'checkedChange' },\r\n    indeterminate: { control: 'boolean' },\r\n  },\r\n  args: { checkedChange: fn() },\r\n}"
-            },
-            {
-                "name": "meta",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "projects/excelsior-angular/src/lib/atoms/card/card.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Meta<ExCardComponent>",
-                "defaultValue": "{\r\n  title: '1.Atoms/Card',\r\n  component: ExCardComponent,\r\n  tags: ['autodocs'],\r\n}"
             },
             {
                 "name": "meta",
@@ -772,6 +772,17 @@
                 "name": "Story",
                 "ctype": "miscellaneous",
                 "subtype": "typealias",
+                "rawtype": "StoryObj<ExButtonComponent>",
+                "file": "projects/excelsior-angular/src/lib/atoms/button/ex-button.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "kind": 183
+            },
+            {
+                "name": "Story",
+                "ctype": "miscellaneous",
+                "subtype": "typealias",
                 "rawtype": "StoryObj<ExBadgeComponent>",
                 "file": "projects/excelsior-angular/src/lib/atoms/badge/badge.stories.ts",
                 "deprecated": false,
@@ -783,8 +794,8 @@
                 "name": "Story",
                 "ctype": "miscellaneous",
                 "subtype": "typealias",
-                "rawtype": "StoryObj<ExButtonComponent>",
-                "file": "projects/excelsior-angular/src/lib/atoms/button/ex-button.stories.ts",
+                "rawtype": "StoryObj<ExCardComponent>",
+                "file": "projects/excelsior-angular/src/lib/atoms/card/card.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "description": "",
@@ -807,17 +818,6 @@
                 "subtype": "typealias",
                 "rawtype": "StoryObj<ExCheckboxComponent>",
                 "file": "projects/excelsior-angular/src/lib/atoms/checkbox/checkbox.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "description": "",
-                "kind": 183
-            },
-            {
-                "name": "Story",
-                "ctype": "miscellaneous",
-                "subtype": "typealias",
-                "rawtype": "StoryObj<ExCardComponent>",
-                "file": "projects/excelsior-angular/src/lib/atoms/card/card.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "description": "",
@@ -1731,6 +1731,19 @@
                     "kind": 183
                 }
             ],
+            "projects/excelsior-angular/src/lib/atoms/button/ex-button.stories.ts": [
+                {
+                    "name": "Story",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "StoryObj<ExButtonComponent>",
+                    "file": "projects/excelsior-angular/src/lib/atoms/button/ex-button.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 183
+                }
+            ],
             "projects/excelsior-angular/src/lib/atoms/badge/badge.stories.ts": [
                 {
                     "name": "Story",
@@ -1744,13 +1757,13 @@
                     "kind": 183
                 }
             ],
-            "projects/excelsior-angular/src/lib/atoms/button/ex-button.stories.ts": [
+            "projects/excelsior-angular/src/lib/atoms/card/card.stories.ts": [
                 {
                     "name": "Story",
                     "ctype": "miscellaneous",
                     "subtype": "typealias",
-                    "rawtype": "StoryObj<ExButtonComponent>",
-                    "file": "projects/excelsior-angular/src/lib/atoms/button/ex-button.stories.ts",
+                    "rawtype": "StoryObj<ExCardComponent>",
+                    "file": "projects/excelsior-angular/src/lib/atoms/card/card.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "description": "",
@@ -1777,19 +1790,6 @@
                     "subtype": "typealias",
                     "rawtype": "StoryObj<ExCheckboxComponent>",
                     "file": "projects/excelsior-angular/src/lib/atoms/checkbox/checkbox.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "description": "",
-                    "kind": 183
-                }
-            ],
-            "projects/excelsior-angular/src/lib/atoms/card/card.stories.ts": [
-                {
-                    "name": "Story",
-                    "ctype": "miscellaneous",
-                    "subtype": "typealias",
-                    "rawtype": "StoryObj<ExCardComponent>",
-                    "file": "projects/excelsior-angular/src/lib/atoms/card/card.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "description": "",
