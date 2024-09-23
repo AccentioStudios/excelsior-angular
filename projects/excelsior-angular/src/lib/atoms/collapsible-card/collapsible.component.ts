@@ -5,9 +5,9 @@ import { ExIconComponent } from '../icon/ex-icon.component'
 @Component({
   selector: 'app-collapsible',
   templateUrl: './collapsible.component.html',
-  styleUrls: ['./collapsible.component.css'],
+  styleUrls: ['./collapsible.component.scss'],
   standalone: true,
-  imports: [CommonModule,ExIconComponent],
+  imports: [CommonModule, ExIconComponent],
 })
 export class CollapsibleComponent {
   @Input() title: string = 'Collapsible Title'

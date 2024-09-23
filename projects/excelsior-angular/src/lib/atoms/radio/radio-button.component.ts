@@ -3,7 +3,7 @@ import { Component, Input, Output, EventEmitter } from '@angular/core'
 @Component({
   selector: 'ex-radio-button',
   templateUrl: './radio-button.component.html',
-  styleUrls: ['./radio-button.component.css'],
+  styleUrls: ['./radio-button.component.scss'],
   standalone: true,
 })
 export class RadioButtonComponent {

@@ -5,10 +5,9 @@ import { ExIconComponent } from '../icon/ex-icon.component'
 @Component({
   selector: 'ex-badge',
   templateUrl: './badge.component.html',
-  styleUrls: ['./badge.component.css'],
+  styleUrls: ['./badge.component.scss'],
   standalone: true,
   imports: [CommonModule, ExIconComponent],
-
 })
 export class ExBadgeComponent {
   @Input() text: string = 'Default Badge'

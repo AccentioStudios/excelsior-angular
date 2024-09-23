@@ -6,7 +6,7 @@ import { ExCheckboxComponent } from '../checkbox/checkbox.component'
 @Component({
   selector: 'ex-checkbox-card',
   templateUrl: './checkbox-group.component.html',
-  styleUrls: ['./checkbox-group.component.css'],
+  styleUrls: ['./checkbox-group.component.scss'],
   standalone: true,
   imports: [CommonModule, ExCardComponent, ExCheckboxComponent],
 })

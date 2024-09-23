@@ -48,7 +48,7 @@ import type { User } from '../user/user'
       </div>
     </div>
   </header>`,
-  styleUrls: ['./ex-header.css'],
+  styleUrls: ['./ex-header.scss'],
 })
 export class ExHeaderComponent {
   @Input()

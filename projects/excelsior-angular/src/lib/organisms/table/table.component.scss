@@ -1,0 +1,65 @@
+@import '../../styles/colors.scss';
+.table-container {
+  width: 100%;
+  overflow-x: auto;
+  border: 1px solid var(--border-secondary);
+  border-radius: var(--radius-md);
+  margin: 1rem 0;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+thead {
+  background-color: var(--bg-secondary);
+  font-size: 12px;
+}
+
+th,
+td {
+  color: var(--text-tertiary);
+  font-size: 12px;
+  padding: 12px 16px;
+  text-align: left;
+  background-color: transparent;
+  border-top-width: 1px;
+  border-right-width: 1px;
+  border-bottom-width: 1px;
+  border-left-width: 1px;
+  border-top-style: solid;
+  border-right-style: solid;
+  border-bottom-style: solid;
+  border-left-style: solid;
+  border-top-color: transparent;
+  border-right-color: transparent;
+  border-left-color: transparent;
+  border-bottom-color: var(--border-secondary);
+}
+
+td {
+  background-color: var(--bg-primary);
+  background-color: var(--bg-primary);
+}
+
+th {
+  background-color: var(--bg-secondary);
+  font-weight: bold;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+tbody tr:hover {
+  background-color: #f1f1f1;
+}
+
+button {
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-right: 4px;
+}

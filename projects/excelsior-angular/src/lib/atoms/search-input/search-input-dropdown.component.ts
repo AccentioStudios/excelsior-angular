@@ -3,7 +3,7 @@ import { Component, Input, Output, EventEmitter } from '@angular/core'
 @Component({
   selector: 'app-search-input-dropdown',
   templateUrl: './search-input-dropdown.component.html',
-  styleUrls: ['./search-input-dropdown.component.css'],
+  styleUrls: ['./search-input-dropdown.component.scss'],
   standalone: true,
 })
 export class SearchInputDropdownComponent {

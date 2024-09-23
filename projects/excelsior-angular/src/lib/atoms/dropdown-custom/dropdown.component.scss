@@ -1,6 +1,4 @@
-
-@import '../../assets/css/variables.css';
-
+@import '../../styles/colors.scss';
 
 .custom-select-container {
   background-color: var(--bg-primary);
@@ -14,7 +12,7 @@
 }
 
 .custom-select-container.open {
-  border: 1px solid var(--secondary-color  );
+  border: 1px solid var(--secondary-color);
 }
 
 .selected-value {
@@ -22,12 +20,12 @@
   flex-direction: row;
   justify-content: space-between;
   color: var(--text-secondary-700);
-  transition: all ease-in-out .2s;
+  transition: all ease-in-out 0.2s;
   position: relative;
 }
 
-.selected-value.open::after{
-  content: " ";
+.selected-value.open::after {
+  content: ' ';
   display: block;
   position: absolute;
   width: calc(100% + 14px);
@@ -41,7 +39,7 @@
 }
 
 .selected-value.open i {
-  transition: all ease-in-out .2s;
+  transition: all ease-in-out 0.2s;
   transform: rotate(180deg);
 }
 
@@ -63,29 +61,26 @@
   padding: 4px;
 }
 
-.options-list::-webkit-scrollbar-track
-{
+.options-list::-webkit-scrollbar-track {
   height: 30px;
-	border-radius: 10px;
-	background-color: transparent;
+  border-radius: 10px;
+  background-color: transparent;
 }
 
-.options-list::-webkit-scrollbar
-{
-	width: 12px;
-	background-color: transparent;
+.options-list::-webkit-scrollbar {
+  width: 12px;
+  background-color: transparent;
 }
 
-.options-list::-webkit-scrollbar-thumb
-{
-	border-radius: 10px;
-	background-color: var(--secondary-color);
-	border: 2px solid transparent; 
+.options-list::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: var(--secondary-color);
+  border: 2px solid transparent;
   background-clip: content-box;
   border-radius: 10px;
   display: block;
-  min-height: 20px; 
-  max-height: 20px; 
+  min-height: 20px;
+  max-height: 20px;
 }
 
 .options-list.show {

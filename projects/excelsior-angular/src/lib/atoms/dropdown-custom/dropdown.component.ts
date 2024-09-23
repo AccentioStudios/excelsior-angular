@@ -7,27 +7,25 @@ import { ExIconComponent } from '../icon/ex-icon.component'
   standalone: true,
   imports: [CommonModule, ExIconComponent],
   templateUrl: './dropdown.component.html',
-  styleUrls: ['./dropdown.component.css'],
-
+  styleUrls: ['./dropdown.component.scss'],
 })
-
 export class DropdownComponent {
-  @Input() options: string[] = [];
-  @Input() placeholder: string = 'Select an option';
+  @Input() options: string[] = []
+  @Input() placeholder: string = 'Select an option'
 
-  selectedOption: string | null = null;
-  dropdownOpen = false;
+  selectedOption: string | null = null
+  dropdownOpen = false
 
   toggleDropdown() {
-    this.dropdownOpen = !this.dropdownOpen;
+    this.dropdownOpen = !this.dropdownOpen
   }
 
   selectOption() {
-    this.dropdownOpen = false;
+    this.dropdownOpen = false
   }
-  clickTest(option: string){
+  clickTest(option: string) {
     console.log(option)
     console.log('teste')
-    this.selectedOption = option;
+    this.selectedOption = option
   }
 }

@@ -22,7 +22,7 @@ import { ExIconComponent } from '../icon/ex-icon.component'
       </span>
     </button>
   `,
-  styleUrls: ['./ex-button.css'],
+  styleUrls: ['./ex-button.scss'],
 })
 export class ExButtonComponent {
   @Input()

@@ -7,8 +7,7 @@ import { ExIconComponent } from '../icon/ex-icon.component'
   standalone: true,
   imports: [CommonModule, ExIconComponent],
   templateUrl: './dropdown.component.html',
-  styleUrls: ['./dropdown.component.css'],
-
+  styleUrls: ['./dropdown.component.scss'],
 })
 export class SelectDropdownComponent {
   @Input() id: string = 'select'
