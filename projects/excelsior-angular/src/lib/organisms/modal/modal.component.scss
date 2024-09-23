@@ -55,9 +55,6 @@
     }
   }
   
-  .ex-modal-content {
-    padding: 16px;
-  }
   
   .ex-modal-footer {
     display: flex;
@@ -94,6 +91,7 @@
   }
  .ex-modal-content {
   padding: var(--ex-space-md);
+  padding-top: 0px;
  }
 
   // Media query for mobile
