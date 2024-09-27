@@ -484,7 +484,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Meta<ExTreeComponent>",
-                "defaultValue": "{\n  title: 'Molecules/Tree',\n  component: ExTreeComponent,\n  tags: ['autodocs'],\n  argTypes: {\n    items: {\n      description: 'The tree items',\n      control: {\n        type: 'object',\n      },\n    },\n    selectedItems: {\n      description: 'The tree items selected',\n      action: 'itemsSelected',\n    },\n    selectedItem: {\n      description: 'The tree item that is the currently selected',\n      action: 'itemSelected',\n    },\n    itemsChange: {\n      description: 'The tree items changed',\n      action: 'itemsChanged',\n    },\n  },\n  args: {\n    // itemsChange: (items) => console.log('items changed', items),\n    selectedItems: (items) => console.log('items selected', items),\n    // selectedItem: (item) => console.log('item selected', item),\n    items: [\n      {\n        id: '1',\n        label: 'Item 1',\n        selected: TreeItemStatus.SELECTED,\n        children: [\n          {\n            id: '1.1',\n            label: 'Item 1.1',\n            selected: TreeItemStatus.SELECTED,\n            children: [],\n          },\n          {\n            id: '1.2',\n            label: 'Item 1.2',\n            selected: TreeItemStatus.SELECTED,\n\n            children: [],\n          },\n        ],\n      },\n      {\n        id: '2',\n        label: 'Item 2',\n        selected: TreeItemStatus.UNSELECTED,\n        children: [\n          {\n            id: '2.1',\n            label: 'Item 2.1',\n            selected: TreeItemStatus.UNSELECTED,\n            children: [],\n          },\n          {\n            id: '2.2',\n            label: 'Item 2.2',\n            selected: TreeItemStatus.UNSELECTED,\n            children: [],\n          },\n        ],\n      },\n    ],\n  },\n}"
+                "defaultValue": "{\n  title: 'Molecules/Tree',\n  component: ExTreeComponent,\n  tags: ['autodocs'],\n  argTypes: {\n    items: {\n      description: 'The tree items',\n      control: {\n        type: 'object',\n      },\n    },\n    selectedItems: {\n      description: 'The tree items selected',\n      action: 'itemsSelected',\n    },\n    selectedItem: {\n      description: 'The tree item that is the currently selected',\n      action: 'itemSelected',\n    },\n    itemsChange: {\n      description: 'The tree items changed',\n      action: 'itemsChanged',\n    },\n    search: {\n      description: 'The search string',\n      control: {\n        type: 'text',\n      },\n    },\n\n    searchChange: {\n      description: 'The search string changed',\n      action: 'searchChanged',\n    },\n  },\n  args: {\n    // itemsChange: (items) => console.log('items changed', items),\n    selectedItems: (items) => console.log('items selected', items),\n    searchChange: (search) => console.log('search changed', search),\n    // selectedItem: (item) => console.log('item selected', item),\n    items: [\n      {\n        id: '1',\n        label: 'Item 1',\n        selected: TreeItemStatus.SELECTED,\n        children: [\n          {\n            id: '1.1',\n            label: 'Item 1.1',\n            selected: TreeItemStatus.SELECTED,\n            children: [],\n          },\n          {\n            id: '1.2',\n            label: 'Item 1.2',\n            selected: TreeItemStatus.SELECTED,\n\n            children: [],\n          },\n        ],\n      },\n      {\n        id: '2',\n        label: 'Item 2',\n        selected: TreeItemStatus.UNSELECTED,\n        children: [\n          {\n            id: '2.1',\n            label: 'Item 2.1',\n            selected: TreeItemStatus.UNSELECTED,\n            children: [],\n          },\n          {\n            id: '2.2',\n            label: 'Item 2.2',\n            selected: TreeItemStatus.UNSELECTED,\n            children: [],\n          },\n        ],\n      },\n    ],\n  },\n}"
             },
             {
                 "name": "meta",
@@ -733,6 +733,16 @@
                 "deprecationMessage": "",
                 "type": "Story",
                 "defaultValue": "{\r\n  args: {\r\n    id: 'searchWithOptions',\r\n    label: 'Search with Options',\r\n    placeholder: 'Type to search...',\r\n    options: [\r\n      { value: 'option1', label: 'Option 1' },\r\n      { value: 'option2', label: 'Option 2' },\r\n      { value: 'option3', label: 'Option 3' },\r\n    ],\r\n  },\r\n}"
+            },
+            {
+                "name": "WithSearch",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/excelsior-angular/src/lib/molecules/tree/tree.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\n  args: {\n    search: '1',\n  },\n\n  argTypes: {\n    search: {\n      control: {\n        type: 'text',\n      },\n    },\n  },\n}"
             },
             {
                 "name": "WithSelectedValue",
@@ -1559,7 +1569,17 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Meta<ExTreeComponent>",
-                    "defaultValue": "{\n  title: 'Molecules/Tree',\n  component: ExTreeComponent,\n  tags: ['autodocs'],\n  argTypes: {\n    items: {\n      description: 'The tree items',\n      control: {\n        type: 'object',\n      },\n    },\n    selectedItems: {\n      description: 'The tree items selected',\n      action: 'itemsSelected',\n    },\n    selectedItem: {\n      description: 'The tree item that is the currently selected',\n      action: 'itemSelected',\n    },\n    itemsChange: {\n      description: 'The tree items changed',\n      action: 'itemsChanged',\n    },\n  },\n  args: {\n    // itemsChange: (items) => console.log('items changed', items),\n    selectedItems: (items) => console.log('items selected', items),\n    // selectedItem: (item) => console.log('item selected', item),\n    items: [\n      {\n        id: '1',\n        label: 'Item 1',\n        selected: TreeItemStatus.SELECTED,\n        children: [\n          {\n            id: '1.1',\n            label: 'Item 1.1',\n            selected: TreeItemStatus.SELECTED,\n            children: [],\n          },\n          {\n            id: '1.2',\n            label: 'Item 1.2',\n            selected: TreeItemStatus.SELECTED,\n\n            children: [],\n          },\n        ],\n      },\n      {\n        id: '2',\n        label: 'Item 2',\n        selected: TreeItemStatus.UNSELECTED,\n        children: [\n          {\n            id: '2.1',\n            label: 'Item 2.1',\n            selected: TreeItemStatus.UNSELECTED,\n            children: [],\n          },\n          {\n            id: '2.2',\n            label: 'Item 2.2',\n            selected: TreeItemStatus.UNSELECTED,\n            children: [],\n          },\n        ],\n      },\n    ],\n  },\n}"
+                    "defaultValue": "{\n  title: 'Molecules/Tree',\n  component: ExTreeComponent,\n  tags: ['autodocs'],\n  argTypes: {\n    items: {\n      description: 'The tree items',\n      control: {\n        type: 'object',\n      },\n    },\n    selectedItems: {\n      description: 'The tree items selected',\n      action: 'itemsSelected',\n    },\n    selectedItem: {\n      description: 'The tree item that is the currently selected',\n      action: 'itemSelected',\n    },\n    itemsChange: {\n      description: 'The tree items changed',\n      action: 'itemsChanged',\n    },\n    search: {\n      description: 'The search string',\n      control: {\n        type: 'text',\n      },\n    },\n\n    searchChange: {\n      description: 'The search string changed',\n      action: 'searchChanged',\n    },\n  },\n  args: {\n    // itemsChange: (items) => console.log('items changed', items),\n    selectedItems: (items) => console.log('items selected', items),\n    searchChange: (search) => console.log('search changed', search),\n    // selectedItem: (item) => console.log('item selected', item),\n    items: [\n      {\n        id: '1',\n        label: 'Item 1',\n        selected: TreeItemStatus.SELECTED,\n        children: [\n          {\n            id: '1.1',\n            label: 'Item 1.1',\n            selected: TreeItemStatus.SELECTED,\n            children: [],\n          },\n          {\n            id: '1.2',\n            label: 'Item 1.2',\n            selected: TreeItemStatus.SELECTED,\n\n            children: [],\n          },\n        ],\n      },\n      {\n        id: '2',\n        label: 'Item 2',\n        selected: TreeItemStatus.UNSELECTED,\n        children: [\n          {\n            id: '2.1',\n            label: 'Item 2.1',\n            selected: TreeItemStatus.UNSELECTED,\n            children: [],\n          },\n          {\n            id: '2.2',\n            label: 'Item 2.2',\n            selected: TreeItemStatus.UNSELECTED,\n            children: [],\n          },\n        ],\n      },\n    ],\n  },\n}"
+                },
+                {
+                    "name": "WithSearch",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/excelsior-angular/src/lib/molecules/tree/tree.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\n  args: {\n    search: '1',\n  },\n\n  argTypes: {\n    search: {\n      control: {\n        type: 'text',\n      },\n    },\n  },\n}"
                 }
             ],
             "projects/excelsior-angular/src/lib/organisms/modal/modal.stories.ts": [
@@ -2629,6 +2649,16 @@
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
                 "name": "meta",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/excelsior-angular/src/lib/molecules/tree/tree.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "WithSearch",
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
                 "status": "low"

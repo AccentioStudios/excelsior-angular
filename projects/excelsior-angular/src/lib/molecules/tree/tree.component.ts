@@ -14,9 +14,22 @@ import { TreeItem, TreeItemStatus } from '../../types'
 })
 export class ExTreeComponent {
   @Input() items: TreeItem[] = []
+  @Input() search?: string = ''
+  @Output() searchChange = new EventEmitter<TreeItem[]>()
   @Output() itemsChange = new EventEmitter<TreeItem[]>()
   @Output() selectedItems = new EventEmitter<TreeItem[]>()
   @Output() selectedItem = new EventEmitter<TreeItem>()
+
+  get filteredItems(): TreeItem[] {
+    if (!this.search) {
+      return this.items
+    }
+
+    return this.items.map((item) => {
+      const children = item.children.filter((child) => child.label.toLowerCase().includes(this.search!.toLowerCase()))
+      return { ...item, children }
+    })
+  }
 
   updateSelection() {
     this.items.forEach((parent) => {
@@ -48,6 +61,7 @@ export class ExTreeComponent {
 
     this.itemsChange.emit(this.items)
     this.selectedItems.emit(allSelected)
+    this.searchChange.emit(this.filteredItems)
   }
 
   toggleSelectItem(item: TreeItem) {

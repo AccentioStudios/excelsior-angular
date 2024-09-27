@@ -25,10 +25,22 @@ const meta: Meta<ExTreeComponent> = {
       description: 'The tree items changed',
       action: 'itemsChanged',
     },
+    search: {
+      description: 'The search string',
+      control: {
+        type: 'text',
+      },
+    },
+
+    searchChange: {
+      description: 'The search string changed',
+      action: 'searchChanged',
+    },
   },
   args: {
     // itemsChange: (items) => console.log('items changed', items),
     selectedItems: (items) => console.log('items selected', items),
+    searchChange: (search) => console.log('search changed', search),
     // selectedItem: (item) => console.log('item selected', item),
     items: [
       {
@@ -79,4 +91,18 @@ type Story = StoryObj<ExTreeComponent>
 
 export const Default: Story = {
   args: {},
+}
+
+export const WithSearch: Story = {
+  args: {
+    search: '1',
+  },
+
+  argTypes: {
+    search: {
+      control: {
+        type: 'text',
+      },
+    },
+  },
 }
