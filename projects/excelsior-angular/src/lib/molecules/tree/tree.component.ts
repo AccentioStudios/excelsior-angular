@@ -25,10 +25,12 @@ export class ExTreeComponent {
       return this.items
     }
 
-    return this.items.map((item) => {
-      const children = item.children.filter((child) => child.label.toLowerCase().includes(this.search!.toLowerCase()))
-      return { ...item, children }
-    })
+    // Return tree items (parent) that match the search string
+    const filteredItems: TreeItem[] = this.items.filter((item) =>
+      item.label.toLowerCase().includes(this.search!.toLowerCase()),
+    )
+
+    return filteredItems
   }
 
   updateSelection() {
