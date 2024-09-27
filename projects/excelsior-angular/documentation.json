@@ -390,16 +390,6 @@
                 "name": "meta",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/excelsior-angular/src/lib/atoms/card/card.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Meta<ExCardComponent>",
-                "defaultValue": "{\r\n  title: '1.Atoms/Card',\r\n  component: ExCardComponent,\r\n  tags: ['autodocs'],\r\n}"
-            },
-            {
-                "name": "meta",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
                 "file": "projects/excelsior-angular/src/lib/atoms/checkbox/checkbox.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
@@ -415,6 +405,16 @@
                 "deprecationMessage": "",
                 "type": "Meta<ExCheckboxGroupComponent>",
                 "defaultValue": "{\r\n  title: '1.Atoms/Checkbox Card',\r\n  component: ExCheckboxGroupComponent,\r\n  tags: ['autodocs'],\r\n  argTypes: {\r\n    label: { control: 'text' },\r\n    text: { control: 'text' },\r\n    checked: { control: 'boolean' },\r\n    checkedChange: { action: 'checkedChange' },\r\n    disabled: { control: 'boolean' },\r\n  },\r\n  args: { checkedChange: fn() },\r\n}"
+            },
+            {
+                "name": "meta",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/excelsior-angular/src/lib/atoms/card/card.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Meta<ExCardComponent>",
+                "defaultValue": "{\r\n  title: '1.Atoms/Card',\r\n  component: ExCardComponent,\r\n  tags: ['autodocs'],\r\n}"
             },
             {
                 "name": "meta",
@@ -814,17 +814,6 @@
                 "name": "Story",
                 "ctype": "miscellaneous",
                 "subtype": "typealias",
-                "rawtype": "StoryObj<ExCardComponent>",
-                "file": "projects/excelsior-angular/src/lib/atoms/card/card.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "description": "",
-                "kind": 183
-            },
-            {
-                "name": "Story",
-                "ctype": "miscellaneous",
-                "subtype": "typealias",
                 "rawtype": "StoryObj<ExCheckboxComponent>",
                 "file": "projects/excelsior-angular/src/lib/atoms/checkbox/checkbox.stories.ts",
                 "deprecated": false,
@@ -838,6 +827,17 @@
                 "subtype": "typealias",
                 "rawtype": "StoryObj<ExCheckboxGroupComponent>",
                 "file": "projects/excelsior-angular/src/lib/atoms/checkbox-group/checkbox-group.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "kind": 183
+            },
+            {
+                "name": "Story",
+                "ctype": "miscellaneous",
+                "subtype": "typealias",
+                "rawtype": "StoryObj<ExCardComponent>",
+                "file": "projects/excelsior-angular/src/lib/atoms/card/card.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "description": "",
@@ -1797,19 +1797,6 @@
                     "kind": 183
                 }
             ],
-            "projects/excelsior-angular/src/lib/atoms/card/card.stories.ts": [
-                {
-                    "name": "Story",
-                    "ctype": "miscellaneous",
-                    "subtype": "typealias",
-                    "rawtype": "StoryObj<ExCardComponent>",
-                    "file": "projects/excelsior-angular/src/lib/atoms/card/card.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "description": "",
-                    "kind": 183
-                }
-            ],
             "projects/excelsior-angular/src/lib/atoms/checkbox/checkbox.stories.ts": [
                 {
                     "name": "Story",
@@ -1830,6 +1817,19 @@
                     "subtype": "typealias",
                     "rawtype": "StoryObj<ExCheckboxGroupComponent>",
                     "file": "projects/excelsior-angular/src/lib/atoms/checkbox-group/checkbox-group.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 183
+                }
+            ],
+            "projects/excelsior-angular/src/lib/atoms/card/card.stories.ts": [
+                {
+                    "name": "Story",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "StoryObj<ExCardComponent>",
+                    "file": "projects/excelsior-angular/src/lib/atoms/card/card.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "description": "",

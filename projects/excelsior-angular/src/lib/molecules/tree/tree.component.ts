@@ -4,6 +4,7 @@ import { ExAccordionItemComponent } from '../../atoms/accordion/accordion_item.c
 import { CommonModule } from '@angular/common'
 import { ExCheckboxComponent } from '../../atoms/checkbox/checkbox.component'
 import { TreeItem, TreeItemStatus } from '../../types'
+import { cloneDeep } from 'lodash'
 
 @Component({
   selector: 'ex-tree',
@@ -24,9 +25,9 @@ export class ExTreeComponent {
     if (!this.search) {
       return this.items
     }
-
+    const clone = cloneDeep(this.items)
     // Return tree items (parent) that match the search string
-    const filteredItems: TreeItem[] = this.items.filter((item) =>
+    const filteredItems: TreeItem[] = clone.filter((item) =>
       item.label.toLowerCase().includes(this.search!.toLowerCase()),
     )
 
@@ -67,7 +68,8 @@ export class ExTreeComponent {
   }
 
   toggleSelectItem(proxy: TreeItem) {
-    const item = this.items.find((i) => i.id === proxy.id)
+    const item = this.getItemFromProxyItem(proxy)
+
     item!.selected = item!.selected === TreeItemStatus.SELECTED ? TreeItemStatus.UNSELECTED : TreeItemStatus.SELECTED
     if (item!.children.length > 0) {
       item!.children.forEach((child) => {
@@ -80,7 +82,7 @@ export class ExTreeComponent {
   }
 
   toggleSelectionFromParentToAllChildren(proxy: TreeItem) {
-    const item = this.items.find((i) => i.id === proxy.id)
+    const item = this.getItemFromProxyItem(proxy)
 
     let status = TreeItemStatus.UNSELECTED
     switch (item!.selected) {
@@ -106,22 +108,38 @@ export class ExTreeComponent {
     this.selectedItem.emit(item)
   }
 
-  getTreeItemStatus(proxy: TreeItem): TreeItemStatus {
-    const item = this.items.find((i) => i.id === proxy.id)
-    let status = TreeItemStatus.INDETERMINATE
-
-    if (item!.children.length === 0) {
-      return item!.selected || TreeItemStatus.UNSELECTED
+  getItemFromProxyItem(proxy: TreeItem): TreeItem | undefined {
+    let item = this.items.find((item) => item.id === proxy.id)
+    if (!item || item === undefined || item === null) {
+      // Search recursively for the item in the children
+      const operationItem = this.items
+        .map((o) => o.children)
+        .reduce((a, b) => a.concat(b), [])
+        .find((i) => i.id.toString() === proxy.id)
+      if (operationItem) {
+        item = operationItem
+      }
     }
 
-    const selectedChildren = item!.children.filter((child) => child.selected === TreeItemStatus.SELECTED).length
-    const unselectedChildren = item!.children.filter((child) => child.selected === TreeItemStatus.UNSELECTED).length
+    return item
+  }
 
-    if (selectedChildren === item!.children.length) {
+  getTreeItemStatus(item: TreeItem): TreeItemStatus {
+    // const item = this.getItemFromProxyItem(proxy)
+    let status = TreeItemStatus.INDETERMINATE
+
+    if (item.children.length === 0) {
+      return item.selected || TreeItemStatus.UNSELECTED
+    }
+
+    const selectedChildren = item.children.filter((child) => child.selected === TreeItemStatus.SELECTED).length
+    const unselectedChildren = item.children.filter((child) => child.selected === TreeItemStatus.UNSELECTED).length
+
+    if (selectedChildren === item.children.length) {
       status = TreeItemStatus.SELECTED
     }
 
-    if (unselectedChildren === item!.children.length) {
+    if (unselectedChildren === item.children.length) {
       status = TreeItemStatus.UNSELECTED
     }
 

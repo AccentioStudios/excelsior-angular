@@ -26,7 +26,7 @@ export class ExInputComponent {
   /**
    * Value of the input.
    */
-  @Input() value?: string = ''
+  @Input() value?: string | undefined | null = undefined
   /**
    * Event emitter for when the value of the input changes.
    */
@@ -36,6 +36,7 @@ export class ExInputComponent {
    * @param value
    * @returns { boolean } Boolean indicating if the input is valid.
    */
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   @Input() validator? = (value: string): boolean => true
 
   /**
