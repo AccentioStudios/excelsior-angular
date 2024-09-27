@@ -66,10 +66,11 @@ export class ExTreeComponent {
     this.searchChange.emit(this.filteredItems)
   }
 
-  toggleSelectItem(item: TreeItem) {
-    item.selected = item.selected === TreeItemStatus.SELECTED ? TreeItemStatus.UNSELECTED : TreeItemStatus.SELECTED
-    if (item.children.length > 0) {
-      item.children.forEach((child) => {
+  toggleSelectItem(proxy: TreeItem) {
+    const item = this.items.find((i) => i.id === proxy.id)
+    item!.selected = item!.selected === TreeItemStatus.SELECTED ? TreeItemStatus.UNSELECTED : TreeItemStatus.SELECTED
+    if (item!.children.length > 0) {
+      item!.children.forEach((child) => {
         child.selected =
           child.selected === TreeItemStatus.SELECTED ? TreeItemStatus.UNSELECTED : TreeItemStatus.SELECTED
       })
@@ -78,9 +79,11 @@ export class ExTreeComponent {
     this.selectedItem.emit(item)
   }
 
-  toggleSelectionFromParentToAllChildren(item: TreeItem) {
+  toggleSelectionFromParentToAllChildren(proxy: TreeItem) {
+    const item = this.items.find((i) => i.id === proxy.id)
+
     let status = TreeItemStatus.UNSELECTED
-    switch (item.selected) {
+    switch (item!.selected) {
       case TreeItemStatus.SELECTED:
         status = TreeItemStatus.UNSELECTED
         break
@@ -94,8 +97,8 @@ export class ExTreeComponent {
         status = TreeItemStatus.SELECTED
         break
     }
-    item.selected = status
-    item.children.forEach((child) => {
+    item!.selected = status
+    item!.children.forEach((child) => {
       child.selected = status
       // this.selectedItem.emit(child)
     })
@@ -103,21 +106,22 @@ export class ExTreeComponent {
     this.selectedItem.emit(item)
   }
 
-  getTreeItemStatus(item: TreeItem): TreeItemStatus {
+  getTreeItemStatus(proxy: TreeItem): TreeItemStatus {
+    const item = this.items.find((i) => i.id === proxy.id)
     let status = TreeItemStatus.INDETERMINATE
 
-    if (item.children.length === 0) {
-      return item.selected || TreeItemStatus.UNSELECTED
+    if (item!.children.length === 0) {
+      return item!.selected || TreeItemStatus.UNSELECTED
     }
 
-    const selectedChildren = item.children.filter((child) => child.selected === TreeItemStatus.SELECTED).length
-    const unselectedChildren = item.children.filter((child) => child.selected === TreeItemStatus.UNSELECTED).length
+    const selectedChildren = item!.children.filter((child) => child.selected === TreeItemStatus.SELECTED).length
+    const unselectedChildren = item!.children.filter((child) => child.selected === TreeItemStatus.UNSELECTED).length
 
-    if (selectedChildren === item.children.length) {
+    if (selectedChildren === item!.children.length) {
       status = TreeItemStatus.SELECTED
     }
 
-    if (unselectedChildren === item.children.length) {
+    if (unselectedChildren === item!.children.length) {
       status = TreeItemStatus.UNSELECTED
     }
 
