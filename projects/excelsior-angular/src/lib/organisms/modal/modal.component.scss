@@ -71,7 +71,8 @@
     left: -123px;
     top: -122px;
     z-index: 1;
-    color: var(--outline-color)
+    color: var(--outline-color);
+    pointer-events: none;
   }
 
   .ex-color-header-text {
@@ -90,6 +91,8 @@
     margin-top: 5px;
   }
  .ex-modal-content {
+  position: relative;
+  z-index: 3;
   padding: var(--ex-space-md);
   padding-top: 0px;
  }
