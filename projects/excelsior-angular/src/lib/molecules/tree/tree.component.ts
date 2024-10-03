@@ -15,23 +15,38 @@ import { cloneDeep } from 'lodash'
 })
 export class ExTreeComponent {
   @Input() items: TreeItem[] = []
+  public filteredItems: TreeItem[] = []
   @Input() search?: string = ''
   @Output() searchChange = new EventEmitter<TreeItem[]>()
   @Output() itemsChange = new EventEmitter<TreeItem[]>()
   @Output() selectedItems = new EventEmitter<TreeItem[]>()
   @Output() selectedItem = new EventEmitter<TreeItem>()
 
-  get filteredItems(): TreeItem[] {
-    if (!this.search) {
-      return this.items
-    }
+  ngOnInit() {
+    this.updateFilteredItems()
+  }
+
+  updateFilteredItems(): void {
     const clone = cloneDeep(this.items)
+    if (!this.search) {
+      this.filteredItems = clone
+    }
     // Return tree items (parent) that match the search string
     const filteredItems: TreeItem[] = clone.filter((item) =>
       item.label.toLowerCase().includes(this.search!.toLowerCase()),
     )
+    console.log('filteredItems', filteredItems)
+    this.filteredItems = filteredItems
+  }
 
-    return filteredItems
+  onCollapsedChange(item: TreeItem) {
+    item.expanded = !item.expanded
+    this.filteredItems = this.filteredItems.map((i) => {
+      if (i.id === item.id) {
+        i.expanded = item.expanded
+      }
+      return i
+    })
   }
 
   updateSelection() {
@@ -61,7 +76,7 @@ export class ExTreeComponent {
         }
       })
     })
-
+    this.updateFilteredItems()
     this.itemsChange.emit(this.items)
     this.selectedItems.emit(allSelected)
     this.searchChange.emit(this.filteredItems)

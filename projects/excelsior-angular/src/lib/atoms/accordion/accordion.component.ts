@@ -1,4 +1,4 @@
-import { Component, ElementRef, EventEmitter, Input, Output, ViewChild } from '@angular/core'
+import { Component, EventEmitter, Input, Output } from '@angular/core'
 import { ExIconComponent } from '../icon/ex-icon.component'
 import { CommonModule } from '@angular/common'
 
@@ -6,7 +6,7 @@ import { CommonModule } from '@angular/common'
   selector: 'ex-accordion',
   template: `
     <div class="ex-accordion__container">
-      <div class="ex-accordion__header" (click)="toggleCollapse()">
+      <div class="ex-accordion__header" (click)="emitOnClick()">
         <ng-content select="[parent]"></ng-content>
       </div>
       <div class="ex-accordion__content" [class]="{ collapsed: isCollapsed }">
@@ -19,13 +19,16 @@ import { CommonModule } from '@angular/common'
   imports: [ExIconComponent, CommonModule],
 })
 export class ExAccordionComponent {
-  @Input() public isCollapsed: boolean = true
-  @Output() isCollapsedChange = new EventEmitter<boolean>()
+  @Input() public isCollapsed?: boolean = true
+  @Output() onClick = new EventEmitter<boolean>()
 
-  toggleCollapse() {
-    this.isCollapsed = !this.isCollapsed
-    this.isCollapsedChange.emit(this.isCollapsed)
+  emitOnClick() {
+    this.onClick.emit()
   }
+  // toggleCollapse() {
+  //   this.isCollapsed = !this.isCollapsed
+  //   this.isCollapsedChange.emit(this.isCollapsed)
+  // }
 
   // get classes(): string {
   //   const classList = [

@@ -4,6 +4,7 @@ export interface TreeItem {
   children: TreeItem[]
   disabled?: boolean
   selected?: TreeItemStatus
+  expanded: boolean
 }
 export enum TreeItemStatus {
   SELECTED = 'selected',
