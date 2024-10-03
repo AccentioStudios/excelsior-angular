@@ -1,19 +1,23 @@
 import { Meta, StoryObj } from '@storybook/angular'
-import { ExIconComponent } from './ex-icon.component'
+import { ExFeaturedIconComponent } from './ex-featured-icon.component'
 
-const meta: Meta<ExIconComponent> = {
-  title: '1.Atoms/Icon',
-  component: ExIconComponent,
+const meta: Meta<ExFeaturedIconComponent> = {
+  title: '1.Atoms/FeaturedIcon',
+  component: ExFeaturedIconComponent,
   tags: ['autodocs'],
   argTypes: {
     name: {
       control: { type: 'select' },
-      options: ['user-plus', 'search-md', 'help-circle', 'line-chart-up', 'lock', 'key', 'cube', 'dot'],
+      options: ['user-plus', 'help-circle', 'line-chart-up-04', 'lock-04', 'key-02', 'cube-03', 'dot'],
     },
 
     size: {
       control: { type: 'select' },
       options: ['small', 'medium', 'large'],
+    },
+
+    flat: {
+      control: { type: 'boolean' },
     },
     // Customize the fill color if needed
   },
@@ -23,17 +27,19 @@ const meta: Meta<ExIconComponent> = {
 }
 
 export default meta
-type Story = StoryObj<ExIconComponent>
+type Story = StoryObj<ExFeaturedIconComponent>
 
 export const UserPlus: Story = {
   args: {
     name: 'user-plus',
+    flat: false,
   },
 }
 
 export const HelpCircle: Story = {
   args: {
     name: 'help-circle',
+    flat: false,
   },
 }
 
@@ -63,18 +69,6 @@ export const Cube: Story = {
 export const Dot: Story = {
   args: {
     name: 'dot',
-  },
-}
-
-export const settings: Story = {
-  args: {
-    name: 'settings',
-  },
-}
-
-export const SearchMd: Story = {
-  args: {
-    name: 'search-md',
   },
 }
 

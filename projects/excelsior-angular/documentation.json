@@ -64,6 +64,16 @@
                 "name": "Cube",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
+                "file": "projects/excelsior-angular/src/lib/atoms/featured-icon/ex-featured-icon.component.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\r\n  args: {\r\n    name: 'cube',\r\n  },\r\n}"
+            },
+            {
+                "name": "Cube",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
                 "file": "projects/excelsior-angular/src/lib/atoms/icon/ex-icon.component.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
@@ -194,6 +204,16 @@
                 "name": "Dot",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
+                "file": "projects/excelsior-angular/src/lib/atoms/featured-icon/ex-featured-icon.component.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\r\n  args: {\r\n    name: 'dot',\r\n  },\r\n}"
+            },
+            {
+                "name": "Dot",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
                 "file": "projects/excelsior-angular/src/lib/atoms/icon/ex-icon.component.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
@@ -219,6 +239,16 @@
                 "deprecationMessage": "",
                 "type": "Story",
                 "defaultValue": "{\r\n  args: {\r\n    primary: true,\r\n    label: 'Button',\r\n    size: 'medium',\r\n    extended: true,\r\n  },\r\n}"
+            },
+            {
+                "name": "HelpCircle",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/excelsior-angular/src/lib/atoms/featured-icon/ex-featured-icon.component.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\r\n  args: {\r\n    name: 'help-circle',\r\n  },\r\n}"
             },
             {
                 "name": "HelpCircle",
@@ -264,6 +294,16 @@
                 "name": "Key",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
+                "file": "projects/excelsior-angular/src/lib/atoms/featured-icon/ex-featured-icon.component.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\r\n  args: {\r\n    name: 'key',\r\n  },\r\n}"
+            },
+            {
+                "name": "Key",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
                 "file": "projects/excelsior-angular/src/lib/atoms/icon/ex-icon.component.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
@@ -284,6 +324,16 @@
                 "name": "Large",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
+                "file": "projects/excelsior-angular/src/lib/atoms/featured-icon/ex-featured-icon.component.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\r\n  args: {\r\n    name: 'cube',\r\n    size: 'large',\r\n  },\r\n}"
+            },
+            {
+                "name": "Large",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
                 "file": "projects/excelsior-angular/src/lib/atoms/icon/ex-icon.component.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
@@ -294,11 +344,31 @@
                 "name": "LineChartUp",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
+                "file": "projects/excelsior-angular/src/lib/atoms/featured-icon/ex-featured-icon.component.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\r\n  args: {\r\n    name: 'line-chart-up',\r\n  },\r\n}"
+            },
+            {
+                "name": "LineChartUp",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
                 "file": "projects/excelsior-angular/src/lib/atoms/icon/ex-icon.component.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
                 "defaultValue": "{\r\n  args: {\r\n    name: 'line-chart-up-04',\r\n  },\r\n}"
+            },
+            {
+                "name": "Lock",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/excelsior-angular/src/lib/atoms/featured-icon/ex-featured-icon.component.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\r\n  args: {\r\n    name: 'lock',\r\n  },\r\n}"
             },
             {
                 "name": "Lock",
@@ -345,6 +415,16 @@
                 "deprecationMessage": "",
                 "type": "Story",
                 "defaultValue": "{\r\n  args: {\r\n    size: 'medium',\r\n    label: 'Button',\r\n  },\r\n}"
+            },
+            {
+                "name": "Medium",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/excelsior-angular/src/lib/atoms/featured-icon/ex-featured-icon.component.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\r\n  args: {\r\n    name: 'cube',\r\n    size: 'medium',\r\n  },\r\n}"
             },
             {
                 "name": "Medium",
@@ -440,11 +520,21 @@
                 "name": "meta",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
+                "file": "projects/excelsior-angular/src/lib/atoms/featured-icon/ex-featured-icon.component.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Meta<ExFeaturedIconComponent>",
+                "defaultValue": "{\r\n  title: '1.Atoms/FeaturedIcon',\r\n  component: ExFeaturedIconComponent,\r\n  tags: ['autodocs'],\r\n  argTypes: {\r\n    name: {\r\n      control: { type: 'select' },\r\n      options: ['user-plus', 'help-circle', 'line-chart-up-04', 'lock-04', 'key-02', 'cube-03', 'dot'],\r\n    },\r\n\r\n    size: {\r\n      control: { type: 'select' },\r\n      options: ['small', 'medium', 'large'],\r\n    },\r\n    // Customize the fill color if needed\r\n  },\r\n  args: {\r\n    // Default fill color\r\n  },\r\n}"
+            },
+            {
+                "name": "meta",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
                 "file": "projects/excelsior-angular/src/lib/atoms/icon/ex-icon.component.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Meta<ExIconComponent>",
-                "defaultValue": "{\r\n  title: '1.Atoms/Icon',\r\n  component: ExIconComponent,\r\n  tags: ['autodocs'],\r\n  argTypes: {\r\n    name: {\r\n      control: { type: 'select' },\r\n      options: ['icon-home', 'icon-user', 'help-circle', 'line-chart-up-04', 'lock-04', 'key-02', 'cube-03', 'dot'],\r\n    },\r\n\r\n    size: {\r\n      control: { type: 'select' },\r\n      options: ['small', 'medium', 'large'],\r\n    },\r\n    // Customize the fill color if needed\r\n  },\r\n  args: {\r\n    // Default fill color\r\n  },\r\n}"
+                "defaultValue": "{\r\n  title: '1.Atoms/Icon',\r\n  component: ExIconComponent,\r\n  tags: ['autodocs'],\r\n  argTypes: {\r\n    name: {\r\n      control: { type: 'select' },\r\n      options: ['user-plus', 'help-circle', 'line-chart-up-04', 'lock-04', 'key-02', 'cube-03', 'dot'],\r\n    },\r\n\r\n    size: {\r\n      control: { type: 'select' },\r\n      options: ['small', 'medium', 'large'],\r\n    },\r\n    // Customize the fill color if needed\r\n  },\r\n  args: {\r\n    // Default fill color\r\n  },\r\n}"
             },
             {
                 "name": "meta",
@@ -638,6 +728,16 @@
                 "name": "Small",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
+                "file": "projects/excelsior-angular/src/lib/atoms/featured-icon/ex-featured-icon.component.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\r\n  args: {\r\n    name: 'cube',\r\n    size: 'small',\r\n  },\r\n}"
+            },
+            {
+                "name": "Small",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
                 "file": "projects/excelsior-angular/src/lib/atoms/icon/ex-icon.component.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
@@ -683,6 +783,16 @@
                 "deprecationMessage": "",
                 "type": "Story",
                 "defaultValue": "{\r\n  args: {\r\n    text: 'Permitir assinar como conferente',\r\n    label: 'O usuário vai poder verificar e conferir diversos elementos na plataforma.',\r\n    checked: false,\r\n    disabled: false,\r\n  },\r\n}"
+            },
+            {
+                "name": "User",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/excelsior-angular/src/lib/atoms/featured-icon/ex-featured-icon.component.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\r\n  args: {\r\n    name: 'user-plus',\r\n  },\r\n}"
             },
             {
                 "name": "User",
@@ -860,6 +970,17 @@
                 "subtype": "typealias",
                 "rawtype": "StoryObj<DropdownComponent>",
                 "file": "projects/excelsior-angular/src/lib/atoms/dropdown-custom/dropdown.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "kind": 183
+            },
+            {
+                "name": "Story",
+                "ctype": "miscellaneous",
+                "subtype": "typealias",
+                "rawtype": "StoryObj<ExFeaturedIconComponent>",
+                "file": "projects/excelsior-angular/src/lib/atoms/featured-icon/ex-featured-icon.component.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "description": "",
@@ -1194,6 +1315,118 @@
                     "defaultValue": "{\r\n  args: {\r\n    text: 'Permitir assinar como conferente',\r\n    label: 'O usuário vai poder verificar e conferir diversos elementos na plataforma.',\r\n    checked: false,\r\n    disabled: false,\r\n  },\r\n}"
                 }
             ],
+            "projects/excelsior-angular/src/lib/atoms/featured-icon/ex-featured-icon.component.stories.ts": [
+                {
+                    "name": "Cube",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/excelsior-angular/src/lib/atoms/featured-icon/ex-featured-icon.component.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\r\n  args: {\r\n    name: 'cube',\r\n  },\r\n}"
+                },
+                {
+                    "name": "Dot",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/excelsior-angular/src/lib/atoms/featured-icon/ex-featured-icon.component.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\r\n  args: {\r\n    name: 'dot',\r\n  },\r\n}"
+                },
+                {
+                    "name": "HelpCircle",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/excelsior-angular/src/lib/atoms/featured-icon/ex-featured-icon.component.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\r\n  args: {\r\n    name: 'help-circle',\r\n  },\r\n}"
+                },
+                {
+                    "name": "Key",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/excelsior-angular/src/lib/atoms/featured-icon/ex-featured-icon.component.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\r\n  args: {\r\n    name: 'key',\r\n  },\r\n}"
+                },
+                {
+                    "name": "Large",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/excelsior-angular/src/lib/atoms/featured-icon/ex-featured-icon.component.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\r\n  args: {\r\n    name: 'cube',\r\n    size: 'large',\r\n  },\r\n}"
+                },
+                {
+                    "name": "LineChartUp",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/excelsior-angular/src/lib/atoms/featured-icon/ex-featured-icon.component.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\r\n  args: {\r\n    name: 'line-chart-up',\r\n  },\r\n}"
+                },
+                {
+                    "name": "Lock",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/excelsior-angular/src/lib/atoms/featured-icon/ex-featured-icon.component.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\r\n  args: {\r\n    name: 'lock',\r\n  },\r\n}"
+                },
+                {
+                    "name": "Medium",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/excelsior-angular/src/lib/atoms/featured-icon/ex-featured-icon.component.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\r\n  args: {\r\n    name: 'cube',\r\n    size: 'medium',\r\n  },\r\n}"
+                },
+                {
+                    "name": "meta",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/excelsior-angular/src/lib/atoms/featured-icon/ex-featured-icon.component.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Meta<ExFeaturedIconComponent>",
+                    "defaultValue": "{\r\n  title: '1.Atoms/FeaturedIcon',\r\n  component: ExFeaturedIconComponent,\r\n  tags: ['autodocs'],\r\n  argTypes: {\r\n    name: {\r\n      control: { type: 'select' },\r\n      options: ['user-plus', 'help-circle', 'line-chart-up-04', 'lock-04', 'key-02', 'cube-03', 'dot'],\r\n    },\r\n\r\n    size: {\r\n      control: { type: 'select' },\r\n      options: ['small', 'medium', 'large'],\r\n    },\r\n    // Customize the fill color if needed\r\n  },\r\n  args: {\r\n    // Default fill color\r\n  },\r\n}"
+                },
+                {
+                    "name": "Small",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/excelsior-angular/src/lib/atoms/featured-icon/ex-featured-icon.component.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\r\n  args: {\r\n    name: 'cube',\r\n    size: 'small',\r\n  },\r\n}"
+                },
+                {
+                    "name": "User",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/excelsior-angular/src/lib/atoms/featured-icon/ex-featured-icon.component.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\r\n  args: {\r\n    name: 'user-plus',\r\n  },\r\n}"
+                }
+            ],
             "projects/excelsior-angular/src/lib/atoms/icon/ex-icon.component.stories.ts": [
                 {
                     "name": "Cube",
@@ -1293,7 +1526,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Meta<ExIconComponent>",
-                    "defaultValue": "{\r\n  title: '1.Atoms/Icon',\r\n  component: ExIconComponent,\r\n  tags: ['autodocs'],\r\n  argTypes: {\r\n    name: {\r\n      control: { type: 'select' },\r\n      options: ['icon-home', 'icon-user', 'help-circle', 'line-chart-up-04', 'lock-04', 'key-02', 'cube-03', 'dot'],\r\n    },\r\n\r\n    size: {\r\n      control: { type: 'select' },\r\n      options: ['small', 'medium', 'large'],\r\n    },\r\n    // Customize the fill color if needed\r\n  },\r\n  args: {\r\n    // Default fill color\r\n  },\r\n}"
+                    "defaultValue": "{\r\n  title: '1.Atoms/Icon',\r\n  component: ExIconComponent,\r\n  tags: ['autodocs'],\r\n  argTypes: {\r\n    name: {\r\n      control: { type: 'select' },\r\n      options: ['user-plus', 'help-circle', 'line-chart-up-04', 'lock-04', 'key-02', 'cube-03', 'dot'],\r\n    },\r\n\r\n    size: {\r\n      control: { type: 'select' },\r\n      options: ['small', 'medium', 'large'],\r\n    },\r\n    // Customize the fill color if needed\r\n  },\r\n  args: {\r\n    // Default fill color\r\n  },\r\n}"
                 },
                 {
                     "name": "Small",
@@ -1862,6 +2095,19 @@
                     "kind": 183
                 }
             ],
+            "projects/excelsior-angular/src/lib/atoms/featured-icon/ex-featured-icon.component.stories.ts": [
+                {
+                    "name": "Story",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "StoryObj<ExFeaturedIconComponent>",
+                    "file": "projects/excelsior-angular/src/lib/atoms/featured-icon/ex-featured-icon.component.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 183
+                }
+            ],
             "projects/excelsior-angular/src/lib/atoms/icon/ex-icon.component.stories.ts": [
                 {
                     "name": "Story",
@@ -2409,6 +2655,116 @@
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
                 "name": "WithSelectedValue",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/excelsior-angular/src/lib/atoms/featured-icon/ex-featured-icon.component.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Cube",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/excelsior-angular/src/lib/atoms/featured-icon/ex-featured-icon.component.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Dot",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/excelsior-angular/src/lib/atoms/featured-icon/ex-featured-icon.component.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "HelpCircle",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/excelsior-angular/src/lib/atoms/featured-icon/ex-featured-icon.component.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Key",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/excelsior-angular/src/lib/atoms/featured-icon/ex-featured-icon.component.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Large",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/excelsior-angular/src/lib/atoms/featured-icon/ex-featured-icon.component.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "LineChartUp",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/excelsior-angular/src/lib/atoms/featured-icon/ex-featured-icon.component.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Lock",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/excelsior-angular/src/lib/atoms/featured-icon/ex-featured-icon.component.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Medium",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/excelsior-angular/src/lib/atoms/featured-icon/ex-featured-icon.component.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "meta",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/excelsior-angular/src/lib/atoms/featured-icon/ex-featured-icon.component.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Small",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/excelsior-angular/src/lib/atoms/featured-icon/ex-featured-icon.component.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "User",
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
                 "status": "low"
