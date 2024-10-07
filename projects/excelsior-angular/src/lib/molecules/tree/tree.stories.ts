@@ -32,16 +32,15 @@ const meta: Meta<ExTreeComponent> = {
       },
     },
 
-    searchChange: {
-      description: 'The search string changed',
-      action: 'searchChanged',
-    },
+    // searchChange: {
+    //   description: 'The search string changed',
+    //   action: 'searchChanged',
+    // },
   },
   args: {
-    // itemsChange: (items) => console.log('items changed', items),
-    // selectedItems: (items) => console.log('items selected', items),
-    // searchChange: (search) => console.log('search changed', search),
-    // selectedItem: (item) => console.log('item selected', item),
+    itemsChange: (items) => console.log('items changed', items),
+    selectedItems: (items) => console.log('items selected', items),
+    selectedItem: (item) => console.log('item selected', item),
     items: [
       {
         id: '1',
@@ -53,14 +52,13 @@ const meta: Meta<ExTreeComponent> = {
             id: '1.1',
             label: 'Item 1.1',
             selected: TreeItemStatus.SELECTED,
-            expanded: false,
+
             children: [],
           },
           {
             id: '1.2',
             label: 'Item 1.2',
             selected: TreeItemStatus.SELECTED,
-            expanded: false,
             children: [],
           },
         ],
@@ -75,14 +73,12 @@ const meta: Meta<ExTreeComponent> = {
             id: '2.1',
             label: 'Item 2.1',
             selected: TreeItemStatus.UNSELECTED,
-            expanded: false,
             children: [],
           },
           {
             id: '2.2',
             label: 'Item 2.2',
             selected: TreeItemStatus.UNSELECTED,
-            expanded: false,
             children: [],
           },
         ],

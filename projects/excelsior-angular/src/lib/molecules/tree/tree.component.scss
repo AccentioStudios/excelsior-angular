@@ -1,6 +1,10 @@
 @import '../../styles/spaces.scss';
 @import '../../styles/colors.scss';
 
+.hidden {
+    display: none;
+}
+
 .ex-tree-parent {
     display: flex;
     align-items: center;

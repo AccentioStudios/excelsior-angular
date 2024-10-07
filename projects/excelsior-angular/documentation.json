@@ -78,7 +78,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\r\n  args: {\r\n    name: 'cube-03',\r\n  },\r\n}"
+                "defaultValue": "{\r\n  args: {\r\n    name: 'cube',\r\n  },\r\n}"
             },
             {
                 "name": "CustomColumns",
@@ -248,7 +248,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\r\n  args: {\r\n    name: 'help-circle',\r\n  },\r\n}"
+                "defaultValue": "{\r\n  args: {\r\n    name: 'help-circle',\r\n    flat: false,\r\n  },\r\n}"
             },
             {
                 "name": "HelpCircle",
@@ -259,16 +259,6 @@
                 "deprecationMessage": "",
                 "type": "Story",
                 "defaultValue": "{\r\n  args: {\r\n    name: 'help-circle',\r\n  },\r\n}"
-            },
-            {
-                "name": "Home",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "projects/excelsior-angular/src/lib/atoms/icon/ex-icon.component.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Story",
-                "defaultValue": "{\r\n  args: {\r\n    name: 'icon-home',\r\n  },\r\n}"
             },
             {
                 "name": "Indeterminate",
@@ -308,7 +298,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\r\n  args: {\r\n    name: 'key-02',\r\n  },\r\n}"
+                "defaultValue": "{\r\n  args: {\r\n    name: 'key',\r\n  },\r\n}"
             },
             {
                 "name": "Large",
@@ -338,7 +328,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\r\n  args: {\r\n    name: 'cube-03',\r\n    size: 'large',\r\n  },\r\n}"
+                "defaultValue": "{\r\n  args: {\r\n    name: 'cube',\r\n    size: 'large',\r\n  },\r\n}"
             },
             {
                 "name": "LineChartUp",
@@ -358,7 +348,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\r\n  args: {\r\n    name: 'line-chart-up-04',\r\n  },\r\n}"
+                "defaultValue": "{\r\n  args: {\r\n    name: 'line-chart-up',\r\n  },\r\n}"
             },
             {
                 "name": "Lock",
@@ -378,7 +368,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\r\n  args: {\r\n    name: 'lock-04',\r\n  },\r\n}"
+                "defaultValue": "{\r\n  args: {\r\n    name: 'lock',\r\n  },\r\n}"
             },
             {
                 "name": "LoggedIn",
@@ -434,7 +424,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\r\n  args: {\r\n    name: 'cube-03',\r\n    size: 'medium',\r\n  },\r\n}"
+                "defaultValue": "{\r\n  args: {\r\n    name: 'cube',\r\n    size: 'medium',\r\n  },\r\n}"
             },
             {
                 "name": "meta",
@@ -524,7 +514,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Meta<ExFeaturedIconComponent>",
-                "defaultValue": "{\r\n  title: '1.Atoms/FeaturedIcon',\r\n  component: ExFeaturedIconComponent,\r\n  tags: ['autodocs'],\r\n  argTypes: {\r\n    name: {\r\n      control: { type: 'select' },\r\n      options: ['user-plus', 'help-circle', 'line-chart-up-04', 'lock-04', 'key-02', 'cube-03', 'dot'],\r\n    },\r\n\r\n    size: {\r\n      control: { type: 'select' },\r\n      options: ['small', 'medium', 'large'],\r\n    },\r\n    // Customize the fill color if needed\r\n  },\r\n  args: {\r\n    // Default fill color\r\n  },\r\n}"
+                "defaultValue": "{\r\n  title: '1.Atoms/FeaturedIcon',\r\n  component: ExFeaturedIconComponent,\r\n  tags: ['autodocs'],\r\n  argTypes: {\r\n    name: {\r\n      control: { type: 'select' },\r\n      options: ['user-plus', 'help-circle', 'line-chart-up-04', 'lock-04', 'key-02', 'cube-03', 'dot'],\r\n    },\r\n\r\n    size: {\r\n      control: { type: 'select' },\r\n      options: ['small', 'medium', 'large'],\r\n    },\r\n\r\n    flat: {\r\n      control: { type: 'boolean' },\r\n    },\r\n    // Customize the fill color if needed\r\n  },\r\n  args: {\r\n    // Default fill color\r\n  },\r\n}"
             },
             {
                 "name": "meta",
@@ -534,7 +524,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Meta<ExIconComponent>",
-                "defaultValue": "{\r\n  title: '1.Atoms/Icon',\r\n  component: ExIconComponent,\r\n  tags: ['autodocs'],\r\n  argTypes: {\r\n    name: {\r\n      control: { type: 'select' },\r\n      options: ['user-plus', 'help-circle', 'line-chart-up-04', 'lock-04', 'key-02', 'cube-03', 'dot'],\r\n    },\r\n\r\n    size: {\r\n      control: { type: 'select' },\r\n      options: ['small', 'medium', 'large'],\r\n    },\r\n    // Customize the fill color if needed\r\n  },\r\n  args: {\r\n    // Default fill color\r\n  },\r\n}"
+                "defaultValue": "{\r\n  title: '1.Atoms/Icon',\r\n  component: ExIconComponent,\r\n  tags: ['autodocs'],\r\n  argTypes: {\r\n    name: {\r\n      control: { type: 'select' },\r\n      options: ['user-plus', 'search-md', 'help-circle', 'line-chart-up', 'lock', 'key', 'cube', 'dot'],\r\n    },\r\n\r\n    size: {\r\n      control: { type: 'select' },\r\n      options: ['small', 'medium', 'large'],\r\n    },\r\n    // Customize the fill color if needed\r\n  },\r\n  args: {\r\n    // Default fill color\r\n  },\r\n}"
             },
             {
                 "name": "meta",
@@ -574,7 +564,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Meta<ExTreeComponent>",
-                "defaultValue": "{\n  title: 'Molecules/Tree',\n  component: ExTreeComponent,\n  tags: ['autodocs'],\n  argTypes: {\n    items: {\n      description: 'The tree items',\n      control: {\n        type: 'object',\n      },\n    },\n    selectedItems: {\n      description: 'The tree items selected',\n      action: 'itemsSelected',\n    },\n    selectedItem: {\n      description: 'The tree item that is the currently selected',\n      action: 'itemSelected',\n    },\n    itemsChange: {\n      description: 'The tree items changed',\n      action: 'itemsChanged',\n    },\n    search: {\n      description: 'The search string',\n      control: {\n        type: 'text',\n      },\n    },\n\n    searchChange: {\n      description: 'The search string changed',\n      action: 'searchChanged',\n    },\n  },\n  args: {\n    // itemsChange: (items) => console.log('items changed', items),\n    // selectedItems: (items) => console.log('items selected', items),\n    // searchChange: (search) => console.log('search changed', search),\n    // selectedItem: (item) => console.log('item selected', item),\n    items: [\n      {\n        id: '1',\n        label: 'Item 1',\n        selected: TreeItemStatus.SELECTED,\n        expanded: false,\n        children: [\n          {\n            id: '1.1',\n            label: 'Item 1.1',\n            selected: TreeItemStatus.SELECTED,\n            expanded: false,\n            children: [],\n          },\n          {\n            id: '1.2',\n            label: 'Item 1.2',\n            selected: TreeItemStatus.SELECTED,\n            expanded: false,\n            children: [],\n          },\n        ],\n      },\n      {\n        id: '2',\n        label: 'Item 2',\n        selected: TreeItemStatus.UNSELECTED,\n        expanded: false,\n        children: [\n          {\n            id: '2.1',\n            label: 'Item 2.1',\n            selected: TreeItemStatus.UNSELECTED,\n            expanded: false,\n            children: [],\n          },\n          {\n            id: '2.2',\n            label: 'Item 2.2',\n            selected: TreeItemStatus.UNSELECTED,\n            expanded: false,\n            children: [],\n          },\n        ],\n      },\n    ],\n  },\n}"
+                "defaultValue": "{\n  title: 'Molecules/Tree',\n  component: ExTreeComponent,\n  tags: ['autodocs'],\n  argTypes: {\n    items: {\n      description: 'The tree items',\n      control: {\n        type: 'object',\n      },\n    },\n    selectedItems: {\n      description: 'The tree items selected',\n      action: 'itemsSelected',\n    },\n    selectedItem: {\n      description: 'The tree item that is the currently selected',\n      action: 'itemSelected',\n    },\n    itemsChange: {\n      description: 'The tree items changed',\n      action: 'itemsChanged',\n    },\n    // search: {\n    //   description: 'The search string',\n    //   control: {\n    //     type: 'text',\n    //   },\n    // },\n\n    // searchChange: {\n    //   description: 'The search string changed',\n    //   action: 'searchChanged',\n    // },\n  },\n  args: {\n    itemsChange: (items) => console.log('items changed', items),\n    selectedItems: (items) => console.log('items selected', items),\n    selectedItem: (item) => console.log('item selected', item),\n    items: [\n      {\n        id: '1',\n        label: 'Item 1',\n        selected: TreeItemStatus.SELECTED,\n        expanded: false,\n        children: [\n          {\n            id: '1.1',\n            label: 'Item 1.1',\n            selected: TreeItemStatus.SELECTED,\n\n            children: [],\n          },\n          {\n            id: '1.2',\n            label: 'Item 1.2',\n            selected: TreeItemStatus.SELECTED,\n            children: [],\n          },\n        ],\n      },\n      {\n        id: '2',\n        label: 'Item 2',\n        selected: TreeItemStatus.UNSELECTED,\n        expanded: false,\n        children: [\n          {\n            id: '2.1',\n            label: 'Item 2.1',\n            selected: TreeItemStatus.UNSELECTED,\n            children: [],\n          },\n          {\n            id: '2.2',\n            label: 'Item 2.2',\n            selected: TreeItemStatus.UNSELECTED,\n            children: [],\n          },\n        ],\n      },\n    ],\n  },\n}"
             },
             {
                 "name": "meta",
@@ -705,6 +695,16 @@
                 "defaultValue": "{\r\n  args: {\r\n    text: 'Purple Badge',\r\n    type: 'purple',\r\n  },\r\n}"
             },
             {
+                "name": "SearchMd",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/excelsior-angular/src/lib/atoms/icon/ex-icon.component.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\r\n  args: {\r\n    name: 'search-md',\r\n  },\r\n}"
+            },
+            {
                 "name": "Secondary",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
@@ -713,6 +713,16 @@
                 "deprecationMessage": "",
                 "type": "Story",
                 "defaultValue": "{\r\n  args: {\r\n    label: 'Button',\r\n  },\r\n}"
+            },
+            {
+                "name": "settings",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/excelsior-angular/src/lib/atoms/icon/ex-icon.component.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\r\n  args: {\r\n    name: 'settings',\r\n  },\r\n}"
             },
             {
                 "name": "Small",
@@ -742,7 +752,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\r\n  args: {\r\n    name: 'cube-03',\r\n    size: 'small',\r\n  },\r\n}"
+                "defaultValue": "{\r\n  args: {\r\n    name: 'cube',\r\n    size: 'small',\r\n  },\r\n}"
             },
             {
                 "name": "Success",
@@ -785,24 +795,24 @@
                 "defaultValue": "{\r\n  args: {\r\n    text: 'Permitir assinar como conferente',\r\n    label: 'O usuário vai poder verificar e conferir diversos elementos na plataforma.',\r\n    checked: false,\r\n    disabled: false,\r\n  },\r\n}"
             },
             {
-                "name": "User",
+                "name": "UserPlus",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
                 "file": "projects/excelsior-angular/src/lib/atoms/featured-icon/ex-featured-icon.component.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\r\n  args: {\r\n    name: 'user-plus',\r\n  },\r\n}"
+                "defaultValue": "{\r\n  args: {\r\n    name: 'user-plus',\r\n    flat: false,\r\n  },\r\n}"
             },
             {
-                "name": "User",
+                "name": "UserPlus",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
                 "file": "projects/excelsior-angular/src/lib/atoms/icon/ex-icon.component.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\r\n  args: {\r\n    name: 'icon-user',\r\n  },\r\n}"
+                "defaultValue": "{\r\n  args: {\r\n    name: 'user-plus',\r\n  },\r\n}"
             },
             {
                 "name": "ValidateOnInit",
@@ -843,16 +853,6 @@
                 "deprecationMessage": "",
                 "type": "Story",
                 "defaultValue": "{\r\n  args: {\r\n    id: 'searchWithOptions',\r\n    label: 'Search with Options',\r\n    placeholder: 'Type to search...',\r\n    options: [\r\n      { value: 'option1', label: 'Option 1' },\r\n      { value: 'option2', label: 'Option 2' },\r\n      { value: 'option3', label: 'Option 3' },\r\n    ],\r\n  },\r\n}"
-            },
-            {
-                "name": "WithSearch",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "projects/excelsior-angular/src/lib/molecules/tree/tree.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Story",
-                "defaultValue": "{\n  args: {\n    search: '1',\n  },\n\n  argTypes: {\n    search: {\n      control: {\n        type: 'text',\n      },\n    },\n  },\n}"
             },
             {
                 "name": "WithSelectedValue",
@@ -1344,7 +1344,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\r\n  args: {\r\n    name: 'help-circle',\r\n  },\r\n}"
+                    "defaultValue": "{\r\n  args: {\r\n    name: 'help-circle',\r\n    flat: false,\r\n  },\r\n}"
                 },
                 {
                     "name": "Key",
@@ -1404,7 +1404,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Meta<ExFeaturedIconComponent>",
-                    "defaultValue": "{\r\n  title: '1.Atoms/FeaturedIcon',\r\n  component: ExFeaturedIconComponent,\r\n  tags: ['autodocs'],\r\n  argTypes: {\r\n    name: {\r\n      control: { type: 'select' },\r\n      options: ['user-plus', 'help-circle', 'line-chart-up-04', 'lock-04', 'key-02', 'cube-03', 'dot'],\r\n    },\r\n\r\n    size: {\r\n      control: { type: 'select' },\r\n      options: ['small', 'medium', 'large'],\r\n    },\r\n    // Customize the fill color if needed\r\n  },\r\n  args: {\r\n    // Default fill color\r\n  },\r\n}"
+                    "defaultValue": "{\r\n  title: '1.Atoms/FeaturedIcon',\r\n  component: ExFeaturedIconComponent,\r\n  tags: ['autodocs'],\r\n  argTypes: {\r\n    name: {\r\n      control: { type: 'select' },\r\n      options: ['user-plus', 'help-circle', 'line-chart-up-04', 'lock-04', 'key-02', 'cube-03', 'dot'],\r\n    },\r\n\r\n    size: {\r\n      control: { type: 'select' },\r\n      options: ['small', 'medium', 'large'],\r\n    },\r\n\r\n    flat: {\r\n      control: { type: 'boolean' },\r\n    },\r\n    // Customize the fill color if needed\r\n  },\r\n  args: {\r\n    // Default fill color\r\n  },\r\n}"
                 },
                 {
                     "name": "Small",
@@ -1417,14 +1417,14 @@
                     "defaultValue": "{\r\n  args: {\r\n    name: 'cube',\r\n    size: 'small',\r\n  },\r\n}"
                 },
                 {
-                    "name": "User",
+                    "name": "UserPlus",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
                     "file": "projects/excelsior-angular/src/lib/atoms/featured-icon/ex-featured-icon.component.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\r\n  args: {\r\n    name: 'user-plus',\r\n  },\r\n}"
+                    "defaultValue": "{\r\n  args: {\r\n    name: 'user-plus',\r\n    flat: false,\r\n  },\r\n}"
                 }
             ],
             "projects/excelsior-angular/src/lib/atoms/icon/ex-icon.component.stories.ts": [
@@ -1436,7 +1436,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\r\n  args: {\r\n    name: 'cube-03',\r\n  },\r\n}"
+                    "defaultValue": "{\r\n  args: {\r\n    name: 'cube',\r\n  },\r\n}"
                 },
                 {
                     "name": "Dot",
@@ -1459,16 +1459,6 @@
                     "defaultValue": "{\r\n  args: {\r\n    name: 'help-circle',\r\n  },\r\n}"
                 },
                 {
-                    "name": "Home",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "projects/excelsior-angular/src/lib/atoms/icon/ex-icon.component.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Story",
-                    "defaultValue": "{\r\n  args: {\r\n    name: 'icon-home',\r\n  },\r\n}"
-                },
-                {
                     "name": "Key",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
@@ -1476,7 +1466,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\r\n  args: {\r\n    name: 'key-02',\r\n  },\r\n}"
+                    "defaultValue": "{\r\n  args: {\r\n    name: 'key',\r\n  },\r\n}"
                 },
                 {
                     "name": "Large",
@@ -1486,7 +1476,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\r\n  args: {\r\n    name: 'cube-03',\r\n    size: 'large',\r\n  },\r\n}"
+                    "defaultValue": "{\r\n  args: {\r\n    name: 'cube',\r\n    size: 'large',\r\n  },\r\n}"
                 },
                 {
                     "name": "LineChartUp",
@@ -1496,7 +1486,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\r\n  args: {\r\n    name: 'line-chart-up-04',\r\n  },\r\n}"
+                    "defaultValue": "{\r\n  args: {\r\n    name: 'line-chart-up',\r\n  },\r\n}"
                 },
                 {
                     "name": "Lock",
@@ -1506,7 +1496,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\r\n  args: {\r\n    name: 'lock-04',\r\n  },\r\n}"
+                    "defaultValue": "{\r\n  args: {\r\n    name: 'lock',\r\n  },\r\n}"
                 },
                 {
                     "name": "Medium",
@@ -1516,7 +1506,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\r\n  args: {\r\n    name: 'cube-03',\r\n    size: 'medium',\r\n  },\r\n}"
+                    "defaultValue": "{\r\n  args: {\r\n    name: 'cube',\r\n    size: 'medium',\r\n  },\r\n}"
                 },
                 {
                     "name": "meta",
@@ -1526,7 +1516,27 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Meta<ExIconComponent>",
-                    "defaultValue": "{\r\n  title: '1.Atoms/Icon',\r\n  component: ExIconComponent,\r\n  tags: ['autodocs'],\r\n  argTypes: {\r\n    name: {\r\n      control: { type: 'select' },\r\n      options: ['user-plus', 'help-circle', 'line-chart-up-04', 'lock-04', 'key-02', 'cube-03', 'dot'],\r\n    },\r\n\r\n    size: {\r\n      control: { type: 'select' },\r\n      options: ['small', 'medium', 'large'],\r\n    },\r\n    // Customize the fill color if needed\r\n  },\r\n  args: {\r\n    // Default fill color\r\n  },\r\n}"
+                    "defaultValue": "{\r\n  title: '1.Atoms/Icon',\r\n  component: ExIconComponent,\r\n  tags: ['autodocs'],\r\n  argTypes: {\r\n    name: {\r\n      control: { type: 'select' },\r\n      options: ['user-plus', 'search-md', 'help-circle', 'line-chart-up', 'lock', 'key', 'cube', 'dot'],\r\n    },\r\n\r\n    size: {\r\n      control: { type: 'select' },\r\n      options: ['small', 'medium', 'large'],\r\n    },\r\n    // Customize the fill color if needed\r\n  },\r\n  args: {\r\n    // Default fill color\r\n  },\r\n}"
+                },
+                {
+                    "name": "SearchMd",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/excelsior-angular/src/lib/atoms/icon/ex-icon.component.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\r\n  args: {\r\n    name: 'search-md',\r\n  },\r\n}"
+                },
+                {
+                    "name": "settings",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/excelsior-angular/src/lib/atoms/icon/ex-icon.component.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\r\n  args: {\r\n    name: 'settings',\r\n  },\r\n}"
                 },
                 {
                     "name": "Small",
@@ -1536,17 +1546,17 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\r\n  args: {\r\n    name: 'cube-03',\r\n    size: 'small',\r\n  },\r\n}"
+                    "defaultValue": "{\r\n  args: {\r\n    name: 'cube',\r\n    size: 'small',\r\n  },\r\n}"
                 },
                 {
-                    "name": "User",
+                    "name": "UserPlus",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
                     "file": "projects/excelsior-angular/src/lib/atoms/icon/ex-icon.component.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\r\n  args: {\r\n    name: 'icon-user',\r\n  },\r\n}"
+                    "defaultValue": "{\r\n  args: {\r\n    name: 'user-plus',\r\n  },\r\n}"
                 }
             ],
             "projects/excelsior-angular/src/lib/organisms/table/table.stories.ts": [
@@ -1802,17 +1812,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Meta<ExTreeComponent>",
-                    "defaultValue": "{\n  title: 'Molecules/Tree',\n  component: ExTreeComponent,\n  tags: ['autodocs'],\n  argTypes: {\n    items: {\n      description: 'The tree items',\n      control: {\n        type: 'object',\n      },\n    },\n    selectedItems: {\n      description: 'The tree items selected',\n      action: 'itemsSelected',\n    },\n    selectedItem: {\n      description: 'The tree item that is the currently selected',\n      action: 'itemSelected',\n    },\n    itemsChange: {\n      description: 'The tree items changed',\n      action: 'itemsChanged',\n    },\n    search: {\n      description: 'The search string',\n      control: {\n        type: 'text',\n      },\n    },\n\n    searchChange: {\n      description: 'The search string changed',\n      action: 'searchChanged',\n    },\n  },\n  args: {\n    // itemsChange: (items) => console.log('items changed', items),\n    // selectedItems: (items) => console.log('items selected', items),\n    // searchChange: (search) => console.log('search changed', search),\n    // selectedItem: (item) => console.log('item selected', item),\n    items: [\n      {\n        id: '1',\n        label: 'Item 1',\n        selected: TreeItemStatus.SELECTED,\n        expanded: false,\n        children: [\n          {\n            id: '1.1',\n            label: 'Item 1.1',\n            selected: TreeItemStatus.SELECTED,\n            expanded: false,\n            children: [],\n          },\n          {\n            id: '1.2',\n            label: 'Item 1.2',\n            selected: TreeItemStatus.SELECTED,\n            expanded: false,\n            children: [],\n          },\n        ],\n      },\n      {\n        id: '2',\n        label: 'Item 2',\n        selected: TreeItemStatus.UNSELECTED,\n        expanded: false,\n        children: [\n          {\n            id: '2.1',\n            label: 'Item 2.1',\n            selected: TreeItemStatus.UNSELECTED,\n            expanded: false,\n            children: [],\n          },\n          {\n            id: '2.2',\n            label: 'Item 2.2',\n            selected: TreeItemStatus.UNSELECTED,\n            expanded: false,\n            children: [],\n          },\n        ],\n      },\n    ],\n  },\n}"
-                },
-                {
-                    "name": "WithSearch",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "projects/excelsior-angular/src/lib/molecules/tree/tree.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Story",
-                    "defaultValue": "{\n  args: {\n    search: '1',\n  },\n\n  argTypes: {\n    search: {\n      control: {\n        type: 'text',\n      },\n    },\n  },\n}"
+                    "defaultValue": "{\n  title: 'Molecules/Tree',\n  component: ExTreeComponent,\n  tags: ['autodocs'],\n  argTypes: {\n    items: {\n      description: 'The tree items',\n      control: {\n        type: 'object',\n      },\n    },\n    selectedItems: {\n      description: 'The tree items selected',\n      action: 'itemsSelected',\n    },\n    selectedItem: {\n      description: 'The tree item that is the currently selected',\n      action: 'itemSelected',\n    },\n    itemsChange: {\n      description: 'The tree items changed',\n      action: 'itemsChanged',\n    },\n    // search: {\n    //   description: 'The search string',\n    //   control: {\n    //     type: 'text',\n    //   },\n    // },\n\n    // searchChange: {\n    //   description: 'The search string changed',\n    //   action: 'searchChanged',\n    // },\n  },\n  args: {\n    itemsChange: (items) => console.log('items changed', items),\n    selectedItems: (items) => console.log('items selected', items),\n    selectedItem: (item) => console.log('item selected', item),\n    items: [\n      {\n        id: '1',\n        label: 'Item 1',\n        selected: TreeItemStatus.SELECTED,\n        expanded: false,\n        children: [\n          {\n            id: '1.1',\n            label: 'Item 1.1',\n            selected: TreeItemStatus.SELECTED,\n\n            children: [],\n          },\n          {\n            id: '1.2',\n            label: 'Item 1.2',\n            selected: TreeItemStatus.SELECTED,\n            children: [],\n          },\n        ],\n      },\n      {\n        id: '2',\n        label: 'Item 2',\n        selected: TreeItemStatus.UNSELECTED,\n        expanded: false,\n        children: [\n          {\n            id: '2.1',\n            label: 'Item 2.1',\n            selected: TreeItemStatus.UNSELECTED,\n            children: [],\n          },\n          {\n            id: '2.2',\n            label: 'Item 2.2',\n            selected: TreeItemStatus.UNSELECTED,\n            children: [],\n          },\n        ],\n      },\n    ],\n  },\n}"
                 }
             ],
             "projects/excelsior-angular/src/lib/organisms/modal/modal.stories.ts": [
@@ -2764,7 +2764,7 @@
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
-                "name": "User",
+                "name": "UserPlus",
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
                 "status": "low"
@@ -2795,16 +2795,6 @@
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
                 "name": "HelpCircle",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
-                "filePath": "projects/excelsior-angular/src/lib/atoms/icon/ex-icon.component.stories.ts",
-                "type": "variable",
-                "linktype": "miscellaneous",
-                "linksubtype": "variable",
-                "name": "Home",
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
                 "status": "low"
@@ -2874,6 +2864,26 @@
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
+                "name": "SearchMd",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/excelsior-angular/src/lib/atoms/icon/ex-icon.component.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "settings",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/excelsior-angular/src/lib/atoms/icon/ex-icon.component.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
                 "name": "Small",
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
@@ -2884,7 +2894,7 @@
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
-                "name": "User",
+                "name": "UserPlus",
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
                 "status": "low"
@@ -3005,16 +3015,6 @@
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
                 "name": "meta",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
-                "filePath": "projects/excelsior-angular/src/lib/molecules/tree/tree.stories.ts",
-                "type": "variable",
-                "linktype": "miscellaneous",
-                "linksubtype": "variable",
-                "name": "WithSearch",
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
                 "status": "low"

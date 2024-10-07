@@ -1,7 +1,7 @@
 <div class="ex-tree">
-  <ng-container *ngFor="let item of filteredItems">
-    <ex-accordion [isCollapsed]="item.expanded" (onClick)="onCollapsedChange(item)">
-      <ex-accordion-item parent [withChevron]="true">
+  <ng-container *ngFor="let item of items">
+    <ex-accordion [isCollapsed]="!item.expanded" (onClick)="toggleItemCollap(item)">
+      <ex-accordion-item parent [withChevron]="true" [class]="{ hidden: !isMatchedWithSearch(item) }">
         <div class="ex-tree-parent">
           <ex-checkbox
             [checked]="getTreeItemStatus(item) === 'selected'"
@@ -13,7 +13,11 @@
           {{ item.label }}
         </div>
       </ex-accordion-item>
-      <ex-accordion-item *ngFor="let child of item.children" [indentation]="true">
+      <ex-accordion-item
+        *ngFor="let child of item.children"
+        [indentation]="true"
+        [class]="{ hidden: !isMatchedWithSearch(item) }"
+      >
         <div class="ex-tree__subtree">
           <ex-checkbox
             [checked]="getTreeItemStatus(child) === 'selected'"
