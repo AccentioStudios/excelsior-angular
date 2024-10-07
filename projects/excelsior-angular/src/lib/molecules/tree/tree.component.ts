@@ -15,6 +15,7 @@ import { TreeItem, TreeItemStatus } from '../../types'
 export class ExTreeComponent implements OnInit {
   @Input() items: TreeItem[] = []
   @Input() search?: string = ''
+  @Input() filterOnlyParents?: boolean = true
   @Output() itemsChange = new EventEmitter<TreeItem[]>()
   @Output() selectedItems = new EventEmitter<TreeItem[]>()
   @Output() selectedItem = new EventEmitter<TreeItem>()
@@ -56,10 +57,17 @@ export class ExTreeComponent implements OnInit {
 
   isMatchedWithSearch(item: TreeItem): boolean {
     if (this.search) {
+      if (item.isChild) {
+        if (this.filterOnlyParents) {
+          return true
+        }
+      }
       // Si es un item padre y tiene hijos, se filtran los hijos.
-      if (item.children.length > 0) {
-        const children = item.children.filter((child) => this.isMatchedWithSearch(child))
-        return children.length > 0
+      if (!this.filterOnlyParents) {
+        if (item.children.length > 0) {
+          const children = item.children.filter((child) => this.isMatchedWithSearch(child))
+          return children.length > 0
+        }
       }
       return item.label.toLowerCase().includes(this.search!.toLowerCase())
     }
