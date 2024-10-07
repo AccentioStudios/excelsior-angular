@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core'
+import { Component, EventEmitter, Input, OnChanges, OnInit, Output } from '@angular/core'
 import { ExAccordionComponent } from '../../atoms/accordion/accordion.component'
 import { ExAccordionItemComponent } from '../../atoms/accordion/accordion_item.component'
 import { CommonModule } from '@angular/common'
@@ -12,7 +12,7 @@ import { TreeItem, TreeItemStatus } from '../../types'
   standalone: true,
   imports: [ExAccordionComponent, ExAccordionItemComponent, CommonModule, ExCheckboxComponent],
 })
-export class ExTreeComponent implements OnInit {
+export class ExTreeComponent implements OnInit, OnChanges {
   @Input() items: TreeItem[] = []
   @Input() search?: string = ''
   @Input() filterOnlyParents?: boolean = true
@@ -21,10 +21,14 @@ export class ExTreeComponent implements OnInit {
   @Output() selectedItem = new EventEmitter<TreeItem>()
 
   ngOnInit(): void {
-    this.init()
+    this.isChildParsing()
   }
 
-  init() {
+  ngOnChanges(): void {
+    this.isChildParsing()
+  }
+
+  isChildParsing() {
     // recorre todos los items. Por cada item que este dentro de child dentro de un parent isChild = true
     this.items.forEach((parent) => {
       parent.children.forEach((child) => {
