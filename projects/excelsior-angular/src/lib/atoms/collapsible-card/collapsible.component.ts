@@ -3,13 +3,13 @@ import { CommonModule } from '@angular/common'
 import { ExIconComponent } from '../icon/ex-icon.component'
 
 @Component({
-  selector: 'app-collapsible',
+  selector: 'ex-collapsable-card',
   templateUrl: './collapsible.component.html',
   styleUrls: ['./collapsible.component.scss'],
   standalone: true,
   imports: [CommonModule, ExIconComponent],
 })
-export class CollapsibleComponent {
+export class ExCollapsibleComponent {
   @Input() title: string = 'Collapsible Title'
   isCollapsed: boolean = true
 

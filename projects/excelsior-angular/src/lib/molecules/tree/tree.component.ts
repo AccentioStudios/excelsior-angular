@@ -48,31 +48,20 @@ export class ExTreeComponent implements OnInit, OnChanges {
     })
   }
 
-  get filteredItems(): TreeItem[] {
-    if (!this.search) {
-      return this.items
-    }
-
-    return this.items.map((item) => {
-      const children = item.children.filter((child) => child.label.toLowerCase().includes(this.search!.toLowerCase()))
-      return { ...item, children }
-    })
-  }
-
   isMatchedWithSearch(item: TreeItem): boolean {
     if (this.search) {
-      if (item.isChild) {
-        if (this.filterOnlyParents) {
-          return true
-        }
-      }
-      // Si es un item padre y tiene hijos, se filtran los hijos.
-      if (!this.filterOnlyParents) {
-        if (item.children.length > 0) {
-          const children = item.children.filter((child) => this.isMatchedWithSearch(child))
-          return children.length > 0
-        }
-      }
+      // if (item.isChild) {
+      //   if (this.filterOnlyParents) {
+      //     return true
+      //   }
+      // }
+      // // Si es un item padre y tiene hijos, se filtran los hijos.
+      // if (!this.filterOnlyParents) {
+      //   if (item.children.length > 0) {
+      //     const children = item.children.filter((child) => this.isMatchedWithSearch(child))
+      //     return children.length > 0
+      //   }
+      // }
       return item.label.toLowerCase().includes(this.search!.toLowerCase())
     }
     return true

@@ -44,21 +44,21 @@
                 "name": "Checked",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/excelsior-angular/src/lib/atoms/checkbox/checkbox.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Story",
-                "defaultValue": "{\r\n  args: {\r\n    label: 'Checked Checkbox',\r\n    checked: true,\r\n  },\r\n}"
-            },
-            {
-                "name": "Checked",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
                 "file": "projects/excelsior-angular/src/lib/atoms/checkbox-group/checkbox-group.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
                 "defaultValue": "{\r\n  args: {\r\n    text: 'Permitir assinar como conferente',\r\n    label: 'O usuário vai poder verificar e conferir diversos elementos na plataforma.',\r\n    checked: true,\r\n    disabled: false,\r\n  },\r\n}"
+            },
+            {
+                "name": "Checked",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/excelsior-angular/src/lib/atoms/checkbox/checkbox.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\r\n  args: {\r\n    label: 'Checked Checkbox',\r\n    checked: true,\r\n  },\r\n}"
             },
             {
                 "name": "Cube",
@@ -470,21 +470,21 @@
                 "name": "meta",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/excelsior-angular/src/lib/atoms/checkbox/checkbox.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Meta<ExCheckboxComponent>",
-                "defaultValue": "{\r\n  title: '1.Atoms/Checkbox',\r\n  component: ExCheckboxComponent,\r\n  tags: ['autodocs'],\r\n  argTypes: {\r\n    label: { control: 'text' },\r\n    checked: { control: 'boolean' },\r\n    checkedChange: { action: 'checkedChange' },\r\n    indeterminate: { control: 'boolean' },\r\n  },\r\n  args: { checkedChange: fn() },\r\n}"
-            },
-            {
-                "name": "meta",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
                 "file": "projects/excelsior-angular/src/lib/atoms/checkbox-group/checkbox-group.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Meta<ExCheckboxGroupComponent>",
                 "defaultValue": "{\r\n  title: '1.Atoms/Checkbox Card',\r\n  component: ExCheckboxGroupComponent,\r\n  tags: ['autodocs'],\r\n  argTypes: {\r\n    label: { control: 'text' },\r\n    text: { control: 'text' },\r\n    checked: { control: 'boolean' },\r\n    checkedChange: { action: 'checkedChange' },\r\n    disabled: { control: 'boolean' },\r\n  },\r\n  args: { checkedChange: fn() },\r\n}"
+            },
+            {
+                "name": "meta",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/excelsior-angular/src/lib/atoms/checkbox/checkbox.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Meta<ExCheckboxComponent>",
+                "defaultValue": "{\r\n  title: '1.Atoms/Checkbox',\r\n  component: ExCheckboxComponent,\r\n  tags: ['autodocs'],\r\n  argTypes: {\r\n    label: { control: 'text' },\r\n    checked: { control: 'boolean' },\r\n    checkedChange: { action: 'checkedChange' },\r\n    indeterminate: { control: 'boolean' },\r\n  },\r\n  args: { checkedChange: fn() },\r\n}"
             },
             {
                 "name": "meta",
@@ -564,7 +564,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Meta<ExTreeComponent>",
-                "defaultValue": "{\n  title: 'Molecules/Tree',\n  component: ExTreeComponent,\n  tags: ['autodocs'],\n  argTypes: {\n    items: {\n      description: 'The tree items',\n      control: {\n        type: 'object',\n      },\n    },\n    selectedItems: {\n      description: 'The tree items selected',\n      action: 'itemsSelected',\n    },\n    selectedItem: {\n      description: 'The tree item that is the currently selected',\n      action: 'itemSelected',\n    },\n    itemsChange: {\n      description: 'The tree items changed',\n      action: 'itemsChanged',\n    },\n    // search: {\n    //   description: 'The search string',\n    //   control: {\n    //     type: 'text',\n    //   },\n    // },\n\n    // searchChange: {\n    //   description: 'The search string changed',\n    //   action: 'searchChanged',\n    // },\n  },\n  args: {\n    itemsChange: (items) => console.log('items changed', items),\n    selectedItems: (items) => console.log('items selected', items),\n    selectedItem: (item) => console.log('item selected', item),\n    items: [\n      {\n        id: '1',\n        label: 'Item 1',\n        selected: TreeItemStatus.SELECTED,\n        expanded: false,\n        children: [\n          {\n            id: '1.1',\n            label: 'Item 1.1',\n            selected: TreeItemStatus.SELECTED,\n\n            children: [],\n          },\n          {\n            id: '1.2',\n            label: 'Item 1.2',\n            selected: TreeItemStatus.SELECTED,\n            children: [],\n          },\n        ],\n      },\n      {\n        id: '2',\n        label: 'Item 2',\n        selected: TreeItemStatus.UNSELECTED,\n        expanded: false,\n        children: [\n          {\n            id: '2.1',\n            label: 'Item 2.1',\n            selected: TreeItemStatus.UNSELECTED,\n            children: [],\n          },\n          {\n            id: '2.2',\n            label: 'Item 2.2',\n            selected: TreeItemStatus.UNSELECTED,\n            children: [],\n          },\n        ],\n      },\n    ],\n  },\n}"
+                "defaultValue": "{\n  title: 'Molecules/Tree',\n  component: ExTreeComponent,\n  tags: ['autodocs'],\n  argTypes: {\n    items: {\n      description: 'The tree items',\n      control: {\n        type: 'object',\n      },\n    },\n    selectedItems: {\n      description: 'The tree items selected',\n      action: 'itemsSelected',\n    },\n    selectedItem: {\n      description: 'The tree item that is the currently selected',\n      action: 'itemSelected',\n    },\n    itemsChange: {\n      description: 'The tree items changed',\n      action: 'itemsChanged',\n    },\n    search: {\n      description: 'The search string',\n      control: {\n        type: 'text',\n      },\n    },\n\n    // searchChange: {\n    //   description: 'The search string changed',\n    //   action: 'searchChanged',\n    // },\n  },\n  args: {\n    itemsChange: (items) => console.log('items changed', items),\n    selectedItems: (items) => console.log('items selected', items),\n    selectedItem: (item) => console.log('item selected', item),\n    items: [\n      {\n        id: '1',\n        label: 'Item 1',\n        selected: TreeItemStatus.SELECTED,\n        expanded: false,\n        children: [\n          {\n            id: '1.1',\n            label: 'Item 1.1',\n            selected: TreeItemStatus.SELECTED,\n\n            children: [],\n          },\n          {\n            id: '1.2',\n            label: 'Item 1.2',\n            selected: TreeItemStatus.SELECTED,\n            children: [],\n          },\n        ],\n      },\n      {\n        id: '2',\n        label: 'Item 2',\n        selected: TreeItemStatus.UNSELECTED,\n        expanded: false,\n        children: [\n          {\n            id: '2.1',\n            label: 'Item 2.1',\n            selected: TreeItemStatus.UNSELECTED,\n            children: [],\n          },\n          {\n            id: '2.2',\n            label: 'Item 2.2',\n            selected: TreeItemStatus.UNSELECTED,\n            children: [],\n          },\n        ],\n      },\n    ],\n  },\n}"
             },
             {
                 "name": "meta",
@@ -778,21 +778,21 @@
                 "name": "Unchecked",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/excelsior-angular/src/lib/atoms/checkbox/checkbox.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Story",
-                "defaultValue": "{\r\n  args: {\r\n    label: 'Unchecked Checkbox',\r\n    checked: false,\r\n  },\r\n}"
-            },
-            {
-                "name": "Unchecked",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
                 "file": "projects/excelsior-angular/src/lib/atoms/checkbox-group/checkbox-group.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
                 "defaultValue": "{\r\n  args: {\r\n    text: 'Permitir assinar como conferente',\r\n    label: 'O usuário vai poder verificar e conferir diversos elementos na plataforma.',\r\n    checked: false,\r\n    disabled: false,\r\n  },\r\n}"
+            },
+            {
+                "name": "Unchecked",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/excelsior-angular/src/lib/atoms/checkbox/checkbox.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\r\n  args: {\r\n    label: 'Unchecked Checkbox',\r\n    checked: false,\r\n  },\r\n}"
             },
             {
                 "name": "UserPlus",
@@ -853,6 +853,16 @@
                 "deprecationMessage": "",
                 "type": "Story",
                 "defaultValue": "{\r\n  args: {\r\n    id: 'searchWithOptions',\r\n    label: 'Search with Options',\r\n    placeholder: 'Type to search...',\r\n    options: [\r\n      { value: 'option1', label: 'Option 1' },\r\n      { value: 'option2', label: 'Option 2' },\r\n      { value: 'option3', label: 'Option 3' },\r\n    ],\r\n  },\r\n}"
+            },
+            {
+                "name": "WithSearch",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/excelsior-angular/src/lib/molecules/tree/tree.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\n  args: {\n    search: '1',\n  },\n\n  argTypes: {\n    search: {\n      control: {\n        type: 'text',\n      },\n    },\n  },\n}"
             },
             {
                 "name": "WithSelectedValue",
@@ -935,8 +945,8 @@
                 "name": "Story",
                 "ctype": "miscellaneous",
                 "subtype": "typealias",
-                "rawtype": "StoryObj<ExCheckboxComponent>",
-                "file": "projects/excelsior-angular/src/lib/atoms/checkbox/checkbox.stories.ts",
+                "rawtype": "StoryObj<ExCheckboxGroupComponent>",
+                "file": "projects/excelsior-angular/src/lib/atoms/checkbox-group/checkbox-group.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "description": "",
@@ -946,8 +956,8 @@
                 "name": "Story",
                 "ctype": "miscellaneous",
                 "subtype": "typealias",
-                "rawtype": "StoryObj<ExCheckboxGroupComponent>",
-                "file": "projects/excelsior-angular/src/lib/atoms/checkbox-group/checkbox-group.stories.ts",
+                "rawtype": "StoryObj<ExCheckboxComponent>",
+                "file": "projects/excelsior-angular/src/lib/atoms/checkbox/checkbox.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "description": "",
@@ -1211,58 +1221,6 @@
                     "defaultValue": "{\r\n  render: (args) => ({\r\n    props: args,\r\n    template: `\r\n    <ex-accordion> \r\n      <ex-accordion-item parent [withChevron]=\"true\">\r\n        Parent\r\n      </ex-accordion-item>\r\n      <ex-accordion-item>\r\n        Child\r\n      </ex-accordion-item>\r\n    </ex-accordion>\r\n    `,\r\n  }),\r\n}"
                 }
             ],
-            "projects/excelsior-angular/src/lib/atoms/checkbox/checkbox.stories.ts": [
-                {
-                    "name": "Checked",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "projects/excelsior-angular/src/lib/atoms/checkbox/checkbox.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Story",
-                    "defaultValue": "{\r\n  args: {\r\n    label: 'Checked Checkbox',\r\n    checked: true,\r\n  },\r\n}"
-                },
-                {
-                    "name": "Indeterminate",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "projects/excelsior-angular/src/lib/atoms/checkbox/checkbox.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Story",
-                    "defaultValue": "{\r\n  args: {\r\n    label: 'Indeterminate Checkbox',\r\n    indeterminate: true,\r\n  },\r\n}"
-                },
-                {
-                    "name": "meta",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "projects/excelsior-angular/src/lib/atoms/checkbox/checkbox.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Meta<ExCheckboxComponent>",
-                    "defaultValue": "{\r\n  title: '1.Atoms/Checkbox',\r\n  component: ExCheckboxComponent,\r\n  tags: ['autodocs'],\r\n  argTypes: {\r\n    label: { control: 'text' },\r\n    checked: { control: 'boolean' },\r\n    checkedChange: { action: 'checkedChange' },\r\n    indeterminate: { control: 'boolean' },\r\n  },\r\n  args: { checkedChange: fn() },\r\n}"
-                },
-                {
-                    "name": "OnlyCheckbox",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "projects/excelsior-angular/src/lib/atoms/checkbox/checkbox.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Story",
-                    "defaultValue": "{\r\n  args: {\r\n    checked: true,\r\n  },\r\n}"
-                },
-                {
-                    "name": "Unchecked",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "projects/excelsior-angular/src/lib/atoms/checkbox/checkbox.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Story",
-                    "defaultValue": "{\r\n  args: {\r\n    label: 'Unchecked Checkbox',\r\n    checked: false,\r\n  },\r\n}"
-                }
-            ],
             "projects/excelsior-angular/src/lib/atoms/checkbox-group/checkbox-group.stories.ts": [
                 {
                     "name": "Checked",
@@ -1313,6 +1271,58 @@
                     "deprecationMessage": "",
                     "type": "Story",
                     "defaultValue": "{\r\n  args: {\r\n    text: 'Permitir assinar como conferente',\r\n    label: 'O usuário vai poder verificar e conferir diversos elementos na plataforma.',\r\n    checked: false,\r\n    disabled: false,\r\n  },\r\n}"
+                }
+            ],
+            "projects/excelsior-angular/src/lib/atoms/checkbox/checkbox.stories.ts": [
+                {
+                    "name": "Checked",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/excelsior-angular/src/lib/atoms/checkbox/checkbox.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\r\n  args: {\r\n    label: 'Checked Checkbox',\r\n    checked: true,\r\n  },\r\n}"
+                },
+                {
+                    "name": "Indeterminate",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/excelsior-angular/src/lib/atoms/checkbox/checkbox.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\r\n  args: {\r\n    label: 'Indeterminate Checkbox',\r\n    indeterminate: true,\r\n  },\r\n}"
+                },
+                {
+                    "name": "meta",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/excelsior-angular/src/lib/atoms/checkbox/checkbox.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Meta<ExCheckboxComponent>",
+                    "defaultValue": "{\r\n  title: '1.Atoms/Checkbox',\r\n  component: ExCheckboxComponent,\r\n  tags: ['autodocs'],\r\n  argTypes: {\r\n    label: { control: 'text' },\r\n    checked: { control: 'boolean' },\r\n    checkedChange: { action: 'checkedChange' },\r\n    indeterminate: { control: 'boolean' },\r\n  },\r\n  args: { checkedChange: fn() },\r\n}"
+                },
+                {
+                    "name": "OnlyCheckbox",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/excelsior-angular/src/lib/atoms/checkbox/checkbox.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\r\n  args: {\r\n    checked: true,\r\n  },\r\n}"
+                },
+                {
+                    "name": "Unchecked",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/excelsior-angular/src/lib/atoms/checkbox/checkbox.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\r\n  args: {\r\n    label: 'Unchecked Checkbox',\r\n    checked: false,\r\n  },\r\n}"
                 }
             ],
             "projects/excelsior-angular/src/lib/atoms/featured-icon/ex-featured-icon.component.stories.ts": [
@@ -1812,7 +1822,17 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Meta<ExTreeComponent>",
-                    "defaultValue": "{\n  title: 'Molecules/Tree',\n  component: ExTreeComponent,\n  tags: ['autodocs'],\n  argTypes: {\n    items: {\n      description: 'The tree items',\n      control: {\n        type: 'object',\n      },\n    },\n    selectedItems: {\n      description: 'The tree items selected',\n      action: 'itemsSelected',\n    },\n    selectedItem: {\n      description: 'The tree item that is the currently selected',\n      action: 'itemSelected',\n    },\n    itemsChange: {\n      description: 'The tree items changed',\n      action: 'itemsChanged',\n    },\n    // search: {\n    //   description: 'The search string',\n    //   control: {\n    //     type: 'text',\n    //   },\n    // },\n\n    // searchChange: {\n    //   description: 'The search string changed',\n    //   action: 'searchChanged',\n    // },\n  },\n  args: {\n    itemsChange: (items) => console.log('items changed', items),\n    selectedItems: (items) => console.log('items selected', items),\n    selectedItem: (item) => console.log('item selected', item),\n    items: [\n      {\n        id: '1',\n        label: 'Item 1',\n        selected: TreeItemStatus.SELECTED,\n        expanded: false,\n        children: [\n          {\n            id: '1.1',\n            label: 'Item 1.1',\n            selected: TreeItemStatus.SELECTED,\n\n            children: [],\n          },\n          {\n            id: '1.2',\n            label: 'Item 1.2',\n            selected: TreeItemStatus.SELECTED,\n            children: [],\n          },\n        ],\n      },\n      {\n        id: '2',\n        label: 'Item 2',\n        selected: TreeItemStatus.UNSELECTED,\n        expanded: false,\n        children: [\n          {\n            id: '2.1',\n            label: 'Item 2.1',\n            selected: TreeItemStatus.UNSELECTED,\n            children: [],\n          },\n          {\n            id: '2.2',\n            label: 'Item 2.2',\n            selected: TreeItemStatus.UNSELECTED,\n            children: [],\n          },\n        ],\n      },\n    ],\n  },\n}"
+                    "defaultValue": "{\n  title: 'Molecules/Tree',\n  component: ExTreeComponent,\n  tags: ['autodocs'],\n  argTypes: {\n    items: {\n      description: 'The tree items',\n      control: {\n        type: 'object',\n      },\n    },\n    selectedItems: {\n      description: 'The tree items selected',\n      action: 'itemsSelected',\n    },\n    selectedItem: {\n      description: 'The tree item that is the currently selected',\n      action: 'itemSelected',\n    },\n    itemsChange: {\n      description: 'The tree items changed',\n      action: 'itemsChanged',\n    },\n    search: {\n      description: 'The search string',\n      control: {\n        type: 'text',\n      },\n    },\n\n    // searchChange: {\n    //   description: 'The search string changed',\n    //   action: 'searchChanged',\n    // },\n  },\n  args: {\n    itemsChange: (items) => console.log('items changed', items),\n    selectedItems: (items) => console.log('items selected', items),\n    selectedItem: (item) => console.log('item selected', item),\n    items: [\n      {\n        id: '1',\n        label: 'Item 1',\n        selected: TreeItemStatus.SELECTED,\n        expanded: false,\n        children: [\n          {\n            id: '1.1',\n            label: 'Item 1.1',\n            selected: TreeItemStatus.SELECTED,\n\n            children: [],\n          },\n          {\n            id: '1.2',\n            label: 'Item 1.2',\n            selected: TreeItemStatus.SELECTED,\n            children: [],\n          },\n        ],\n      },\n      {\n        id: '2',\n        label: 'Item 2',\n        selected: TreeItemStatus.UNSELECTED,\n        expanded: false,\n        children: [\n          {\n            id: '2.1',\n            label: 'Item 2.1',\n            selected: TreeItemStatus.UNSELECTED,\n            children: [],\n          },\n          {\n            id: '2.2',\n            label: 'Item 2.2',\n            selected: TreeItemStatus.UNSELECTED,\n            children: [],\n          },\n        ],\n      },\n    ],\n  },\n}"
+                },
+                {
+                    "name": "WithSearch",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/excelsior-angular/src/lib/molecules/tree/tree.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\n  args: {\n    search: '1',\n  },\n\n  argTypes: {\n    search: {\n      control: {\n        type: 'text',\n      },\n    },\n  },\n}"
                 }
             ],
             "projects/excelsior-angular/src/lib/organisms/modal/modal.stories.ts": [
@@ -2043,19 +2063,6 @@
                     "kind": 183
                 }
             ],
-            "projects/excelsior-angular/src/lib/atoms/checkbox/checkbox.stories.ts": [
-                {
-                    "name": "Story",
-                    "ctype": "miscellaneous",
-                    "subtype": "typealias",
-                    "rawtype": "StoryObj<ExCheckboxComponent>",
-                    "file": "projects/excelsior-angular/src/lib/atoms/checkbox/checkbox.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "description": "",
-                    "kind": 183
-                }
-            ],
             "projects/excelsior-angular/src/lib/atoms/checkbox-group/checkbox-group.stories.ts": [
                 {
                     "name": "Story",
@@ -2063,6 +2070,19 @@
                     "subtype": "typealias",
                     "rawtype": "StoryObj<ExCheckboxGroupComponent>",
                     "file": "projects/excelsior-angular/src/lib/atoms/checkbox-group/checkbox-group.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 183
+                }
+            ],
+            "projects/excelsior-angular/src/lib/atoms/checkbox/checkbox.stories.ts": [
+                {
+                    "name": "Story",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "StoryObj<ExCheckboxComponent>",
+                    "file": "projects/excelsior-angular/src/lib/atoms/checkbox/checkbox.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "description": "",
@@ -3015,6 +3035,16 @@
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
                 "name": "meta",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/excelsior-angular/src/lib/molecules/tree/tree.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "WithSearch",
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
                 "status": "low"
