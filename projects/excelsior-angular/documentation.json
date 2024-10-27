@@ -44,21 +44,21 @@
                 "name": "Checked",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/excelsior-angular/src/lib/atoms/checkbox-group/checkbox-group.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Story",
-                "defaultValue": "{\r\n  args: {\r\n    text: 'Permitir assinar como conferente',\r\n    label: 'O usuário vai poder verificar e conferir diversos elementos na plataforma.',\r\n    checked: true,\r\n    disabled: false,\r\n  },\r\n}"
-            },
-            {
-                "name": "Checked",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
                 "file": "projects/excelsior-angular/src/lib/atoms/checkbox/checkbox.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
                 "defaultValue": "{\r\n  args: {\r\n    label: 'Checked Checkbox',\r\n    checked: true,\r\n  },\r\n}"
+            },
+            {
+                "name": "Checked",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/excelsior-angular/src/lib/atoms/checkbox-group/checkbox-group.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\r\n  args: {\r\n    text: 'Permitir assinar como conferente',\r\n    label: 'O usuário vai poder verificar e conferir diversos elementos na plataforma.',\r\n    checked: true,\r\n    disabled: false,\r\n  },\r\n}"
             },
             {
                 "name": "Cube",
@@ -118,17 +118,17 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\r\n  args: {\r\n    title: 'Click to Expand',\r\n  },\r\n  render: (args) => ({\r\n    props: args,\r\n    template: `<app-collapsible [title]=\"title\"><p>This is the content inside the collapsible.</p></app-collapsible>`,\r\n  }),\r\n}"
+                "defaultValue": "{\r\n  args: {\r\n    title: 'Click to Expand',\r\n  },\r\n  render: (args) => ({\r\n    props: args,\r\n    template: `<ex-collapsable-card [title]=\"title\"><p>This is the content inside the collapsible.</p></ex-collapsable-card>`,\r\n  }),\r\n}"
             },
             {
                 "name": "Default",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/excelsior-angular/src/lib/atoms/dropdown-custom/dropdown.stories.ts",
+                "file": "projects/excelsior-angular/src/lib/atoms/dropdown/dropdown.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\r\n  args: {\r\n    selectedOption: '',\r\n  },\r\n}"
+                "defaultValue": "{\r\n  args: {\r\n    valueChange: (items) => console.log('items changed', items),\r\n  },\r\n  render: (args) => ({\r\n    props: args,\r\n    template: `\r\n    <div style=\"height: 220px\">\r\n      <ex-dropdown\r\n      [options]=\"options\"\r\n      [placeholder]=\"placeholder\"\r\n      (selectOption)=\"selectOption($event)\"\r\n      (valueChange)=\"valueChange\"\r\n      ></ex-dropdown>\r\n    </div>\r\n    `,\r\n  }),\r\n}"
             },
             {
                 "name": "Default",
@@ -470,16 +470,6 @@
                 "name": "meta",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/excelsior-angular/src/lib/atoms/checkbox-group/checkbox-group.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Meta<ExCheckboxGroupComponent>",
-                "defaultValue": "{\r\n  title: '1.Atoms/Checkbox Card',\r\n  component: ExCheckboxGroupComponent,\r\n  tags: ['autodocs'],\r\n  argTypes: {\r\n    label: { control: 'text' },\r\n    text: { control: 'text' },\r\n    checked: { control: 'boolean' },\r\n    checkedChange: { action: 'checkedChange' },\r\n    disabled: { control: 'boolean' },\r\n  },\r\n  args: { checkedChange: fn() },\r\n}"
-            },
-            {
-                "name": "meta",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
                 "file": "projects/excelsior-angular/src/lib/atoms/checkbox/checkbox.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
@@ -490,21 +480,31 @@
                 "name": "meta",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/excelsior-angular/src/lib/atoms/collapsible-card/collapsible.stories.ts",
+                "file": "projects/excelsior-angular/src/lib/atoms/checkbox-group/checkbox-group.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
-                "type": "Meta<CollapsibleComponent>",
-                "defaultValue": "{\r\n  title: '1.Atoms/Collapsible',\r\n  component: CollapsibleComponent,\r\n  tags: ['autodocs'],\r\n  argTypes: {\r\n    title: { control: 'text' },\r\n  },\r\n}"
+                "type": "Meta<ExCheckboxGroupComponent>",
+                "defaultValue": "{\r\n  title: '1.Atoms/Checkbox Card',\r\n  component: ExCheckboxGroupComponent,\r\n  tags: ['autodocs'],\r\n  argTypes: {\r\n    label: { control: 'text' },\r\n    text: { control: 'text' },\r\n    checked: { control: 'boolean' },\r\n    checkedChange: { action: 'checkedChange' },\r\n    disabled: { control: 'boolean' },\r\n  },\r\n  args: { checkedChange: fn() },\r\n}"
             },
             {
                 "name": "meta",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/excelsior-angular/src/lib/atoms/dropdown-custom/dropdown.stories.ts",
+                "file": "projects/excelsior-angular/src/lib/atoms/collapsible-card/collapsible.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
-                "type": "Meta<DropdownComponent>",
-                "defaultValue": "{\r\n  title: '1.Atoms/Dropdown',\r\n  component: DropdownComponent,\r\n  tags: ['autodocs'],\r\n  argTypes: {\r\n    options: { control: 'object' },\r\n    placeholder: { control: 'text' },\r\n    selectedOption: { control: 'text' },\r\n    selectOption: { action: 'selectOption' },\r\n  },\r\n  args: {\r\n    options: ['Option 1', 'Option 2', 'Option 3', 'Option 4', 'Option 6', 'Option 7', 'Option 8'],\r\n    placeholder: 'Select an option',\r\n  },\r\n}"
+                "type": "Meta<ExCollapsibleComponent>",
+                "defaultValue": "{\r\n  title: '1.Atoms/Collapsible',\r\n  component: ExCollapsibleComponent,\r\n  tags: ['autodocs'],\r\n  argTypes: {\r\n    title: { control: 'text' },\r\n  },\r\n}"
+            },
+            {
+                "name": "meta",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/excelsior-angular/src/lib/atoms/dropdown/dropdown.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Meta<ExDropdownComponent>",
+                "defaultValue": "{\r\n  title: '1.Atoms/Dropdown',\r\n  component: ExDropdownComponent,\r\n  tags: ['autodocs'],\r\n  argTypes: {\r\n    options: { control: 'object' },\r\n    placeholder: { control: 'text' },\r\n    valueChange: { action: 'selectOption' },\r\n  },\r\n  args: {\r\n    options: [\r\n      { id: '1', label: 'Option 1', value: 'Option 1' },\r\n      { id: '1', label: 'Option 2', value: 'Option 2' },\r\n      { id: '1', label: 'Option 3', value: 'Option 3' },\r\n    ],\r\n    placeholder: 'Select an option',\r\n  },\r\n}"
             },
             {
                 "name": "meta",
@@ -630,7 +630,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\r\n  args: {\r\n    title: 'Open by Default',\r\n  },\r\n  render: (args) => ({\r\n    props: { ...args, isCollapsed: false },\r\n    template: `<app-collapsible [title]=\"title\" [isCollapsed]=\"false\">This is the content inside the collapsible.</app-collapsible>`,\r\n  }),\r\n}"
+                "defaultValue": "{\r\n  args: {\r\n    title: 'Open by Default',\r\n  },\r\n  render: (args) => ({\r\n    props: { ...args, isCollapsed: false },\r\n    template: `<ex-collapsable-card [title]=\"title\" [isCollapsed]=\"false\">This is the content inside the collapsible.</ex-collapsable-card>`,\r\n  }),\r\n}"
             },
             {
                 "name": "patch",
@@ -778,21 +778,21 @@
                 "name": "Unchecked",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/excelsior-angular/src/lib/atoms/checkbox-group/checkbox-group.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Story",
-                "defaultValue": "{\r\n  args: {\r\n    text: 'Permitir assinar como conferente',\r\n    label: 'O usuário vai poder verificar e conferir diversos elementos na plataforma.',\r\n    checked: false,\r\n    disabled: false,\r\n  },\r\n}"
-            },
-            {
-                "name": "Unchecked",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
                 "file": "projects/excelsior-angular/src/lib/atoms/checkbox/checkbox.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
                 "defaultValue": "{\r\n  args: {\r\n    label: 'Unchecked Checkbox',\r\n    checked: false,\r\n  },\r\n}"
+            },
+            {
+                "name": "Unchecked",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/excelsior-angular/src/lib/atoms/checkbox-group/checkbox-group.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\r\n  args: {\r\n    text: 'Permitir assinar como conferente',\r\n    label: 'O usuário vai poder verificar e conferir diversos elementos na plataforma.',\r\n    checked: false,\r\n    disabled: false,\r\n  },\r\n}"
             },
             {
                 "name": "UserPlus",
@@ -868,11 +868,11 @@
                 "name": "WithSelectedValue",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/excelsior-angular/src/lib/atoms/dropdown-custom/dropdown.stories.ts",
+                "file": "projects/excelsior-angular/src/lib/atoms/dropdown/dropdown.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\r\n  args: {\r\n    selectedOption: 'Option 2',\r\n  },\r\n}"
+                "defaultValue": "{\r\n  args: {\r\n    selectedOption: {\r\n      id: '1',\r\n      label: 'Option 1',\r\n      value: 'Option 1',\r\n    },\r\n  },\r\n}"
             },
             {
                 "name": "WithSelectedValue",
@@ -945,17 +945,6 @@
                 "name": "Story",
                 "ctype": "miscellaneous",
                 "subtype": "typealias",
-                "rawtype": "StoryObj<ExCheckboxGroupComponent>",
-                "file": "projects/excelsior-angular/src/lib/atoms/checkbox-group/checkbox-group.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "description": "",
-                "kind": 183
-            },
-            {
-                "name": "Story",
-                "ctype": "miscellaneous",
-                "subtype": "typealias",
                 "rawtype": "StoryObj<ExCheckboxComponent>",
                 "file": "projects/excelsior-angular/src/lib/atoms/checkbox/checkbox.stories.ts",
                 "deprecated": false,
@@ -967,7 +956,18 @@
                 "name": "Story",
                 "ctype": "miscellaneous",
                 "subtype": "typealias",
-                "rawtype": "StoryObj<CollapsibleComponent>",
+                "rawtype": "StoryObj<ExCheckboxGroupComponent>",
+                "file": "projects/excelsior-angular/src/lib/atoms/checkbox-group/checkbox-group.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "kind": 183
+            },
+            {
+                "name": "Story",
+                "ctype": "miscellaneous",
+                "subtype": "typealias",
+                "rawtype": "StoryObj<ExCollapsibleComponent>",
                 "file": "projects/excelsior-angular/src/lib/atoms/collapsible-card/collapsible.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
@@ -978,8 +978,8 @@
                 "name": "Story",
                 "ctype": "miscellaneous",
                 "subtype": "typealias",
-                "rawtype": "StoryObj<DropdownComponent>",
-                "file": "projects/excelsior-angular/src/lib/atoms/dropdown-custom/dropdown.stories.ts",
+                "rawtype": "StoryObj<ExDropdownComponent>",
+                "file": "projects/excelsior-angular/src/lib/atoms/dropdown/dropdown.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "description": "",
@@ -1221,58 +1221,6 @@
                     "defaultValue": "{\r\n  render: (args) => ({\r\n    props: args,\r\n    template: `\r\n    <ex-accordion> \r\n      <ex-accordion-item parent [withChevron]=\"true\">\r\n        Parent\r\n      </ex-accordion-item>\r\n      <ex-accordion-item>\r\n        Child\r\n      </ex-accordion-item>\r\n    </ex-accordion>\r\n    `,\r\n  }),\r\n}"
                 }
             ],
-            "projects/excelsior-angular/src/lib/atoms/checkbox-group/checkbox-group.stories.ts": [
-                {
-                    "name": "Checked",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "projects/excelsior-angular/src/lib/atoms/checkbox-group/checkbox-group.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Story",
-                    "defaultValue": "{\r\n  args: {\r\n    text: 'Permitir assinar como conferente',\r\n    label: 'O usuário vai poder verificar e conferir diversos elementos na plataforma.',\r\n    checked: true,\r\n    disabled: false,\r\n  },\r\n}"
-                },
-                {
-                    "name": "Disabled",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "projects/excelsior-angular/src/lib/atoms/checkbox-group/checkbox-group.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Story",
-                    "defaultValue": "{\r\n  args: {\r\n    text: 'Permitir assinar como conferente',\r\n    label: 'O usuário vai poder verificar e conferir diversos elementos na plataforma.',\r\n    checked: true,\r\n    disabled: true,\r\n  },\r\n}"
-                },
-                {
-                    "name": "meta",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "projects/excelsior-angular/src/lib/atoms/checkbox-group/checkbox-group.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Meta<ExCheckboxGroupComponent>",
-                    "defaultValue": "{\r\n  title: '1.Atoms/Checkbox Card',\r\n  component: ExCheckboxGroupComponent,\r\n  tags: ['autodocs'],\r\n  argTypes: {\r\n    label: { control: 'text' },\r\n    text: { control: 'text' },\r\n    checked: { control: 'boolean' },\r\n    checkedChange: { action: 'checkedChange' },\r\n    disabled: { control: 'boolean' },\r\n  },\r\n  args: { checkedChange: fn() },\r\n}"
-                },
-                {
-                    "name": "TestCheckbox",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "projects/excelsior-angular/src/lib/atoms/checkbox-group/checkbox-group.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Story",
-                    "defaultValue": "{\r\n  args: {\r\n    label: 'Unchecked Checkbox',\r\n    checked: true,\r\n    disabled: false,\r\n  },\r\n}"
-                },
-                {
-                    "name": "Unchecked",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "projects/excelsior-angular/src/lib/atoms/checkbox-group/checkbox-group.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Story",
-                    "defaultValue": "{\r\n  args: {\r\n    text: 'Permitir assinar como conferente',\r\n    label: 'O usuário vai poder verificar e conferir diversos elementos na plataforma.',\r\n    checked: false,\r\n    disabled: false,\r\n  },\r\n}"
-                }
-            ],
             "projects/excelsior-angular/src/lib/atoms/checkbox/checkbox.stories.ts": [
                 {
                     "name": "Checked",
@@ -1323,6 +1271,58 @@
                     "deprecationMessage": "",
                     "type": "Story",
                     "defaultValue": "{\r\n  args: {\r\n    label: 'Unchecked Checkbox',\r\n    checked: false,\r\n  },\r\n}"
+                }
+            ],
+            "projects/excelsior-angular/src/lib/atoms/checkbox-group/checkbox-group.stories.ts": [
+                {
+                    "name": "Checked",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/excelsior-angular/src/lib/atoms/checkbox-group/checkbox-group.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\r\n  args: {\r\n    text: 'Permitir assinar como conferente',\r\n    label: 'O usuário vai poder verificar e conferir diversos elementos na plataforma.',\r\n    checked: true,\r\n    disabled: false,\r\n  },\r\n}"
+                },
+                {
+                    "name": "Disabled",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/excelsior-angular/src/lib/atoms/checkbox-group/checkbox-group.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\r\n  args: {\r\n    text: 'Permitir assinar como conferente',\r\n    label: 'O usuário vai poder verificar e conferir diversos elementos na plataforma.',\r\n    checked: true,\r\n    disabled: true,\r\n  },\r\n}"
+                },
+                {
+                    "name": "meta",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/excelsior-angular/src/lib/atoms/checkbox-group/checkbox-group.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Meta<ExCheckboxGroupComponent>",
+                    "defaultValue": "{\r\n  title: '1.Atoms/Checkbox Card',\r\n  component: ExCheckboxGroupComponent,\r\n  tags: ['autodocs'],\r\n  argTypes: {\r\n    label: { control: 'text' },\r\n    text: { control: 'text' },\r\n    checked: { control: 'boolean' },\r\n    checkedChange: { action: 'checkedChange' },\r\n    disabled: { control: 'boolean' },\r\n  },\r\n  args: { checkedChange: fn() },\r\n}"
+                },
+                {
+                    "name": "TestCheckbox",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/excelsior-angular/src/lib/atoms/checkbox-group/checkbox-group.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\r\n  args: {\r\n    label: 'Unchecked Checkbox',\r\n    checked: true,\r\n    disabled: false,\r\n  },\r\n}"
+                },
+                {
+                    "name": "Unchecked",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/excelsior-angular/src/lib/atoms/checkbox-group/checkbox-group.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\r\n  args: {\r\n    text: 'Permitir assinar como conferente',\r\n    label: 'O usuário vai poder verificar e conferir diversos elementos na plataforma.',\r\n    checked: false,\r\n    disabled: false,\r\n  },\r\n}"
                 }
             ],
             "projects/excelsior-angular/src/lib/atoms/featured-icon/ex-featured-icon.component.stories.ts": [
@@ -1642,7 +1642,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\r\n  args: {\r\n    title: 'Click to Expand',\r\n  },\r\n  render: (args) => ({\r\n    props: args,\r\n    template: `<app-collapsible [title]=\"title\"><p>This is the content inside the collapsible.</p></app-collapsible>`,\r\n  }),\r\n}"
+                    "defaultValue": "{\r\n  args: {\r\n    title: 'Click to Expand',\r\n  },\r\n  render: (args) => ({\r\n    props: args,\r\n    template: `<ex-collapsable-card [title]=\"title\"><p>This is the content inside the collapsible.</p></ex-collapsable-card>`,\r\n  }),\r\n}"
                 },
                 {
                     "name": "meta",
@@ -1651,8 +1651,8 @@
                     "file": "projects/excelsior-angular/src/lib/atoms/collapsible-card/collapsible.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "type": "Meta<CollapsibleComponent>",
-                    "defaultValue": "{\r\n  title: '1.Atoms/Collapsible',\r\n  component: CollapsibleComponent,\r\n  tags: ['autodocs'],\r\n  argTypes: {\r\n    title: { control: 'text' },\r\n  },\r\n}"
+                    "type": "Meta<ExCollapsibleComponent>",
+                    "defaultValue": "{\r\n  title: '1.Atoms/Collapsible',\r\n  component: ExCollapsibleComponent,\r\n  tags: ['autodocs'],\r\n  argTypes: {\r\n    title: { control: 'text' },\r\n  },\r\n}"
                 },
                 {
                     "name": "OpenByDefault",
@@ -1662,39 +1662,39 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\r\n  args: {\r\n    title: 'Open by Default',\r\n  },\r\n  render: (args) => ({\r\n    props: { ...args, isCollapsed: false },\r\n    template: `<app-collapsible [title]=\"title\" [isCollapsed]=\"false\">This is the content inside the collapsible.</app-collapsible>`,\r\n  }),\r\n}"
+                    "defaultValue": "{\r\n  args: {\r\n    title: 'Open by Default',\r\n  },\r\n  render: (args) => ({\r\n    props: { ...args, isCollapsed: false },\r\n    template: `<ex-collapsable-card [title]=\"title\" [isCollapsed]=\"false\">This is the content inside the collapsible.</ex-collapsable-card>`,\r\n  }),\r\n}"
                 }
             ],
-            "projects/excelsior-angular/src/lib/atoms/dropdown-custom/dropdown.stories.ts": [
+            "projects/excelsior-angular/src/lib/atoms/dropdown/dropdown.stories.ts": [
                 {
                     "name": "Default",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "projects/excelsior-angular/src/lib/atoms/dropdown-custom/dropdown.stories.ts",
+                    "file": "projects/excelsior-angular/src/lib/atoms/dropdown/dropdown.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\r\n  args: {\r\n    selectedOption: '',\r\n  },\r\n}"
+                    "defaultValue": "{\r\n  args: {\r\n    valueChange: (items) => console.log('items changed', items),\r\n  },\r\n  render: (args) => ({\r\n    props: args,\r\n    template: `\r\n    <div style=\"height: 220px\">\r\n      <ex-dropdown\r\n      [options]=\"options\"\r\n      [placeholder]=\"placeholder\"\r\n      (selectOption)=\"selectOption($event)\"\r\n      (valueChange)=\"valueChange\"\r\n      ></ex-dropdown>\r\n    </div>\r\n    `,\r\n  }),\r\n}"
                 },
                 {
                     "name": "meta",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "projects/excelsior-angular/src/lib/atoms/dropdown-custom/dropdown.stories.ts",
+                    "file": "projects/excelsior-angular/src/lib/atoms/dropdown/dropdown.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "type": "Meta<DropdownComponent>",
-                    "defaultValue": "{\r\n  title: '1.Atoms/Dropdown',\r\n  component: DropdownComponent,\r\n  tags: ['autodocs'],\r\n  argTypes: {\r\n    options: { control: 'object' },\r\n    placeholder: { control: 'text' },\r\n    selectedOption: { control: 'text' },\r\n    selectOption: { action: 'selectOption' },\r\n  },\r\n  args: {\r\n    options: ['Option 1', 'Option 2', 'Option 3', 'Option 4', 'Option 6', 'Option 7', 'Option 8'],\r\n    placeholder: 'Select an option',\r\n  },\r\n}"
+                    "type": "Meta<ExDropdownComponent>",
+                    "defaultValue": "{\r\n  title: '1.Atoms/Dropdown',\r\n  component: ExDropdownComponent,\r\n  tags: ['autodocs'],\r\n  argTypes: {\r\n    options: { control: 'object' },\r\n    placeholder: { control: 'text' },\r\n    valueChange: { action: 'selectOption' },\r\n  },\r\n  args: {\r\n    options: [\r\n      { id: '1', label: 'Option 1', value: 'Option 1' },\r\n      { id: '1', label: 'Option 2', value: 'Option 2' },\r\n      { id: '1', label: 'Option 3', value: 'Option 3' },\r\n    ],\r\n    placeholder: 'Select an option',\r\n  },\r\n}"
                 },
                 {
                     "name": "WithSelectedValue",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "projects/excelsior-angular/src/lib/atoms/dropdown-custom/dropdown.stories.ts",
+                    "file": "projects/excelsior-angular/src/lib/atoms/dropdown/dropdown.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\r\n  args: {\r\n    selectedOption: 'Option 2',\r\n  },\r\n}"
+                    "defaultValue": "{\r\n  args: {\r\n    selectedOption: {\r\n      id: '1',\r\n      label: 'Option 1',\r\n      value: 'Option 1',\r\n    },\r\n  },\r\n}"
                 }
             ],
             "projects/excelsior-angular/src/lib/atoms/input/input.stories.ts": [
@@ -2063,19 +2063,6 @@
                     "kind": 183
                 }
             ],
-            "projects/excelsior-angular/src/lib/atoms/checkbox-group/checkbox-group.stories.ts": [
-                {
-                    "name": "Story",
-                    "ctype": "miscellaneous",
-                    "subtype": "typealias",
-                    "rawtype": "StoryObj<ExCheckboxGroupComponent>",
-                    "file": "projects/excelsior-angular/src/lib/atoms/checkbox-group/checkbox-group.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "description": "",
-                    "kind": 183
-                }
-            ],
             "projects/excelsior-angular/src/lib/atoms/checkbox/checkbox.stories.ts": [
                 {
                     "name": "Story",
@@ -2089,12 +2076,25 @@
                     "kind": 183
                 }
             ],
+            "projects/excelsior-angular/src/lib/atoms/checkbox-group/checkbox-group.stories.ts": [
+                {
+                    "name": "Story",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "StoryObj<ExCheckboxGroupComponent>",
+                    "file": "projects/excelsior-angular/src/lib/atoms/checkbox-group/checkbox-group.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 183
+                }
+            ],
             "projects/excelsior-angular/src/lib/atoms/collapsible-card/collapsible.stories.ts": [
                 {
                     "name": "Story",
                     "ctype": "miscellaneous",
                     "subtype": "typealias",
-                    "rawtype": "StoryObj<CollapsibleComponent>",
+                    "rawtype": "StoryObj<ExCollapsibleComponent>",
                     "file": "projects/excelsior-angular/src/lib/atoms/collapsible-card/collapsible.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
@@ -2102,13 +2102,13 @@
                     "kind": 183
                 }
             ],
-            "projects/excelsior-angular/src/lib/atoms/dropdown-custom/dropdown.stories.ts": [
+            "projects/excelsior-angular/src/lib/atoms/dropdown/dropdown.stories.ts": [
                 {
                     "name": "Story",
                     "ctype": "miscellaneous",
                     "subtype": "typealias",
-                    "rawtype": "StoryObj<DropdownComponent>",
-                    "file": "projects/excelsior-angular/src/lib/atoms/dropdown-custom/dropdown.stories.ts",
+                    "rawtype": "StoryObj<ExDropdownComponent>",
+                    "file": "projects/excelsior-angular/src/lib/atoms/dropdown/dropdown.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "description": "",
@@ -2650,7 +2650,7 @@
                 "status": "low"
             },
             {
-                "filePath": "projects/excelsior-angular/src/lib/atoms/dropdown-custom/dropdown.stories.ts",
+                "filePath": "projects/excelsior-angular/src/lib/atoms/dropdown/dropdown.stories.ts",
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
@@ -2660,7 +2660,7 @@
                 "status": "low"
             },
             {
-                "filePath": "projects/excelsior-angular/src/lib/atoms/dropdown-custom/dropdown.stories.ts",
+                "filePath": "projects/excelsior-angular/src/lib/atoms/dropdown/dropdown.stories.ts",
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
@@ -2670,7 +2670,7 @@
                 "status": "low"
             },
             {
-                "filePath": "projects/excelsior-angular/src/lib/atoms/dropdown-custom/dropdown.stories.ts",
+                "filePath": "projects/excelsior-angular/src/lib/atoms/dropdown/dropdown.stories.ts",
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
