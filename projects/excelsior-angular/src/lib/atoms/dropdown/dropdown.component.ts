@@ -11,10 +11,11 @@ import {
   ViewEncapsulation,
 } from '@angular/core'
 import { CommonModule } from '@angular/common'
-import { DropdownChangeEvent, SelectItem } from './dropdown-item.model'
+
 import { NG_VALUE_ACCESSOR } from '@angular/forms'
 import { cloneDeep } from 'lodash'
 import { ExIconComponent } from '../icon/ex-icon.component'
+import { DropdownChangeEvent, SelectItem } from '../../types'
 export const DROPDOWN_VALUE_ACCESSOR: any = {
   provide: NG_VALUE_ACCESSOR,
   useExisting: forwardRef(() => ExDropdownComponent),
