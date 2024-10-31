@@ -2,6 +2,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import {
   ChangeDetectionStrategy,
+  ChangeDetectorRef,
   Component,
   EventEmitter,
   forwardRef,
@@ -62,18 +63,29 @@ export class ExDropdownItemComponent {
   selector: 'ex-dropdown',
   standalone: true,
   imports: [CommonModule, ExDropdownItemComponent, ExIconComponent],
-  template: `<div class="ex-dropdown-container" (click)="toggleDropdown()" [class.open]="dropdownOpen">
-    <div class="selected-value" [class.open]="dropdownOpen">
-      <input class="ex-dropdown-search" type="text" [value]="selectedOption" (keyup)="filterOnChange($event)" />
+  template: `<div class="ex-dropdown-container" (click)="toggleDropdown()" [ngClass]="{ open: dropdownOpen === true }">
+    <div class="selected-value" [ngClass]="{ open: dropdownOpen === true }">
+      <input
+        [placeholder]="placeholder"
+        class="ex-dropdown-search"
+        type="text"
+        [value]="selectedOption?.label || selectedOption?.value || null"
+        (keyup)="filterOnChange($event)"
+      />
       <i>
         <ex-icon [name]="'chevron-down'" />
       </i>
     </div>
-    <ul class="options-list" [class.show]="dropdownOpen" style="z-index: 10000;">
+    <ul
+      (click)="toggleDropdown()"
+      class="options-list"
+      [ngClass]="{ show: dropdownOpen === true }"
+      style="z-index: 10000;"
+    >
       <ng-template ngFor let-option [ngForOf]="filterValue ? filteredOptions : options" let-i="index">
         <ng-container>
           <ex-dropdown-item
-            [id]="id + '_ex-dropdown-item_' + i"
+            [id]="_id + '_ex-dropdown-item_' + i"
             [option]="option"
             [selected]="isSelected(option)"
             [label]="getOptionLabel(option)"
@@ -94,6 +106,7 @@ export class ExDropdownItemComponent {
   encapsulation: ViewEncapsulation.ShadowDom,
 })
 export class ExDropdownComponent implements OnInit {
+  constructor(private cdr: ChangeDetectorRef) {}
   @Input() emptyLabel: string = 'No results found'
 
   ngOnInit(): void {}
@@ -112,16 +125,30 @@ export class ExDropdownComponent implements OnInit {
   @Input() placeholder: string = 'Select an option'
   filterValue: string | undefined = undefined
   @Output() valueChange = new EventEmitter<DropdownChangeEvent>()
-  selectedOption: SelectItem | null = null
-  dropdownOpen = false
+  public selectedOption: SelectItem | null = null
+  public dropdownOpen = false
+  public isFiltering = false
+
+  get _id(): string {
+    return this.id || this.generateUUIDv4()
+  }
+
+  generateUUIDv4(): string {
+    return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (c) {
+      var r = (Math.random() * 16) | 0,
+        v = c == 'x' ? r : (r & 0x3) | 0x8
+      return v.toString(16)
+    })
+  }
 
   filterOnChange(event: Event) {
-    console.log('CULO')
     this.filterValue = (event.target as HTMLInputElement).value
+    this.isFiltering = true
   }
 
   get filteredOptions(): SelectItem[] {
     if (!this.filterValue) {
+      this.isFiltering = false
       return this.options
     }
     return this.options.filter((option) => option.label?.toLowerCase().includes(this.filterValue!.toLowerCase()))
@@ -131,20 +158,8 @@ export class ExDropdownComponent implements OnInit {
     this.dropdownOpen = !this.dropdownOpen
   }
 
-  selectOption() {
-    this.dropdownOpen = false
-  }
-
-  public generateNewUUID(): string {
-    return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (c) {
-      var r = (Math.random() * 16) | 0,
-        v = c == 'x' ? r : (r & 0x3) | 0x8
-      return v.toString(16)
-    })
-  }
-
   public isSelected(option: SelectItem): boolean {
-    return this.selectedOption === option.value
+    return this.selectedOption?.value === option.value
   }
 
   public getOptionLabel(option: SelectItem): string {
@@ -152,13 +167,17 @@ export class ExDropdownComponent implements OnInit {
   }
 
   public onOptionSelect(event: Event, option: SelectItem): void {
+    console.log('option selected', option)
+    this.dropdownOpen = false
+    this.isFiltering = false
+    this.filterValue = undefined
     const originalValue = cloneDeep(this.selectedOption) as SelectItem
-    this.selectedOption = option.value
+    this.selectedOption = option
     this.valueChange.emit({
       originalValue: originalValue,
       value: option,
     })
-    this.selectOption()
+    this.cdr.detectChanges()
   }
 
   public isEmpty(): boolean {

@@ -1,4 +1,10 @@
 @import '../../styles/colors.scss';
+.ex-highlight {
+  background-color: var(--surface-container);
+  border-radius: var(--radius-md);
+  color: var(--on-surface-color);
+}
+
   .ex-dropdown-search {
     // remove all default styles of input
     all: unset;

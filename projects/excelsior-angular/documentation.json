@@ -440,16 +440,6 @@
                 "name": "meta",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/excelsior-angular/src/lib/atoms/badge/badge.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Meta<ExBadgeComponent>",
-                "defaultValue": "{\r\n  title: '1.Atoms/Badge',\r\n  component: ExBadgeComponent,\r\n  tags: ['autodocs'],\r\n  argTypes: {\r\n    type: {\r\n      control: { type: 'select' },\r\n      options: ['success', 'pink', 'warning', 'error', 'purple', 'indigo', 'indigo', 'blue-light'],\r\n    },\r\n    text: { control: 'text' },\r\n  },\r\n  // Use `fn` to spy on the onClick arg, which will appear in the actions panel once invoked: https://storybook.js.org/docs/essentials/actions#action-args\r\n  args: { onClick: fn() },\r\n}"
-            },
-            {
-                "name": "meta",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
                 "file": "projects/excelsior-angular/src/lib/atoms/button/ex-button.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
@@ -465,6 +455,16 @@
                 "deprecationMessage": "",
                 "type": "Meta<ExCardComponent>",
                 "defaultValue": "{\r\n  title: '1.Atoms/Card',\r\n  component: ExCardComponent,\r\n  tags: ['autodocs'],\r\n}"
+            },
+            {
+                "name": "meta",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/excelsior-angular/src/lib/atoms/badge/badge.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Meta<ExBadgeComponent>",
+                "defaultValue": "{\r\n  title: '1.Atoms/Badge',\r\n  component: ExBadgeComponent,\r\n  tags: ['autodocs'],\r\n  argTypes: {\r\n    type: {\r\n      control: { type: 'select' },\r\n      options: ['success', 'pink', 'warning', 'error', 'purple', 'indigo', 'indigo', 'blue-light'],\r\n    },\r\n    text: { control: 'text' },\r\n  },\r\n  // Use `fn` to spy on the onClick arg, which will appear in the actions panel once invoked: https://storybook.js.org/docs/essentials/actions#action-args\r\n  args: { onClick: fn() },\r\n}"
             },
             {
                 "name": "meta",
@@ -504,7 +504,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Meta<ExDropdownComponent>",
-                "defaultValue": "{\r\n  title: '1.Atoms/Dropdown',\r\n  component: ExDropdownComponent,\r\n  tags: ['autodocs'],\r\n  argTypes: {\r\n    options: { control: 'object' },\r\n    placeholder: { control: 'text' },\r\n    valueChange: { action: 'selectOption' },\r\n  },\r\n  args: {\r\n    options: [\r\n      { id: '1', label: 'Option 1', value: 'Option 1' },\r\n      { id: '1', label: 'Option 2', value: 'Option 2' },\r\n      { id: '1', label: 'Option 3', value: 'Option 3' },\r\n    ],\r\n    placeholder: 'Select an option',\r\n  },\r\n}"
+                "defaultValue": "{\r\n  title: '1.Atoms/Dropdown',\r\n  component: ExDropdownComponent,\r\n  tags: ['autodocs'],\r\n  argTypes: {\r\n    options: { control: 'object' },\r\n    placeholder: { control: 'text' },\r\n    valueChange: { action: 'selectOption' },\r\n  },\r\n  args: {\r\n    options: [\r\n      { id: '1', label: 'Option 1', value: '1' },\r\n      { id: '2', label: 'Option 2', value: '2' },\r\n      { id: '3', label: 'Option 3', value: '3' },\r\n    ],\r\n    placeholder: 'Select an option',\r\n  },\r\n}"
             },
             {
                 "name": "meta",
@@ -872,7 +872,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\r\n  args: {\r\n    selectedOption: {\r\n      id: '1',\r\n      label: 'Option 1',\r\n      value: 'Option 1',\r\n    },\r\n  },\r\n}"
+                "defaultValue": "{\r\n  args: {\r\n    selectedOption: {\r\n      id: '1',\r\n      label: 'Option 1',\r\n      value: '1',\r\n    },\r\n  },\r\n}"
             },
             {
                 "name": "WithSelectedValue",
@@ -912,17 +912,6 @@
                 "name": "Story",
                 "ctype": "miscellaneous",
                 "subtype": "typealias",
-                "rawtype": "StoryObj<ExBadgeComponent>",
-                "file": "projects/excelsior-angular/src/lib/atoms/badge/badge.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "description": "",
-                "kind": 183
-            },
-            {
-                "name": "Story",
-                "ctype": "miscellaneous",
-                "subtype": "typealias",
                 "rawtype": "StoryObj<ExButtonComponent>",
                 "file": "projects/excelsior-angular/src/lib/atoms/button/ex-button.stories.ts",
                 "deprecated": false,
@@ -936,6 +925,17 @@
                 "subtype": "typealias",
                 "rawtype": "StoryObj<ExCardComponent>",
                 "file": "projects/excelsior-angular/src/lib/atoms/card/card.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "kind": 183
+            },
+            {
+                "name": "Story",
+                "ctype": "miscellaneous",
+                "subtype": "typealias",
+                "rawtype": "StoryObj<ExBadgeComponent>",
+                "file": "projects/excelsior-angular/src/lib/atoms/badge/badge.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "description": "",
@@ -1684,7 +1684,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Meta<ExDropdownComponent>",
-                    "defaultValue": "{\r\n  title: '1.Atoms/Dropdown',\r\n  component: ExDropdownComponent,\r\n  tags: ['autodocs'],\r\n  argTypes: {\r\n    options: { control: 'object' },\r\n    placeholder: { control: 'text' },\r\n    valueChange: { action: 'selectOption' },\r\n  },\r\n  args: {\r\n    options: [\r\n      { id: '1', label: 'Option 1', value: 'Option 1' },\r\n      { id: '1', label: 'Option 2', value: 'Option 2' },\r\n      { id: '1', label: 'Option 3', value: 'Option 3' },\r\n    ],\r\n    placeholder: 'Select an option',\r\n  },\r\n}"
+                    "defaultValue": "{\r\n  title: '1.Atoms/Dropdown',\r\n  component: ExDropdownComponent,\r\n  tags: ['autodocs'],\r\n  argTypes: {\r\n    options: { control: 'object' },\r\n    placeholder: { control: 'text' },\r\n    valueChange: { action: 'selectOption' },\r\n  },\r\n  args: {\r\n    options: [\r\n      { id: '1', label: 'Option 1', value: '1' },\r\n      { id: '2', label: 'Option 2', value: '2' },\r\n      { id: '3', label: 'Option 3', value: '3' },\r\n    ],\r\n    placeholder: 'Select an option',\r\n  },\r\n}"
                 },
                 {
                     "name": "WithSelectedValue",
@@ -1694,7 +1694,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\r\n  args: {\r\n    selectedOption: {\r\n      id: '1',\r\n      label: 'Option 1',\r\n      value: 'Option 1',\r\n    },\r\n  },\r\n}"
+                    "defaultValue": "{\r\n  args: {\r\n    selectedOption: {\r\n      id: '1',\r\n      label: 'Option 1',\r\n      value: '1',\r\n    },\r\n  },\r\n}"
                 }
             ],
             "projects/excelsior-angular/src/lib/atoms/input/input.stories.ts": [
@@ -2024,19 +2024,6 @@
                     "kind": 183
                 }
             ],
-            "projects/excelsior-angular/src/lib/atoms/badge/badge.stories.ts": [
-                {
-                    "name": "Story",
-                    "ctype": "miscellaneous",
-                    "subtype": "typealias",
-                    "rawtype": "StoryObj<ExBadgeComponent>",
-                    "file": "projects/excelsior-angular/src/lib/atoms/badge/badge.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "description": "",
-                    "kind": 183
-                }
-            ],
             "projects/excelsior-angular/src/lib/atoms/button/ex-button.stories.ts": [
                 {
                     "name": "Story",
@@ -2057,6 +2044,19 @@
                     "subtype": "typealias",
                     "rawtype": "StoryObj<ExCardComponent>",
                     "file": "projects/excelsior-angular/src/lib/atoms/card/card.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 183
+                }
+            ],
+            "projects/excelsior-angular/src/lib/atoms/badge/badge.stories.ts": [
+                {
+                    "name": "Story",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "StoryObj<ExBadgeComponent>",
+                    "file": "projects/excelsior-angular/src/lib/atoms/badge/badge.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "description": "",
