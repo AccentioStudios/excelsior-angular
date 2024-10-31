@@ -3,11 +3,11 @@
   border: 1px solid var(--border-primary);
   border-radius: var(--radius-xl);
   overflow: hidden;
-  padding: 16px 24px 16px 24px;
+  padding: 0px;
 }
 
 .collapsble-header {
-  padding: 1rem;
+  padding: 17px 24px 17px 24px;
   width: 100%;
   text-align: left;
   border: none;
@@ -20,20 +20,16 @@
   font-weight: 600;
   line-height: 20px;
   text-align: left;
-  color: var(--text-secondary-700);
-}
-
-.collapsble-content {
-  padding: 1rem;
-  transition: all ease-in-out 0.3s;
-  padding: 16px, 24px, 16px, 24px;
+  color: var(--on-surface-color);
 }
 
 .collapsble-content {
   display: block;
+  transition: all ease-in-out 0.3s;
+  padding: 16px 24px 16px 24px;
   font-size: 14px;
   font-weight: 400;
   line-height: 20px;
   text-align: left;
-  color: #475467;
+  color: var(--on-surface-color);
 }
