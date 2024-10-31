@@ -3,7 +3,7 @@
   border: 1px solid var(--border-primary);
   border-radius: var(--radius-xl);
   overflow: hidden;
-  padding: 17px, 24px, 17px, 24px;
+  padding: 16px 24px 16px 24px;
 }
 
 .collapsble-header {
@@ -15,7 +15,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: var(--bg-primary);
+  background-color: transparent;
   font-size: 14px;
   font-weight: 600;
   line-height: 20px;
