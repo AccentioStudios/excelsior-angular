@@ -12,6 +12,7 @@
     padding: 0px;
     margin: 0px;
     font-size: 16px;
+    box-sizing: border-box;
   }
 
 .ex-dropdown-container {
@@ -24,6 +25,7 @@
   cursor: pointer;
   user-select: none;
   outline: none;
+  box-sizing: border-box;
 }
 
 .ex-dropdown-container.open {
@@ -61,6 +63,7 @@
 }
 
 .options-list {
+  box-sizing: border-box;
   display: none;
   position: absolute;
   top: calc(100% + 6px);
