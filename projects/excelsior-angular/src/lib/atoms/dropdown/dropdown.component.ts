@@ -69,6 +69,7 @@ export class ExDropdownItemComponent {
         [placeholder]="placeholder"
         class="ex-dropdown-search"
         type="text"
+        (ngBlur)="toggleDropdown()"
         [value]="selectedOption?.label || selectedOption?.value || null"
         (keyup)="filterOnChange($event)"
       />
