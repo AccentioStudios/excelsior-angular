@@ -1,6 +1,6 @@
 {
   "name": "@accentiostudios/excelsior-angular",
-  "version": "1.0.8-alpha.10.2.6",
+  "version": "1.0.8-alpha.10.2.7",
   "peerDependencies": {
     "@angular/common": "^15.2.10",
     "@angular/core": "^15.2.10"

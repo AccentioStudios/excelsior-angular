@@ -39,6 +39,7 @@
   color: var(--fg-disabled);
   background-color: var(--bg-disabled);
   border-color: var(--border-disabled_subtle);
+  pointer-events: none;
 }
 
 .ex-input__container.disabled label {
