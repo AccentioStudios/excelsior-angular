@@ -128,7 +128,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\r\n  args: {\r\n    valueChange: (items) => console.log('items changed', items),\r\n  },\r\n  render: (args) => ({\r\n    props: args,\r\n    template: `\r\n    <div style=\"height: 220px\">\r\n      <ex-dropdown\r\n      [options]=\"options\"\r\n      [placeholder]=\"placeholder\"\r\n      (selectOption)=\"selectOption($event)\"\r\n      (valueChange)=\"valueChange\"\r\n      ></ex-dropdown>\r\n    </div>\r\n    `,\r\n  }),\r\n}"
+                "defaultValue": "{\r\n  args: {\r\n    valueChange: (items) => console.log('items changed', items),\r\n  },\r\n  render: (args) => ({\r\n    props: args,\r\n    template: `\r\n    <div style=\"height: 220px\">\r\n      <ex-dropdown\r\n      [options]=\"options\"\r\n      [placeholder]=\"placeholder\"\r\n      (selectOption)=\"selectOption($event)\"\r\n      [label]=\"'label'\"\r\n      (valueChange)=\"valueChange\"\r\n      ></ex-dropdown>\r\n    </div>\r\n    `,\r\n  }),\r\n}"
             },
             {
                 "name": "Default",
@@ -1674,7 +1674,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\r\n  args: {\r\n    valueChange: (items) => console.log('items changed', items),\r\n  },\r\n  render: (args) => ({\r\n    props: args,\r\n    template: `\r\n    <div style=\"height: 220px\">\r\n      <ex-dropdown\r\n      [options]=\"options\"\r\n      [placeholder]=\"placeholder\"\r\n      (selectOption)=\"selectOption($event)\"\r\n      (valueChange)=\"valueChange\"\r\n      ></ex-dropdown>\r\n    </div>\r\n    `,\r\n  }),\r\n}"
+                    "defaultValue": "{\r\n  args: {\r\n    valueChange: (items) => console.log('items changed', items),\r\n  },\r\n  render: (args) => ({\r\n    props: args,\r\n    template: `\r\n    <div style=\"height: 220px\">\r\n      <ex-dropdown\r\n      [options]=\"options\"\r\n      [placeholder]=\"placeholder\"\r\n      (selectOption)=\"selectOption($event)\"\r\n      [label]=\"'label'\"\r\n      (valueChange)=\"valueChange\"\r\n      ></ex-dropdown>\r\n    </div>\r\n    `,\r\n  }),\r\n}"
                 },
                 {
                     "name": "meta",

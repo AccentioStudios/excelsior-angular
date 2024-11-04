@@ -1,4 +1,17 @@
 @import '../../styles/colors.scss';
+.ex-dropdown {
+  box-sizing: border-box;
+  position: relative;
+  display: flex;
+  gap: .5rem;
+  flex-direction: column;
+}
+
+label {
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--text-secondary-700);
+}
 .ex-highlight {
   background-color: var(--surface-container);
   border-radius: var(--radius-md);

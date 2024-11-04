@@ -63,45 +63,54 @@ export class ExDropdownItemComponent {
   selector: 'ex-dropdown',
   standalone: true,
   imports: [CommonModule, ExDropdownItemComponent, ExIconComponent],
-  template: `<div class="ex-dropdown-container" (click)="toggleDropdown()" [ngClass]="{ open: dropdownOpen === true }">
-    <div class="selected-value" [ngClass]="{ open: dropdownOpen === true }">
-      <input
-        [placeholder]="placeholder"
-        class="ex-dropdown-search"
-        type="text"
-        (ngBlur)="toggleDropdown()"
-        [value]="selectedOption?.label || selectedOption?.value || null"
-        (keyup)="filterOnChange($event)"
-      />
-      <i>
-        <ex-icon [name]="'chevron-down'" />
-      </i>
+  template: `
+    <div class="ex-dropdown">
+      <label *ngIf="label && label !== ''" [for]="id">{{ label }}</label>
+      <div class="ex-dropdown-container" (click)="toggleDropdown()" [ngClass]="{ open: dropdownOpen === true }">
+        <div class="selected-value" [ngClass]="{ open: dropdownOpen === true }">
+          <input
+            [id]="id"
+            [placeholder]="placeholder"
+            class="ex-dropdown-search"
+            type="text"
+            (ngBlur)="toggleDropdown()"
+            [value]="selectedOption?.label || selectedOption?.value || null"
+            (keyup)="filterOnChange($event)"
+          />
+          <i>
+            <ex-icon [name]="'chevron-down'" />
+          </i>
+        </div>
+        <ul
+          (click)="toggleDropdown()"
+          class="options-list"
+          [ngClass]="{ show: dropdownOpen === true }"
+          style="z-index: 10000;"
+        >
+          <ng-template ngFor let-option [ngForOf]="filterValue ? filteredOptions : options" let-i="index">
+            <ng-container>
+              <ex-dropdown-item
+                [id]="_id + '_ex-dropdown-item_' + i"
+                [option]="option"
+                [selected]="isSelected(option)"
+                [label]="getOptionLabel(option)"
+                [disabled]="option.disabled"
+                (onClick)="onOptionSelect($event, option)"
+              ></ex-dropdown-item>
+            </ng-container>
+          </ng-template>
+          <li *ngIf="filterValue && isEmpty()" class="ex-dropdown-empty-message" role="option">
+            <ng-container>
+              {{ emptyLabel }}
+            </ng-container>
+          </li>
+        </ul>
+      </div>
+      <div *ngIf="haveHint && isValid !== false" class="ex-input__hint">
+        {{ hintText }}
+      </div>
     </div>
-    <ul
-      (click)="toggleDropdown()"
-      class="options-list"
-      [ngClass]="{ show: dropdownOpen === true }"
-      style="z-index: 10000;"
-    >
-      <ng-template ngFor let-option [ngForOf]="filterValue ? filteredOptions : options" let-i="index">
-        <ng-container>
-          <ex-dropdown-item
-            [id]="_id + '_ex-dropdown-item_' + i"
-            [option]="option"
-            [selected]="isSelected(option)"
-            [label]="getOptionLabel(option)"
-            [disabled]="option.disabled"
-            (onClick)="onOptionSelect($event, option)"
-          ></ex-dropdown-item>
-        </ng-container>
-      </ng-template>
-      <li *ngIf="filterValue && isEmpty()" class="ex-dropdown-empty-message" role="option">
-        <ng-container>
-          {{ emptyLabel }}
-        </ng-container>
-      </li>
-    </ul>
-  </div> `,
+  `,
   providers: [DROPDOWN_VALUE_ACCESSOR],
   changeDetection: ChangeDetectionStrategy.OnPush,
   encapsulation: ViewEncapsulation.ShadowDom,
@@ -109,6 +118,8 @@ export class ExDropdownItemComponent {
 export class ExDropdownComponent implements OnInit {
   constructor(private cdr: ChangeDetectorRef) {}
   @Input() emptyLabel: string = 'No results found'
+  @Input() label: string | undefined
+  public isValid: boolean | null = null
 
   ngOnInit(): void {}
   /**
@@ -122,6 +133,20 @@ export class ExDropdownComponent implements OnInit {
    */
   @Input() scrollHeight: string = '200px'
 
+  /**
+   * Hint text to be displayed below the input. If null, no hint text will be displayed.
+   * @type {string}
+   */
+  @Input() hintText: string | null = null
+
+  /**
+   * Validator function to validate the input value.  If the function returns false, the input will be marked as invalid.
+   * @param value
+   * @returns { boolean } Boolean indicating if the input is valid.
+   */
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  @Input() validator? = (value: SelectItem): boolean => true
+
   @Input() options: SelectItem[] = []
   @Input() placeholder: string = 'Select an option'
   filterValue: string | undefined = undefined
@@ -133,7 +158,15 @@ export class ExDropdownComponent implements OnInit {
   get _id(): string {
     return this.id || this.generateUUIDv4()
   }
-
+  validate() {
+    if (this.selectedOption !== null && this.selectedOption !== undefined) {
+      if (this.validator !== undefined) {
+        this.isValid = this.validator(this.selectedOption)
+        return // Return early if validator is defined
+      }
+      this.isValid = true
+    }
+  }
   generateUUIDv4(): string {
     return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (c) {
       var r = (Math.random() * 16) | 0,
@@ -141,7 +174,9 @@ export class ExDropdownComponent implements OnInit {
       return v.toString(16)
     })
   }
-
+  get haveHint(): boolean {
+    return this.hintText !== null
+  }
   filterOnChange(event: Event) {
     this.filterValue = (event.target as HTMLInputElement).value
     this.isFiltering = true

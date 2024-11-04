@@ -9,6 +9,8 @@ const meta: Meta<ExDropdownComponent> = {
     options: { control: 'object' },
     placeholder: { control: 'text' },
     valueChange: { action: 'selectOption' },
+    label: { control: 'text' },
+    hintText: { control: 'text' },
   },
   args: {
     options: [
@@ -17,6 +19,8 @@ const meta: Meta<ExDropdownComponent> = {
       { id: '3', label: 'Option 3', value: '3' },
     ],
     placeholder: 'Select an option',
+    label: 'label',
+    hintText: 'hint text',
   },
 }
 
@@ -35,6 +39,8 @@ export const Default: Story = {
       [options]="options"
       [placeholder]="placeholder"
       (selectOption)="selectOption($event)"
+      [label]="'label'"
+      [hintText]="'hint text'"
       (valueChange)="valueChange"
       ></ex-dropdown>
     </div>
