@@ -125,7 +125,6 @@ export class ExDropdownComponent implements OnInit {
   @Input() label: string | undefined
   public isValid: boolean | null = null
 
-  ngOnInit(): void {}
   /**
    * Unique identifier of the component
    * @group Props
@@ -161,7 +160,7 @@ export class ExDropdownComponent implements OnInit {
   public dropdownOpen = false
   public isFiltering = false
 
-  ngAfterViewInit() {
+  ngOnInit() {
     if (this.initialValue) {
       // Search the option in the options array
       const selectedOption = this.options.find(
