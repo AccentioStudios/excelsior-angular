@@ -204,6 +204,8 @@ export class ExDropdownComponent implements OnInit {
     if (!this.filterValue) {
       this.isFiltering = false
       this.filteredOptions = this.options
+      this.initialValue = null
+      this.cdr.detectChanges()
       return
     }
     this.filteredOptions = this.options.filter((option) =>
