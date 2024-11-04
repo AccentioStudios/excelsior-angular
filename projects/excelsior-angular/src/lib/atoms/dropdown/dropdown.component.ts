@@ -116,7 +116,11 @@ export class ExDropdownItemComponent {
   encapsulation: ViewEncapsulation.ShadowDom,
 })
 export class ExDropdownComponent implements OnInit {
-  constructor(private cdr: ChangeDetectorRef) {}
+  _id: string
+  filteredOptions: SelectItem[] = []
+  constructor(private cdr: ChangeDetectorRef) {
+    this._id = this.id || this.generateUUIDv4()
+  }
   @Input() emptyLabel: string = 'No results found'
   @Input() label: string | undefined
   public isValid: boolean | null = null
@@ -155,9 +159,6 @@ export class ExDropdownComponent implements OnInit {
   public dropdownOpen = false
   public isFiltering = false
 
-  get _id(): string {
-    return this.id || this.generateUUIDv4()
-  }
   validate() {
     if (this.selectedOption !== null && this.selectedOption !== undefined) {
       if (this.validator !== undefined) {
@@ -180,14 +181,18 @@ export class ExDropdownComponent implements OnInit {
   filterOnChange(event: Event) {
     this.filterValue = (event.target as HTMLInputElement).value
     this.isFiltering = true
+    this.updateFilteredOptions()
   }
 
-  get filteredOptions(): SelectItem[] {
+  updateFilteredOptions(): void {
     if (!this.filterValue) {
       this.isFiltering = false
-      return this.options
+      this.filteredOptions = this.options
+      return
     }
-    return this.options.filter((option) => option.label?.toLowerCase().includes(this.filterValue!.toLowerCase()))
+    this.filteredOptions = this.options.filter((option) =>
+      option.label?.toLowerCase().includes(this.filterValue!.toLowerCase()),
+    )
   }
 
   toggleDropdown() {
@@ -213,6 +218,7 @@ export class ExDropdownComponent implements OnInit {
       originalValue: originalValue,
       value: option,
     })
+    this.updateFilteredOptions()
     this.cdr.detectChanges()
   }
 
