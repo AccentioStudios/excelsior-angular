@@ -154,10 +154,25 @@ export class ExDropdownComponent implements OnInit {
   @Input() options: SelectItem[] = []
   @Input() placeholder: string = 'Select an option'
   filterValue: string | undefined = undefined
+  @Input() initialValue: SelectItem | null = null
   @Output() valueChange = new EventEmitter<DropdownChangeEvent>()
-  public selectedOption: SelectItem | null = null
+
+  selectedOption: SelectItem | null = null
   public dropdownOpen = false
   public isFiltering = false
+
+  ngAfterViewInit() {
+    if (this.initialValue) {
+      // Search the option in the options array
+      const selectedOption = this.options.find(
+        (option) => option.value === this.initialValue?.value || option.id === this.initialValue?.id,
+      )
+      if (selectedOption) {
+        this.selectedOption = selectedOption
+      }
+    }
+    this.updateFilteredOptions()
+  }
 
   validate() {
     if (this.selectedOption !== null && this.selectedOption !== undefined) {

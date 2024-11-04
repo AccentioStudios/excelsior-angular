@@ -8,6 +8,7 @@ const meta: Meta<ExDropdownComponent> = {
   argTypes: {
     options: { control: 'object' },
     placeholder: { control: 'text' },
+    initialValue: { control: 'object' },
     valueChange: { action: 'selectOption' },
     label: { control: 'text' },
     hintText: { control: 'text' },
@@ -50,7 +51,7 @@ export const Default: Story = {
 
 export const WithSelectedValue: Story = {
   args: {
-    selectedOption: {
+    initialValue: {
       id: '1',
       label: 'Option 1',
       value: '1',
