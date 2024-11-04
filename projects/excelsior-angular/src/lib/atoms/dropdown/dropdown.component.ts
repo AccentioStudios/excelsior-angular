@@ -74,7 +74,9 @@ export class ExDropdownItemComponent {
             class="ex-dropdown-search"
             type="text"
             (ngBlur)="toggleDropdown()"
-            [value]="selectedOption?.label || selectedOption?.value || null"
+            [value]="
+              initialValue?.label || initialValue?.value || selectedOption?.label || selectedOption?.value || null
+            "
             (keyup)="filterOnChange($event)"
           />
           <i>
@@ -233,6 +235,7 @@ export class ExDropdownComponent implements OnInit {
       value: option,
     })
     this.updateFilteredOptions()
+    this.initialValue = null
     this.cdr.detectChanges()
   }
 
