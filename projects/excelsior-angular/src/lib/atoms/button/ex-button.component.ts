@@ -46,11 +46,9 @@ export class ExButtonComponent {
 
   /**
    * Button contents
-   *
-   * @required
    */
   @Input()
-  label = 'Button'
+  label = ''
 
   @Input()
   disabled = false
