@@ -53,6 +53,14 @@ export const PrimaryIcon: Story = {
   },
 }
 
+export const IconButton: Story = {
+  args: {
+    primary: false,
+    icon: 'trash',
+    label: '',
+  },
+}
+
 export const Secondary: Story = {
   args: {
     label: 'Button',

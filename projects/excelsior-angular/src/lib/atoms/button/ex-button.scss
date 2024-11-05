@@ -12,6 +12,7 @@
   justify-items: center;
   align-items: center;
 }
+
 .ex-button-content-text {
   padding: 0px var(--spacing-xxs) 0px var(--spacing-xxs);
   font-weight: 600;
@@ -62,14 +63,26 @@
   font-size: 14px;
   padding: 10px 14px;
   gap: var(--ex-space-xs);
+
+  &.ex-button--icon {
+    padding: 10px 10px;
+  }
 }
 .ex-button--large {
   font-size: 16px;
   padding: 12px 24px;
+
+  &.ex-button--icon {
+    padding: 12px 12px;
+  }
 }
 .ex-button--small {
   font-size: 12px;
   padding: 8px 12px;
+
+  &.ex-button--icon {
+    padding: 8px 8px;
+  }
 }
 
 .ex-button--extended {

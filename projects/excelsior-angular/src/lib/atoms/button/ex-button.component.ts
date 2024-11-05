@@ -11,13 +11,15 @@ import { ExIconComponent } from '../icon/ex-icon.component'
       type="button"
       (click)="onClick.emit($event)"
       [ngClass]="classes"
-      [ngStyle]="{ 'background-color': backgroundColor }"
+      [ngStyle]="{
+        'background-color': backgroundColor,
+      }"
       [disabled]="disabled"
     >
       <i [ngStyle]="{ color: iconColor }">
         <ex-icon *ngIf="icon !== ''" [name]="icon" [size]="size" />
       </i>
-      <span class="ex-button-content-text">
+      <span *ngIf="label && label !== ''" class="ex-button-content-text">
         {{ label }}
       </span>
     </button>
@@ -61,6 +63,7 @@ export class ExButtonComponent {
     const disabledClass = this.disabled ? 'ex-button--disabled' : ''
     const size = `ex-button--${this.size}`
     const extended = this.extended ? 'ex-button--extended' : ''
-    return ['ex-button', `ex-button--${this.size}`, mode, disabledClass, size, extended]
+    const iconButton = this.icon && this.icon !== '' && (!this.label || this.label === '') ? 'ex-button--icon' : ''
+    return ['ex-button', `ex-button--${this.size}`, mode, disabledClass, size, extended, iconButton]
   }
 }
