@@ -32,7 +32,12 @@ export const DROPDOWN_VALUE_ACCESSOR: any = {
     [id]="id"
     (click)="onOptionClick($event)"
     (mouseenter)="onOptionMouseEnter($event)"
-    [ngClass]="{ 'ex-dropdown-item': true, 'ex-highlight': selected, 'ex-disabled': disabled, 'ex-focus': focused }"
+    [ngClass]="{
+      'ex-dropdown-item': true,
+      'ex-highlight': selected,
+      'ex-dropdown-item--disabled': disabled === true,
+      'ex-focus': focused,
+    }"
   >
     {{ option?.label || option?.value || '' }}
   </li>`,
@@ -64,12 +69,13 @@ export class ExDropdownItemComponent {
   standalone: true,
   imports: [CommonModule, ExDropdownItemComponent, ExIconComponent],
   template: `
-    <div class="ex-dropdown">
+    <div class="ex-dropdown" [ngClass]="{ disabled: disabled }">
       <label *ngIf="label && label !== ''" [for]="id">{{ label }}</label>
       <div class="ex-dropdown-container" (click)="toggleDropdown()" [ngClass]="{ open: dropdownOpen === true }">
         <div class="selected-value" [ngClass]="{ open: dropdownOpen === true }">
           <input
             [id]="id"
+            [disabled]="disabled"
             [placeholder]="placeholder"
             class="ex-dropdown-search"
             type="text"
@@ -157,6 +163,7 @@ export class ExDropdownComponent implements OnInit {
   filterValue: string | undefined = undefined
   @Input() initialValue: SelectItem | null = null
   @Output() valueChange = new EventEmitter<DropdownChangeEvent>()
+  @Input() disabled: boolean = false
 
   selectedOption: SelectItem | null = null
   public dropdownOpen = false
@@ -214,7 +221,9 @@ export class ExDropdownComponent implements OnInit {
   }
 
   toggleDropdown() {
-    this.dropdownOpen = !this.dropdownOpen
+    if (!this.disabled) {
+      this.dropdownOpen = !this.dropdownOpen
+    }
   }
 
   public isSelected(option: SelectItem): boolean {
@@ -226,19 +235,22 @@ export class ExDropdownComponent implements OnInit {
   }
 
   public onOptionSelect(event: Event, option: SelectItem): void {
-    console.log('option selected', option)
-    this.dropdownOpen = false
-    this.isFiltering = false
-    this.filterValue = undefined
-    const originalValue = cloneDeep(this.selectedOption) as SelectItem
-    this.selectedOption = option
-    this.valueChange.emit({
-      originalValue: originalValue,
-      value: option,
-    })
-    this.updateFilteredOptions()
-    this.initialValue = null
-    this.cdr.detectChanges()
+    if (!this.disabled) {
+      if (!option.disabled) {
+        this.dropdownOpen = false
+        this.isFiltering = false
+        this.filterValue = undefined
+        const originalValue = cloneDeep(this.selectedOption) as SelectItem
+        this.selectedOption = option
+        this.valueChange.emit({
+          originalValue: originalValue,
+          value: option,
+        })
+        this.updateFilteredOptions()
+        this.initialValue = null
+        this.cdr.detectChanges()
+      }
+    }
   }
 
   public isEmpty(): boolean {

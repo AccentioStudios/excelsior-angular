@@ -5,6 +5,37 @@
   display: flex;
   gap: .5rem;
   flex-direction: column;
+
+  &.disabled {
+    pointer-events: none;
+    cursor: not-allowed;
+    color: var(--fg-disabled);
+    & .ex-dropdown-container {
+      cursor: not-allowed;
+      color: var(--fg-disabled);
+      background-color: var(--bg-disabled);
+      border-color: var(--border-disabled_subtle);
+      pointer-events: none;
+    }
+
+    & input {
+      cursor: not-allowed;
+      color: var(--fg-disabled);
+      background-color: var(--bg-disabled);
+      border-color: var(--border-disabled_subtle);
+      pointer-events: none;
+    }
+    & label {
+      color: var(--fg-disabled);
+    }
+  }
+}
+
+.ex-dropdown-item--disabled {
+  cursor: not-allowed;
+  color: var(--fg-disabled);
+  border-color: var(--border-disabled_subtle);
+  pointer-events: none;
 }
 
 label {

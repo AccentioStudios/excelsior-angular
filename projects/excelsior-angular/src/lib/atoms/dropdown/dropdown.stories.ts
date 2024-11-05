@@ -12,10 +12,11 @@ const meta: Meta<ExDropdownComponent> = {
     valueChange: { action: 'selectOption' },
     label: { control: 'text' },
     hintText: { control: 'text' },
+    disabled: { control: 'boolean' },
   },
   args: {
     options: [
-      { id: '1', label: 'Option 1', value: '1' },
+      { id: '1', label: 'Option 1', value: '1', disabled: true },
       { id: '2', label: 'Option 2', value: '2' },
       { id: '3', label: 'Option 3', value: '3' },
     ],
@@ -51,6 +52,17 @@ export const Default: Story = {
 
 export const WithSelectedValue: Story = {
   args: {
+    initialValue: {
+      id: '1',
+      label: 'Option 1',
+      value: '1',
+    },
+  },
+}
+
+export const Disabled: Story = {
+  args: {
+    disabled: true,
     initialValue: {
       id: '1',
       label: 'Option 1',
