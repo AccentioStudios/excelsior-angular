@@ -504,7 +504,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Meta<ExDropdownComponent>",
-                "defaultValue": "{\r\n  title: '1.Atoms/Dropdown',\r\n  component: ExDropdownComponent,\r\n  tags: ['autodocs'],\r\n  argTypes: {\r\n    options: { control: 'object' },\r\n    placeholder: { control: 'text' },\r\n    valueChange: { action: 'selectOption' },\r\n    label: { control: 'text' },\r\n    hintText: { control: 'text' },\r\n  },\r\n  args: {\r\n    options: [\r\n      { id: '1', label: 'Option 1', value: '1' },\r\n      { id: '2', label: 'Option 2', value: '2' },\r\n      { id: '3', label: 'Option 3', value: '3' },\r\n    ],\r\n    placeholder: 'Select an option',\r\n    label: 'label',\r\n    hintText: 'hint text',\r\n  },\r\n}"
+                "defaultValue": "{\r\n  title: '1.Atoms/Dropdown',\r\n  component: ExDropdownComponent,\r\n  tags: ['autodocs'],\r\n  argTypes: {\r\n    options: { control: 'object' },\r\n    placeholder: { control: 'text' },\r\n    initialValue: { control: 'object' },\r\n    valueChange: { action: 'selectOption' },\r\n    label: { control: 'text' },\r\n    hintText: { control: 'text' },\r\n  },\r\n  args: {\r\n    options: [\r\n      { id: '1', label: 'Option 1', value: '1' },\r\n      { id: '2', label: 'Option 2', value: '2' },\r\n      { id: '3', label: 'Option 3', value: '3' },\r\n    ],\r\n    placeholder: 'Select an option',\r\n    label: 'label',\r\n    hintText: 'hint text',\r\n  },\r\n}"
             },
             {
                 "name": "meta",
@@ -872,7 +872,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\r\n  args: {\r\n    selectedOption: {\r\n      id: '1',\r\n      label: 'Option 1',\r\n      value: '1',\r\n    },\r\n  },\r\n}"
+                "defaultValue": "{\r\n  args: {\r\n    initialValue: {\r\n      id: '1',\r\n      label: 'Option 1',\r\n      value: '1',\r\n    },\r\n  },\r\n}"
             },
             {
                 "name": "WithSelectedValue",
@@ -1684,7 +1684,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Meta<ExDropdownComponent>",
-                    "defaultValue": "{\r\n  title: '1.Atoms/Dropdown',\r\n  component: ExDropdownComponent,\r\n  tags: ['autodocs'],\r\n  argTypes: {\r\n    options: { control: 'object' },\r\n    placeholder: { control: 'text' },\r\n    valueChange: { action: 'selectOption' },\r\n    label: { control: 'text' },\r\n    hintText: { control: 'text' },\r\n  },\r\n  args: {\r\n    options: [\r\n      { id: '1', label: 'Option 1', value: '1' },\r\n      { id: '2', label: 'Option 2', value: '2' },\r\n      { id: '3', label: 'Option 3', value: '3' },\r\n    ],\r\n    placeholder: 'Select an option',\r\n    label: 'label',\r\n    hintText: 'hint text',\r\n  },\r\n}"
+                    "defaultValue": "{\r\n  title: '1.Atoms/Dropdown',\r\n  component: ExDropdownComponent,\r\n  tags: ['autodocs'],\r\n  argTypes: {\r\n    options: { control: 'object' },\r\n    placeholder: { control: 'text' },\r\n    initialValue: { control: 'object' },\r\n    valueChange: { action: 'selectOption' },\r\n    label: { control: 'text' },\r\n    hintText: { control: 'text' },\r\n  },\r\n  args: {\r\n    options: [\r\n      { id: '1', label: 'Option 1', value: '1' },\r\n      { id: '2', label: 'Option 2', value: '2' },\r\n      { id: '3', label: 'Option 3', value: '3' },\r\n    ],\r\n    placeholder: 'Select an option',\r\n    label: 'label',\r\n    hintText: 'hint text',\r\n  },\r\n}"
                 },
                 {
                     "name": "WithSelectedValue",
@@ -1694,7 +1694,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\r\n  args: {\r\n    selectedOption: {\r\n      id: '1',\r\n      label: 'Option 1',\r\n      value: '1',\r\n    },\r\n  },\r\n}"
+                    "defaultValue": "{\r\n  args: {\r\n    initialValue: {\r\n      id: '1',\r\n      label: 'Option 1',\r\n      value: '1',\r\n    },\r\n  },\r\n}"
                 }
             ],
             "projects/excelsior-angular/src/lib/atoms/input/input.stories.ts": [

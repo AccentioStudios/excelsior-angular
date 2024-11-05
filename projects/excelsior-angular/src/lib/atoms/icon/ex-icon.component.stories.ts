@@ -8,7 +8,7 @@ const meta: Meta<ExIconComponent> = {
   argTypes: {
     name: {
       control: { type: 'select' },
-      options: ['user-plus', 'search-md', 'help-circle', 'line-chart-up', 'lock', 'key', 'cube', 'dot'],
+      options: ['trash', 'user-plus', 'search-md', 'help-circle', 'line-chart-up', 'lock', 'key', 'cube', 'dot'],
     },
 
     size: {
