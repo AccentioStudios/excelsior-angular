@@ -8,6 +8,8 @@
     (input)="onInput($event)"
     [required]="required"
     [disabled]="disabled"
+    (keyup)="onKeyUp($event)"
+    (keydown)="onKeyDown($event)"
   />
   <div *ngIf="isValid === false" class="ex-input__error">
     {{ errorMessage }}

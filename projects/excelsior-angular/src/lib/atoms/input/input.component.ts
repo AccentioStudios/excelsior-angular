@@ -72,6 +72,9 @@ export class ExInputComponent {
    */
   @Input() required: boolean = false
 
+  @Output() keyup = new EventEmitter<KeyboardEvent>()
+  @Output() keydown = new EventEmitter<KeyboardEvent>()
+
   ngOnInit() {
     if (this.validateOnInit) {
       this.validate()
@@ -95,6 +98,14 @@ export class ExInputComponent {
     this.value = input.value
     this.validate()
     this.valueChange.emit(this.value)
+  }
+
+  onKeyUp(event: KeyboardEvent) {
+    this.keyup.emit(event)
+  }
+
+  onKeyDown(event: KeyboardEvent) {
+    this.keydown.emit(event)
   }
 
   get haveHint(): boolean {
