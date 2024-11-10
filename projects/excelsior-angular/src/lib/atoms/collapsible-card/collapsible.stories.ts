@@ -7,6 +7,7 @@ const meta: Meta<ExCollapsibleComponent> = {
   tags: ['autodocs'],
   argTypes: {
     title: { control: 'text' },
+    isCollapsed: { control: 'boolean' },
   },
 }
 
@@ -16,19 +17,21 @@ type Story = StoryObj<ExCollapsibleComponent>
 export const Default: Story = {
   args: {
     title: 'Click to Expand',
+    isCollapsed: true,
   },
   render: (args) => ({
     props: args,
-    template: `<ex-collapsable-card [title]="title"><p>This is the content inside the collapsible.</p></ex-collapsable-card>`,
+    template: `<ex-collapsable-card [title]="title" [isCollapsed]="isCollapsed"><p>This is the content inside the collapsible.</p></ex-collapsable-card>`,
   }),
 }
 
 export const OpenByDefault: Story = {
   args: {
     title: 'Open by Default',
+    isCollapsed: false,
   },
   render: (args) => ({
-    props: { ...args, isCollapsed: false },
-    template: `<ex-collapsable-card [title]="title" [isCollapsed]="false">This is the content inside the collapsible.</ex-collapsable-card>`,
+    props: { ...args },
+    template: `<ex-collapsable-card [title]="title" [isCollapsed]="isCollapsed">This is the content inside the collapsible.</ex-collapsable-card>`,
   }),
 }

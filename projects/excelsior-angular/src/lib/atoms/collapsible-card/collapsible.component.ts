@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core'
+import { Component, EventEmitter, Input, Output } from '@angular/core'
 import { CommonModule } from '@angular/common'
 import { ExIconComponent } from '../icon/ex-icon.component'
 
@@ -11,9 +11,11 @@ import { ExIconComponent } from '../icon/ex-icon.component'
 })
 export class ExCollapsibleComponent {
   @Input() title: string = 'Collapsible Title'
-  isCollapsed: boolean = true
+  @Input() isCollapsed: boolean = true
+  @Output() isCollapsedChange = new EventEmitter<boolean>()
 
   toggleCollapse() {
     this.isCollapsed = !this.isCollapsed
+    this.isCollapsedChange.emit(this.isCollapsed)
   }
 }
